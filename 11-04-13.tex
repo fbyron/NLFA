@@ -1,0 +1,226 @@
+\subsection{Vorarbeiten}
+
+\subsubsection{Ableitung in Banachräume und implizite Funktionen}
+
+Es seien $X$ und $Y$ Banachräume, $\Omega\subset X$ offen, $F:\Omega \ra Y$, $x_0\in \Omega$
+
+\begin{defi}[Gâteaux-Ableitung]
+    Die Gâteaux-Ableitung $\d F(x_0,\psi)$ des Operators $F$ im Punkt $x_0$ in Richtung $\psi\in X$ 
+    ist gegeben durch 
+    \[
+        \d F (x_0,\psi)=\lim_{s\ra 0} \frac{F(x_0+s\cdot \psi)-F(x_0)}{s}= \left. \frac{\d}{\d s} 
+        F(x_0+s\psi)\right|_{s=0}
+    \]
+    falls der Limes existiert. Der Operator $F$ heißt in diesem Fall in $x_0$ Richtung $\psi$ 
+    Gâteaux-differenzierbar.
+\end{defi}
+\begin{defi}[Fréchet-Ableitung]
+    Der Operator $F$ heißt Fréchet-differenzierbar in $x_0\in \Omega$, falls ein beschränkter,
+    linearer Operator 
+    \[
+        F'(x_0):X\ra Y 
+    \]
+    existiert, so dass 
+    \begin{align}\label{3}
+        \lim_{\|h\|\ra 0} \frac{\| F(x_0+h) - F(x_0) -F'(x_0)\cdot h \|  }{\|h\|} = 0
+    \end{align}
+    $F'(x_0)$ heißt dann Fréchet-Ableitung von $F$ in $x_0$.
+\end{defi}
+
+\begin{theorem}
+    \begin{description}
+        \item{i)} $F'(x_0)$ ist durch (\ref{3}) eindeutig bestimmt.
+        \item{ii)} Falls $F$ stetig ist in $x_0$, so ist jeder lineare Operator, der (\ref{3}) erfüllt,
+                ebenfalls stetig.
+        \item{iii)} Ist $L:X\ra Y$ linear, so gilt
+                \[
+                    L'(x)=L \qq \forall x\in X
+                \]
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+
+\begin{description}
+
+\item{i)} 
+Es gelte (\ref{3}) auch für L. Dann haben wir
+\begin{align*}
+    \|Lh-F'(x_0)h\| \leq \eps \|h\| \qq \text{falls} \qq \|h\| < \delta = \delta(\eps, x_0)
+\end{align*}
+Für beliebiges $h$ folgt aber
+\begin{align*}
+    \|(L-F'(x_0)) (\delta\|h\|^{-1}\cdot h)\|&\leq \delta\eps\\
+    \Ra \, \|(L-F'(x_0))h  \|&\leq \eps \|h\| \qq \forall \, h\in X, \, \forall \, \eps>0 \\
+    \Ra \, \|L-F'(x_0)\|_{\ms L(X,Y)} &= 0
+\end{align*}
+
+\item{ii)}
+(\ref{3}) wird umgeformt zu
+\[
+    \|F'(x_0) h \| \leq \eps \|h\| + \|F(x_0+h)-F(x_0)\|
+\]
+Mit $h\ra 0$ folgt die Stetigkeit (für $\|h\|\leq \delta$) von $F'(x_0)$ an der Stelle 0. 
+Wegen Linearität von $F'(x_0)$ ist $F'(x_0)$ somit stetig. 
+
+\item{iii)} (\ref{3}) gilt offensichtlich für $L'(x_0)=L$, mit i) folgt Eindeutigkeit.
+\end{description}
+\[ \]
+\end{proof}
+
+
+\begin{prop}
+    Jeder Fréchet-differenzierbare Operator $F$ ist Gâteaux-differenziebar $\forall \, \psi\in X$ 
+    und es gilt
+    \[
+        F'(x_0)\psi=\d F(x_0,\psi)
+    \]
+\end{prop}
+\begin{proof}
+    Übungsaufgabe \[\]
+\end{proof}
+
+\begin{defi}
+    $F$ heißt (Fréchet-)differenzierbar auf $\Omega$, falls $\forall\, x\in X$ ein $F'(x)$ existiert,
+    sodass $F'(x)$ stetig ist  und (\ref{3}) erfüllt. $F$ heißt stetig (Fréchet-)differenzierbar in
+    $\Omega$, falls die Abbildung
+    \[
+        F': \Omega\ra \ms L(X,Y)
+    \]
+    stetig ist.
+\end{defi}
+
+\begin{prop}
+    Existiert die Gâteaux-Ableitung $\d F(x,\psi) \, \forall x\in \Omega$, und ist sie linear und
+    stetig in $\psi$ $\forall\, x\in \Omega$, so ist $F$ Fréchet-differenziebar auf $\Omega$ und
+    es gilt 
+    \[
+        F'(x)\psi=\d F(x,\psi)
+    \]
+\end{prop}
+
+\begin{proof} 
+    Übungsaufgabe \[\]
+\end{proof}
+
+\begin{defi}
+    Sei $F$ auf $\Omega$ stetig differenziebar, $x_0\in \Omega$. Falls ein stetiger linearer Operator
+    \[
+        F''(x_0):X\ra \ms L(X,Y)
+    \]
+    existiert mit
+    \[
+        \lim_{\|h\|\ra 0}\frac{\|F'(x_0+h)-F'(x_0)-F''(x_0)h\|_{\ms L(X,Y)}}{\|h\|}=0
+    \]
+    dann heißt $F$ in $x_0$ zweimal (Fréchet-)differenzierbar und $F''(x_0)$ heißt zweite Ableitung
+    von $F$ in $x_0$. Höhere Ableitungen entsprechend.
+\end{defi}
+
+\begin{remark}
+    Es gilt die Kettenregel:
+    Seien $X$, $Y$, $Z$ Banachräume, $\Omega_X\subset X$ offen, $x_0\in \Omega_X$,
+    \[
+        F:\Omega_X\ra Y, \qq F(x_0)=y_0\in \Omega_Y\subset Y \qq \text{offen}
+    \]
+    \[
+        G:\Omega_Y\ra Z
+    \]
+    Falls $F'(x_0)$ und $G'(y_0)$ existiert, so ist 
+    \[
+    (G\circ F)'(x_0)=G'(y_0)\circ F'(x_0)
+    \]
+\end{remark}
+
+\begin{defi}[Partielle Ableitung]
+    Seien $X,$ $Y$, $Z$ Banachräume, $\Omega_X\subset X$ offen, $x_0\in \Omega_X$, $\Omega_Y\subset Y$ 
+    offen, $y_0\in \Omega_Y$. Der Operator
+    \[
+        F: \Omega_X \times \Omega_Y \ra Z 
+    \]
+    heißt partiell in $(x_0,y_0)$ nach dem zweiten Argument (nach $y$) differenzierbar, falls die 
+    Ableitung 
+    \[
+        F(x_0, \cdot) : \Omega_Y \ra Z 
+    \]
+    differenziebar ist. Wir nennen den linearen Operator $F_Y(x_0,y_0): Y\ra Z$, der
+    \[
+        \lim_{\|h\|\ra 0} \frac{\| F(x_0,y_0+h) - F(x_0,y_0) - F_Y( x_0,y_0)h \|}{\|h\|} = 0 
+    \]
+    erfüllt, die partielle Ableitung von $F$ in $(x_0,y_0)$ nach dem zweiten Argument.
+\end{defi}
+
+\begin{prop}
+    Seien $X,Y$ Banachräume, $\Omega \subset X $ offen und konvex mit $x_0, x_1\in \Omega$. 
+    $F: \Omega \ra Y$ sei stetig Fréchet-differenzierbar auf $\Omega$. Dann gilt
+    \[
+        F(x_1)-F(x_0)=\int_{0}^1 F'(x_0+t(x_1-x_0))(x_1-x_0)\d t
+    \]
+    Das Integral ist als Limes der entsprechenden Riemannsumme zu verstehen und dieser existiert.
+\end{prop}
+
+\begin{proof}
+    Übungsaufgabe \[\]
+\end{proof}
+
+Ähnlich dem endlichdimensionalen Fall geben uns die Ableitungen im Banachraum
+hinreichende Bedingungen um Operatoren implizit zu definieren. Die Fragestellung ist die folgende:
+Seien $X,\, Y,\, Z$ Banachräume, $U$ eine Umgebung von $x_0\in X$. $V$ eine Umgebung von $y_0\in Y$.
+Wir suchen zu $F:U\times V \ra Z$ einen Operator
+\[
+    T:U_0\subset U \ra V, 
+\]
+sodass gilt
+\[
+    F(x,Tx)=F(x_0,y_0) \qq \forall \, x\in U_0.
+\]
+Durch eine einfache Verschiebung ist es ausreichend, den Fall
+\[
+    F(x_0,y_0)=0
+\]
+zu untersuchen.
+
+\begin{prop}
+    Sei $X$ ein Banachraum, $\Id: X\ra X$, $x\mapsto x$ die Identität auf $X$. Es sei
+    \[
+        R:B_r(0)\subset X \ra X, 
+    \]
+    eine $k$-Kontraktion mit $k<1$, d.h. $\|R(x)-R(y)\|\leq k \|x-y\|$, und es gelte
+    \[
+        \|R(0)\| < r(1-k)
+    \]
+    Dann existiert genau ein $x\in B_r(0)$ mit
+    \[
+        (\Id + R)x = 0
+    \]
+\end{prop}
+
+\begin{proof}
+    Sei $S=-R$, wir suchen also einen Fixpunkt von $S$.
+    \begin{description}
+        \item{1. Eindeutigkeit:} 
+        Seien $Sx=x$ und $Sx'=x'$, damit gilt
+        \[
+            \|x-x'\|=\|Sx-Sx'\| \leq k \|x-x'\|.
+        \]
+        Mit $k<1$ folgt $x=x'$.
+        
+        \item{2. Existenz:}
+        Sei $x\in B_r(0)$, es gilt
+        \[
+            \|Sx\|\leq \|Sx-S(0)\|+\|S(0)\|\leq k\|x\|+\|S(0)\|< kr + r(1-k) = r
+        \]
+        Sei $x_p=Sx_{p-1}$, $x_0=0$. Es gilt (wie auch im Banach'schen Fixpunktsatz, siehe ÜB 1), dass
+        \[
+            \|x_{n+p}-x_n\| \leq k^n(1-k)^{-1}\|x\|,
+        \]
+        damit ist $(x_p)_{p\in \N}$ eine Cauchy-Folge und konvergiert gegen $x\in X$.
+        Wir haben weiter, dass
+        \[
+            \|x\| \leq \underbrace{\|x-x_{p+1}\|}_{\ra 0} + \|x_{p+1}\| \qq \text{mit} 
+            \qq \|x_{p+1}\|< (1-k) \|S(0)\|=r\\
+            \Ra \, \|x\|<r
+        \]
+        Wegen $x_{p+1}=Sx_p$ gilt dass $x=Sx$, somit ist $x$ der gesuchte Fixpunkt. 
+    \end{description}
+    \[  \]
+\end{proof}

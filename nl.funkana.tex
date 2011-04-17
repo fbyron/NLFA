@@ -1,0 +1,156 @@
+\documentclass[14pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig}
+\usepackage[ngerman]{babel}
+\usepackage{mathtools,extarrows}
+\usepackage[thmmarks]{ntheorem}
+\usepackage{amsmath,theorem}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{marvosym}
+\usepackage{MnSymbol}
+\usepackage{mathrsfs}
+\usepackage{parallel}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{titletoc}
+\usepackage{url}
+\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,colorlinks=true,
+		filecolor=black,linkcolor=blue,urlcolor=blue,plainpages=false,pdfpagelabels,
+		citecolor=black,setpagesize=false]{hyperref}
+
+
+\makeatletter
+\renewcommand\l@section{\@dottedtocline{1}{0em}{2.5em}}
+\renewcommand\l@subsection{\@dottedtocline{2}{2.5em}{2em}}
+\makeatother
+
+\titlecontents{chapter}[1.5em]{\addvspace{1em}\bfseries}
+	{\contentslabel{1.5em}}{\hspace^{-1.5em}}
+	{\hfill\contentspage}
+\dottedcontents{section}[3.8em]{}{1.3em}{1pc}
+\dottedcontents{subsection}[6.0em]{}{2.2em}{1pc}
+\dottedcontents{subsubsection}[9.2em]{}{3.1em}{1pc}
+
+%%%%theoremenvironments
+\theoremstyle{plain} 
+
+\theoremheaderfont{\bfseries}
+
+\theorembodyfont{\it}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{cor}[theorem]{Corollar}
+\newtheorem{prop}[theorem]{Proposition}
+
+\theorembodyfont{\rm}
+\newtheorem{remark}[theorem]{Bemerkung}
+\newtheorem{defi}[theorem]{Definition}
+\newtheorem{rul}[theorem]{Regel}
+
+\theoremstyle{nonumberplain}
+
+\theoremheaderfont{%
+    \normalfont\scshape}
+\theorembodyfont{\normalfont}
+\theoremsymbol{\square}
+\newtheorem{proof}{Beweis:}
+
+\topmargin=-2mm \textwidth=155mm \textheight=230mm
+\oddsidemargin=0mm \evensidemargin=0mm
+\thispagestyle{empty}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mr}{\mathrm}
+\newcommand{\ms}{\mathscr}
+\newcommand{\K}{\mb{K}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\N}{\mb{N}}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\LRa}{\Leftrightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vt}{\vartheta}
+\newcommand{\vp}{\varphi}
+\newcommand{\qq}{\hspace{.25cm}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\renewcommand{\d}{ \, \mr{d}}
+\newcommand{\Res}{\mr{Res}}
+\newcommand{\Const}{\mr{Const} \, }
+\newcommand{\Id}{\mr{Id}}
+\geometry{hmargin=3cm,top=2cm,bottom=4cm}
+
+\newcommand{\makelicense}{Dieser Mitschrieb steht unter der freien \texttt{CC-BY-SA-DE 3.0} 
+Lizenz.
+\begin{center}\includegraphics[height=31pt,width=88pt]{license.pdf}\end{center}
+Für weitere Informationen besuchen Sie
+\begin{center}\url{http://creativecommons.org/licenses/by-sa/3.0/deed.de}\end{center}}
+
+
+\input xy
+\xyoption{all}
+
+\title{\sc{Nichtlineare Funktionalanalysis}}
+\author{Luis Felipe Müller}
+%\date{Sommersemester 2011}
+
+\begin{document}
+
+
+\maketitle
+
+\hrule \hspace*{1cm}\\[3mm]
+{\sc Kompletter Mitschrieb zur gleichnamigen Vorlesung bei Herrn Dondl\\
+\hspace*{1cm}\hfill (Sommersemester 2011, Uni Heidelberg)}\\
+\hrule
+\vspace{1cm}
+\noindent\makelicense
+
+%\vfill
+%\listoffigures
+%\vfill
+%\listoftables
+
+\newpage
+
+\pagenumbering{roman}
+
+\section*{Organisatorisches}
+
+\subsection*{Termine}
+\begin{itemize}
+    \item Vorlesung: Mo./Mi. 9-11ct. -104 Ang. Math.
+    \item Übungsaufgaben: Mi. - Mi. vor der Vorlesung. Kasten in der Angew.Math
+    \item Übungsgruppe: Fr. 16-18 Angew. Math. -101
+    \item Website zur Vorlesung: \url{http://dondl.org/wiki/Sommersemester_11}
+    \item Literatur: \begin{enumerate}
+        \item Růžička M: Nichtlineare Funktionalanalysis, Eine Einführung
+        \item Aubin-Ekeland: Applied nonlinear Analysis
+        \item Deimling: Nonlinear Functional Analysis
+        \item Schwartz: Nonlinear Functional Analysis
+        \item Zeidler: Nonlinear Functional Analysis and its applications 
+        \end{enumerate}
+    \item Prüfungen: Zulassung mit etwa 50\% der Übungsaufgaben-Punkte. Prüfung ist mündlich, 
+            beispielsweise am 29. Juli (Fr.) 
+    \item Dozent: Patrick Dondl, Sprechstunde Mo./Mi. 11-12 in Raum 130 (Angew. Math.)
+    \item Tutor: Julian Scheuer
+\end{itemize}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\input{11-04-11}
+\input{11-04-13}
+\end{document}

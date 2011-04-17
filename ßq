@@ -1,0 +1,124 @@
+\section{Einleitung}
+
+\subsection{Thema der Vorlesung}
+
+In der linearen Funktionalanalysis haben wir eine Vielzahl von Methoden kennengelernt um
+Ergebnisse aus der endlichdimensionalen linearen Algebra auf den unendlichdimensionalen Fall 
+zu verallgemeinern. Ein Hauptaufgabe war dabei, die Lösbarkeit von Gleichungen der Form
+\[
+    Ax=y
+\]
+für lineare Operatoren $A$ auf $\infty$-dimensionalen Banchräumen zu zeigen.
+\begin{description}
+    \item{Ein Beispiel:}
+    
+    Sei $\Omega\subset\R^3$, gefüllt mit einer inkompressiblen, riskosen Flüssigkeit.
+    $v_j(x)$ sei die Geschwindigkeit der Flüssigkeit an der Stelle $x\in \Omega$. 
+    $p(x)$ ist der Druck an der Stelle $x$.
+    \begin{description}
+    \item{Randbedingungen:}
+    $v_j(x)=0 \qq x\in \partial\Omega$
+    \item{Inkompressibilität:}$\partial_jv_j(x)=0 \qq x\in \Omega$
+    \end{description}
+Bewegungsgleichung:
+
+\noindent Wir betrachten die Kräfte, die auf einen kleinen Würfel, eingeschlossen durch
+$(x_1,x_2,x_3)$, $(x_1+\Delta x_1, x_2+\Delta x_2, x_3+\Delta x_3)$. Druck auf eine Oberfläche
+des Würfels mit Normale x, ist $f_j^p=p\cdot \delta x_2 \delta x_3 \cdot \delta_{ij} $ auf die
+gegenüberliegende Seite wirkt
+\[
+    -(p+\partial _i p \Delta x_i) \Delta x_2 \Delta x_3 \delta_{ij}
+\]
+Zusammen ergibt sich 
+\[
+    f=(\partial_j p)\Delta V
+\]
+
+Kraft durch Viskosität auf eine Oberfläöche mit Normale $x_1$ ist 
+\[
+    f_j^{V,x_i}= -2\eta \Delta x_2\Delta x_3 \partial_1v_j
+\]
+mit einer Konstante $\eta$. Der gleiche Trick wie oben ergibt für die gegenüberliegende
+Oberfläche
+\[
+    \eta \Delta x_2 \Delta x_3 \partial (v_j+\partial v_j\Delta x_1)
+\]
+Zusammen ergibt sich
+\begin{align*}
+    f_j^V&= \eta\Delta V \cdot \partial_i\partial_iv_j\\
+    \text{Newton:} \qq \rho \Delta V \frac{\d}{\d t} v_j (t,x(t))
+        &= \eta \Delta V  \partial _i\partial_iv_j- \Delta V (\partial _j p) + \Delta 
+        V\kappa_j \qq \text{mit $\kappa_j$ einer externen Konstante, bspw. Gravitation}
+\end{align*}
+Teilen durch $\Delta V$ und die Kettenregel ergibt
+\begin{align*}
+    \rho \partial_t v_j&= \eta \partial_i\partial_i v_j - \rho (v_i\partial_i) - \partial_j p + K_j 
+        \qq \text{(Newton)}\\
+    d_jv_j&=0
+\end{align*}
+Naurier-Stokes. Frage: Existiert eine eindeutige Lösung zur sationären Naurier-Stokes-Gleichung:
+\begin{align}\label{1}
+    \eta \partial_i\partial_iv_j-(v_i\partial_i)v_j+\partial_jp+K_j=0
+\end{align}
+\end{description}
+Wir können die Gleichung etwas umschreiben. Sei $H$ ein Hilbertraum
+\[
+    H:=\ol{\left\{ u\in C_c^\infty (\Omega,\R^3), \text{ so dass } \partial_jv_j=0 \right\}}
+        ^{W^{1,2}(\Omega, \R^3)}
+\]
+Ein Skalarprodukt auf $H$ ist gegeben durch
+\begin{align*}
+    (u,v)_H:= \int_{\Omega} \nabla u\cdot \nabla v \d x = \int_\Omega \sum_{i,j=1}^3 
+    (\partial_iu_j)(\partial_iv_j)
+\end{align*}
+$\Omega$ beschränkt $\Ra$ $(\cdot, \cdot)_H$ ist äquivalent zum üblichen Skalarprod 
+(mittels Poincaré).
+Wir multiplizieren (\ref{1}) mit $\omega \in H $, integrieren und erhalten
+\begin{align*}
+    \int_\Omega (\eta \partial_i\partial_i v_j- (v,\partial_i) v_j + K_j) \cdot \omega_j 
+    &= \int_\Omega (\partial _jp)\omega_j=0 \text{, da $\omega$ divergenzfrei.}\\
+    (\ref{1}) \Ra \eta (v,\omega)_H-a(v,v,w)-\int_\Omega K\omega&=0
+\end{align*}
+Ebenso für $a$:
+\begin{align*}
+    a(u,v,w):= (\underbrace{B(u,v)}_{\text{bilinear.}},w)_H
+\end{align*}
+Also
+\begin{align*}
+    (\ref{1}) \Ra \, (\eta v - B(u,v)) - \tilde K , \omega)_H=0 \qq \forall \omega \in H
+\end{align*}
+somit
+\[
+    \eta v - B(v,v) = \tilde K
+\]
+Das ist eine Gleichung der Form
+\begin{align}\label{2}
+    Fv=\tilde K,\qq\text{mit $F$ einem Nichtlinearen Operator}
+\end{align}
+Im ersten teil der Vorlesung beschäftigen wir uns mit der eindeutigen Lösbarkeit von
+Gleichungen der Form
+\[
+    Fx=y, \qq F:X\ra Y, \qq X,Y \text{Banachräume}
+\]
+und zum Abschluß zeigen wir mit Hilfe des \textit{Schauder'schen Fixpunktsatzes} die Existenz
+und Finden eine Lösung von (\ref{2}), also der schwachen Form der stationären 
+Navier-Stokes-Gleichung.
+
+Im zweiten Teil der Vorlesung beschäftigen wir uns mit Variationsrechnung (d.h. dem Finden
+von Minimierern nichtlinearer Funktionalen)
+\[
+    W:X\ra \R \qq\text{mit} \qq X \qq \text{Banachraum}
+\]
+Finde 
+\[
+    x_0\in X: \, W(x)= \inf_{y\in X}W(y)
+\]
+Insbesonder treffen wir dort auf Probleme in der Elastizitätstheorie.
+
+\subsection*{Aufbau der Vorlesung}
+\begin{itemize}
+    \item Abbildungsgrad $\ra$ Existenz von Lösungen von $Fx=y$
+    \item Monotone Operatoren $\ra$ Eindeutigkeit von Lösungen von $Fx=y$; 
+    	zeitabhängige Probleme.
+    \item Variationsrechnung $\ra$ $\inf_{y\in X} W(y)$
+\end{itemize}
