@@ -1,0 +1,250 @@
+\begin{theorem}[Satz über die Implizite Funktion]\label{1.12}
+    Seien $X$, $Y$, $Z$ Banachräume, $U\subset X$ Umgebung von $x_0\in X$, $V\in Y$ Umgebung von 
+    $y_0 \in Y$. Sei weiter
+    \[F:U\times V\ra Z\]
+    stetig und stetig differenzierbar nach der zweiten Variablen. $F_Y(x_0,y_0)$ sei eine Bijektion
+    von $Y$ nach $Z$ und es gelte
+    \[
+        F(x_0,y_0)=0
+    \]
+    Dann existiert $B_\delta(x_0)\subset U$, $B_r(y_0)\subset V$ und genau ein Operator 
+    $T:B_\delta(x_0)\ra B_r(y_0)$, so dass $T(x_0)=y$ und $F(x,Tx)=0$ $\forall \, x\in B_\delta(x_0)$.
+    $T$ ist stetig.
+\end{theorem}
+
+\begin{proof}
+    Ohne Einschränkung sei $x_0=y_0=0$. Sei $L:= F_Y(0,0)$, $\Id: Y\ra Y$ die Identität auf $V$. Es 
+    sei $S(x,y):= L^{-1}F(x,y)-y$ für $(x,y)\in U\times V$. Somit gilt
+    \[
+        F(x,y)=0 \qq \LRa \qq y+S(x,y)=0.
+    \]
+    $S$ ist stetig differenzierbar nach dem zweiten Argument mit
+    \[
+        S_Y=L^{-1} F_Y(x,y)-Id
+    \]
+    Damit gilt
+    \[
+        S_Y(0,0)=0
+    \]
+    Sei $k\in (0,1)$. Wegen Stetigkeit von $S_Y$ existiert $r>0$ mit 
+    \[
+        \|S_Y(x,y)\|\leq k \qq \forall (x,y)\in B_r(0)\times B_r(0)
+    \]
+    Sei nun $x\in B_r(0)$, $y, \tilde y \in B_r(0)$
+    Es gilt nach Proposition \ref{1.10}, dass
+    \[
+        \|S(x,y)-S(x,\tilde y)\|=\left\|\int_0^1 S_Y(x,\tilde y +t(y-\tilde y)) (y-\tilde y) \d t 
+        \right\|\leq k\cdot\|y-\tilde y\|
+    \]
+    Wegen $S(0,0)$ und Stetigkeit von $S$ existiert $\delta \leq r$, so dass
+    \[
+        \|S(x,0)\|\leq r(1-k) \qq \forall \, x \in B_\delta (0)
+    \]
+    Sei also $x\in B_\delta(0)$. Nach Proposition \ref{1.11} existiert genau ein $y\in B_r(0)$ mit
+    $y+S(x,y)=0$. Wir setzen
+    \[
+        Tx=y, \qq T:B_\delta(0)\ra B_r(0)
+    \]
+    Es gilt $T(0)=0$ wegen $0+S(0,0)=T(0)+S(0,T(0))=0$ und der Eindeutigkeit von $T$. Es bleibt die
+    Stetigkeit von $T$ zu zeigen: Seien $x,x'\in B_\delta (0)$, damit gilt
+    \[
+        0=Tx+S(x,Tx)=T(x'+S(x,Tx'))
+    \]
+    also
+    \begin{align*}
+        \|Tx-Tx'\|&\leq \|S(x',Tx')-S(x,Tx')\|+\|S(x,Tx)-S(x,Tx)\|\\
+            &\leq \|S(x',Tx') - S(x,Tx')\|+k\|Tx-Tx'\|\\
+            &= (1-k)\|Tx-Tx'\|\\
+            &\leq \|S(x',Tx')-S(x,Tx')\| \ra 0 \qq \text{für $x\ra x'$} 
+    \end{align*}
+    Somit ist $T$ stetig.
+    \[\]
+\end{proof}
+
+\begin{remark}
+    Ist $F$ $r$-mal stetig differenziebrar, so gilt das auch für $T$.
+\end{remark}
+
+\begin{theorem}\label{1.13}
+    Seien $X$, $Y$ Banachräume, $U\subset X$ eine Umgebung von $x_0$. Es sei $F:U\ra Y$ stetig 
+    differenzierbar und $F'(x_0)$ sei eine lineare Bijektion von $X$ nach $Y$.
+    Dann existiert eine Umgebung $U_0\subset U$ von $x_0$, so dass
+    \[
+        F|_{U_0}: U_0\ra F(U_0)\ni y_0 -F(x_0)
+    \]
+    ein Homöomorphismus (bistetige Abbildung) ist.
+\end{theorem}
+
+\begin{proof}
+    Wir wenden Satz $\ref{1.12}$ auf
+    \[
+        \tilde F(x,y):= F(x)-y
+    \]
+    an.
+    \[  \]
+\end{proof}
+
+\begin{remark}
+    Ist $F$ $r$-mal stetig differenzierbar, so gilt das auch für $F^{-1}$ ($F$ ist ein 
+    $r$-Diffeomorphismus).
+\end{remark}
+
+\begin{proof}
+    Übungsaufgabe\[ \]
+\end{proof}
+
+\begin{defi}[Zusammenhände Mengen]\label{1.14}
+    \begin{description}
+    \item{-}
+    Sei $X$ ein (topologischer metrischer, normierter) Raum. Eine Menge $\Omega \subset X$ heißt
+    zusammenhängend, falls es keine zwei abgeschlossenen (offenen) $\Omega_1$, $\Omega_2$ gibt
+    mit
+    \[
+        \Omega\subset\Omega_1\cup\Omega_2, \qq \Omega\cap \Omega_1 \cap \Omega_2 = \varnothing, \qq
+        \Omega\cap\Omega_{1,2}\neq \varnothing
+    \]
+    \item{-}
+    Eine Menge $\Omega\subset X$ heißt wegzusammenhängend, falls sich je zwei Punkte in $\Omega$ durch
+    eine stetige, in $\Omega$ verlaufende Kurve verbinden lassen.
+    \item{-}
+    Eine Menge $\ol\Omega \subset \Omega$ heißt Zusammenhangskomponente von $\Omega$, falls
+    $\ol \Omega \subset \Omega$ maximal, zusammenhängend.
+    \end{description}
+\end{defi}
+
+\begin{remark}
+    Wegzusammenhängend $\Ra$ Zusammenhängend.
+
+    \noindent Offen, zusammenhängend $\Ra$ Wegzusamenhängend
+\end{remark}
+
+\begin{theorem}[Mittelwert]\label{1.15}
+    Seien $X$, $Y$ stetig, differenzierbar.
+    \begin{description}
+    \item{i)}
+    Falls $\Omega$ konvex ist, so gilt
+    \[
+        \|F(x)-F(y)\|\leq M\|x-y\|
+    \]
+    wobei
+    \[
+        M=\max_{0\leq t \leq 1}\| F'((1-t)x + ty) \|
+    \]
+    \item{ii)}
+    Umgekehrt gilt: Falls
+    \[
+        \| F(x)-F(y) \|\leq M\|x-y\| \qq \forall \, x,y\in \Omega
+    \]
+    Dann gilt
+    \[
+        \sup_{x\in \Omega}\|F'(x)\|\leq M
+    \]
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+    Sei $f(t):= F((1-t)x+ty)$, $0\leq t\leq1$. Nach Kettenregel gilt
+    \[
+        f'(t)=F'((1-t)x+ty)(x-y)  
+    \]
+    \[
+        \Ra \, \|f'(x)\|\leq\tilde M:= M\|x-y\|  
+    \]
+    \begin{description}
+    \item{i)}
+    Sei $\phi(t):=\|f(t)\|$ für $\delta>0$. Wir wollen zeigen, dass $\phi(t)\leq0$ $\forall \, 
+    \delta>0$, $0\leq t\leq1$. Sei also (zum Widerspruch)
+    \[
+        t_0:=\max\{t\in [0,1]\, | \, \phi(s)\leq 0 \, \forall \, s\leq t\}.
+    \]
+    Dann gilt
+    \begin{align*}
+        \phi(t_0+\eps)&=\|f(t_0+\eps)-f(t_0)+f(t_0)-f(0)\|-(\tilde M + \delta)t\\
+        &\leq \|f(t_0+\eps)-f(t_0)\|-(\tilde M +\delta) -\phi(t_0)\\
+        &\leq \|f'(t_0)\eps+ \mc o (1)\|-(\tilde M +\delta)\eps\\
+        &\leq (-\delta + \mc o (1))\eps 
+    \end{align*}
+    \item{ii)}
+    Angenommen, es existiert $x_0$ mit $\|F'(x_0)\|\geq M+2\delta$, $\delta>0$. Dann existiert
+    $e\in X$, $\|e\|=1$, $\| F'(x_0)e \|\geq M+\delta$. Somit gilt
+    \begin{align*}
+        M\eps&\geq \|F(x_0+\eps e) - F(x_0)\|= \|F'(x_0)(\eps e)+\mc o (\eps)\|\\
+         &\geq (M+\delta)\eps- \mc o(\eps) > M\eps
+    \end{align*}
+    Das ist ein Widerspruch.
+    \end{description}
+    \[\]
+\end{proof}
+
+\begin{cor}\label{1.16}
+    Sei $\Omega \subset X$ offen, (weg-)zusammenhängend, $F$ stetig differenzierbar auf $\Omega$.
+    Es gilt
+    \[
+        F= \Const \qq \LRa \qq F'=0
+    \]
+\end{cor}
+\begin{remark}
+    Wir schreiben wie im endl. dim. $C(\Omega)= C^0(\Omega), \, C^1(\Omega)\, …$
+\end{remark}
+
+\noindent \textbf{Anwendungen}: Lokale Existenz und Eindeutigkeit Banachraum-wertiger
+Differenztialgleichunegen. Sei $X$ Banachraum, $\Omega\subset X$ offen, $I\subset \R$
+kompaktes Intervall. Es sei $C_b(I,\Omega)$ der Banachraum der beschränkten, stetigen Abbildungen
+von $I$ nach $\Omega$, versehen mit der $\sup$-Norm.
+
+\begin{lem}
+    Sei $f\in C(\Omega, )$ ($Y$ Banachraum) und sei die Funktion
+    \[
+        f_\star: C_b(I,\Omega)\ra C_b(I,Y)
+    \]
+    definiert als
+    \[
+        (f_\star x)(t)= f(x(t))
+    \]
+    Es gilt $f_\star\in C^r$
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{$r=0$:}
+    Sei $x_0\in C_b(I,\Omega)$, $\eps>0$ $\forall \, t \in I$ existiert $\delta(t)>0$, so dass
+    \[
+        \|f(\chi)-f(x_0(t))\|\leq \frac{\eps}{2} \qq \forall \, \chi\in U
+    \]
+    Die offenen Kugeln 
+    \[
+        \{ B_{\delta(t)}(x_0(t)) \}_{t\in I}
+    \]
+    sind eine offene Überdeckung vom $\{ x_0(t) \}_{t\in I}$. Diese Menge ist als stetiges Bild einer
+    kompakten Menge kompakt, und somit existiert endliche Teilüberdeckung
+    \[
+        \{ B_{\delta(t_j)}(x_0)(t_j) \}_{1\leq j \leq N}
+    \]
+    Sei nun $x\in C_b(I,\Omega)$ mit
+    \[
+        \|x-x_0\|\leq \delta := \min_{1\leq j \leq N}\delta(t_j)
+    \]
+    Somit existiert $\forall \, t\in I$ ein $t_j$, so dass $\|x_0(t)-x_0(t_j)\|\leq \delta(t_j)$,
+    und deshalb gilt
+    \[
+        \|f(x(t))- f(x_0(t))\|\leq \|\underbrace{f(x(t))-f(x_0(t_j))}_{\leq 2\delta}\|
+        +\|\underbrace{f(x_0(t_j))-f(x_0(t))}_{\leq\delta}\|,
+    \]
+    denn
+    \[
+        \|x(t)-x_0(t_j)\|\leq \|x(t)-x_0(t)\|+\|x_0(t)-x_0(t_j)\|\leq 2\delta(t_j).
+    \]
+    Somit folgt die Steigkeit……
+    \item{$r=1$:}
+    Wir müssen zeigen, dass
+    \[
+        \sup_{t\in I} \|f(x_0(t))+x(t)- f(x_0(t)) - f'(x_0(t))x(t)\|\leq \eps \sup_{t\in I}\|x(t)\|
+    \]
+    denn
+    \[
+        (f'_\star(x_0)x)(t)= f'(x_0(t))x(t)
+    \]
+    Übungsaufgabe. Folgt wie Stetigkeit durch Kompaktheit von $I$.
+    \end{description}
+    \[  \]
+\end{proof}
