@@ -1,0 +1,242 @@
+\subsection{Der Browersche Abbildungsgrad}
+
+\subsection*{Motivation}
+\begin{description}
+    \item[Ziel:]
+    $f(x)=0$ zu lösen für $f:U\subset X \ra X$, $X$ Banachraum.
+    \item[Frage:]
+    Existenz/Anzahl der Lösungen
+    \item[Rückblick auf Funktionentheorie:]
+    Sei $z_0\in \C$
+    \[
+        n(\gamma,z_0) = \frac{1}{2\pi i} \int_\gamma \frac1{z-z_0} \d z
+    \]
+\end{description}
+$\Ra$ Verallg.: $f\in \mc H(\C)$. $0\nin f(\gamma)$
+\[
+    n(f(\gamma),0)=\frac1{2\pi i} \int_\gamma \frac{f'}{f} \d z = \sum_k n(\gamma,z_k) \alpha_k
+\]
+wobei $f(z_n)=0$, $\alpha_k$ Vielfachheiten.
+
+\noindent Ziel: Verallg. des Begriffs „Umlaufzahl“ für Abb. $f:U\subset \R^n\ra \R^n$
+
+\subsubsection{Notation}
+
+$U\subset\subset R^n$ offen,
+\begin{align*}
+    J_f(x)&=\det \partial f(x)\\
+    RV(f)&=\{ y\in \R^n \,| \, \forall \, x\in f^{-1}(y), \, J_f(x)\neq 0 \}\\
+    CV(f)&= \R^n \setminus RV(f)\\
+    D_y^r(\ol U, \R^n)&:=\{f\in C^k(\ol U, \R^n)\,|\,y\nin f(\partial U)\}\\
+    D_y(\ol u, \R^n)&:=D_y^0(\ol U, \R^n)
+\end{align*}
+$\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
+\begin{defi}
+    Eine Abbildung
+    \[
+        \deg: \bigcup_{U\in \tau(\R^n),\, y\in \R^n} (D_y(\ol U, \R^n)\times \{U\}\times \{y\}\ra \R,
+    \]
+    d.h.
+    \[
+        \deg=\deg(f,U,y) 
+    \]
+    heißt Gradabbildung, falls
+    \begin{description}
+        \item[D1]
+        $\deg(f,U,y)=\deg(f-y,U,0)$
+        \item[D2]
+        $\deg(\Id,U,y)=1 \qq \forall y\in U$
+        \item[D3]
+        Seien $U_1,U_2\subset U$ offen und disjunkt, sodass $y\nin f(\ol U\,|\,(U_1\cup U_2))$, dann
+        gelte
+        \[
+            \deg(f,U,y)=\deg(f,U_1,y)+\deg(f,U_2,y)
+        \]
+        \item[D4]
+        $H(t)=(1-t)f+tg \in D_y(\ol U,\R^n) \qq \forall \, t\in [0,1]\, \Ra \, \deg(f,U,y)=\deg(g,U,y)$
+        (Homotopieinvarianz)
+\end{description}
+\end{defi}
+
+\begin{theorem}
+    Sei $\deg$ eine Gradabbildung. Dann gilt
+    \begin{description}
+        \item{i)}
+        $\deg(f,\varnothing,y)=0$ und
+        \[
+            \deg(f,U,y)=\sum_{i=1}^N \deg(f,U_i,y)
+        \]
+        falls $y\nin f(\ol U\setminus\bigcup_{i=1}^NU_i)$, $U_i\subset U$ offen und disjunkt.
+        \item{ii)}
+        $y\nin f(U) \, \Ra \, \deg(f,U,y)=0$
+        \item{iii)}
+        $|f(x)-g(x)|<\dist(y,f(\partial U)) \qq \forall \, x\in \partial U \qq \ra \qq \deg(f,u,y)
+        =\deg(g,U,y)$
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+    \begin{description}
+    \item{i)}
+    Sei $U_1=U$, $U_2=\varnothing$, einsetzen in (\textbf{D3})
+    \[
+        \Ra \, \deg(f,\varnothing,y)=0
+    \]
+    $i=1$: $U_2=\varnothing$
+    \[
+        \Ra \, \deg(f,U,y)=\deg(f,U_1,y)
+    \]
+    $i>1:$ Induktion mittels (\textbf{D3})
+    \item{ii)}
+    \begin{align*}
+        y\nin f(U) \ra y \nin &=(\ol U)\, \Ra \, y\nin f(\ol U\setminus \varnothing)\\
+        \overset{(i)}{\Ra } \, \deg (f,U,y)&=0 \qq (i=1, U_1=\varnothing)
+    \end{align*}
+    \item{iii)}
+    Sei $H(t,x):=(1-t)f(x)+tg(x)$ und sei $x\in \partial U$
+    \begin{align*}
+        \Ra \, |H(t,x)-y|&= |f(x)-y+t(g(x)-f(x))|\\
+            &\geq |f(x)-y| - |g(x)-f(x)|\\
+            &\geq \dist(y,f(\partial U))- |g(x)-f(x)| >0\\
+        \Ra \, y&\nin H(t,\partial U) \qq \forall \, t\,\Ra \,H(t)\in D_y(\ol U,\R^n)\\
+        &\overset{(\textbf{D4})}{\Ra} \text{ Behauptung.}
+    \end{align*}
+    \end{description}
+\end{proof}
+
+\begin{theorem}
+    \begin{description}
+        \item{i)} $\deg(\cdot,U,y)$ ist lokal konstant in $D_y(\ol U,\R^n)$
+        \item{ii)} $\deg(f,U,\cdot)$ ist lokal konstant in $\R^n\setminus f(\partial U)$
+        \item{iii)} Seien $H:[0,1]\times \ol U\ra \R^n$ und $y:[0,1]\ra \R^n$ stetig (d.h. $H$ ist eine
+            Homotopie zwischen $H(0)=H(0,\cdot)$ und $H(1)$), so gilt
+        \[
+            \deg(H(0),U,y(0))=\deg(H(1),U,y(1)),
+        \]
+        falls $H(t)\in D_{y(t)}(\ol U, \R^n)$ $\forall t \in [0,1]$
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+    Beachte: $D_y(\ol U, \R^n)$ ist offen in $C^0(\ol U, \R^n)$
+    \begin{description}
+    \item{i)}
+        $\|f-g\|_{C^0,\ol U} <\eps \, \Ra \, |f(x)-g(x)|<\eps \, \forall \, x,\partial U$ mit
+        \[
+            \eps:= \dist(y,f(\partial U)) \, \Ra \, \deg (f,U,y)=\deg (g,U,y)
+        \]
+    \item{ii)}
+        Sei $y_0\nin f(\partial U)$ und $y\in B_{\dist(y_0,f(\partial U))}(y_0\subset \R^n\setminus
+                f(\partial U))$
+        \begin{eqnarray*}
+            \Ra \, \|(f-y)-f\|&<\dist(y_0,f(\partial U))\\
+                \overset{i)}{\Ra} \, \deg(f-y,U,y_0) &= \deg(f,U,y_0)\\
+            \overset{\textbf{D1}}{\Ra } \, \deg (f,U,y_0+y)&= \deg(f,U,y_0)
+        \end{eqnarray*}
+    \item{iii)}
+        $H$ ist gleichmäßig stetig
+        \[
+            \Ra \, H:[0,1]\ra C^0(\ol U,\R^n)\qq t\mapsto H(t,\cdot)
+        \]
+        ist auch stetig. $H$ ist ein stetiger Weg in $D_y(\ol U,\R^n)$. Sei $y$ fest
+        \[
+            \Ra \, \deg(H(t,U,y))=\Const
+        \]
+        weil $\deg(\cdot,U,y)$ konst. auf Zsh-Komponenten ist. Für $y=y(t):$
+        \begin{align*}
+            \deg(H(0),U,y(0))&=\deg(H(0)-y(0),U,0)=\deg(H(t)-y(t), U, 0) \qq \forall t\\
+            &=
+        \end{align*}
+    \end{description}
+\end{proof}
+
+\begin{lem}\label{1.3.5}
+    Zwei Matrizen $M_1,M_2\in \Gl(n)$ sind genau dann homotop in $GL(n)$, falls
+    \[
+        \sign \det M_1 = \sign\det M_2
+    \]
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{„$\Ra$“} Sei $M\in \Gl(n)$. Wegen der Linearität von $\det $ in Zweilen können elementare
+    Zeilenumformungen mit Hilfe stetiger Deformationen in $\Gl(n)$ erzeugt werden.
+    \[
+        M \, \leadsto*\diag(m_1,…,m_m), \qq \text{mit} |m_i|=1
+    \]
+    weil $\sign \det M_1=\sign \det M_2$.
+    \[
+        H(t):= \begin{pmatrix} \pm \cos (\pi t)& \mp \sin(\pi t)\\ \sin(\pi t) & \cos(\pi t)\end{pmatrix}
+    \]
+    ist eine Homotopie in $\Gl(n)$ von $\diag(\pm 1,1)$ nach $\diag(\mp 1,-1)$. $i=n$ transformiere
+    $\diag(\mp 1,-1)$.
+
+    \noindent $i=n$ transformiere $\diag(m_i,…,m_i)$ nach $\diag(\pm1,1)$
+
+    \[
+        \leadsto \begin{pmatrix} \sign\det M& 0& \cdots&0\\ 0& 1 &\cdots&0\\\vdots&&\ddots&0\\ 0&\cdots&
+        \cdots& 1\end{pmatrix}
+    \]
+
+    \end{description}
+\end{proof}
+
+\begin{theorem}
+    Sei $f\in D_y^1(\ol U, \R^n)$, $y\nin CV(f)$ und $\deg$ eine Gradabbildung. Dann gilt
+    \[
+        \deg(f,U,y)=\sum_{x\in f^{-1}(y)} \sign J_f(x),
+    \]
+    wobei die Summe endlich ist.
+\end{theorem}
+
+\begin{proof}
+    O.B.d.A. $y_0$ (\textbf{D1}). Alle $x\in f^{-1} (0)$ sind isolierte Punkte in $U$ (Homöomorphiesatz).
+    $f^{-1}(y)$ hat höchstens am Rand einen Häufungspunkt, aber $0\nin f(\partial U)$.
+    \[
+        \Ra \, f^{-1}(0)= \{ x^i \}_{i=1}^N
+    \]
+    Wähle $\delta >0$ so klein, dass $B_\delta(x^i)$ paarw. disjunkt.
+    \[
+        \deg(f,U,0)=\sum_{i=1}^N \deg(f,B_\delta(x^i),0)
+    \]
+    beachte $0\nin f(\ol U, \setminus \bigcup_{i=1}^N B_\delta(x^i))$.
+    \begin{align*}
+        f(x)&= \partial f(x)(x-x') + |x-x^i| r(x-x') \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
+        \qq r(0)=0)\\
+            &=
+    \end{align*}
+    Zeige $0\nin H(t,\partial B_\delta(x^i))$.
+    \[
+        J_f(x^i)\neq 0 \, \Ra \, \exists\, \lambda >0:\, |\partial f(x^i)(x-x^i)|\geq \lambda|x-x^i|
+    \]
+    O.B.d.A. sei $\delta$ so klein, dass $|r(x-x^i)|<\lambda$ in $B_\delta (x^i)$.
+    \[
+        \Ra\, | H(t,x) |>|\partial f(x^i)(x-x^i)|-(1-t)(x-x^i)r(x-x^i)\geq \lambda \delta - \delta|r|>0
+        \qq \forall \, x\in \partial B_\delta (x^i)
+    \]
+    \[
+        \overset{(\textbf{D4})}{\Ra} \, \deg(f,U,0)=\sum_{i=1}^N\deg (\partial f (x^i)(\cdot-x^i),
+                B_\delta(x^i),0
+    \]
+    Lemma \ref{1.3.5}
+    \[
+        \Ra \, \deg(\partial f (x^i)(\cdot- x^i),B_\delta (x^i),0)= \deg(\diag(\sign J_f(x^i),1,…,1),
+            B_\delta(x^i),0)
+    \]
+    Falls $J_f(x^i)>0\, \overset{\textbf{D2}}{\Ra}\,\deg(I(\cdot-x^i),B_\delta (x^i),0)=1$. Es genüngt
+    also, $\deg(M(\cdot-x^i),B_1(x^i),0)$. Zu berechnen, wobei $M=\diag(-1,1,…,1)$ ist.
+    \begin{align*}
+        U_1&:= B_1 (x^i) = \{ \max_{1\leq k\leq n} |x_k-x_k^i|<1 \}\\
+        U_2&:= U_1+ (2,0,\cdot,0)\\
+        g(r)=2-|r-1|, \, h(r)=1-r^2\\
+        f_1(x)&:= (1-g(x_1-x_1^i)h(x_2-x_2^(i))…h(x_n-x_n^{(i)}),…, 1)\\
+        f_2(x)&:= (1,x_2-x_2^{(i)}, … , x_n-x_n^{(i)})\\
+        f_1^{-1}(0)&= \{ y,z \} \qq y=x^i, z = x^i+(2,0,…,0)\\
+        f_1|_{\partial U}&= f_2|_{\partial U} \qq \Ra \qq \deg(f_1,U_2,0)=0\\
+        \Ra \, \deg (f_1,U,0)&= \deg(f_1,U_1,0)+ \deg(f_2,U_2,0) \qq (\star)\\
+        \Ra \, \deg(M,B_1(x^i),0)&=\deg(\partial f_1(y),B_1(x^i), 0)\\
+        &=\deg(f_1, U_1,0) \overset{(\star)}{=} -\deg (f_1,U_2,0)\\
+        &= -\deg(\partial f_1(z),U_2,0)=\deg(\Id, U_2,0)=1
+    \end{align*}
+    \[ \]
+\end{proof}

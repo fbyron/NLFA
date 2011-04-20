@@ -14,7 +14,7 @@
 \contentsline {proof}{{Beweis:}{4}{}}{5}{proof.4}
 \contentsline {prop}{{Proposition}{1.{11}}{}}{5}{theorem.1.11}
 \contentsline {proof}{{Beweis:}{5}{}}{5}{proof.5}
-\contentsline {theorem}{{Theorem}{1.{12}}{Satz über die Implizite Funktion}}{6}{theorem.1.12}
+\contentsline {theorem}{{Theorem}{1.{12}}{Satz über implizite Funktion}}{6}{theorem.1.12}
 \contentsline {proof}{{Beweis:}{6}{}}{6}{proof.6}
 \contentsline {remark}{{Bemerkung}{1.{13}}{}}{6}{theorem.1.13}
 \contentsline {theorem}{{Theorem}{1.{14}}{}}{7}{theorem.1.14}
@@ -29,3 +29,12 @@
 \contentsline {remark}{{Bemerkung}{1.{20}}{}}{8}{theorem.1.20}
 \contentsline {lem}{{Lemma}{1.{21}}{}}{8}{theorem.1.21}
 \contentsline {proof}{{Beweis:}{10}{}}{8}{proof.10}
+\contentsline {defi}{{Definition}{1.{22}}{}}{10}{theorem.1.22}
+\contentsline {theorem}{{Theorem}{1.{23}}{}}{10}{theorem.1.23}
+\contentsline {proof}{{Beweis:}{11}{}}{10}{proof.11}
+\contentsline {theorem}{{Theorem}{1.{24}}{}}{10}{theorem.1.24}
+\contentsline {proof}{{Beweis:}{12}{}}{11}{proof.12}
+\contentsline {lem}{{Lemma}{1.{25}}{}}{11}{theorem.1.25}
+\contentsline {proof}{{Beweis:}{13}{}}{11}{proof.13}
+\contentsline {theorem}{{Theorem}{1.{26}}{}}{12}{theorem.1.26}
+\contentsline {proof}{{Beweis:}{14}{}}{12}{proof.14}

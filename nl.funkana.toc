@@ -3,4 +3,6 @@
 \contentsline {subsection}{\numberline {1.1}Thema der Vorlesung}{1}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Vorarbeiten}{3}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}Ableitung in Banachr\IeC {\"a}ume und implizite Funktionen}{3}{subsubsection.1.2.1}
+\contentsline {subsection}{\numberline {1.3}Der Browersche Abbildungsgrad}{9}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Notation}{9}{subsubsection.1.3.1}
 \contentsfinish 
