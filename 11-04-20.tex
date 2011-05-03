@@ -1,4 +1,4 @@
-\subsection{Der Browersche Abbildungsgrad}
+\section{Der Browersche Abbildungsgrad}
 
 \subsection*{Motivation}
 \begin{description}
@@ -12,7 +12,7 @@
         n(\gamma,z_0) = \frac{1}{2\pi i} \int_\gamma \frac1{z-z_0} \d z
     \]
 \end{description}
-$\Ra$ Verallg.: $f\in \mc H(\C)$. $0\nin f(\gamma)$
+$\leadsto$ Verallg.: $f\in \mc H(\C)$. $0\nin f(\gamma)$
 \[
     n(f(\gamma),0)=\frac1{2\pi i} \int_\gamma \frac{f'}{f} \d z = \sum_k n(\gamma,z_k) \alpha_k
 \]
@@ -151,7 +151,7 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
 \end{proof}
 
 \begin{lem}\label{1.3.5}
-    Zwei Matrizen $M_1,M_2\in \Gl(n)$ sind genau dann homotop in $GL(n)$, falls
+    Zwei Matrizen $M_1,M_2\in \Gl(n)$ sind genau dann homotop in $\Gl(n)$, falls
     \[
         \sign \det M_1 = \sign\det M_2
     \]
@@ -159,10 +159,10 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
 
 \begin{proof}
     \begin{description}
-    \item{„$\Ra$“} Sei $M\in \Gl(n)$. Wegen der Linearität von $\det $ in Zweilen können elementare
+    \item{„$\Ra$“} Sei $M\in \Gl(n)$. Wegen der Linearität von $\det $ in Zeilen können elementare
     Zeilenumformungen mit Hilfe stetiger Deformationen in $\Gl(n)$ erzeugt werden.
     \[
-        M \, \leadsto*\diag(m_1,…,m_m), \qq \text{mit} |m_i|=1
+        M \, \leadsto\diag(m_1,…,m_m), \qq \text{mit} \qq |m_i|=1
     \]
     weil $\sign \det M_1=\sign \det M_2$.
     \[
@@ -228,7 +228,7 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
     \begin{align*}
         U_1&:= B_1 (x^i) = \{ \max_{1\leq k\leq n} |x_k-x_k^i|<1 \}\\
         U_2&:= U_1+ (2,0,\cdot,0)\\
-        g(r)=2-|r-1|, \, h(r)=1-r^2\\
+        g(r)&=2-|r-1|, \, h(r)=1-r^2\\
         f_1(x)&:= (1-g(x_1-x_1^i)h(x_2-x_2^(i))…h(x_n-x_n^{(i)}),…, 1)\\
         f_2(x)&:= (1,x_2-x_2^{(i)}, … , x_n-x_n^{(i)})\\
         f_1^{-1}(0)&= \{ y,z \} \qq y=x^i, z = x^i+(2,0,…,0)\\

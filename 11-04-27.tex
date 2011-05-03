@@ -1,0 +1,151 @@
+\subsection{Verallgemeinerung der Determinantenformel}
+
+Wir haben einen Kandidaten für $\deg$ identifiziert; für $f\in D'_Y(\ol\Omega,\R^n)$, $y\in \R^n\cap
+RV(f)$ gilt
+\[
+    \deg(f,\Omega, g)=\sum_{x_j\in f^{-1}(y)} \sign \det J_f(x_j).
+\]
+
+\noindent \textbf{Problem:} Nur für glatte $f$, und reguläre Punkte zu definieren. Programm zum 
+Existenzbeweis: Verallgemeinerung der Determinanten-Formel auf
+\begin{description}
+    \item{-} kirtische Werte $y$.
+    \item{-} nur stetige Funktionen $f$.
+\end{description}
+
+\noindent Drei Beispiele zur Illustration:
+\begin{enumerate}
+    \item $f(x)=x^2$, $U=(-1,1)$
+    \item $f(x)=x^2$, $U=(-1,2)$
+    \item $f(x)=x+2\sin(x)$, $U=(-10,10)$
+\end{enumerate}
+Wie aus dem Beispielen ersichtlich ist, haben wir noch (kleine) Schwierigkeiten, den Abbildungsgrad
+an kritischen Werten von $f$ zu definieren. Stetige Fortsetzungen liegt aber nahe. Das funktioniert
+aber nur falls es von diesen nicht „zu viele“ gibt.
+
+\subsubsection*{Schritt 1:} Kritische Werte von $f$:
+
+\begin{lem}[Sard]\label{2.5}
+
+Es sei $f\in C^1(\Omega, \R^n)$, $\Omega\subset\R^n$ ist offen und beschränkt. Dann ist
+$CV(f)$ eine Lebesgue-Nullmenge.
+\end{lem}
+    
+\begin{proof}
+    Klar, falls $f$ eine affine Abbildung ist. (Dimension des Bildraumes der (konstanten) Ableitung!)
+    Wir linearisieren. 
+
+    \noindent Es sei $CP(f):=\{x\in \Omega\,|\, \det J_f(x)=0\}$ die Menge der kritischen Punkte von $f$.
+    Sei $\{ Q_j \}_{j\in \N}$ eine abzählbare, offen Überdeckung von $\Omega$ bestehend aus Würfeln,
+    so dass
+    \[
+        \ol \Omega_i\subset \Omega, \, i\in \N.
+    \]
+    Es gilt 
+    \[
+        CV(f)=f(\CP(f))=\bigcup_{j\in \N} f(\CP(f)\cap Q_j)
+    \]
+    Es reicht also zu zeigen, dass
+    \[
+    |f(\CP(f)\cap Q_j)|
+    \]
+    für alle $j\in \N$ verschwindet. Sei nun $Q$ ein solcher Würfel, $\rho$ dessen Kantenlänge.
+    Sei $\eps >0$, und sei $Q$ unterteilt in $N^n$ Würfel $Q^i$ der Seitenlänge $frac{\rho}{N}$, so
+    dass
+    \begin{align}\label{4}
+        |f(x)-f(\tilde x)-f'(\tilde x)(x-\tilde x)|&\leq \int_0^1|f'(\tilde x+t(x-\tilde x))-
+        f'(\tilde x)|\cdot|x-\tilde x|\d x\leq \frac{\eps\rho}{N} \qq \text{für alle} 
+            \qq x,\tilde x \in Q^i
+    \end{align}
+    So ein $N$ existiert, nachdem $f'$ auf $Q$ gleichmäßig stetig ist. Nun enthalte $Q^i$ einen
+    kirtischen Punkt $\tilde x_i \in \CP(f)$, ohne Einschränkung sei $\tilde x_i=0$, $f(\tilde x_i)=0$,
+    und $M=f'(\tilde x _i)$. Wegen $\det M =0$ existiert eine ONB $\{b^j\}_{j=1}^n$ mit
+    \[
+    b^n \bot R(M)
+    \]
+    Weiter gilt 
+    \begin{align*}
+        Q^i&\subset \left\{ \sum_{j=1}^n \lambda _j b^j \, \big| \, \| \lambda \|_2\leq \sqrt{n} 
+            \frac{\rho}{N} \right\}\subset\left\{\sum_{j=1}^n\lambda _jb^j \, \big|
+            \, |\lambda_j|\leq \sqrt{n}\frac{\rho}{M} \, \forall 1\leq j\leq n\right\}
+    \end{align*}
+    Damit existiert $C>0$, (unabhängig von $i$), so dass
+    \[
+        MQ^i\subset \left\{\sum_{j=1}^{n-1}\lambda_jb^j\, \big| \, |\lambda_j|
+            \leq C\cdot \frac{\rho}{N} \right\}
+    \]
+    mit $C=\sqrt{n} \max_{x\in \ol Q}|f'(x)| $. Damit gilt nach (\ref{4}) sogar, dass
+    \[
+        f(Q^i)\subset\left\{ \sum_{j=1}^n \lambda_jb^j\, \big| \, |\lambda_j|\leq 
+        (C+\eps)\frac{\rho}{N} \, \forall 1\leq j\leq n-1, \, |\lambda_n|\leq \frac{\eps\rho}{N}\right\}
+    \]
+    Es folgt
+    \[
+        |f(Q^i)|\leq \frac{\tilde C\eps}{N^n},
+    \]
+    falls in $Q^i$ ein kritischer Punkt liegt. Es gibt maximal $N^n$ Unterwürfel $Q^i$ mit kritischen
+    Punkten. Somit gilt
+    \[
+        |f(Q\cap \CP(f))|\leq C\cdot \eps
+    \]
+
+\end{proof}
+
+\noindent Dank Lemma \ref{2.5} ist $\R^n\setminus \CV(f)$ dicht in $\R^n$. Das reicht leider (?)
+noch nicht.
+
+\noindent Wir brauchen $d_1=d_2$, um den Abbildungsgrad sinnvoll durch die Determinanten-Formel
+definieren zu können. (denn $\deg$ soll konstant sein auf Zskg-Komponenten, unabhängig von krit. Werten.)
+
+\textbf{Idee:} Umschreiben der Determinantenformel als \textit{Integral}.
+Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d. h.
+\[
+    \eta_\eps \in \C^\infty_c(B_\eps(0)\subset \R^n), \qq \int_{\R^n} \eta_\eps=1,\qq \eta_eps\geq 0
+\]
+
+\begin{lem}\label{2.6}
+    Sei $f\in D^1_y(\ol \Omega, \R^n)$, $y\nin \CV(F)$. Dann gilt
+    \begin{eqnarray}\label{5}
+        \deg(f,\Omega,y)&=\sum_{x_j\in f^{-1}(y)} \sign \det J_f(x_j)\\
+                        &= \int_\Omega \eta_\eps (f(x)-y) \det J_f(x)\d x
+    \end{eqnarray}
+    für alle $\eps$ hinreichend klein, d. h.
+    \[
+        \eps_0>\eps>0, \qq \text{mit} \qq \eps_0=\eps_0(f,y)
+    \]
+    Es gilt $\supp (\eta_\eps(f(\cdot)-y))\subset \Omega$ für $\eps < \dist(y,f(\partial \Omega))$
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+        \item{1)} 
+        Falls $f^{-1}(y)=\varnothing$, dann sei $\eps_0=\dist(y,f(\partial \Omega))$
+        \item{2)}
+        Falls $f^{-1}(y):= \{x^i\}_{1\leq i \leq N}$, sei $\eps_0>0$, so dass
+        \[
+            f^{-1}(B_{\eps_0}(y)) = \bigcup_{i=1}^N U_i
+        \]
+        mit $U_i\cap U_j=\varnothing$ für $i\neq j$.
+        Aus dem \textit{Satz über die imliziete Funktion} (war ja klar, dass wir den mal brauchen)
+        folgt für evtl. noch kleiners $\eps_0$, dass
+        \[
+            f\big|_{U_i(x_i)} \qq \text{bijektiv,} \qq \det J_f(x)\neq 0 \qq \forall x \in U_i(x_i).
+        \]
+        Wieder gilt $\eta _{\eps}(f(x)-y)=0$ für
+        \[
+            x\in \ol \Omega \setminus \bigcap _{i=1}^N U_i(x^i)
+        \]
+        Damit gilt
+        \begin{align*}
+            \int_\Omega \eta_\eps(f(x)-y) \det J_f(x) \d x&= \sum_{i=1}^N \sign \det J_f(x^i)\cdot
+            \int_{B_{\eps_0(x)}}\eta_\eps (\tilde x ) \d \tilde x\\
+            &=\sum_{x^i\in f^{-1(y)}} \sign \det J_f(x^i)
+        \end{align*}
+        mit $f(x)=\tilde x$.
+    \end{description}
+    \[ \]
+\end{proof}
+Die Inegraldarstellung ergibt auch für kritische Punkte Sinn. Aber:
+Wegen Abhängigkeit von $\eps_0$ von $f,y$ ist. Auch der Wert des Integrals nicht a priori stetig in 
+$f,y$, denn $\eps_0$ hängt ab von $f$ und $y$.
+

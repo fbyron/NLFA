@@ -13,14 +13,14 @@
 \end{theorem}
 
 \begin{proof}
-    Ohne Einschränkung sei $x_0=y_0=0$. Sei $L:= F_Y(0,0)$, $\Id: Y\ra Y$ die Identität auf $V$. Es 
+    Ohne Einschränkung sei $x_0=y_0=0$. Sei $L:= F_Y(0,0)$, $\Id: Y\ra Y$ die Identität auf $Y$. Es 
     sei $S(x,y):= L^{-1}F(x,y)-y$ für $(x,y)\in U\times V$. Somit gilt
     \[
         F(x,y)=0 \qq \LRa \qq y+S(x,y)=0.
     \]
     $S$ ist stetig differenzierbar nach dem zweiten Argument mit
     \[
-        S_Y=L^{-1} F_Y(x,y)-Id
+        S_Y=L^{-1} F_Y(x,y)-\Id
     \]
     Damit gilt
     \[
@@ -64,6 +64,10 @@
 \begin{remark}
     Ist $F$ $r$-mal stetig differenziebrar, so gilt das auch für $T$.
 \end{remark}
+
+\begin{proof}
+    Übungsaufgabe \[ \]
+\end{proof}
 
 \begin{theorem}\label{1.13}
     Seien $X$, $Y$ Banachräume, $U\subset X$ eine Umgebung von $x_0$. Es sei $F:U\ra Y$ stetig 
@@ -124,7 +128,7 @@
     \item{i)}
     Falls $\Omega$ konvex ist, so gilt
     \[
-        \|F(x)-F(y)\|\leq M\|x-y\|
+        \|F(x)-F(y)\|\leq M\|x-y\|,
     \]
     wobei
     \[
@@ -193,7 +197,7 @@ kompaktes Intervall. Es sei $C_b(I,\Omega)$ der Banachraum der beschränkten, st
 von $I$ nach $\Omega$, versehen mit der $\sup$-Norm.
 
 \begin{lem}
-    Sei $f\in C(\Omega, )$ ($Y$ Banachraum) und sei die Funktion
+    Sei $Y$ ein Banachraum, $f\in C(\Omega,Y)$ und sei die Funktion
     \[
         f_\star: C_b(I,\Omega)\ra C_b(I,Y)
     \]

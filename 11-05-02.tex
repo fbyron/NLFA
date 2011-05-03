@@ -1,0 +1,211 @@
+Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauchen zunächst einen Hilfssatz.
+
+\begin{prop}\label{2.7}
+    \begin{description}
+        \item{a)}
+        Sei $u\in C^1(\R^n)$, $\supp u \subset K$, K kompakt. Sei $\vp=\div u$. Dann gilt
+        \[
+            \int_{\R^n} \vp (x) \d x=0
+        \]
+        \item{b)}
+        Sei $\vp : \R^n\ra \R$, $\vp \in C^1$, und sei $z\in \R^n$. Dann gilt
+        \[
+            \vp (x+z)-\vp(x)=\div \left( z\cdot \int_0^1 \vp (z+tz) \d t\right)
+        \]
+        \item{c)}
+        Seien $x,K,\vp$ wie in $a)$, $\Omega \subset \R^n$ offen, beschränkt. Sei $f\in C^2(\ol \Omega)$,
+        sei $K\cap f(\partial \Omega)=\varnothing$. Dann existiert $v\in C^1(\ol \Omega)$, mit $\supp v
+        \subset \Omega$, so dass
+        \[
+            \vp (f(x))J_f(x)=\div v(x) \qq \text{auf} \qq \Omega
+        \]
+    \end{description}
+\end{prop}
+
+\begin{proof}
+    \begin{description}
+    \item{a)}
+    Klar!
+    \item{b)}
+    Sei
+    \[
+        \eta (x):= \int_0^1 \vp (x-sz) \d s.
+    \]
+    \begin{align*}
+        (z\cdot \eta(x))&=\frac{\d}{\d t } \eta (x+tz)\big|_{t=0}=\int_0^1 \frac{\d}{\d t} \vp(x+sz+tz)
+       \big|_{t=0} \d s\\
+        &= \int_0^1 \frac{\d}{\d t} \vp(x+sz)\d s=\vp(x-z)-\vp(x)
+    \end{align*}
+    \item{c)}
+    Es sei $\d _{ij}$ der $(i,j)$- Eintrag der Kofaktormatrix von $(f')_{ij}= \partial _if_j(x)$.
+    Es sei $v_j(x)=\sum_{j=1}^n u_j(f(x))\d _{ij}(x),i=1,…,n$. Es gilt $K\cap f(\partial \Omega) = \Phi$,
+    $f\in C(\ol \Omega)$, damit existiert $\delta>0$ mit $\dist(K,f(\ol \Omega \setminus 
+                f(\Omega_\delta)))>0$.
+    Somit gilt $\supp v\subset \Omega_\delta\subset \Omega$.
+    Wir rechnen:
+    \begin{align*}
+        \partial_iv_i&= \sum_{\d _{ij}(x)\partial_ku_j(f(x))}\partial _i f_k.+\sum_{j=1}^nu_j(f(x))
+        \partial_i \d_{ij}x
+    \end{align*}
+    \textit{Behauptung 1:}
+    \[
+        \sum_{i=1}^n \partial_i\d_{ij}(x)=0
+    \]
+    \textit{Behauptung 2:}
+    \[
+        \sum_{i=1}^n \d_{ij} (x) \partial_if_k(x) =\delta_{ij}\cdot J_f(x)
+    \]
+    Somit gilt:
+    \[
+        \div u(x)=\sum_{k,j}\partial _k u_j(f(x))\cdot \left( \sum_{i=1}^n \d_{ij}(x) \partial f_k(x) 
+                \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d {ij}(x) \right) =
+        \sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
+    \]
+    Behauptungen: Siehe Übungsblatt 2.
+    Wir wollen nun zeigen, dass der über die Determinantenformel definierte Abbildungsgrad konstant
+    ist auf Zusammenhangskomponente. Zu zeigen: $\deg(f,\Omega,y_1)=\deg(f,\Omega,y_2)$.
+
+    \begin{lem}\label{2.8}
+        Sei $f\in C^2(\ol \Omega,\R^n),$ $ y_0\nin f(\partial \Omega) $,
+        \[
+            \rho:=\dist(y_0,f(\partial \Omega))
+        \]
+        Dann ist $\deg(f,\Omega,\cdot)$ (Definiert durch die Determinantenformel) konstant auf
+        \[
+            B_\delta (y_0)\cap \RV(f)
+        \]
+    \end{lem}
+
+    \begin{proof}
+        Sei $y^j\in B_\delta (y_0)\cap \RV(f),$ $j=1,2$, sei $\delta := \rho-\max_{j=1,2}\|y^j-y_0\|$.
+        Sei $\eps>0$, so dass
+        \[
+            \deg(f,\Omega,y^j)=\int \eta_\eps(f(x)-y^j)J_f(x) \d x \qq \text{(nach Lemma $\ref{2.6}$)}
+        \]
+        mit Proposition $\ref{2.7}$ b) gilt
+        \begin{align*}
+            \eta_\eps(x-y^2)-\eta_\eps(x-y^1)&= \eta_\eps (x-y^1+(y^1-y^2))-\eta_\eps(x-y^1)\\
+            &= \div w(x) \qq\text{mit}\\
+            w(x)&= (y^1-y^2)\int_0^1 \eta_\eps (x-y^1+t(y^1-y^2))\d t
+        \end{align*}
+    \textit{Behauptung:} Es gilt $\supp w\subset B_\delta(y_0)$
+    \begin{proof}
+        Sei $x\in \supp w$. Damit existert $t\in [0,1]$ mit $|x-y^1+t(y^1-y^2)|<\eps$
+        \begin{align*}
+            \Ra \, |x-y_0|&\leq \eps + |y^1-t(y^1-y^2)-y_0|\leq \eps +|(1-t)(y^1-y_0)+t(y^2-y_0)|\\
+                \eps + \rho-\delta<\rho
+        \end{align*}
+        Damit gilt aber, dass $f(\partial \Omega)\cap \supp w=\varnothing$. Mit Proposition 
+        $\ref{2.7}$ e) existiert
+        \[
+            v\in C^1(\Omega),\, \supp v \subset \Omega.
+        \]
+        und
+        \[
+            \left( \eta_\eps(f(x)-y^2)-\eta_\eps (f(x)-y^1) \right)J_f(x)=\div v(x)
+        \]
+        Mit dem Proposition $\ref{2.7}$ a) folgt die Behauptung. \[  \]
+    \end{proof}
+
+    \end{proof}
+    \end{description}
+\end{proof}
+
+\begin{defi}\label{2.9}
+    Sei $f\in C^2(\ol \Omega,\R^n)$, $y\in f(\partial \Omega)$. Wir setzen
+    \[
+        \deg (f,\Omega,y)= \deg(f,\Omega,\tilde y)=\sum_{x\in f^{-1}(\tilde y)} \sign J_f(x)
+    \],
+    wobei $\tilde y \in \RV(f)$ mit
+    \[
+        |\tilde y- y| < \dist(y,f(\partial \Omega))
+    \]
+\end{defi}
+
+\textit{Behauptung:} $\deg$ ist somit nach dem vorherstehenden Überlegungen wohldefiniert.
+\subsubsection*{2. Schritt: Nur stetige Funktionen $f$}
+
+Auch hier die Idee: Sei $f\in D_y(\ol \Omega, \R^n)$. Wir schuen $\tilde f \in C^2 (\ol \Omega, \R^n)$
+hinreichend nahe an $f$ (in derselben Zushgskomponente von $D_y(\ol \Omega, \R^n)$) und übertragen
+den Wert von $\deg(\cdot , \Omega, y)$ von $\tilde f$ auf f. Es bleibt zu zeigen, dass die so definierte
+Funktion stetig ist.
+
+\begin{lem}
+    Sei $f\in D_y^2(\ol \Omega, \R^n)$, sei $g\in C^2(\ol \Omega, \R^n)$. Dann existiert $\eps >0$, so 
+    dass
+    \[
+        \deg (f+tg,\Omega,y)= \deg(f,\Omega,y) \qq \forall t\in (-\eps,\eps)
+    \]
+\end{lem}
+\begin{proof}
+    \begin{description}
+        \item{1)}
+        $f(y)=\varnothing \, \Ra \, (f+tg)^{-1}=\varnothing$ für $|t|
+        <\frac{\dist(y,f(\ol \Omega))}{\|g\|_\infty}$
+        \item{2)}
+        $y\in \RV (f) \, \Ra \, f^{-1}(y)=\{x\}_{i=1}^N$. Mithilfe des \textit{satzes über die 
+            implizite Funktion} finden wir
+            \[
+                U^i(x^i)
+            \]
+            disjunkte Umegbungen, so dass eindeutige Lösungen $x^i(t)$ existieren von
+            \[
+                (f+tg)(x)=y \qq \forall |t|<\eps
+            \]
+            Wir können (zumindest auf evtl. noch kleineren $U^i(x^i)$) annehmen, dass das Vorzeihcen
+            von $J_f+tg$ konstant ist auf $U^i(x^i)$. Sei 
+            \[
+                \eps _2= \frac{\dist(y,f(\Omega\setminus \bigcup_{i=1}^NU^i(x^i))}{\|g\|_\infty}).
+            \]
+            Dann gilt $\dist(y,(f+tg)(\partial \Omega))>0$ $\forall |t|<\eps_2$. Das Lemma gilt somit
+            für $\eps = \min(\eps,\eps_2)$
+        \item{3)}
+            $y\in \CV(f)$. Sei dann $\tilde y\in \RV(f)$.
+            \[
+                |y-\tilde y|< \frac{\rho}{3} = \frac13 \dist(y,f(\partial \Omega)).
+            \]
+            Nach Definition \ref{2.9} gilt
+            \[
+                \deg (f,\Omega,y)=\deg(f,\Omega,\tilde y).
+            \]
+            Sei $\tilde \eps>0$ mit $\deg(f,\Omega,\tilde y)=\deg(f+tg,\Omega,\tilde y)$ für $|t|<\tilde
+            \eps$ (Nach Schritt 2).
+            Mit $\eps=\min(\tilde \eps , \frac{\rho}{3\|g\|_\infty})$ gilt:
+            \[
+                |\tilde y-(f+tg)(x)|\geq \frac{\rho}{3} \qq \forall x \in \partial \Omega
+            \]
+            Somit gilt
+            \[
+                |\tilde y-y|< \dist (\tilde y, (f+tg)(\partial \Omega))
+            \]
+            also
+            \[
+                \deg(f+tg,\Omega,\tilde y)= \deg (f+tg,\Omega,y)
+            \]
+            Es folgt
+            \[
+                \deg(f,\Omega, y)= \deg(f+tg,\Omega,y)
+            \]
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{theorem}[Existenz und Eindeutigkeit des Brower'schen Abbildungsgrades]\label{2.11}
+    Es existiert eine eindeutige Abbildung
+    \[\deg(f,\Omega,y)\]
+    mit den Eigenschaften \textbf{(D1-D4)}. Weiter gilt
+    \[
+        \deg(\cdot, \Omega, y): D_y(\ol \Omega, \R^n)\ra \Z
+    \]
+    ist konstant auf Zusammenhangskomponente von $D_y(\ol \Omega, \R^n)$. Für $f\in D_y(\ol \Omega,\R^n)$
+    ist $\deg(f,\Omega,y)$ gegeben durch
+    \[
+        \deg(f,\Omega,y)=\sum_{x\in \tilde f ^{-1}(y)} \sign J_{\tilde f}(x)  
+    \]
+    wobei
+    \[
+        \tilde f \in D_y^2(\ol \Omega, \R^n)
+    \]
+    beliebig aus derselben Komponente von $D_y(\ol \Omega,\R^n)$ wie $f$ gewählt werden kann mit $y
+    \in \RV(\tilde f)$
+\end{theorem}
