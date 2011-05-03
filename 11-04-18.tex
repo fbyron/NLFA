@@ -213,7 +213,7 @@ von $I$ nach $\Omega$, versehen mit der $\sup$-Norm.
     \item{$r=0$:}
     Sei $x_0\in C_b(I,\Omega)$, $\eps>0$ $\forall \, t \in I$ existiert $\delta(t)>0$, so dass
     \[
-        \|f(\chi)-f(x_0(t))\|\leq \frac{\eps}{2} \qq \forall \, \chi\in U
+        \|f(\xi)-f(x_0(t))\|\leq \frac{\eps}{2} \qq \forall \, \xi\in B_{2\delta(t)}(x_0(t))
     \]
     Die offenen Kugeln 
     \[
@@ -222,17 +222,17 @@ von $I$ nach $\Omega$, versehen mit der $\sup$-Norm.
     sind eine offene Überdeckung vom $\{ x_0(t) \}_{t\in I}$. Diese Menge ist als stetiges Bild einer
     kompakten Menge kompakt, und somit existiert endliche Teilüberdeckung
     \[
-        \{ B_{\delta(t_j)}(x_0)(t_j) \}_{1\leq j \leq N}
+        \{ B_{\delta(t_j)}(x_0(t_j)) \}_{1\leq j \leq N}
     \]
     Sei nun $x\in C_b(I,\Omega)$ mit
     \[
         \|x-x_0\|\leq \delta := \min_{1\leq j \leq N}\delta(t_j)
     \]
-    Somit existiert $\forall \, t\in I$ ein $t_j$, so dass $\|x_0(t)-x_0(t_j)\|\leq \delta(t_j)$,
+    Somit existiert $\forall \, t\in I$ ein $t_j$, so dass $\|x_0(t)-x_0(t_j)\|< \delta(t_j)$,
     und deshalb gilt
     \[
-        \|f(x(t))- f(x_0(t))\|\leq \|\underbrace{f(x(t))-f(x_0(t_j))}_{\leq 2\delta}\|
-        +\|\underbrace{f(x_0(t_j))-f(x_0(t))}_{\leq\delta}\|,
+        \|f(x(t))- f(x_0(t))\|\leq \underbrace{\|f(x(t))-f(x_0(t_j))\|}_{\leq 2\delta}
+        +\underbrace{\|f(x_0(t_j))-f(x_0(t))\|}_{\leq\delta},
     \]
     denn
     \[
@@ -242,7 +242,7 @@ von $I$ nach $\Omega$, versehen mit der $\sup$-Norm.
     \item{$r=1$:}
     Wir müssen zeigen, dass
     \[
-        \sup_{t\in I} \|f(x_0(t))+x(t)- f(x_0(t)) - f'(x_0(t))x(t)\|\leq \eps \sup_{t\in I}\|x(t)\|
+        \sup_{t\in I} \|f(x_0(t)+x(t))- f(x_0(t)) - f'(x_0(t))x(t)\|\leq \eps \sup_{t\in I}\|x(t)\|
     \]
     denn
     \[
