@@ -1,0 +1,155 @@
+\begin{proof}
+
+Aus Lemma \ref{2.8} und \ref{2.10} folgt, dass $\deg$ wohldefiniert ist und lokal konstant mit 
+Werten in $\Z$. Die Abbildung $\deg$ auf Zusammenhangskomponenten.
+\begin{description}
+\item[(D2)] $\ra$ klar.
+\item[(D1)] gilt nachdem diese Bedingung per Konstruktion für die Determinatenformel gilt.
+\item[(D3)] Wir wählen $\|f-\tilde f\|_\infty<\dist(y,f(\ol \Omega\setminus(\Omega_1\cap \Omega_2)))$.
+    \textbf{D3} gilt per Konstruktion für $\tilde f$, sonst für $f$.
+\item[(D4)] folgt aus der Konstruktion von $f$ auf Zusammenhangskomponente.
+\end{description}
+\[ \]
+\end{proof}
+
+\subsubsection*{Beispiele:}
+\begin{description}
+    \item{1)}
+    Sei 
+    \[
+        f(x_1,x_2)=\begin{pmatrix} x_1-2x_2+\cos(x_1+x_2)\\x_2+2x_1+\sin(x_1+x_2) \end{pmatrix}
+    \]
+    und
+    \[
+        g(x_1,x_2):=\begin{pmatrix} x_1-2x_2 \\ x_2+2x_1 \end{pmatrix}
+    \]
+    Es gilt $|g(x)|=\sqrt{5} |x|$ und $|f(x)-g(x)|=\sqrt{\sin^2(x_1+x_2)+\cos^2(x_1+x_2)}=1$.
+    Sei $h(t)=(1-t)g+tf=g+t(f-g)$.
+    \begin{align*}
+        |h(t)|&\geq |g|-t|f-g|>0 \qq \text{für} \qq |x|>\frac1{\sqrt{5}}\\
+        \Ra \, \deg(f,B_r(0),0)&= \deg(g,B_r(0),0)=1 \qq \text{für} \qq r>\frac1{\sqrt{5}}
+    \end{align*}
+    Somit existiert eine Lösung $x:f(x)=0$.
+
+    \item{2)}
+    \begin{theorem}
+        Ein stetiges Vektorfeld im $\R^n$, das auf einer Kugeloberfläche überall nach außen zeigt, muss
+        auf einem Punkt im Innern der Kugel verschwinden. 
+        
+        Anders formuliert, sei $f:\ol{B_R(0)} \ra \R^n$ stetig, so dass $f(x)\cdot x>0$ $\forall |x|=R$. 
+        Dann existiert ein $x_0\in B_R(0)$ mit $f(x_0)=0$.
+    \end{theorem}
+
+    \begin{proof}
+        Wir haben $\deg(\Id, B_R(0),y)=1$ für $y\in B_R(0)$. Angenommen, $f(x)\neq 0$ für alle
+        $x\in B_R(0)$. Dann gilt $f^{-1}(0)\cap B_R(0)=\varnothing$.
+        \[
+            \Ra \, \deg(f,B_R(0),0)=0
+        \]
+        Sei $H(t)=(1-t)\Id+tf$.
+        \begin{align*}
+            \deg(H(0),B_R(0),0)&=1\\
+            \deg(H(1),B_R(0),0)&=0.
+        \end{align*}
+        Es existiert ein $t_0\in (0,1)$, so dass $H(t_0)\nin D_0(\ol{B_R(0)},\R^n)$.
+        \[
+            \exists x_0\in \partial B_R(0)\cdot (H(t_0))(x_0)=0.
+        \]
+        \begin{align*}
+            0&=H(t_0)(x_0)\\
+            \Ra \, 0&= H(t_0)(x_0)\cdot x_0= \underbrace{(1-t_0)R^n}_{>0}+\underbrace{t_0f(x_0)x_0}_{>0}
+            >0
+        \end{align*}
+        Widerspruch!
+        \[ \]
+    \end{proof}
+\end{description}
+
+\subsection{Der Broawer'sche Fixpunktsatz}
+
+Der \textit{Broawer'sche Fixpunktsatz} ist eine Folgerung aus den Eigenschaften des Abbildungsgrades.
+Er besagt, dass stetige Abblidungen, die kompakte, konvexe Mengen im $\R^n$ (oder Mengen, die dazu
+homöomorph sind) in sich selbst abbilden,einen Fixpunkt besitzen.
+
+\begin{theorem}\label{2.12}
+    Sei $X$ ein metrischer Raum, $Y$ normierter Raum. Sei $K\subset X$ abgeschlossen. Sei $F\in C(K,Y)$.
+    Dann besizt $F$ eine stetige Fortsetzung Fortsetzung $G:X\ra Y$, so dass
+    \[
+        G(x)\subset\conv\, F(K)
+    \]
+\end{theorem}
+
+\begin{proof}
+    Wir betrachten die offene Überdeckung
+    \[
+        \left\{ B_{\rho(x)}(x) \right\}_{x\in X\setminus K} \qq \text{von} \qq X\setminus K
+    \]
+    mit $\rho(x)=\frac12 \dist(x,K)$.
+    Wir wählen nun eine lokal endliche Zerlegung der Eins $\{\vp_\lambda\}_{\lambda\in \Lambda}$, welche
+    der offenen Überdeckung untergeordnet ist.\\[.5cm]
+
+    \noindent \textbf{Einschub:}
+    \begin{description}
+        \item[Zerlegung der Eins:]
+        Sei $\{U_i\}_{i\in I}$ eine Überdeckung von $X$, topologischer Raum. $\{\vp_\lambda\}_{\lambda\in
+        \Lambda}$ ist eine $\{U_i\}_{i\in I}$ untergeordnete lokal endliche Zerlegung der Eins,
+        falls gilt
+        \begin{itemize}
+        \item[-] $\forall \lambda\in \Lambda\, \exists \, i \in I: \, \supp \vp_\lambda\subset U_i$
+        \item[-] $\sum_{\lambda \in \Lambda} \vp _\lambda=1$
+        \item[-] $\forall x \in X \, \exists \, U(x)$ Umgebung von $x$, so dass nur
+        \textit{endlich viele} $\lambda \in \Lambda$ existieren, mit $U(x)\cap \supp \vp_\lambda\neq 
+        \varnothing$ (lokal endlich).
+        \item[-] $\vp_\lambda \in C(U,[0,1]) \,\forall\, \lambda$. 
+        \end{itemize}
+        \item[Konstruktion] aus einer lokal endlichen Überdeckung $(v_\lambda)_{\lambda\in\Lambda}$ 
+        ($\forall x\in X \, \exists \, U(x)$ Umgebung: $U(x)\cap V_\lambda\neq \varnothing$ nur für
+         endlich viele $\lambda\in \Lambda$.) in metrischen Räumen $(X,d)$.
+        \begin{itemize}
+            \item[-] Sei $\alpha(x)=\sum_{\lambda\in \Lambda} \dist(x,X\setminus V_\lambda)>0 \, \forall
+            x \in X$, mit $\dist(x,\varnothing):=1$.
+            \item[-] $\vp _\lambda(x):=\frac{1}{\alpha(x)}d(x,X\setminus V_\lambda) \, \in [0,1]$,
+            $\vp_\lambda=0$ für $x\nin V_\lambda$.
+        \end{itemize}
+        \item[„Konstruktion“] einer lokal endlichen Überdeckung $\{V_\lambda\}_{\lambda\in\Lambda}$, die
+        eine offen Überdeckung $\{U_i\}_{i\in I}$ verfeinert (d.h. $\forall \, \lambda\in \Lambda \, 
+        \exists i \in I, \, V_\lambda\subset U_i$).
+        \item{Die Existenz} einer solchen lokal endlichen verfeinernde Überdeckung zu jeder offenen
+        Überdeckung ist die Definition der \textit{Parakompaktheit}.
+        \begin{theorem*}
+            Jeder metrische Raum ist parakompakt.
+        \end{theorem*}
+        
+        \noindent \textsc{Beweisidee:} Angenommen $I=\N$ also wohlgeordnet. (jede Teilmenge besitzt ein
+                eindeutiges kleinstes Element.) Wir setzen für $i\in I, \, n\in \N$.
+        \[
+            D_{in}=\bigcup_{x\in \Phi(i,n)} B_{2^{-n}}(x)
+        \]
+        \[
+            \Phi(i,n):=\left\{x\in X \, \Big| \, \text{mit}\, \begin{cases}\text{$i$ ist die kleinste Zahl,
+            so dass $x\in U_i$}\\ \text{$x\nin D_{jm}$ für $m<n$}\\ B_{3\cdot2^{-n}}\subset U_i  
+            \end{cases}\right\}
+        \]
+        \item klar: $\{ D_{in} \}$ verfeinert $\{U_i\}$
+        \item[Überdeckung:] Klar, denn für jedes $x\in X$ finden in ein kleinstes $i\in I=\N$ und ein
+        $n$ hinreichend groß.
+        \item[lokale Endlichkeit] (s.Artikel).
+    Ist $I$ nun eine beliebige Indexmenge, so läßt sich diese wohlordnen (\textit{Zorn'sches Lemma}),
+    und die Wohlordnung ist die einzige Eigenschaft von $I$, die wir benutzt haben.   
+    \end{description}
+    Einschub Ende, weiter im Beweis.
+
+    Sei
+    \[
+    G(x):= \begin{cases} F(x)& \text{für} \qq x\in K\\
+           \sum_{\lambda \in \Lambda } \vp_\lambda(x) \cdot F(x_\lambda) & \text{für} 
+           \qq x\in X\setminus K\end{cases},
+    \]
+    wobei $x_\lambda$ beliebig in $K$ so gewählt ist, dass 
+    \[
+        \dist(x_\lambda,\supp \vp_\lambda)\leq 2\cdot \dist(K,\supp \vp_\lambda).
+    \]
+    $G$ ist offensichtlich stetig auf $X\setminus \partial K$.
+    \[  \]
+
+\end{proof}

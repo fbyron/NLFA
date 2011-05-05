@@ -104,7 +104,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         \[
             \left( \eta_\eps(f(x)-y^2)-\eta_\eps (f(x)-y^1) \right)J_f(x)=\div v(x)
         \]
-        Mit dem Proposition $\ref{2.7}$ a) folgt die Behauptung. \[  \]
+        Mit der Proposition $\ref{2.7}$ a) folgt die Behauptung. \[  \]
     \end{proof}
 
     \end{proof}
@@ -114,8 +114,8 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
 \begin{defi}\label{2.9}
     Sei $f\in C^2(\ol \Omega,\R^n)$, $y\in f(\partial \Omega)$. Wir setzen
     \[
-        \deg (f,\Omega,y)= \deg(f,\Omega,\tilde y)=\sum_{x\in f^{-1}(\tilde y)} \sign J_f(x)
-    \],
+        \deg (f,\Omega,y)= \deg(f,\Omega,\tilde y)=\sum_{x\in f^{-1}(\tilde y)} \sign J_f(x),
+    \]
     wobei $\tilde y \in \RV(f)$ mit
     \[
         |\tilde y- y| < \dist(y,f(\partial \Omega))
@@ -130,7 +130,7 @@ hinreichend nahe an $f$ (in derselben Zushgskomponente von $D_y(\ol \Omega, \R^n
 den Wert von $\deg(\cdot , \Omega, y)$ von $\tilde f$ auf f. Es bleibt zu zeigen, dass die so definierte
 Funktion stetig ist.
 
-\begin{lem}
+\begin{lem}\label{2.10}
     Sei $f\in D_y^2(\ol \Omega, \R^n)$, sei $g\in C^2(\ol \Omega, \R^n)$. Dann existiert $\eps >0$, so 
     dass
     \[
@@ -143,7 +143,7 @@ Funktion stetig ist.
         $f(y)=\varnothing \, \Ra \, (f+tg)^{-1}=\varnothing$ für $|t|
         <\frac{\dist(y,f(\ol \Omega))}{\|g\|_\infty}$
         \item{2)}
-        $y\in \RV (f) \, \Ra \, f^{-1}(y)=\{x\}_{i=1}^N$. Mithilfe des \textit{satzes über die 
+        $y\in \RV (f) \, \Ra \, f^{-1}(y)=\{x\}_{i=1}^N$. Mithilfe des \textit{Satzes über die 
             implizite Funktion} finden wir
             \[
                 U^i(x^i)
@@ -152,10 +152,10 @@ Funktion stetig ist.
             \[
                 (f+tg)(x)=y \qq \forall |t|<\eps
             \]
-            Wir können (zumindest auf evtl. noch kleineren $U^i(x^i)$) annehmen, dass das Vorzeihcen
+            Wir können (zumindest auf evtl. noch kleineren $U^i(x^i)$) annehmen, dass das Vorzeichen
             von $J_f+tg$ konstant ist auf $U^i(x^i)$. Sei 
             \[
-                \eps _2= \frac{\dist(y,f(\Omega\setminus \bigcup_{i=1}^NU^i(x^i))}{\|g\|_\infty}).
+                \eps _2= \frac{\dist(y,f(\Omega\setminus \bigcup_{i=1}^NU^i(x^i)))}{\|g\|_\infty}.
             \]
             Dann gilt $\dist(y,(f+tg)(\partial \Omega))>0$ $\forall |t|<\eps_2$. Das Lemma gilt somit
             für $\eps = \min(\eps,\eps_2)$
