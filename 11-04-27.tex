@@ -35,7 +35,7 @@ $CV(f)$ eine Lebesgue-Nullmenge.
     Klar, falls $f$ eine affine Abbildung ist. (Dimension des Bildraumes der (konstanten) Ableitung!)
     Wir linearisieren. 
 
-    \noindent Es sei $CP(f):=\{x\in \Omega\,|\, J_f(x)=0\}$ die Menge der kritischen Punkte von $f$.
+    \noindent Es sei $\CP(f):=\{x\in \Omega\,|\, J_f(x)=0\}$ die Menge der kritischen Punkte von $f$.
     Sei $\{ Q_j \}_{j\in \N}$ eine abzählbare, offen Überdeckung von $\Omega$ bestehend aus Würfeln,
     so dass
     \[
@@ -50,7 +50,7 @@ $CV(f)$ eine Lebesgue-Nullmenge.
     |f(\CP(f)\cap Q_j)|
     \]
     für alle $j\in \N$ verschwindet. Sei nun $Q$ ein solcher Würfel, $\rho$ dessen Kantenlänge.
-    Sei $\eps >0$, und sei $Q$ unterteilt in $N^n$ Würfel $Q^i$ der Seitenlänge $frac{\rho}{N}$, so
+    Sei $\eps >0$, und sei $Q$ unterteilt in $N^n$ Würfel $Q^i$ der Seitenlänge $\frac{\rho}{N}$, so
     dass
     \begin{align}\label{4}
         |f(x)-f(\tilde x)-f'(\tilde x)(x-\tilde x)|&\leq \int_0^1|f'(\tilde x+t(x-\tilde x))-
@@ -101,15 +101,15 @@ von krit. Werten.)
 \textbf{Idee:} Umschreiben der Determinantenformel als \textit{Integral}.
 Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d. h.
 \[
-    \eta_\eps \in C^\infty_c(B_\eps(0)\subset \R^n), \qq \int_{\R^n} \eta_\eps=1,\qq \eta_eps\geq 0
+    \eta_\eps \in C^\infty_c(B_\eps(0)\subset \R^n), \qq \int_{\R^n} \eta_\eps=1,\qq \eta_\eps\geq 0
 \]
 
 \begin{lem}\label{2.6}
     Sei $f\in D^1_y(\ol \Omega, \R^n)$, $y\nin \CV(F)$. Dann gilt
-    \begin{eqnarray}\label{5}
+    \begin{align}\label{5}
         \deg(f,\Omega,y)&=\sum_{x_j\in f^{-1}(y)} \sign J_f(x_j)\\
                         &= \int_\Omega \eta_\eps (f(x)-y) J_f(x)\d x
-    \end{eqnarray}
+    \end{align}
     für alle $\eps$ hinreichend klein, d. h.
     \[
         \eps_0>\eps>0, \qq \text{mit} \qq \eps_0=\eps_0(f,y)
@@ -146,7 +146,7 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d.
     \end{description}
     \[ \]
 \end{proof}
-Die Inegraldarstellung ergibt auch für kritische Punkte Sinn. Aber:
+Die Integraldarstellung ergibt auch für kritische Punkte Sinn. Aber:
 Wegen Abhängigkeit von $\eps_0$ von $f,y$ ist. Auch der Wert des Integrals nicht a priori stetig in 
 $f,y$, denn $\eps_0$ hängt ab von $f$ und $y$.
 

@@ -34,7 +34,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
     \begin{align*}
         (z\cdot \eta(x))&=\frac{\d}{\d t } \eta (x+tz)\big|_{t=0}=\int_0^1 \frac{\d}{\d t} \vp(x+sz+tz)
        \big|_{t=0} \d s\\
-        &= \int_0^1 \frac{\d}{\d t} \vp(x+sz)\d s=\vp(x-z)-\vp(x)
+        &= \int_0^1 \frac{\d}{\d t} \vp(x+sz)\d s=\vp(x+z)-\vp(x)
     \end{align*}
     \item{c)}
     Es sei $\d _{ij}$ der $(i,j)$- Eintrag der Kofaktormatrix von $(f')_{ij}= \partial _if_j(x)$.
@@ -56,11 +56,11 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         \sum_{i=1}^n \d_{ij} (x) \partial_if_k(x) =\delta_{ij}\cdot J_f(x)
     \]
     Somit gilt:
-    \[
-        \div u(x)=\sum_{k,j}\partial _k u_j(f(x))\cdot \left( \sum_{i=1}^n \d_{ij}(x) \partial f_k(x) 
-                \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d {ij}(x) \right) =
-        \sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
-    \]
+    \begin{align*}
+        \div u(x)&=\sum_{k,j}\partial _k u_j(f(x))\cdot \left( \sum_{i=1}^n \d_{ij}(x) \partial f_k(x) 
+                \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d {ij}(x) \right)\\
+        =\sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
+    \end{align*}
     Behauptungen: Siehe Übungsblatt 2.
     Wir wollen nun zeigen, dass der über die Determinantenformel definierte Abbildungsgrad konstant
     ist auf Zusammenhangskomponente. Zu zeigen: $\deg(f,\Omega,y_1)=\deg(f,\Omega,y_2)$.
@@ -193,7 +193,7 @@ Funktion stetig ist.
 \begin{theorem}[Existenz und Eindeutigkeit des Brower'schen Abbildungsgrades]\label{2.11}
     Es existiert eine eindeutige Abbildung
     \[\deg(f,\Omega,y)\]
-    mit den Eigenschaften \textbf{(D1-D4)}. Weiter gilt
+    mit den Eigenschaften \textbf{(D1)}-\textbf{(D4)}. Weiter gilt
     \[
         \deg(\cdot, \Omega, y): D_y(\ol \Omega, \R^n)\ra \Z
     \]

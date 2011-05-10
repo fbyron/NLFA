@@ -2,17 +2,17 @@
     \[
         G(X) \subset \conv\,G(K).
     \]
-    Sei also $x_0\partial K$ und sei $\eps>0$. Wir wählen $\delta >0$, so dass
+    Sei also $x_0\in\partial K$ und sei $\eps>0$. Wir wählen $\delta >0$, so dass
     \[
-        \|F(x)-F(x_0)\leq\eps \qq \forall x\in K \qq \text{mit} \qq d(x,x_0)\leq 9\delta.
+        \|F(x)-F(x_0)\|\leq\eps \qq \forall x\in K \qq \text{mit} \qq d(x,x_0)\leq 9\delta.
     \]
     Es bleibt zu zeigen, dass
     \[
         \|G(x)-F(x_0)\|\leq \eps \qq \forall x\in X\setminus K \qq \text{mit} \qq d(x,x_0)\leq \delta
-    \]
+    \]a
     Sei also $x\nin K$, dann gilt
     \[
-        \|F(x)-F(x_0)\|\leq \sum_{\lambda\in \Lambda} \vp_\lambda (x) \|F(x_\lambda)-F(x_0)\|
+        \|G(x)-F(x_0)\|\leq \sum_{\lambda\in \Lambda} \vp_\lambda (x) \|F(x_\lambda)-F(x_0)\|
     \]
     Nach Konstruktion liegt $x_\lambda$ nicht weit von $x$ entfernt, damit nicht weit von $x_0$, falls
     $x\in\supp \, \vp _\lambda$. In der Tat gilt für $x\in \supp\,\vp_\lambda$:
@@ -29,7 +29,7 @@
     \begin{align*}
         \Ra \, \diam (\supp \, \vp _\lambda) &\leq 2\rho(\tilde x)=\dist(\tilde x,K)
         \leq2\dist(K,B_{\rho(\tilde x)}(\tilde x))\leq 2 \dist(K,\supp \vp_\lambda)\\
-        \Ra \, d(x_0,x_\lambda)\leq 4 \dist(K,\supp\, \vp_\lambda).
+        \Ra \, d(x_0,x_\lambda)&\leq 4 \dist(K,\supp\, \vp_\lambda).
     \end{align*}
     Und es folgt
     \begin{align*}
@@ -164,13 +164,13 @@ Sei $m<n$, wir identifizieren im Folgenden den $\R^m$ mit dem Unterraum
     \]
     Sei $y\in \R^m$, $y\nin g(\partial \Omega)$. Dann gilt
     \[
-        \deg(g,\Omega,y)=\deg(g|_{\ol{Omega}\cap\R^m},\Omega|_{R^m},y).
+        \deg(g,\Omega,y)=\deg(g|_{\ol{\Omega}\cap\R^m},\Omega|_{R^m},y).
     \]
 \end{theorem}
 
 \begin{proof}
-    Sei $\Omega_m=\Omega\cap\R^m\neq \varnothing$ offen, beschränkt im $R^m$, und
-    $g_m:=g|_{\ol{Omega_m}}$. Es gilt
+    Sei $\Omega_m=\Omega\cap\R^m\neq \varnothing$ offen, beschränkt im $\R^m$, und
+    $g_m:=g|_{\ol{\Omega_m}}$. Es gilt
     \[
         \partial \Omega_m=\partial\Omega\cap\R^m.
     \]
