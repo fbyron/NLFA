@@ -3,7 +3,7 @@
 Wir haben einen Kandidaten für $\deg$ identifiziert; für $f\in D'_Y(\ol\Omega,\R^n)$, $y\in \R^n\cap
 RV(f)$ gilt
 \[
-    \deg(f,\Omega, g)=\sum_{x_j\in f^{-1}(y)} \sign \det J_f(x_j).
+    \deg(f,\Omega, g)=\sum_{x_j\in f^{-1}(y)} \sign J_f(x_j).
 \]
 
 \noindent \textbf{Problem:} Nur für glatte $f$, und reguläre Punkte zu definieren. Programm zum 
@@ -35,7 +35,7 @@ $CV(f)$ eine Lebesgue-Nullmenge.
     Klar, falls $f$ eine affine Abbildung ist. (Dimension des Bildraumes der (konstanten) Ableitung!)
     Wir linearisieren. 
 
-    \noindent Es sei $CP(f):=\{x\in \Omega\,|\, \det J_f(x)=0\}$ die Menge der kritischen Punkte von $f$.
+    \noindent Es sei $CP(f):=\{x\in \Omega\,|\, J_f(x)=0\}$ die Menge der kritischen Punkte von $f$.
     Sei $\{ Q_j \}_{j\in \N}$ eine abzählbare, offen Überdeckung von $\Omega$ bestehend aus Würfeln,
     so dass
     \[
@@ -107,8 +107,8 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d.
 \begin{lem}\label{2.6}
     Sei $f\in D^1_y(\ol \Omega, \R^n)$, $y\nin \CV(F)$. Dann gilt
     \begin{eqnarray}\label{5}
-        \deg(f,\Omega,y)&=\sum_{x_j\in f^{-1}(y)} \sign \det J_f(x_j)\\
-                        &= \int_\Omega \eta_\eps (f(x)-y) \det J_f(x)\d x
+        \deg(f,\Omega,y)&=\sum_{x_j\in f^{-1}(y)} \sign J_f(x_j)\\
+                        &= \int_\Omega \eta_\eps (f(x)-y) J_f(x)\d x
     \end{eqnarray}
     für alle $\eps$ hinreichend klein, d. h.
     \[
@@ -130,7 +130,7 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d.
         Aus dem \textit{Satz über die imliziete Funktion} (war ja klar, dass wir den mal brauchen)
         folgt für evtl. noch kleiners $\eps_0$, dass
         \[
-            f\big|_{U_i(x_i)} \qq \text{bijektiv,} \qq \det J_f(x)\neq 0 \qq \forall x \in U_i(x_i).
+            f\big|_{U_i(x_i)} \qq \text{bijektiv,} \qq J_f(x)\neq 0 \qq \forall x \in U_i(x_i).
         \]
         Wieder gilt $\eta _{\eps}(f(x)-y)=0$ für
         \[
@@ -138,9 +138,9 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d.
         \]
         Damit gilt
         \begin{align*}
-            \int_\Omega \eta_\eps(f(x)-y) \det J_f(x) \d x&= \sum_{i=1}^N \sign \det J_f(x^i)\cdot
+            \int_\Omega \eta_\eps(f(x)-y) J_f(x) \d x&= \sum_{i=1}^N \sign J_f(x^i)\cdot
             \int_{B_{\eps_0(x)}}\eta_\eps (\tilde x ) \d \tilde x\\
-            &=\sum_{x^i\in f^{-1(y)}} \sign \det J_f(x^i)
+            &=\sum_{x^i\in f^{-1(y)}} \sign  J_f(x^i)
         \end{align*}
         mit $f(x)=\tilde x$.
     \end{description}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  4 MAY 2011 21:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  10 MAY 2011 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1112,15 +1112,16 @@ File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
 \c@endcorctr=\count152
 \c@currpropctr=\count153
 \c@endpropctr=\count154
-\c@currremarkctr=\count155
-\c@endremarkctr=\count156
-\c@currdefictr=\count157
-\c@enddefictr=\count158
-\c@currrulctr=\count159
-\c@endrulctr=\count160
-\c@currproofctr=\count161
-\c@endproofctr=\count162
-\c@proof=\count163
+\c@currdefictr=\count155
+\c@enddefictr=\count156
+\c@currrulctr=\count157
+\c@endrulctr=\count158
+\c@currremarkctr=\count159
+\c@endremarkctr=\count160
+\c@remark=\count161
+\c@currproofctr=\count162
+\c@endproofctr=\count163
+\c@proof=\count164
 
 (/usr/share/texmf-texlive/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes,
 docmode, (/usr/share/texmf-texlive/tex/generic/xypic/xyrecat.tex)
@@ -1161,14 +1162,14 @@ Loading kernel: messages; fonts; allocations: state,
  direction,
 \d@X=\dimen202
 \d@Y=\dimen203
-\K@=\count164
-\KK@=\count165
-\Direction=\count166
+\K@=\count165
+\KK@=\count166
+\Direction=\count167
 \K@dXdY=\dimen204
 \K@dYdX=\dimen205
 \xyread@=\read1
 \xywrite@=\write4
-\csp@=\count167
+\csp@=\count168
 \quotPTK@=\dimen206
 
 utility macros; pictures: \xy, positions,
@@ -1183,7 +1184,7 @@ edges, connections;  Xy-pic loaded)
  Xy-pic option: All features v.3.3
 (/usr/share/texmf-texlive/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.7 curve,
-\crv@cnt@=\count168
+\crv@cnt@=\count169
 \crvpts@=\toks45
 \splinebox@=\box44
 \splineval@=\dimen207
@@ -1209,13 +1210,13 @@ edges, connections;  Xy-pic loaded)
  Xy-pic option: Colour extension v.3.3 loaded)
 (/usr/share/texmf-texlive/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.4
-\Row=\count169
-\Col=\count170
+\Row=\count170
+\Col=\count171
 \queue@=\toks46
 \queue@@=\toks47
-\qcount@=\count171
-\qcount@@=\count172
-\matrixsize@=\count173
+\qcount@=\count172
+\qcount@@=\count173
+\matrixsize@=\count174
  loaded)
 (/usr/share/texmf-texlive/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
@@ -1225,55 +1226,59 @@ edges, connections;  Xy-pic loaded)
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-(./nl.funkana.aux)
+(./nl.funkana.aux
+
+LaTeX Warning: Label `2.12' multiply defined.
+
+)
 \openout1 = `nl.funkana.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 115.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 115
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 120.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 120
 .
  (/usr/share/texmf-texlive/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 115
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 120.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 120
 .
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 115
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 120.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 120
 .
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 115.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 120.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 120.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 115.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 120.
 
 
 (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 115.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 120.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txr.fd
@@ -1281,15 +1286,15 @@ File: ot1txr.fd 2000/12/15 v3.1
 )
 (/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count174
+\scratchcounter=\count175
 \scratchdimen=\dimen213
 \scratchbox=\box45
-\nofMPsegments=\count175
-\nofMParguments=\count176
+\nofMPsegments=\count176
+\nofMParguments=\count177
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count177
+\MPscratchCnt=\count178
 \MPscratchDim=\dimen214
-\MPnumerator=\count178
+\MPnumerator=\count179
 \everyMPtoPDFconversion=\toks49
 )
 *geometry auto-detecting driver*
@@ -1333,66 +1338,66 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-Package hyperref Info: Link coloring ON on input line 115.
+Package hyperref Info: Link coloring ON on input line 120.
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count179
+\c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 115.
-LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \ref on input line 120.
+LaTeX Info: Redefining \pageref on input line 120.
  (./nl.funkana.out)
 (./nl.funkana.out)
 \@outlinefile=\write5
 \openout5 = `nl.funkana.out'.
 
 \AtBeginShipoutBox=\box46
-LaTeX Font Info:    Try loading font information for U+txsya on input line 119.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 124.
 
  (/usr/share/texmf-texlive/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 119.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 124.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 119.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 124.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 119.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 124.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 119.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 124.
 
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 120--123
+Underfull \hbox (badness 10000) in paragraph at lines 125--128
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 125
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 130
 .
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-<license.pdf, id=42, 96.36pt x 33.726pt>
+<license.pdf, id=46, 96.36pt x 33.726pt>
 File: license.pdf Graphic file (type pdf)
  <use license.pdf> [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./license.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+txr on input line 140.
+LaTeX Font Info:    Try loading font information for TS1+txr on input line 145.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ts1txr.fd
@@ -1533,41 +1538,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--90
 
  []
 
-[19])
+[19]) (./11-05-09.tex [20] [21]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 157.
+
+[22])
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
- [20] (./nl.funkana.aux) ) 
+ [23] (./nl.funkana.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 18253 strings out of 493848
- 275195 string characters out of 1152822
- 372034 words of memory out of 3000000
- 20923 multiletter control sequences out of 15000+50000
+ 18306 strings out of 493848
+ 275825 string characters out of 1152822
+ 372309 words of memory out of 3000000
+ 20960 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,16n,49p,340b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/Mn
-SymbolE.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/
-usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{/usr/share/texm
-f-texlive/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-texlive/fonts/enc/dvips
-/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSy
-mbolD.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}</us
-r/share/texmf-texlive/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/share/te
-xmf-texlive/fonts/type1/public/mnsymbol/MnSymbol5.pfb></usr/share/texmf-texlive
-/fonts/type1/public/mnsymbol/MnSymbol7.pfb></usr/share/texmf-texlive/fonts/type
-1/public/rsfs/rsfs10.pfb></usr/share/texmf-texlive/fonts/type1/public/rsfs/rsfs
-7.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/rtcxr.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf-texlive/f
-onts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/txfonts/rtxr.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/rtxsc.p
-fb></usr/share/texmf-texlive/fonts/type1/public/txfonts/txsyb.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/txfonts/txtt.pfb></usr/share/texmf-texlive/font
-s/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/ut
-mbi8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (23 pages, 285230 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/
+texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-texlive/
+fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-texlive/fonts/enc/dvip
+s/mnsymbol/MnSymbolS.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}
+{/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/te
+xmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}</usr/share/texmf-texlive/fo
+nts/type1/public/mnsymbol/MnSymbol10.pfb></usr/share/texmf-texlive/fonts/type1/
+public/mnsymbol/MnSymbol5.pfb></usr/share/texmf-texlive/fonts/type1/public/mnsy
+mbol/MnSymbol7.pfb></usr/share/texmf-texlive/fonts/type1/public/rsfs/rsfs10.pfb
+></usr/share/texmf-texlive/fonts/type1/public/rsfs/rsfs7.pfb></usr/share/texmf-
+texlive/fonts/type1/public/txfonts/rtcxr.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/txfonts/rtxi.pfb></usr/share/texmf-texlive/fonts/type1/public/txfont
+s/rtxmi.pfb></usr/share/texmf-texlive/fonts/type1/public/txfonts/rtxr.pfb></usr
+/share/texmf-texlive/fonts/type1/public/txfonts/rtxsc.pfb></usr/share/texmf-tex
+live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
+/public/txfonts/txtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
+xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on nl.funkana.pdf (26 pages, 300094 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 421 PDF objects out of 1000 (max. 8388607)
+ 126 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

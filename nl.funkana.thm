@@ -8,27 +8,27 @@
 \contentsline {prop}{{Proposition}{1.{6}}{}}{4}{theorem.1.6}
 \contentsline {proof}{{Beweis:}{3}{}}{4}{proof.3}
 \contentsline {defi}{{Definition}{1.{7}}{}}{4}{theorem.1.7}
-\contentsline {remark}{{Bemerkung}{1.{8}}{}}{4}{theorem.1.8}
-\contentsline {defi}{{Definition}{1.{9}}{Partielle Ableitung}}{4}{theorem.1.9}
-\contentsline {prop}{{Proposition}{1.{10}}{}}{4}{theorem.1.10}
+\contentsline {remark}{{Bemerkung:}{1}{}}{4}{remark.1}
+\contentsline {defi}{{Definition}{1.{8}}{Partielle Ableitung}}{4}{theorem.1.8}
+\contentsline {prop}{{Proposition}{1.{9}}{}}{4}{theorem.1.9}
 \contentsline {proof}{{Beweis:}{4}{}}{5}{proof.4}
-\contentsline {prop}{{Proposition}{1.{11}}{}}{5}{theorem.1.11}
+\contentsline {prop}{{Proposition}{1.{10}}{}}{5}{theorem.1.10}
 \contentsline {proof}{{Beweis:}{5}{}}{5}{proof.5}
-\contentsline {theorem}{{Theorem}{1.{12}}{Satz über implizite Funktion}}{6}{theorem.1.12}
+\contentsline {theorem}{{Theorem}{1.{11}}{Satz über implizite Funktion}}{6}{theorem.1.11}
 \contentsline {proof}{{Beweis:}{6}{}}{6}{proof.6}
-\contentsline {remark}{{Bemerkung}{1.{13}}{}}{6}{theorem.1.13}
+\contentsline {remark}{{Bemerkung:}{2}{}}{6}{remark.2}
 \contentsline {proof}{{Beweis:}{7}{}}{7}{proof.7}
-\contentsline {theorem}{{Theorem}{1.{14}}{}}{7}{theorem.1.14}
+\contentsline {theorem}{{Theorem}{1.{12}}{}}{7}{theorem.1.12}
 \contentsline {proof}{{Beweis:}{8}{}}{7}{proof.8}
-\contentsline {remark}{{Bemerkung}{1.{15}}{}}{7}{theorem.1.15}
+\contentsline {remark}{{Bemerkung:}{3}{}}{7}{remark.3}
 \contentsline {proof}{{Beweis:}{9}{}}{7}{proof.9}
-\contentsline {defi}{{Definition}{1.{16}}{Zusammenhände Mengen}}{7}{theorem.1.16}
-\contentsline {remark}{{Bemerkung}{1.{17}}{}}{7}{theorem.1.17}
-\contentsline {theorem}{{Theorem}{1.{18}}{Mittelwert}}{7}{theorem.1.18}
+\contentsline {defi}{{Definition}{1.{13}}{Zusammenhände Mengen}}{7}{theorem.1.13}
+\contentsline {remark}{{Bemerkung:}{4}{}}{7}{remark.4}
+\contentsline {theorem}{{Theorem}{1.{14}}{Mittelwert}}{7}{theorem.1.14}
 \contentsline {proof}{{Beweis:}{10}{}}{7}{proof.10}
-\contentsline {cor}{{Corollar}{1.{19}}{}}{8}{theorem.1.19}
-\contentsline {remark}{{Bemerkung}{1.{20}}{}}{8}{theorem.1.20}
-\contentsline {lem}{{Lemma}{1.{21}}{}}{8}{theorem.1.21}
+\contentsline {cor}{{Corollar}{1.{15}}{}}{8}{theorem.1.15}
+\contentsline {remark}{{Bemerkung:}{5}{}}{8}{remark.5}
+\contentsline {lem}{{Lemma}{1.{16}}{}}{8}{theorem.1.16}
 \contentsline {proof}{{Beweis:}{11}{}}{8}{proof.11}
 \contentsline {defi}{{Definition}{2.{1}}{}}{10}{theorem.2.1}
 \contentsline {theorem}{{Theorem}{2.{2}}{}}{10}{theorem.2.2}
@@ -55,5 +55,12 @@
 \contentsline {proof}{{Beweis:}{22}{}}{18}{proof.22}
 \contentsline {theorem}{{Theorem}{2.{13}}{}}{18}{theorem.2.13}
 \contentsline {proof}{{Beweis:}{23}{}}{18}{proof.23}
-\contentsline {theorem}{{Theorem}{2.{14}}{}}{19}{theorem.2.14}
+\contentsline {theorem}{{Theorem}{2.{14}}{Fortsetzung stetiger Funktionen}}{19}{theorem.2.14}
 \contentsline {proof}{{Beweis:}{24}{}}{19}{proof.24}
+\contentsline {remark}{{Bemerkung:}{6}{}}{21}{remark.6}
+\contentsline {theorem}{{Theorem}{2.{16}}{Brouwerscher Fixpunktsatz}}{21}{theorem.2.16}
+\contentsline {proof}{{Beweis:}{25}{}}{21}{proof.25}
+\contentsline {remark}{{Bemerkung:}{7}{}}{21}{remark.7}
+\contentsline {proof}{{Beweis:}{26}{}}{22}{proof.26}
+\contentsline {theorem}{{Theorem}{2.{17}}{Reduktionseigenschaften des Abbildungsgrades}}{22}{theorem.2.17}
+\contentsline {proof}{{Beweis:}{27}{}}{22}{proof.27}

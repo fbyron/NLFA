@@ -1,0 +1,209 @@
+    $G$ ist offensichtlich stetig auf $X\setminus\partial K$ und
+    \[
+        G(X) \subset \conv\,G(K).
+    \]
+    Sei also $x_0\partial K$ und sei $\eps>0$. Wir wählen $\delta >0$, so dass
+    \[
+        \|F(x)-F(x_0)\leq\eps \qq \forall x\in K \qq \text{mit} \qq d(x,x_0)\leq 9\delta.
+    \]
+    Es bleibt zu zeigen, dass
+    \[
+        \|G(x)-F(x_0)\|\leq \eps \qq \forall x\in X\setminus K \qq \text{mit} \qq d(x,x_0)\leq \delta
+    \]
+    Sei also $x\nin K$, dann gilt
+    \[
+        \|F(x)-F(x_0)\|\leq \sum_{\lambda\in \Lambda} \vp_\lambda (x) \|F(x_\lambda)-F(x_0)\|
+    \]
+    Nach Konstruktion liegt $x_\lambda$ nicht weit von $x$ entfernt, damit nicht weit von $x_0$, falls
+    $x\in\supp \, \vp _\lambda$. In der Tat gilt für $x\in \supp\,\vp_\lambda$:
+    \begin{align*}
+        d(x,x_\lambda)&\leq \dist(x_\lambda,\supp\,\vp_\lambda)
+        +\underbrace{\diam(\supp\, \vp_\lambda)}_{=\sup_{x,y\in\supp\,\vp_\lambda} d(x,y)}\\
+            &\leq 2\dist(K,\supp \, \vp _\lambda)+\diam(\supp\, \vp _\lambda)
+    \end{align*}
+    Nachdem $\{\vp _\lambda\}_{\lambda\in\Lambda}$ der Überdeckung $\{B_{\rho(x)}\}_{x\in X\setminus K}$
+    untergeordnet ist, existiert $\tilde x\in X\setminus K$, so dass
+    \begin{align*}
+        \supp\, \vp _\lambda &\subset B_{\rho(\tilde x)}(\tilde x)
+    \end{align*}
+    \begin{align*}
+        \Ra \, \diam (\supp \, \vp _\lambda) &\leq 2\rho(\tilde x)=\dist(\tilde x,K)
+        \leq2\dist(K,B_{\rho(\tilde x)}(\tilde x))\leq 2 \dist(K,\supp \vp_\lambda)\\
+        \Ra \, d(x_0,x_\lambda)\leq 4 \dist(K,\supp\, \vp_\lambda).
+    \end{align*}
+    Und es folgt
+    \begin{align*}
+        d(x_0,x_\lambda) &\leq d(x_0,x)+d(x,x_\lambda)\\
+                &\leq d(x_0,x)+4\dist(K,\supp\,\vp_\lambda)\\
+                &\leq d(x_0,x)+8\dist(K,\supp\, \vp_\lambda)\\
+                &\leq d(x_0,x)+8d(x_0,x)=9d(x_0,x)\leq \delta.
+    \end{align*}
+    Nach Wahl von $\delta$ gilt
+    \[
+        \|F(x_{\lambda})-F(x_0)\|\leq \eps \qq \forall \lambda\in\Lambda:\, \vp_\lambda(x)\neq 0.
+    \]
+    Somit gilt
+    \[
+        \|G(x)-G(x_0)\|\leq \eps \qq \text{für} \qq d(x,x_0)\leq \delta.
+    \]
+\end{proof}
+
+\begin{remark}
+    Mit Hilfe dieses Satzes und dem Abbildungsgrad lässt sich der sog. „Igelsatz“ zeigen, der besagt,
+    dass man einen Igel nicht stetig kämmen kann. Übungsaufgabe. 
+\end{remark}
+
+\begin{theorem}[Brouwerscher Fixpunktsatz]\label{2.13}
+    Sei $K$ ein topologischer Raum, der zu einer kompakten konvexen Teilmenge des $R^n$ homöomorph ist.
+    Sei $f\in C(K,K)$. Dann besitzt $f$ einen Fixpunkt.
+\end{theorem}
+
+\begin{proof}
+    \begin{description}
+    \item{1.}
+    $K=\ol{B_r(0)}\subset\R^n$. Falls ein Fixpunkt auf dem Rand existiert, dann sind wir fertig.
+    Ansonsten gilt für $H(t)=\Id-tf$, dass $0\nin H(t)(\partial B_r(0))$, nachdem
+    \[
+        |H(t)(x)|\geq |x|-t|f(x)|\geq (1-t)r>0 \qq \text{für} \qq 0\leq t< 1, \qq x\in\partial B_r(0).
+    \]
+    Nach der Annahme der Nichtexistenz eines Fixpunktes auf $\partial B_r(0)$ ist auch $H(1)(x)\neq 0$
+    $\forall x \in \partial B_r(0)$.
+    \[
+        \Ra \, \deg(\Id-f,B_r(0),0)=\deg(\Id,B_r(0),0)=1.
+    \]
+    Somit existiert $x\in B_r(0)$ mit $x=f(x)$.
+    \item{2.}
+    Sei nun $K\subset \R^n$ konvex, kompakt. Für ein $\rho>0$ gilt $K\subset B_\rho(0)$ und gemäß Satz
+    \label{2.12} können wir $f$ stetig durch $g$ auf $\ol{B_{\rho}(0)}$ fortsetzen mit
+    \[
+        g\left( \ol{B_\rho (0)} \right)\subset \conv \, K=K.
+    \]
+    Nach 1. finden wir $x\in \ol{B_\rho(x)}$ mit $x=g(x)$.
+    Es gilt $g(x)\in K$, somit folgt $x\in K$ und wir haben $x \in K$ mit $f(x)=x$.
+    \item{3.}
+    Sei $K$ homöomorph zu $K^\star \subset \R^n$ kompakt, konvex. Sei $h$ die entsprechende Homöomorphie.
+    nach 2. besitzt $h\circ f \circ h^{-1}$ einen Fixpunkt $x^\star\in K^\star$. Damit ist aber $x=h^{-1}
+    (x^\star)\in K$ ein Fixpunkt von $f$.
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{remark}
+    \begin{description}
+    \item{1.}
+    Die Bedingungen sind tatsächlich notwendig. Gegenbeispiele siehe Übung.
+    \item{2.}
+    Es existiert auch eine stetige Abbildung $f\in C(\ol{B_1(0)},\ol{B_1(0)})$, $B_1\subset X$ separabler
+    $\infty$-dimensionaler Hilbertraum ohne Fixpunkt.
+    \begin{description}
+    \item{$\ra$}
+    Beispiel von Kakutani später.
+    \item{$\ra$}
+    \textit{Schauderscher Fixpunktsatz}.
+    \end{description}
+    \item{3.}
+    Im eindimensionalen Fall ist \ref{2.13} nichts anderes als der Zwischenwertsatz angewendet auf
+    $x-f(x)$.
+    \item{4.}
+    Vergleich mit dem \textit{Banach'schen Fixpunktsatz}: Wesentlich geringere Anforderungen an den
+    Operator (nur Stetigkeit), dafür hohe Anforderungen an den Raum (endlichdim., kompakt, konvex).
+    Wir bekommen keine Eindeutigkeitsaussage.
+    \end{description}
+\end{remark}
+
+\subsubsection*{Ein Anwendugsbeispiel}
+
+Existenz positiver (bzw. nichtnegativer) Eigenwerte und Eigenfunktionen. Sei $A=(a_{ij})_{i,j=1}^n$ eine
+Matrix und sei $a_{ij}\geq 0$ $\forall (i,j)$. Dann existiert $\lambda\geq 0$, $x=(x_i)_{i=1}^n$,
+$x_i\geq 0$ $\forall i$ mit
+\begin{align}\label{6}
+    Ax=\lambda x
+\end{align}
+
+\begin{proof}
+    Sei 
+    \[
+        K=\{ x\in \R^n \, |\, x\geq 0, \, \sum_{i}x_i=1 \}
+    \]
+    kompakt und konvex.
+    \begin{description}
+        \item{1)}
+        Falls $Ax=0$ für ein $x\in K$, gilt \ref{6} mit $\lambda=0$.
+        \item{2)}
+        Sei $Ax\neq 0$ $\forall x\in K$. Dann existiert $\alpha>0$ mit
+        \[
+            \sum_i(Ax)_i\geq \alpha \qq \forall x\in K.
+        \]
+        Es sei also
+        \[
+            f:x\mapsto \frac{Ax}{\sum_i (Ax)_i}; \qq (f(x))_i \geq 0 \qq \forall i
+        \]
+        und es gilt
+        \[
+            \sum_i (f(x))_i=1 \qq \forall x\in K.
+        \]
+        Dann ist $f(K)\subset K$ und nach Satz $\ref{2.13}$ existiert ein Fixpunkt $x\in K$ mit $x=f(x)$,
+        d.h.
+        \[
+            Ax=\lambda x \qq \text{mit} \qq \lambda =\sum_i(Ax)_i >0
+        \]
+    \end{description}\[ \]
+\end{proof}
+
+\subsection{Weitere Eigenschaften des Abbildungsgrades}
+
+Sei $m<n$, wir identifizieren im Folgenden den $\R^m$ mit dem Unterraum
+\[
+    \{x\in \R^n \, | \, x{m+n}=…=x_n=0\}\subset \R^n.
+\]
+
+\begin{theorem}[Reduktionseigenschaften des Abbildungsgrades]\label{2.14}
+    Sei $\Omega \subset \R^n$ offen und beschränkt, $\Omega \cap \R^m \neq \varnothing$ und sei
+    \[
+        f:\ol \Omega \ra \R^m\, \text{stetig,} \qq g=\Id-f
+    \]
+    Sei $y\in \R^m$, $y\nin g(\partial \Omega)$. Dann gilt
+    \[
+        \deg(g,\Omega,y)=\deg(g|_{\ol{Omega}\cap\R^m},\Omega|_{R^m},y).
+    \]
+\end{theorem}
+
+\begin{proof}
+    Sei $\Omega_m=\Omega\cap\R^m\neq \varnothing$ offen, beschränkt im $R^m$, und
+    $g_m:=g|_{\ol{Omega_m}}$. Es gilt
+    \[
+        \partial \Omega_m=\partial\Omega\cap\R^m.
+    \]
+    und
+    \[
+        g_m(\ol{\Omega_m})\subset\R^m,\, y\nin g_m(\partial\Omega_m).
+    \]
+    $\Ra$ $\deg(g_m,\Omega_m,y)$ ist definiert (als Abbildungsgrad im $\R^m$).
+    \begin{description}
+        \item{1)}
+        Sei $g\in C^1(\ol \Omega)$ und $y\in \RV(g)$ und $x\in \Omega$, $g(x)=y$.
+        \[
+        \Ra \, x=y=f(x)\in \R^m \qq \Ra \qq x\in \Omega_m.
+        \]
+        Somit haben wir
+        \[
+            g^{-1}(y)=g_m^{-1}(y).
+        \]
+        Nach der Determinantenformel genögt es nun zu zeigen, dass
+        \[
+            J_{g_m}(x)=J_g(x) \qq \text{für} \qq x\in \Omega_m.
+        \]
+        Es sei $\Id_k$ die $k\times k$-Einheitsmatrix. Es gilt
+        \begin{align*}
+            J_{g_m}(x)&=\det(\Id_m-f'(x)) \qq (f|_{\Omega_m}')\\
+            J_g(x)&= \det\begin{pmatrix} \Id_m-(\partial_jf_i(x)) & -\partial_jf_i\\
+            0& \Id_{n-m}\end{pmatrix} \qq \text{wegen} \, f(\ol\Omega)\subset\R^m.
+        \end{align*}
+        Die gewünschte Aussage folgt sofort durch Entwicklung der Determinante nach den letzten
+        $n-m$ Zeilen.
+        \item{2)}
+        Der allgemeine Fall folgt durch Wahl von $\tilde g=\Id-\tilde f$ hinreichend nah an $g$, so dass
+        $\tilde g$ die in 1. geforderten Eigenschaften besitzt.
+    \end{description}
+    \[ \]
+\end{proof}
