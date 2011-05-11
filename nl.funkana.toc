@@ -9,4 +9,5 @@
 \contentsline {subsection}{\numberline {2.2}Verallgemeinerung der Determinantenformel}{13}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Der Brouwer'sche Fixpunktsatz}{19}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Weitere Eigenschaften des Abbildungsgrades}{22}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Der Fixpunktsatz von Kakutani und eine Anwendung in der Spieltheorie}{23}{subsection.2.5}
 \contentsfinish 
