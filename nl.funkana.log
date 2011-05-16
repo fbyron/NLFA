@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  13 MAY 2011 16:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  16 MAY 2011 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1230,6 +1230,9 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `2.12' multiply defined.
 
+
+LaTeX Warning: Label `2.16' multiply defined.
+
 )
 \openout1 = `nl.funkana.aux'.
 
@@ -1392,7 +1395,7 @@ LaTeX Font Info:    Try loading font information for OT1+txtt on input line 131
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-<license.pdf, id=50, 96.36pt x 33.726pt>
+<license.pdf, id=62, 96.36pt x 33.726pt>
 File: license.pdf Graphic file (type pdf)
  <use license.pdf> [1
 
@@ -1526,7 +1529,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--90
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 157.
 
-[22]) (./11-05-11.tex [23]
+[22]) (./11-05-16.1.tex [23]) (./11-05-11.tex [24]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 74.
 
@@ -1542,10 +1545,10 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 89.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 93.
 
+[25]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 101.
 
-[24]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 120.
 
@@ -1561,20 +1564,20 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 120.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 125.
 
-)
+[26]) (./11-05-16.2.tex [27])
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
- [25] (./nl.funkana.aux)
+ [28] (./nl.funkana.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18350 strings out of 493848
- 276361 string characters out of 1152822
- 372603 words of memory out of 3000000
- 20988 multiletter control sequences out of 15000+50000
+ 18405 strings out of 493848
+ 276975 string characters out of 1152822
+ 373080 words of memory out of 3000000
+ 21018 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,16n,49p,340b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1597,9 +1600,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (28 pages, 314382 bytes).
+Output written on nl.funkana.pdf (31 pages, 333190 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

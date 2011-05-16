@@ -64,8 +64,18 @@
 \contentsline {proof}{{Beweis:}{26}{}}{22}{proof.26}
 \contentsline {theorem}{{Theorem}{2.{17}}{Reduktionseigenschaften des Abbildungsgrades}}{22}{theorem.2.17}
 \contentsline {proof}{{Beweis:}{27}{}}{22}{proof.27}
-\contentsline {theorem}{{Theorem}{2.{18}}{Kakutani}}{23}{theorem.2.18}
+\contentsline {theorem}{{Theorem}{2.{18}}{Produktregel}}{23}{theorem.2.18}
 \contentsline {proof}{{Beweis:}{28}{}}{23}{proof.28}
-\contentsline {defi}{{Definition}{2.{19}}{Nash-Gleichgewicht}}{25}{theorem.2.19}
-\contentsline {theorem}{{Theorem}{2.{20}}{}}{25}{theorem.2.20}
-\contentsline {proof}{{Beweis:}{29}{}}{25}{proof.29}
+\contentsline {theorem}{{Theorem}{2.{19}}{Jordanische Kurvensatz}}{24}{theorem.2.19}
+\contentsline {theorem}{{Theorem}{2.{20}}{Kakutani}}{24}{theorem.2.20}
+\contentsline {proof}{{Beweis:}{29}{}}{24}{proof.29}
+\contentsline {defi}{{Definition}{2.{21}}{Nash-Gleichgewicht}}{26}{theorem.2.21}
+\contentsline {theorem}{{Theorem}{2.{22}}{}}{26}{theorem.2.22}
+\contentsline {proof}{{Beweis:}{30}{}}{27}{proof.30}
+\contentsline {theorem}{{Theorem}{3.{1}}{Kakutani}}{27}{theorem.3.1}
+\contentsline {proof}{{Beweis:}{31}{}}{27}{proof.31}
+\contentsline {defi}{{Definition}{3.{2}}{}}{27}{theorem.3.2}
+\contentsline {prop}{{Proposition}{3.{3}}{}}{27}{theorem.3.3}
+\contentsline {proof}{{Beweis:}{32}{}}{28}{proof.32}
+\contentsline {defi}{{Definition}{3.{4}}{}}{28}{theorem.3.4}
+\contentsline {remark}{{Bemerkung:}{8}{}}{28}{remark.8}

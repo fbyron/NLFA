@@ -1,0 +1,121 @@
+\section{Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}
+
+Das Ziel ist es, den Fixpunktsatz von Brouwer auf $\infty$-dimensionale Räume ………
+
+\begin{theorem}[Kakutani]\label{3.1}
+    Sei $H$ ein $\infty$-dimensionaler separabler Hilbertraum. Dann existiert eine stetige Abbildung
+    \[
+        f:H\ra H,
+    \]
+    welche die Einheitenkugel in sich selbst abbildet und die keinen Fixpunkt besitzt.
+\end{theorem}
+
+\begin{proof}
+    Sei $(e_n)_{n\in \Z}$ eine Orhonormalbasis von $H$. Für $x=\sum_{j=-\infty}^\infty\alpha_je_j$
+    definieren wir
+    \[
+        U(x):=\sum_{j=-\infty}^\infty \alpha _je_{j+1};\qq f(x):=\frac12 U(x)+\frac 12 e_0
+    \]
+    Zu zeigen:
+    \begin{description}
+    \item{-}
+    $U$ ist stetig.
+    \item{-}
+    $\|U(x)\|<1$ für $\|x\|<1$
+    \item{-}
+    $f$ besitzt keinen Fixpunkt in $\ol{B_1(0)}$
+    \begin{itemize}
+        \item bei $x=0$.
+        \item auf dem Rand.
+        \item im Innern.
+    \end{itemize}
+    \end{description}
+    \[  \]
+\end{proof}
+
+\subsection{Der Abbildungsgrad auf endlichen Banachräumen}
+
+\begin{defi}\label{3.2}
+    Sei $X$ ein (reeller) Banachraum von Dimension $n$, und sei $\Phi$ ein Isomorphismus von $X$ nach 
+    $\R^n$. Für $f\in D_y(\ol \Omega,X)$, $\Omega \subset X$ offen, beschränkt, $y\in X$ deinieren wir
+    \[
+        \deg(f,\Omega,y)=\deg(\Phi\circ f \circ \Phi^{-1},\Phi(\Omega),\Phi(y))
+    \]
+\end{defi}
+
+\begin{prop}\label{3.3}
+    Der in Definition \ref{3.2} definierte Abbildungsgrad ist unabhängig von der Wahl von $\Phi$.
+\end{prop}
+
+\begin{proof}
+    Sei $\Psi$ ein zweiter Isomorphismus. Es gilt $A=\Psi\circ\Phi^{-1}\in \Gl(n)$. Wir schreiben
+    \[
+        f^\star:=\Phi \circ \phi^{-1}, \qq y^\star\in \RV(\tilde f^\star)
+    \]
+    und wählen wie üblich $\tilde f^\star\in C^1(\Phi(\ol\Omega),\R^n)$ aus derselben Komponente von
+    $D_y(\Phi(\ol \Omega),\R^n)$ wie $f^\star$, so dass $y^\star\in \RV(\tilde f^\star)$. Dann ist auch
+    \[
+        A\circ \tilde f^\star \circ A^{-1}\in C^1(\Psi (\ol \Omega),\R^n)
+    \]
+    in derselben Komponente von $D_y(\Psi(\ol \Omega),\R^n)$ wie $A\circ f^\star\circ A^{-1}=\Psi\circ
+    f\circ \Psi^{-1}$.
+    Nach der Kettenregel gilt
+    \begin{align*}
+        J_{A\circ \tilde f^\star\circ A^{-1}}(Ay^\star)&= \det(A) J_{\tilde f^\star}(y^\star)
+        \det(A^{-1})=J_{\tilde f^\star} (y^\star) \deg(\Phi\circ f \Phi^{-1},\Phi(\Omega), \Phi (y)).
+    \end{align*}
+    \[ \]
+\end{proof}
+
+Die Eigenschaften des Abbildungsgrades im $\R^n$ übertragen sich mit Definition \ref{3.2} auf den
+Abbildungsgrad in endlichdimensionalen Banachräumen. Das gilt ebenfalls für die Reduktionseigenschaft aus
+Satz \ref{2.14}, nachdem $\Phi:X\ra\R^n$ so gewählt werden kann, dass $\Phi(X_1)=\R^n$, wobei $X_1$ ein
+$m$-dimensionaler Untervektorraum von $X$ ist.
+
+\subsection{Kompakte Operatoren}
+
+Es seien $X$ und $Y$ Banachräume, $\Omega\subset X$ (nicht unbedingt offen).
+
+\begin{defi}
+    Ein stetiger Operator $F:\Omega\ra Y$ heißt
+    \begin{description}
+        \item{•} \textit{endlichdimenisional}, falls $F$ ein endlichdimensionaler UVR $Y_1\subset Y$
+        \item{•} \textit{kompakt}, falls $F$ beschränkte Teilmenge von $\Omega$ relativ kompakte
+        Teilmengen von $Y$ abbildet.
+    \end{description}
+    Wir bezeichnen die Menge der endlichdimensionalen Operatoren von $\Omega$ nach $Y$ mit
+    \[
+        \ms F(\Omega,Y)
+    \]
+    und die kompakten mit
+    \[
+        \ms C(\Omega,Y)
+    \]
+\end{defi}
+
+\begin{remark}
+    \begin{description}
+        \item{1)}
+        Es gilt
+        \[
+            \ms F(\Omega,Y)\subset \ms C(\Omega,Y)\subset C(\Omega,Y)
+        \]
+        \item{2)}
+        Falls $\Omega$ kompakt ist, so gilt
+        \[
+            \ms C(\Omega,Y)\subset C(\Omega,Y)
+        \]
+        \item{3)}
+        Falls $\dim(Y)<\infty$, so gilt
+        \[
+            \ms F(\Omega,Y)=\ms (\Omega,Y)
+        \]
+        \item{4)}
+        Falls $\Omega\subset\R^n$ beschränkt, so gilt
+        \[
+            \ms F (\ol \Omega,\R^n)=\ms C(\ol \Omega,\R^n)=C(\ol\Omega,\R^n)
+        \]
+    \end{description}
+\end{remark}
+
+

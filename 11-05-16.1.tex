@@ -1,0 +1,75 @@
+Es sei nun wieder $\Omega \subset \R^n$ offen, beschränkt, $f\in C(\ol \Omega,\R^n)$. Nach Satz \ref{2.2}
+, dass $\deg(f,\Omega,\cdot)$ konstant ist auf Zusammenhangskomponenten von $\R^n\setminus f(\partial 
+\Omega)$. Wir bezeichnen diese Zusammenhangskomponenten mit $\{G_j\}_{j\in I}$ und schreiben $\deg(f,
+\Omega,y)=\deg(f,\Omega,G_j)$ für $y\in G_j$
+
+\begin{theorem}[Produktregel]\label{2.15}
+    Sei $\Omega\subset\R^n$ offen, beschränkt. Seien $G_j$ die Zusammenhangskomponenten von $\R^n
+    \setminus f(\partial \Omega)$ für $f\in C(\ol\Omega, \R^n)$ und sei
+    \[
+        g\circ f \in D_y(\ol \Omega,\R^n), \qq y\in \R^n
+    \]
+    Dann gilt
+    \begin{align}\label{9}
+        \deg(g\circ f, \Omega, y)=\sum_j\deg(f,\Omega,G_j)\cdot \deg(g,G_j,y)
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    (Endlichkeit der Summe) Es gilt $f(\ol\Omega)$ ist kompakt, somit existiert $r>0$ mit $f(\ol \Omega)
+    \subset B_r(0)$. Nachdem $g^{-1}(y)$ abgeschlossen ist, gilt $g^{-1}(y)\cap B_r(0)$ kompakt ist.
+    $\{G_j\}_{j\in I}$ ist eine offene Überdeckung dieser Menge, es genügen somit endlich viele $\{  
+    G_j \}_{j=1}^N$ um $g^{-1}(y)\cap B_r(0)$ zu überdecken.
+    \begin{description}
+    \item{1)}
+    Wir nehmen an, dass $f\circ g\in C^1(\ol \Omega)$, $y\in \RV(g\circ f)$. Es gilt nach der
+    Kettenregel, dass
+    \[
+        (g\circ f)'(x)=g'(f(x))\circ f'(x)
+    \]
+    Die Behauptung folgt dann durch eine längere Rechnung.
+    \begin{align*}
+        \deg(g\circ f,\Omega,y)&=\sum_{x\in(g\circ f)^{-1}(y)}\sign J_{g\circ f}(x)=\sum_{x\in (g\circ f)
+        ^{-1} (y)}(\sign J_g(f(x)))\cdot(\sign J_f(x))\\
+        &= \sum_{z\in g^{-1}(y)} \sign J_g(z)\cdot \sum_{x\in f^{-1}(z)} \sign J_f(x)
+        =\sum_{z\in g^{-1}(y)} \sign J_g(z)\cdot \deg(f,\Omega,z)
+    \end{align*}
+    Mit der Überdeckung $\{G_j\}_{j\in I}$ von $g^{-1}(y)$ gilt
+    \begin{align*}
+        \deg(g\circ f,\Omega,y)&=\sum_{j=1}^m\sum_{z\in g^{-1}(y)\cap G_j}\sign J_g\cdot \deg(f,\Omega,z)
+        =\sum_{j=1}^N \deg(f,\Omega,G_j) \cdot \sum_{z\in g^{-1}(y)\cap G_j} \sign J_g(z)\\
+        &= \sum_{j=1}^N \deg(f,\Omega,G_j)\cdot \deg(g,G_j,y)
+    \end{align*}
+    Diese Formel gilt nun natürlich auch für $y\in \CV(g\circ f)$ und für $g$ nur stetig. Etwas
+    problematischer ist der Fall, dass $f$ nur stetig ist, da sich bei der Modifikation von $f$ die
+    Mengen $G_j$ ändern.
+
+    Es sei
+    \[
+        L_l=\{z\in R^n\setminus(\partial \Omega)\, | \, \deg(f,\Omega,z)=l\}
+    \]
+    Für $l\neq 0$ gilt, dass $L_l$ aus einer Vereinigung von Mengen $G_j$ bestehen muss. Sei nun
+    $\tilde f\in C^1 (\ol \Omega)$, so dass $|f(x)-\tilde f(x)|< \frac 12 \dist(g^{-1}(y),
+    f(\partial\Omega))$ für $x\in \ol \Omega$. Wir definieren $\tilde G_j$ und $\tilde L_l$ entsprechend
+    für die Funktion $\tilde f$.
+    Es gilt
+    \[
+        L_l\cap g^{-1}(y)=\tilde L_l\cap g^{-1}(y).
+    \]
+    nach Satz \ref{2.1} (iii). ($\|f(x)-\tilde f(x)\|<\dist(y,f(\partial \Omega)\qq \forall
+    x\in \partial \Omega)\qq \Ra \qq \deg(f,\Omega,y)=\deg(\tilde f,\Omega,y)$.) Es gilt somit
+    \begin{align*}
+        \deg(f\circ g, \Omega, y)&=\deg(\tilde f\circ g,\Omega,y)\\
+        &=\sum_{j}\deg(f,\Omega,\tilde G_j)\cdot \deg(g,\tilde G_j,y)=\sum_{l\neq0} l\cdot\deg( g,\tilde
+        L_l,y)=\sum_{l\neq 0} l\cdot \deg(g,L_l,y)\\
+        &=\sum_j \deg(f,\Omega,G_j)\cdot \deg(g,G_j,y)
+    \end{align*}
+    \end{description}
+    \[  \]
+\end{proof}
+
+Eine wichtige Anwendung der Produktformel ist das folgende
+\begin{theorem}[Jordanische Kurvensatz]\label{2.16}
+Es seien $C_1$ und $C_2$ zwei kompakte, zueinander Homeomorphe Teilmengen des $\R^n$. Dann besitzen
+$\R^n\setminus C_1$ und $\R^n\setminus C_2$ die selbe Anzahl von Zusammenhangskomponenten.
+\end{theorem}
