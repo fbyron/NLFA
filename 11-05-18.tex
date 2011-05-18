@@ -1,0 +1,209 @@
+\subsubsection*{Korrekturen}
+
+Bei Satz \ref{2.15}. Vorsicht vor der unbeschränkten Komponente $K_\infty$ von $\R^n\setminus f(\partial
+\Omega)$! Diese taucht jedoch in der Produktformel ausschließend nicht auf, denn
+\[
+    f(\ol \Omega)\subset B_r(0), \, \text{mit}\, f(\ol \Omega) \text{ kompakt}
+\]
+\[
+    \Ra \, \deg(f,\Omega,K_\infty\cap B_{2r}(0))=0 \qq \text{und} \qq f(\ol \Omega) \cap (\R^n\setminus
+    B_{2r}(0))=\varnothing
+\]
+somit können wir vereinfacht schreiben
+\[
+    \deg(f,\Omega,K_\infty)=0
+\]
+Der in der Produktformel aufauchende Term
+\[
+    \deg(f,\Omega,K_\infty)\cdot \deg(g,K_\infty,y)
+\]
+ist also unproblematisch, da er verschwindet.\\[0.5cm]
+
+\begin{lem}\label{3.5}
+    Sei $K\subset X$ kompakt, $\eps>0$. Dann existiert ein endlichdimensionaler Untervektorraum $X_\eps
+    \subset X$ und eine stetige Abbildung
+    \[
+        P_\eps:K\ra X_\eps,
+    \]
+    so dass
+    \[
+        \|P_\eps(x)-x\|\leq \eps \qq \forall x\in K
+    \]
+\end{lem}
+
+\begin{proof}
+    Es sei $\{x_j\}_{j=1}^N\subset K$, so dass $\bigcap _{j=1}^NB_\eps(x_j)$ eine Überdeckung von $K$
+    darstellt. Sei $\{\Phi_j\}_{j=1}^N$ eine Zerleung der Eins, welche $\{B_\eps(x_j)\}_{j=1}^N$
+    untergeordnet ist. Wir definieren
+    \[
+        P_\eps(x):= \sum_{j=1}^N \Phi_j(x)x_j
+    \]
+    Damit gilt
+    \[
+        \|P_\eps(x)-x\|=\|\sum_{j=1}^N\Phi_j(x)x_j-\sum_{j=1}^N \Phi_j(x)x_j\leq \sum_{j=1}^N \Phi_j(x)
+        \|x-x_j\|\leq \eps\|
+    \]
+\end{proof}
+
+\begin{theorem}\label{3.6}
+    $X,Y$ Banachräume. Sei $\Omega\subset X$ beschränkt. Dann gilt
+    \[
+        \ol{\ms F(\Omega,Y)}^{C{\Omega,Y}}=\ms C(\Omega,Y)
+    \]
+    (D.h. der Abschluss von $\ms F(\Omega,Y)$ bzgl. der Norm der gleichmäßigen Konvergenz ist der Raum
+     der kompakten Operatoren $\ms C(\Omega,Y)$.)
+\end{theorem}
+
+\begin{proof}
+    Es sei $(F_n)_{n\in \N}$ eine Folge in $\ms C(\Omega,Y)$, sodass  $F_n\ra F$. Wir nehmen an, dass
+    $F\nin \ms C(\Omega,Y)$. Dann existiert eine Folge $(x_n)_{n\in \N}$, so dass
+    \[
+        \|F(x_n)-F(x_l)\|\geq \rho>0 \qq\text{für}\qq k\neq l
+    \]
+    Es sei $n$ so groß, dass
+    \[
+        \|F_n-F\|_{\ms C(\Omega,Y)}<\frac{\rho}{4}
+    \]
+    Damit gilt
+    \[
+        \|F_n(x_k)-F_n(x_l)\|\geq \frac\rho2.
+    \]
+    Das ist ein Widerspruch zur Annahme, dass $F_n\in \ms C(\Omega,Y)$. Somit gilt auch
+    \[
+        \ol{\ms F(\Omega,Y)}^{\ms C(\Omega,Y)}\subset \ms C(\Omega,Y)
+    \]
+    Sei andererseits $F\in \ms C(\Omega,Y)$,und sei $K=\ol{F(\Omega)}$ kompakt. sei $P_\eps$ gewählt wie
+    in Lemma \ref{3.5}. Es gilt
+    \[
+        F_\eps=P_\eps\circ F\in \ms F(\Omega,Y) \qq \text{und}\qq F_\eps\ra F
+    \]
+\end{proof}
+
+Zur Definition des Abbildungsgrades auf unendlichdimensionalen Räumen betrachten wir insbesondere
+kompakte Störungen der Identität (d.h. Operatoren der Form $\Id+F$, $F\in \ms C$). Wir bezeichnen deshalb
+zunächst einige Interessante Eigenschaften von $\Id+F$.
+
+\begin{lem}\label{3.7}
+    Sei $X$ ein Banachraum und $\Omega\subset X$ beschränkt und abgeschlossen, $F\in \ms C(\Omega,Y)$.
+    Dann ist $\Id + F$ eine eigentliche Abbildung (d.h. $(\Id+F)^{-1}(K)$ ist kompakt für $K\in X$ 
+    kompakt), die abgeschlossene Teilmengen von $\Omega$ auf abgeschlossene Teilmengen von $X$ abbildet.
+\end{lem}
+
+\begin{proof}
+    Sei $A\subset \Omega$ abgeschlossen, und sei
+    \[
+        y_n=(\Id+F)(x_n), \qq \text{mit } x_n \in A,
+    \]
+    so dass $y_n \ra y$ in $X$. Zu zeigen ist, dass $y\in (\Id+F)(A)$. Es gilt
+    \[
+        y_n-x_n=F(x_n),
+    \]
+    somit folgt $y_n-x_n\ra z$ in $X$, nach Extraktion einer Teilfolge. Es folgt $x_n\ra x \in A$, da
+    $A$ abgeschlossen und $y_n$ konvergent nach Annahme. Wir haben aber $x=y-z\in A$. Nachdem aber
+    $y=x+F(x)\in (Id+F)(A)$ folgt die Behauptung.
+
+    Sei nun $\Omega$ abgeschlossen und $K\subset X$ kompakt. Sei $(x_n)_{n\in \N}$ eine Folge in
+    $(\Id+F)^{-1}(K)$. Wir können wieder eine Teilfolge
+    \[
+        y_n=x_n+F(x_n)
+    \]
+    wählen, so dass $y_n\ra y$. Wie im vorhergehenden Teil folgt, folgt dass $x_n\ra x$, somit ist
+    $(\Id+F)^{-1}(K)$ kompakt.
+    \[ \]
+\end{proof}
+
+\subsection{Der Leray-Schauder Grad}
+
+Sei $\Omega\subset X$, $X$ ein Banachraum. Wir setzten
+\[
+    \ms D_y(\ol \Omega,X)=\{ F\in \ms C(\ol\Omega,X)\, | \, y\nin(\Id + F)(\partial \Omega) \}
+\]
+und
+\[
+    \ms G_y(\ol\Omega,X):=\{F\in \ms F(\ol \Omega,X)\, |\, y\nin(\Id+F)(\partial\Omega)\}
+\]
+Es gilt für $F\in \ms D_y(\ol \Omega,X)$, dass $\dist(y,(\Id+F)(\partial\Omega))>0$, da $\Id+F$
+abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
+
+\begin{defi}{\label{3.8}}
+    Sei $\Omega\subset X$ offen, beschränkt, $y\in X$, $F\in \ms D_y(\ol \Omega,X)$. Sei $\rho:=
+    \dist(y,(\Id+F)(\partial \Omega))$ und sei
+    \[
+        F_1\in \ms F(\ol \Omega, X),
+    \]
+    sodass
+    \[
+        \|F-F_1\|<\rho. \qq (\Ra \, F_1\in \ms G_y(\ol \Omega,X))
+    \]
+    Nun sei $X_1\subset X$ ein endlichdimensionaler Untervektorraum, so dass
+    \[
+        F_1(\Omega)\subset X_1,\, y\in X_1
+    \] 
+    und sei $\Omega_1=\Omega\cap X_1$. Damit ist $F_1\in \ms G_y(\ol\Omega_1,X_1)$ und wir definieren
+    \[
+        \deg(\Id+F,\Omega,y):=\deg(\Id+F_1,\Omega_1,y)
+    \]
+\end{defi}
+
+\begin{prop}\label{3.9}
+    die Obige Definiton ist unabhängig von der Wahl von $F_1$ und $X_1$.
+\end{prop}
+
+\begin{proof}
+    Sei $F_2\in \ms F (\ol \Omega,X)$, $\|F_2-F\|<S$, $X_2$ entsprechend endlichdim UVR von $X$. Es sei
+    $X_0=X_1+X_2$, $\Omega_0=\Omega\cap X_0$. Dann gilt
+    \[
+        F_i\in \ms F_y(\ol\Omega_0,X_0) \qq i=1,2
+    \]
+    und es folgt wegen der Reduktionseigenschaft des endlich dimenisionalen Abbildungsgrades, dass
+    \[
+        \deg(\Id + F_i,\Omega_0,y)=\deg(\Id+F_i,\Omega_i,y)\qq i=1,2
+    \]
+    Sei $H(t)=\Id + (1-t)F_1+F_2.$ Es folgt, dass
+    \[
+        H(t)\in D_y(\ol\Omega_0,X_0) \qq t\in [0,1],
+    \]
+    nachdem gilt $\|H(t)-(\Id+F)\|<\rho$ $\forall t\in [0,1]$.
+    \[
+        \Ra \, \deg(\Id+F_1,\Omega_0,y)=\deg(\Id+F_2,\Omega_0,y)
+    \]
+    Somit ergibt Definiton \ref{3.8} Sinn.
+    \[ \]
+\end{proof}
+
+\begin{theorem}\label{3.10}
+    Sei $\Omega\subset X$ beschränkt und offen und sei $F\in \ms D_y(\ol\Omega,X)$, $y\in X$. Dann gilt
+    \begin{description}
+        \item{i)}
+        $\deg(\Id+F,\Omega,y)=\deg(\Id+F-y,\Omega,0)$
+        \item{ii)}
+        $\deg(\Id, \Omega,y)=1$, falls $y\in \Omega.$
+        \item{iii)}
+        Falls $\Omega_1,\Omega_2$ offene, disjunkte Teilmengen von $X$ sind, so dass
+        $y\nin (\Id+F)(\ol\Omega\setminus (\Omega_1\cup\Omega_2)),$ dann gilt
+        \[
+            \deg(\Id+F,\Omega,y)=\deg(\Id+F,\Omega_1,y)+\deg(\Id+F,\Omega_2,y).
+        \]
+        \item{iv)}
+        Falls $H:[0,1]\times\ol\Omega\ra X$ und $y:[0,1]\ra X$ beide stetig, so dass $H(t)\in 
+        \ms D_{y(t)}(\ol\Omega,X) \qq \forall t\in [0,1]$. Dann gilt
+        \[
+            \deg(\Id+H(0),\Omega,y(0))=\deg(\Id+H(1), \Omega,y(1))
+        \]
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+    \textit{i)-iii)} folgen sofort aus der Definition und den entsprechenden Eigenschaften des
+    endlichdimensionalen Abbildungsgrades.
+
+    \noindent Zu \textit{iv)}: Mittels \textit{i)} betrachten wir $y(t)=0$ ($\tilde H(t)=H(t)-y(x)$).
+    Nachdem $H([0,1],\partial \Omega)$ abgeschlossen und kompakt ist, gilt
+    $\rho=\dist(y,H([0,1])\times\partial\Omega)>0$. Nach Satz \ref{3.6} existiert $H_1\in \ms F([0,1]
+    \times\ol\Omega, X)$, so dass $\|H(t)-H_1(t)\|<\rho$ $t\in [0,1]$. Damit folgt
+    \[
+        \deg(\Id+H(t),\Omega,0)=\deg(\Id+H_1(t),\Omega,0) \qq \forall t\in [0,1].
+    \]
+    Die Behauptung folgt nun wieder aus den Eigenschaften des endlichen Abbildungsgrades.
+    \[ \]
+\end{proof}

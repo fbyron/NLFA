@@ -13,4 +13,5 @@
 \contentsline {section}{\numberline {3}Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}{27}{section.3}
 \contentsline {subsection}{\numberline {3.1}Der Abbildungsgrad auf endlichen Banachr\IeC {\"a}umen}{27}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Kompakte Operatoren}{28}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Der Leray-Schauder Grad}{30}{subsection.3.3}
 \contentsfinish 
