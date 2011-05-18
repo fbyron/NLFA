@@ -13,7 +13,7 @@ somit können wir vereinfacht schreiben
 \[
     \deg(f,\Omega,K_\infty)=0
 \]
-Der in der Produktformel aufauchende Term
+Der in der Produktformel auftauchende Term
 \[
     \deg(f,\Omega,K_\infty)\cdot \deg(g,K_\infty,y)
 \]
@@ -40,15 +40,15 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
     \]
     Damit gilt
     \[
-        \|P_\eps(x)-x\|=\|\sum_{j=1}^N\Phi_j(x)x_j-\sum_{j=1}^N \Phi_j(x)x_j\leq \sum_{j=1}^N \Phi_j(x)
-        \|x-x_j\|\leq \eps\|
+        \|P_\eps(x)-x\|=\left\|\sum_{j=1}^N\Phi_j(x)x_j-\sum_{j=1}^N \Phi_j(x)x\right\|
+        \leq \sum_{j=1}^N \Phi_j(x)\|x-x_j\|\leq \eps
     \]
 \end{proof}
 
 \begin{theorem}\label{3.6}
     $X,Y$ Banachräume. Sei $\Omega\subset X$ beschränkt. Dann gilt
     \[
-        \ol{\ms F(\Omega,Y)}^{C{\Omega,Y}}=\ms C(\Omega,Y)
+        \ol{\ms F(\Omega,Y)}^{C(\Omega,Y)}=\ms C(\Omega,Y)
     \]
     (D.h. der Abschluss von $\ms F(\Omega,Y)$ bzgl. der Norm der gleichmäßigen Konvergenz ist der Raum
      der kompakten Operatoren $\ms C(\Omega,Y)$.)
@@ -58,11 +58,11 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
     Es sei $(F_n)_{n\in \N}$ eine Folge in $\ms C(\Omega,Y)$, sodass  $F_n\ra F$. Wir nehmen an, dass
     $F\nin \ms C(\Omega,Y)$. Dann existiert eine Folge $(x_n)_{n\in \N}$, so dass
     \[
-        \|F(x_n)-F(x_l)\|\geq \rho>0 \qq\text{für}\qq k\neq l
+        \|F(x_k)-F(x_l)\|\geq \rho>0 \qq\text{für}\qq k\neq l
     \]
     Es sei $n$ so groß, dass
     \[
-        \|F_n-F\|_{\ms C(\Omega,Y)}<\frac{\rho}{4}
+        \|F_n-F\|_{ C(\Omega,Y)}<\frac{\rho}{4}
     \]
     Damit gilt
     \[
@@ -146,7 +146,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
 \end{defi}
 
 \begin{prop}\label{3.9}
-    die Obige Definiton ist unabhängig von der Wahl von $F_1$ und $X_1$.
+    Die obige Definiton ist unabhängig von der Wahl von $F_1$ und $X_1$.
 \end{prop}
 
 \begin{proof}
