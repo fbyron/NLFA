@@ -71,11 +71,66 @@ Der \textit{Brouwer'sche Fixpunktsatz} ist eine Folgerung aus den Eigenschaften 
 Er besagt, dass stetige Abblidungen, die kompakte, konvexe Mengen im $\R^n$ (oder Mengen, die dazu
 homöomorph sind) in sich selbst abbilden, einen Fixpunkt besitzen.
 
+\subsubsection{Einschub:}
+
+\begin{description}
+        \item[Zerlegung der Eins:]
+        Sei $\{U_i\}_{i\in I}$ eine Überdeckung von $X$, $X$ ein topologischer Raum.
+        $\{\vp_\lambda\}_{\lambda\in\Lambda}$ ist eine $\{U_i\}_{i\in I}$ untergeordnete lokal endliche
+        Zerlegung der Eins, falls gilt
+        \begin{itemize}
+        \item[-] $\vp_\lambda \in C(U,[0,1]) \,\forall\, \lambda$.
+        \item[-] $\forall \lambda\in \Lambda\, \exists \, i \in I: \, \supp \vp_\lambda\subset U_i$
+        \item[-] $\sum_{\lambda \in \Lambda} \vp _\lambda=1$
+        \item[-] $\forall x \in X \, \exists \, U(x)$ Umgebung von $x$, so dass nur
+        \textit{endlich viele} $\lambda \in \Lambda$ existieren, mit $U(x)\cap \supp \vp_\lambda\neq 
+        \varnothing$ (lokal endlich).
+        \end{itemize}
+        \item[Konstruktion] aus einer lokal endlichen Überdeckung $(V_\lambda)_{\lambda\in\Lambda}$ 
+        ($\forall x\in X \, \exists \, U(x)$ Umgebung: $U(x)\cap V_\lambda\neq \varnothing$ nur für
+         endlich viele $\lambda\in \Lambda$.) in metrischen Räumen $(X,d)$.
+        \begin{itemize}
+            \item[-] Sei $\alpha(x)=\sum_{\lambda\in \Lambda} \dist(x,X\setminus V_\lambda)>0 \, \forall
+            x \in X$, mit $\dist(x,\varnothing):=1$.
+            \item[-] $\vp _\lambda(x):=\frac{1}{\alpha(x)}\dist(x,X\setminus V_\lambda) \, \in [0,1]$,
+            $\vp_\lambda=0$ für $x\nin V_\lambda$.
+        \end{itemize}
+        \item[„Konstruktion“] einer lokal endlichen Überdeckung $\{V_\lambda\}_{\lambda\in\Lambda}$, die
+        eine offen Überdeckung $\{U_i\}_{i\in I}$ verfeinert (d.h. $\forall \, \lambda\in \Lambda \, 
+        \exists i \in I, \, V_\lambda\subset U_i$).
+        \item{Die Existenz} einer solchen lokal endlichen verfeinernde Überdeckung zu jeder offenen
+        Überdeckung ist die Definition der \textit{Parakompaktheit}.
+        \begin{theorem*}
+                    Jeder metrische Raum ist parakompakt.
+        \end{theorem*}
+
+        \begin{idea}
+        Angenommen $I=\N$ also wohlgeordnet. (jede Teilmenge besitzt ein eindeutiges kleinstes Element.)
+        Wir setzen für $i\in I, \, n\in \N$.
+        \[
+            D_{in}=\bigcup_{x\in \Phi(i,n)} B_{2^{-n}}(x)
+        \]
+        \[
+            \Phi(i,n):=\left\{x\in X \, \Big| \, \text{mit}\, \begin{cases}\text{$i$ ist die kleinste
+            Zahl, so dass $x\in U_i$}\\ \text{$x\nin D_{jm}$ für $m<n$}\\ B_{3\cdot2^{-n}}\subset U_i  
+            \end{cases}\right\}
+        \]
+        \begin{description}
+        \item klar: $\{ D_{in} \}$ verfeinert $\{U_i\}$
+        \item[Überdeckung:] Klar, denn für jedes $x\in X$ finden in ein kleinstes $i\in I=\N$ und ein
+        $n$ hinreichend groß.
+        \item[lokale Endlichkeit:] (s.Artikel).
+        Ist $I$ nun eine beliebige Indexmenge, so läßt sich diese wohlordnen (\textit{Zorn'sches Lemma}),
+        und die Wohlordnung ist die einzige Eigenschaft von $I$, die wir benutzt haben.
+        \end{description}
+        \[ \]
+        \end{idea}
+    \end{description}
 \begin{theorem}[Fortsetzung stetiger Funktionen]\label{2.12}
     Sei $X$ ein metrischer Raum, $Y$ normierter Raum. Sei $K\subset X$ abgeschlossen. Sei $F\in C(K,Y)$.
-    Dann besizt $F$ eine stetige Fortsetzung $G:X\ra Y$, so dass
+    Dann besitzt $F$ eine stetige Fortsetzung $G:X\ra Y$, so dass
     \[
-        G(x)\subset\conv\, F(K)
+        G(X)\subset\conv\, F(K)
     \]
 \end{theorem}
 
@@ -86,59 +141,7 @@ homöomorph sind) in sich selbst abbilden, einen Fixpunkt besitzen.
     \]
     mit $\rho(x)=\frac12 \dist(x,K)$.
     Wir wählen nun eine lokal endliche Zerlegung der Eins $\{\vp_\lambda\}_{\lambda\in \Lambda}$, welche
-    der offenen Überdeckung untergeordnet ist.\\[.5cm]
-
-    \noindent \textbf{Einschub:}
-    \begin{description}
-        \item[Zerlegung der Eins:]
-        Sei $\{U_i\}_{i\in I}$ eine Überdeckung von $X$, topologischer Raum. $\{\vp_\lambda\}_{\lambda\in
-        \Lambda}$ ist eine $\{U_i\}_{i\in I}$ untergeordnete lokal endliche Zerlegung der Eins,
-        falls gilt
-        \begin{itemize}
-        \item[-] $\forall \lambda\in \Lambda\, \exists \, i \in I: \, \supp \vp_\lambda\subset U_i$
-        \item[-] $\sum_{\lambda \in \Lambda} \vp _\lambda=1$
-        \item[-] $\forall x \in X \, \exists \, U(x)$ Umgebung von $x$, so dass nur
-        \textit{endlich viele} $\lambda \in \Lambda$ existieren, mit $U(x)\cap \supp \vp_\lambda\neq 
-        \varnothing$ (lokal endlich).
-        \item[-] $\vp_\lambda \in C(U,[0,1]) \,\forall\, \lambda$. 
-        \end{itemize}
-        \item[Konstruktion] aus einer lokal endlichen Überdeckung $(v_\lambda)_{\lambda\in\Lambda}$ 
-        ($\forall x\in X \, \exists \, U(x)$ Umgebung: $U(x)\cap V_\lambda\neq \varnothing$ nur für
-         endlich viele $\lambda\in \Lambda$.) in metrischen Räumen $(X,d)$.
-        \begin{itemize}
-            \item[-] Sei $\alpha(x)=\sum_{\lambda\in \Lambda} \dist(x,X\setminus V_\lambda)>0 \, \forall
-            x \in X$, mit $\dist(x,\varnothing):=1$.
-            \item[-] $\vp _\lambda(x):=\frac{1}{\alpha(x)}d(x,X\setminus V_\lambda) \, \in [0,1]$,
-            $\vp_\lambda=0$ für $x\nin V_\lambda$.
-        \end{itemize}
-        \item[„Konstruktion“] einer lokal endlichen Überdeckung $\{V_\lambda\}_{\lambda\in\Lambda}$, die
-        eine offen Überdeckung $\{U_i\}_{i\in I}$ verfeinert (d.h. $\forall \, \lambda\in \Lambda \, 
-        \exists i \in I, \, V_\lambda\subset U_i$).
-        \item{Die Existenz} einer solchen lokal endlichen verfeinernde Überdeckung zu jeder offenen
-        Überdeckung ist die Definition der \textit{Parakompaktheit}.
-        \begin{theorem*}
-            Jeder metrische Raum ist parakompakt.
-        \end{theorem*}
-        
-        \noindent \textsc{Beweisidee:} Angenommen $I=\N$ also wohlgeordnet. (jede Teilmenge besitzt ein
-                eindeutiges kleinstes Element.) Wir setzen für $i\in I, \, n\in \N$.
-        \[
-            D_{in}=\bigcup_{x\in \Phi(i,n)} B_{2^{-n}}(x)
-        \]
-        \[
-            \Phi(i,n):=\left\{x\in X \, \Big| \, \text{mit}\, \begin{cases}\text{$i$ ist die kleinste Zahl,
-            so dass $x\in U_i$}\\ \text{$x\nin D_{jm}$ für $m<n$}\\ B_{3\cdot2^{-n}}\subset U_i  
-            \end{cases}\right\}
-        \]
-        \item klar: $\{ D_{in} \}$ verfeinert $\{U_i\}$
-        \item[Überdeckung:] Klar, denn für jedes $x\in X$ finden in ein kleinstes $i\in I=\N$ und ein
-        $n$ hinreichend groß.
-        \item[lokale Endlichkeit] (s.Artikel).
-    Ist $I$ nun eine beliebige Indexmenge, so läßt sich diese wohlordnen (\textit{Zorn'sches Lemma}),
-    und die Wohlordnung ist die einzige Eigenschaft von $I$, die wir benutzt haben.   
-    \end{description}
-    Einschub Ende, weiter im Beweis.
-
+    der offenen Überdeckung untergeordnet ist.
     Sei
     \[
     G(x):= \begin{cases} F(x)& \text{für} \qq x\in K\\
@@ -149,4 +152,3 @@ homöomorph sind) in sich selbst abbilden, einen Fixpunkt besitzen.
     \[
         \dist(x_\lambda,\supp \vp_\lambda)\leq 2\cdot \dist(K,\supp \vp_\lambda).
     \]
-    $G$ ist offensichtlich stetig auf $X\setminus \partial K$.

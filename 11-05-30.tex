@@ -1,0 +1,254 @@
+\section{Monotone Operatoren}
+
+Man möchte folgendes Prinzip auf Banachräume verallgemeinern $F:\R\ra\R$ genüge
+\begin{description}
+    \item{(a)}
+    monoton
+    \item{(b)}
+    stetig
+    \item{(c)}
+    $F$ ist koerziv, d.h. $\lim_{v\ra \pm \infty} F(v)=\pm \infty$
+\end{description}
+Dann
+\[
+    \forall b\in \R \, \exists ! v\in \R: \, F(v)=b
+\]
+
+\begin{defi}\label{4.1}
+    Sei $X$ ein reflexiver Banachraum und
+    \[
+        A:X\ra X^\star
+    \]
+    ein Operator. A heißt
+    \begin{description}
+        \item{(i)}
+        monoton $\Ra$ $\forall u,v\in X:$ $(Au-Av,u-v)\geq 0$
+        \item{(ii)}
+        strikt monoton $\Ra$ $\forall u\neq v\in X:$ $(Au-Av,u-v)>0$
+        \item{(iii)}
+        stark monoton
+        \[
+            \Ra \exists c>0 \, \forall u,v\in X:\, (Au-Av,u-v)\geq c\|u-v\|^2
+        \]
+        \item{(iv)}
+        koerziv
+        \[
+            \Ra \, \lim_{\|u\|\ra \infty}\frac{(Au.u)}{\|u\|}=\infty
+        \]
+    \end{description}
+\end{defi}
+
+\begin{remark}
+    $A$ stark monoton $\Ra$ $A$ koerziv.
+\end{remark}
+
+\begin{proof}
+    \[
+        \frac{(Av,v)}{\|v\|}=\frac{ (Au-A(0), v) + (A(0),v) }{\|v\|}\geq c\|v\|-\|A(0)\|
+    \]
+\end{proof}
+
+\subsubsection*{Beispiele:}
+
+\begin{description}
+    \item{1.}
+    Sei $f:\R\ra\R$. Das Dualitätsproblem in $\R$ ist die Multiplikation. Im Spezialfall $X=\R=X^\star$
+    stimmen die Monotoniebegriffe reeller Funktionen und für Operatoren überein, da
+    \[
+        (f(u)-f(v),u-v)=(f(v)-f(u))\cdot(u-v)\geq 0
+    \]
+    $f$ ist außerdem genau dann koerziv, d.h.
+    \[
+        \lim_{v\ra \pm \infty} \frac{f(u)\cdot u}{|u|}=\infty \, \LRa \, f(v)\ra \pm \infty\qq(v\ra\pm
+                \infty)
+    \]
+    \item{2.}
+    $g:\R\ra \R$
+    \[
+        g(u):=\begin{cases} |u|^{p-2}u, & u\neq 0\\ 0, & v=0 \end{cases}
+    \]
+    $\Ra$ \begin{description}
+        \item{(i)}
+        $p>1 \, \Ra \, g$ strikt monoton.
+        \item{(ii)}
+        $p\geq 2 \, \Ra \, (g(u)-g(v),u-v)\geq c|u-v|^p$
+        \item{(iii)}
+        $p=2 \, \Ra \, g$ stark monoton
+    \end{description}
+    \begin{proof}
+    Übungsaufgabe. \[ \]
+    \end{proof}
+\end{description}
+
+\begin{defi}
+    Sei $X$ reflexiver Banachraum und $A:X\ra X^\star$ ein Operator $A$ heißt
+    \begin{description}
+        \item{(i)}
+    \end{description}
+\end{defi}
+
+\begin{remark}
+    stark stetig $\Ra$ stetig $\Ra$ demistetig $\overset{\Ra}{(\star)}$ hemistetig
+\end{remark}
+
+\begin{proof}
+    Zu $(\star)$. Seien $u,v,w\in X$, $t\ra t_0$ $\Ra$ $u+tv \ra u+tv$
+    \[
+        \overset{\Ra}{\text{demistetig}} \, A(u+tv) \rightharpoonup A(u+t_0v)
+    \]
+    \[
+        (A(u+tv),w)\ra (A(u+t_0v),w)
+    \]
+\end{proof}
+
+\begin{lem}\label{4.4}
+    $X$ reflexiver Banachraum, $A:X\ra X^\star$. Dann gelten
+    \begin{description}
+        \item{(i)}
+        $A$ stark stetig $\Ra$ $A$ kompakt.
+        \item{(ii)}
+        $A$ demistetig $\Ra$ $A$ lokal beschränkt.
+        \item{(iii)}
+        $A$ monoton $\Ra$ $A$ lokal beschränkt.
+        \item{iv}
+        $A$ monoton und hemistetig $\Ra$ $A$ demistetig.
+    \end{description}
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{(i)}
+        Sei $(v_n)_{n\in \N}\subset X$ beschränkt, da $X$ reflexiv folgt:
+        \[
+            \exists v^{m_k} \rightharpoonup v \in X\overset{\text{stark stetig}}{\Ra} A(v_{m_k})\ra A(v)
+        \]
+        $\Ra$ $A$ kompakt.
+    \item{(ii)}
+    Wöre $A$ nicht lokal beschränkt, so existiert $v\in X$, $v_m\ra v$, sodass
+    \[
+        \|Av_m\|\ra \infty \lightning  \qq Av_m \rightharpoonup Av
+    \]
+    \item{(iii)}
+    Angenommen, $v_m\ra v: \, \|Av_m\|\ra \infty$
+    \[
+        a_n:=(1+\|Av_n\|\|v_n-v\|)^{-1}
+    \]
+    $A$ monoton 
+    \begin{align*}
+        \Ra \, 0&\leq (Au_n-Av,u_n-v)= (Au_n-Av,(u_n-v)+(u-v))\\
+        a_n(Au_n,v-u)&\leq a_n((Au_n,u_n-v)-(Av,u_n-v))\\
+        &\leq 1+ c(u,v) \qq \forall v\in X
+    \end{align*}
+    Einsetze $v\leadsto 2u-v$
+    \[
+        -a_n (Au_n,v-u)\leq 1+c(u,v) \qq \forall v \in X
+    \]
+    \[
+        \Ra \, |(a_n A u_n,v-u)|\leq 1+c(u,v)
+    \]
+    $\Ra \, (a_nAu_n)_{n\in \N}$ ist punktweise beschränkt.
+    \[
+        \Ra \, \sup_n\|a_nAu_n\|_{X^\star}\leq c(u)
+    \]
+    \[
+        \Ra \, \|Au_n\|\leq \frac{c(u)}{a_n} = c(u)(1+\|Au_n\|\|u_n-v\|)
+    \]
+    Für
+    \[
+        \|u_n-u\|c(u)=\lambda <1: \, \|Au_n\|\leq \frac{c(u)}{1-\lambda}<\infty
+    \]
+    \item{(iv)}
+    Gelte $u_n\ra u$. $A$ monoton $\Ra$ $(Au_n)$ beschränkt.
+    $X^\star$ reflexiv
+    \[
+        Au_{n_k}\rightharpoonup b \in X^\star
+    \]
+    \[
+        Au=b
+    \]
+    Dies gilt für jede Teilfolge von $u_n, \Ra  Au_n \rightharpoonup b$
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{lem}[Minty]\label{4.5}
+    Sei $X$ ein refelexiver Banachraum und $A:X\ra X^\star$, hemistetig und monoton. Dann gelten
+    \begin{description}
+        \item{(i)}
+        $A$ maximal monoton, d.h.
+        \begin{align*}
+            v\in X, \, b\in X^\star, \, (b-Av,u-v) \geq 0 \qq \forall v\in X\\
+                \Ra \,b=Au
+        \end{align*}
+        \item{(ii)}
+        $A$ genügt der Bedingung (M), d.h.
+        \[
+            Au=b \La \begin{cases} v_n \rightharpoonup v \\ Av_n\rightharpoonup b \\ (Av_n,v_n)\ra (b,v)
+        \end{cases}
+        \]
+        \item{(iii)}
+        \[
+            u_n \rightharpoonup u, \, Au_n\ra b \, \Ra \, Au=b
+        \]
+        \[
+            u_n\ra u \,\wedge \, Au_n \rightharpoonup b \, \Ra \, Au=b
+        \]
+    \end{description}
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{(i)}
+    Sei $w\in X$ und $v=v-tw, \, t>0$.
+    \[
+        \Ra \,(b-A(u-tw),w)\geq 0
+    \]
+    \[
+        \Ra\,(b-Au, w)\geq 0 \qq w\in X
+    \]
+    \[
+        \Ra \,(b-Av,w)=0 \forall w
+    \]
+    \[
+        b=Aw
+    \]
+    \item{(ii)}
+    $A$ ist monoton.
+    \begin{align*}
+    \Ra \, 0&\leq (Au_n-Av,u_n-v) = (Au_n,u_n)-(Av,u_n) - (Au_n,Av,v)\\
+    &\ra (b,v)-(Av,u)-(b-Av,v)
+    \end{align*}
+    \end{description}
+\end{proof}
+
+\begin{theorem}[Brouder, Minty]\label{4.6}
+    Sei $X$ ein separabeler, reflexiver Banachraum mit Basis $(w_i)_{i\in \N}$. Sei $A:X\ra X^\star$
+    monoton, koerziv und hemistetig. Dann existiert für alle $b\in X^\star$ eine Lösung $u\in X$ von
+    \[ Au=b \]
+    $\{A=b\}$ ist abgeschlossen, beschränkt, und konvex. Falls $A$ strikt monoton ist, ist die Lösung
+    eindeutig.
+\end{theorem}
+
+\textsc{Beweisidee:} Der Beweis erfolgt per \textit{Galerkin-Approximation}.
+\begin{description}
+    \item{1.}
+    $X$ separabel, d.h.
+    \[
+        X=\bigcup_{n=1}^\infty X^n, \qq X_n=\mr{span}(w_1,…,w_n)
+    \]
+    Approximiere „die Gleichung“ $Au=b$ durch „endlichdimensionale“ Probleme der Form
+    \[
+        (Au,z^n)=(b,z^n)    \forall z^n\in X_n
+    \]
+    \item{2. \textit{A-priori}-Abschätzung für Lösungen:}
+    Wir zeigen, dass die Folge $(v_n)_{n\in \N}$ der Lösungen dieser Probleme beschränkt ist (mit Hilfe
+            der Koerzivität).
+    \item{3. Schwache Konvergenz}
+    $X$ reflexiv $\Ra$ $(v_n)_{n\in \N}$ hat eine schwach konvergente Teilfolge
+    \[
+        u_{n_k}\rightharpoonup u \in X
+    \]
+    \item{4.}
+    Lemma von Minty $\Ra$ Au=b.
+    
+\end{description}

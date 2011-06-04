@@ -1,0 +1,143 @@
+\subsection{Das Leray-Schauder-Prinzip und der Schaude'sche Fixpunktsatz}
+
+Fixpunktsätze in schneller Folge!
+
+\begin{theorem}[Leray-Schauder-Prinzip]\label{3.12}
+    Es sei $F\in \ms C(X,X)$ und es existiere $M>0$, so dass jede Lösung $x$ von
+    \[
+        x=tF(x) \qq t\in [0,1]
+    \]
+    die \textit{a priori} Abchätzung
+    \[
+        \|x\|\leq M
+    \]
+    erfüllt. Dann besitzt $F$ einen Fixpunkt.
+\end{theorem}
+
+\begin{proof}
+    Sei $\rho>M$. Es gilt
+    \[
+        \deg(\Id-F,B_\rho(0),0)=\deg(\Id,B_\rho(0),0)=1
+    \]
+    Aus der \textit{a priori} Abschätzung folgt
+    \[
+        H(t)\in \ms D_0(B_\rho(0),X) \qq \forall t\in [0,1]
+    \]
+    Somit existiert eine Lösung von $x-F(x)=0$.
+    \[ \]
+\end{proof}
+
+\begin{theorem}[Schauder'sche Fixpunktsatz]\label{3.13}
+    Sei $K$ ein abgeschlossene, konvexe, beschränkte Teilmenge von $X$, ein Banachraum. Sei
+    $F\in \ms C(K,K)$. Dann besitzt $F$ einen Fixpunkt.
+\end{theorem}
+
+\begin{proof}
+    $K$ beschränkt, also sei $\rho>0$ mit $K\subset B_\rho(0)$. Es sei $R$ die stetige Fortsetzung von
+    $\Id:K\ra K$ auf $X$ nach Satz \ref{2.12}. Es gilt $R:X\ra K$, $R(x)=x$ für $x\in K$.
+
+    \noindent\textit{Anmerkung}: So eine Abbildung heißt „Retraktion“, $K$ ist dann ein Retrakt von $X$.
+
+    \noindent Wir betrachten $\tilde F=F\circ R\in \ms C(\ol{B_\rho(0)},\ol{B_\rho(0)})$. Mit $H(t)
+    -t\tilde F$ folgt
+    \[
+        \deg(\Id-\tilde F, B_\rho(0),0)=\deg(\Id,B_\rho(0),0)=1
+    \]
+    Somit existiert $x_0=\tilde F(x_0)\in K \, \Ra \, \tilde F(x_0)=F(x_0)=x_0$. 
+    \[ \]
+\end{proof}
+
+\begin{remark}
+    Existenz eines Fixpunktes gilt natürlich auch für $F:G\ra G$, wobei $G$ nur homöomorph zu einer
+    konvexen, abgeschlossen, beschränkten Teilmenge eines Banachraumes $X$ ist.
+\end{remark}
+
+\begin{theorem}\label{3.14}
+    Sei $\Omega\subset X$ offen und beschränkt, $F\in \ms C(\ol\Omega,X)$. Angenommen, es existiert ein
+    $x_0\in \Omega$, so dass
+    \[
+        F(x)-x_0\neq \alpha \qq \forall x\in \partial \Omega, \, \forall \alpha\in(1,\infty)
+    \]
+    Dann besitzt $F$ einen Fixpunkt.
+\end{theorem}
+
+\begin{proof}
+    Sei $H(t)(x)=x-x_0-t(F(x)-x_0)$. Dann gilt aber
+    \[
+        H(t)\neq 0 \qq \forall x \in \partial\Omega, \, t\in [0,1)
+    \]
+    Falls $H(1)(x)=0$ für ein $x\in \partial \Omega$, dann ist $x$ ein Fixpunkt von $F$ und wir
+    sind fertig. Ansonsten gilt allerdings
+    \[
+        \deg(\Id-F,\Omega,0)=\deg(\Id-x_0,\Omega,0)=\deg(\Id,\Omega,x_0)=1
+    \]
+    und es existiert wieder ein Fixpunkt von $F$. 
+    \[ \]
+\end{proof}
+
+\begin{cor}\label{3.15}
+    Sei $\Omega\subset X$ offen und beschränkt, $F\in \ms C (\ol \Omega, X)$. Dann besitzt $F$ einen
+    Fixpunkt falls \textit{eine} der folgenden Bedingungen erfüllt ist:
+    \begin{description}
+        \item{i)}
+        $\Omega=B_\rho(0)$, $F(\partial \Omega)\subset \ol\Omega$ (Rohte)
+        \item{ii)}
+        $\Omega=B_\rho(0)$, $\|F(x)-x\|^2\geq \|F(x)\|^2-\|x\|^2$ $\forall x\in \partial \Omega$
+        (Altmann)
+        \item{iii)}
+        $X$ ist ein Hilbertraum, $\Omega=B_\rho(0)$, $(F(x),x)\leq \|x\|^2 \qq \forall x 
+        \in \partial \Omega$ (Krasnosel'shii).
+    \end{description}
+\end{cor}
+
+\begin{proof}
+    Übungsaufgabe. \[ \]
+\end{proof}
+
+\noindent \textbf{Beispiele:}
+
+\begin{description}
+    \item{1. nichtlineares 2-Punkt Randwertsproblem:}
+    Wir betrachten auf $[0,T]$ das Randwertsproblem
+    \begin{align}\label{11}
+        \begin{split}
+        u''(t)&=g(t,u(t),u'(t))\qq 0\leq t \leq T \\
+        u(0)&=u(1)=0
+        \end{split}
+    \end{align}
+    Es sei $C_0^2=\{u\in C^2\, | \, u(0)=u(T)=0\}$
+
+    \textbf{Behauptung:} $L$ ist bistetig.
+    \begin{proof}
+        \begin{description}
+            \item{Injektivität:} klar.
+            \item{Surjektivität:} Beispielsweise mittels \textit{Green'scher Funktion}:
+            \begin{align*}
+                K(s,t)&=2T\cdot\sum_{n=1}^\infty \frac1{ \pi^2n^2 } \sin \frac{n\pi s}{T}
+                \sin\frac{n\pi t}{T}\\
+                u(s)&=L^{-1} (f)(s)=-\int_0^TK(s,t)f(t)\d t
+            \end{align*}
+            \item{Stetigkeit:} klar.
+            \item{Stetigkeit:} \textit{Satz über die offene Abbildung}.
+        \end{description}
+        \[ \]
+    \end{proof}
+    \begin{theorem}
+        Sei $g:[0,T]\times \R \times \R\ra \R$ eine stetige beschränkte Funktion. Dann bestizt
+        (\ref{11}) eine Lösung $u\in C_0^2$.
+    \end{theorem}
+    \begin{proof}
+        Es sei $G:C^1([0,1])\ra C([0,1])$ definiert durch $G(u)(t)=g(t,u(t),u'(t))$ und es sei
+        \[
+            J: C_0^2 \ra C^1([0,T])
+        \]
+        die Einbettung. Dann ist (\ref{11}) äquivalent zu
+        \[
+            L(u)=GJ(u) \, \LRa \, u = GJL^{-1}(u).
+        \]
+        Es gilt $JL^{-1}$ ist kompakt, das folgt aus \textit{Arzelá-Ascoli}.
+        $G$ ist ein beschränkter Operator, denn $g$ ist stetig und beschränkt, 
+        somit ist $GJL^{-1}$ kompakt und es existiert $\rho>0$ mit $GJL^{-1}(B_\rho(0))\subset 
+        B_\rho(0)$. Damit besitzt $GJL^{-1}$ einen Fixpunket.
+        \[ \]
+    \end{proof}

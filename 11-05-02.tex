@@ -8,14 +8,14 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
             \int_{\R^n} \vp (x) \d x=0
         \]
         \item{b)}
-        Sei $\vp : \R^n\ra \R$, $\vp \in C^1$, und sei $z\in \R^n$. Dann gilt
+        Sei $\vp \in C^1(\R^n)$, und sei $z\in \R^n$. Dann gilt
         \[
             \vp (x+z)-\vp(x)=\div \left( z\cdot \int_0^1 \vp (z+tz) \d t\right)
         \]
         \item{c)}
-        Seien $x,K,\vp$ wie in $a)$, $\Omega \subset \R^n$ offen, beschränkt. Sei $f\in C^2(\ol \Omega)$,
-        sei $K\cap f(\partial \Omega)=\varnothing$. Dann existiert $v\in C^1(\ol \Omega)$, mit $\supp v
-        \subset \Omega$, so dass
+        Seien $u$, $K$, $\vp$ wie in $a)$, $\Omega \subset \R^n$ offen, beschränkt.
+        Sei $f\in C^2(\ol \Omega)$ mit $K\cap f(\partial \Omega)=\varnothing$. Dann existiert
+        $v\in C^1(\ol \Omega)$, mit $\supp v \subset \Omega$, so dass
         \[
             \vp (f(x))J_f(x)=\div v(x) \qq \text{auf} \qq \Omega
         \]
@@ -58,7 +58,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
     Somit gilt:
     \begin{align*}
         \div u(x)&=\sum_{k,j}\partial _k u_j(f(x))\cdot \left( \sum_{i=1}^n \d_{ij}(x) \partial f_k(x) 
-                \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d {ij}(x) \right)\\
+                \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d_{ij}(x) \right)\\
         =&\sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
     \end{align*}
     Behauptungen: Siehe Übungsblatt 2.
@@ -93,7 +93,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         Sei $x\in \supp w$. Damit existert $t\in [0,1]$ mit $|x-y^1+t(y^1-y^2)|<\eps$
         \begin{align*}
             \Ra \, |x-y_0|&\leq \eps + |y^1-t(y^1-y^2)-y_0|\leq \eps +|(1-t)(y^1-y_0)+t(y^2-y_0)|\\
-                \eps + \rho-\delta<\rho
+                \eps + \rho-\delta&<\rho
         \end{align*}
         Damit gilt aber, dass $f(\partial \Omega)\cap \supp w=\varnothing$. Mit Proposition 
         $\ref{2.7}$ e) existiert
@@ -122,13 +122,13 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
     \]
 \end{defi}
 
-\textit{Behauptung:} $\deg$ ist somit nach dem vorherstehenden Überlegungen wohldefiniert.
+\noindent\textit{Behauptung:} $\deg$ ist somit nach dem vorherstehenden Überlegungen wohldefiniert.
 \subsubsection*{2. Schritt: Nur stetige Funktionen $f$}
 
 Auch hier die Idee: Sei $f\in D_y(\ol \Omega, \R^n)$. Wir suchen $\tilde f \in C^2 (\ol \Omega, \R^n)$
 hinreichend nahe an $f$ (in derselben Zushgskomponente von $D_y(\ol \Omega, \R^n)$) und übertragen
-den Wert von $\deg(\cdot , \Omega, y)$ von $\tilde f$ auf f. Es bleibt zu zeigen, dass die so definierte
-Funktion stetig ist.
+den Wert von $\deg(\cdot , \Omega, y)$ von $\tilde f$ auf $f$. Es bleibt zu zeigen, dass die so
+definierte Funktion stetig ist.
 
 \begin{lem}\label{2.10}
     Sei $f\in D_y^2(\ol \Omega, \R^n)$, sei $g\in C^2(\ol \Omega, \R^n)$. Dann existiert $\eps >0$, so 
@@ -140,22 +140,24 @@ Funktion stetig ist.
 \begin{proof}
     \begin{description}
         \item{1)}
-        $f(y)=\varnothing \, \Ra \, (f+tg)^{-1}=\varnothing$ für $|t|
-        <\frac{\dist(y,f(\ol \Omega))}{\|g\|_\infty}$
+        $f(y)=\varnothing \, \Ra \, (f+tg)^{-1}(y)=\varnothing$ falls
+        \[
+            |t| < \frac{\dist(y,f(\ol \Omega))}{\|g\|_\infty}
+        \]
         \item{2)}
         $y\in \RV (f) \, \Ra \, f^{-1}(y)=\{x\}_{i=1}^N$. Mithilfe des \textit{Satzes über die 
             implizite Funktion} finden wir
             \[
-                U^i(x^i)
+                U(x^i)=:U^i
             \]
-            disjunkte Umegbungen, so dass eindeutige Lösungen $x^i(t)$ existieren von
+            disjunkte Umegbungen, so dass eindeutige Lösungen $x^i(t)\in U^i$ existieren von
             \[
                 (f+tg)(x)=y \qq \forall |t|<\eps
             \]
-            Wir können (zumindest auf evtl. noch kleineren $U^i(x^i)$) annehmen, dass das Vorzeichen
-            von $J_f+tg$ konstant ist auf $U^i(x^i)$. Sei 
+            Wir können (zumindest auf evtl. noch kleineren $U^i$) annehmen, dass das Vorzeichen
+            von $J_{f+tg}$ konstant ist auf $U^i$. Sei 
             \[
-                \eps _2= \frac{\dist(y,f(\Omega\setminus \bigcup_{i=1}^NU^i(x^i)))}{\|g\|_\infty}.
+                \eps _2= \frac{\dist(y,f(\Omega\setminus \bigcup_{i=1}^NU^i))}{\|g\|_\infty}.
             \]
             Dann gilt $\dist(y,(f+tg)(\partial \Omega))>0$ $\forall |t|<\eps_2$. Das Lemma gilt somit
             für $\eps = \min(\eps,\eps_2)$

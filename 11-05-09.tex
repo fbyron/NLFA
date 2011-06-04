@@ -53,15 +53,15 @@
     dass man einen Igel nicht stetig kämmen kann. Übungsaufgabe. 
 \end{remark}
 
-\begin{theorem}[Brouwerscher Fixpunktsatz]\label{2.13}
-    Sei $K$ ein topologischer Raum, der zu einer kompakten konvexen Teilmenge des $R^n$ homöomorph ist.
+\begin{theorem}[Brouwer'scher Fixpunktsatz]\label{2.13}
+    Sei $K$ ein topologischer Raum, der zu einer kompakten konvexen Teilmenge des $\R^n$ homöomorph ist.
     Sei $f\in C(K,K)$. Dann besitzt $f$ einen Fixpunkt.
 \end{theorem}
-
+sss
 \begin{proof}
     \begin{description}
     \item{1.}
-    $K=\ol{B_r(0)}\subset\R^n$. Falls ein Fixpunkt auf dem Rand existiert, dann sind wir fertig.
+    $K=\ol{B_r(0)}\subset\R^n$. Falls für $f$ ein Fixpunkt auf dem Rand existiert, dann sind wir fertig.
     Ansonsten gilt für $H(t)=\Id-tf$, dass $0\nin H(t)(\partial B_r(0))$, nachdem
     \[
         |H(t)(x)|\geq |x|-t|f(x)|\geq (1-t)r>0 \qq \text{für} \qq 0\leq t< 1, \qq x\in\partial B_r(0).
@@ -74,7 +74,7 @@
     Somit existiert $x\in B_r(0)$ mit $x=f(x)$.
     \item{2.}
     Sei nun $K\subset \R^n$ konvex, kompakt. Für ein $\rho>0$ gilt $K\subset B_\rho(0)$ und gemäß Satz
-    \label{2.12} können wir $f$ stetig durch $g$ auf $\ol{B_{\rho}(0)}$ fortsetzen mit
+    \ref{2.12} können wir $f$ stetig durch $g$ auf $\ol{B_{\rho}(0)}$ fortsetzen mit
     \[
         g\left( \ol{B_\rho (0)} \right)\subset \conv \, K=K.
     \]
@@ -99,7 +99,7 @@
     \item{$\ra$}
     Beispiel von Kakutani später.
     \item{$\ra$}
-    \textit{Schauderscher Fixpunktsatz}.
+    \textit{Schauder'scher Fixpunktsatz}.
     \end{description}
     \item{3.}
     Im eindimensionalen Fall ist \ref{2.13} nichts anderes als der Zwischenwertsatz angewendet auf
@@ -111,7 +111,7 @@
     \end{description}
 \end{remark}
 
-\subsubsection*{Ein Anwendugsbeispiel}
+\subsubsection*{Ein Anwendungsbeispiel}
 
 Existenz positiver (bzw. nichtnegativer) Eigenwerte und Eigenfunktionen. Sei $A=(a_{ij})_{i,j=1}^n$ eine
 Matrix und sei $a_{ij}\geq 0$ $\forall (i,j)$. Dann existiert $\lambda\geq 0$, $x=(x_i)_{i=1}^n$,
@@ -123,12 +123,12 @@ $x_i\geq 0$ $\forall i$ mit
 \begin{proof}
     Sei 
     \[
-        K=\{ x\in \R^n \, |\, x\geq 0, \, \sum_{i}x_i=1 \}
+        K=\{ x\in \R^n \, |\, x_j\geq 0, \, \sum_{i}x_i=1 \}
     \]
     kompakt und konvex.
     \begin{description}
         \item{1)}
-        Falls $Ax=0$ für ein $x\in K$, gilt \ref{6} mit $\lambda=0$.
+        Falls $Ax=0$ für ein $x\in K$, gilt (\ref{6}) mit $\lambda=0$.
         \item{2)}
         Sei $Ax\neq 0$ $\forall x\in K$. Dann existiert $\alpha>0$ mit
         \[
@@ -154,7 +154,7 @@ $x_i\geq 0$ $\forall i$ mit
 
 Sei $m<n$, wir identifizieren im Folgenden den $\R^m$ mit dem Unterraum
 \[
-    \{x\in \R^n \, | \, x_{m+n}=…=x_n=0\}\subset \R^n.
+    \{x\in \R^n \, | \, x_{m+1}=…=x_n=0\}\subset \R^n.
 \]
 
 \begin{theorem}[Reduktionseigenschaften des Abbildungsgrades]\label{2.14}
@@ -164,7 +164,7 @@ Sei $m<n$, wir identifizieren im Folgenden den $\R^m$ mit dem Unterraum
     \]
     Sei $y\in \R^m$, $y\nin g(\partial \Omega)$. Dann gilt
     \[
-        \deg(g,\Omega,y)=\deg(g|_{\ol{\Omega}\cap\R^m},\Omega|_{R^m},y).
+        \deg(g,\Omega,y)=\deg(g|_{\ol{\Omega}\cap\R^m},\Omega|_{\R^m},y).
     \]
 \end{theorem}
 
@@ -183,13 +183,13 @@ Sei $m<n$, wir identifizieren im Folgenden den $\R^m$ mit dem Unterraum
         \item{1)}
         Sei $g\in C^1(\ol \Omega)$ und $y\in \RV(g)$ und $x\in \Omega$, $g(x)=y$.
         \[
-        \Ra \, x=y=f(x)\in \R^m \qq \Ra \qq x\in \Omega_m.
+        \Ra \, x=y=f(x)\in \R^m \, \Ra \, x\in \Omega_m.
         \]
         Somit haben wir
         \[
             g^{-1}(y)=g_m^{-1}(y).
         \]
-        Nach der Determinantenformel genögt es nun zu zeigen, dass
+        Nach der Determinantenformel genügt es nun zu zeigen, dass
         \[
             J_{g_m}(x)=J_g(x) \qq \text{für} \qq x\in \Omega_m.
         \]

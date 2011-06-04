@@ -44,43 +44,58 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
     \]
     heißt Gradabbildung, falls
     \begin{description}
-        \item[D1]
-        $\deg(f,U,y)=\deg(f-y,U,0)$
-        \item[D2]
-        $\deg(\Id,U,y)=1 \qq \forall y\in U$
-        \item[D3]
-        Seien $U_1,U_2\subset U$ offen und disjunkt, sodass $y\nin f(\ol U\,|\,(U_1\cup U_2))$, dann
-        gelte
+        \item[(D1)]
+        Translationsinvarianz: 
+        \[
+            \deg(f,U,y)=\deg(f-y,U,0)
+        \]
+        \item[(D2)]
+        Normalisation:
+        \[
+            \deg(\Id,U,y)=1 \qq \forall y\in U
+        \]
+        \item[(D3)]
+        Additivität: Seien $U_1,U_2\subset U$ offen und disjunkt, sodass
+        \[
+            y\nin f(\ol U\,|\,(U_1\cup U_2)),
+        \]
+        dann gelte
         \[
             \deg(f,U,y)=\deg(f,U_1,y)+\deg(f,U_2,y)
         \]
-        \item[D4]
-        $H(t)=(1-t)f+tg \in D_y(\ol U,\R^n) \qq \forall \, t\in [0,1]\, \Ra \, \deg(f,U,y)=\deg(g,U,y)$
-        (Homotopieinvarianz)
+        \item[(D4)]
+        Homotopieinvarianz: 
+        \[
+            H(t)=(1-t)f+tg \in D_y(\ol U,\R^n) \qq \forall \, t\in [0,1]\, \Ra \, \deg(f,U,y)=\deg(g,U,y)
+        \]
 \end{description}
 \end{defi}
 
 \begin{theorem}\label{2.1}
     Sei $\deg$ eine Gradabbildung. Dann gilt
     \begin{description}
-        \item{i)}
+        \item{(i)}
         $\deg(f,\varnothing,y)=0$ und
         \[
             \deg(f,U,y)=\sum_{i=1}^N \deg(f,U_i,y)
         \]
-        falls $y\nin f(\ol U\setminus\bigcup_{i=1}^NU_i)$, $U_i\subset U$ offen und disjunkt.
-        \item{ii)}
+        falls 
+        \[
+            y\nin f(\ol U\setminus\bigcup_{i=1}^NU_i),
+        \]
+        wobei $U_i\subset U$ offen und disjunkt für $1\leq i \leq N$.
+        \item{(ii)}
         $y\nin f(U) \, \Ra \, \deg(f,U,y)=0$
-        \item{iii)}
-        $|f(x)-g(x)|<\dist(y,f(\partial U)) \qq \forall \, x\in \partial U \qq \ra \qq \deg(f,u,y)
+        \item{(iii)}
+        $|f(x)-g(x)|<\dist(y,f(\partial U)) \, \forall \, x\in \partial U \, \Ra \, \deg(f,U,y)
         =\deg(g,U,y)$
     \end{description}
 \end{theorem}
 
 \begin{proof}
     \begin{description}
-    \item{i)}
-    Sei $U_1=U$, $U_2=\varnothing$, einsetzen in (\textbf{D3})
+    \item{(i)}
+    Sei $U_1=U$, $U_2=\varnothing$, einsetzen in \textbf{(D3)}
     \[
         \Ra \, \deg(f,\varnothing,y)=0
     \]
@@ -88,13 +103,13 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
     \[
         \Ra \, \deg(f,U,y)=\deg(f,U_1,y)
     \]
-    $i>1:$ Induktion mittels (\textbf{D3})
-    \item{ii)}
+    $i>1:$ Induktion mittels \textbf{(D3)}
+    \item{(ii)}
     \begin{align*}
-        y\nin f(U) \ra y \nin &=(\ol U)\, \Ra \, y\nin f(\ol U\setminus \varnothing)\\
+        y\nin f(U) \Ra y &\nin f(\ol U)\, \Ra \, y\nin f(\ol U\setminus \varnothing)\\
         \overset{(i)}{\Ra } \, \deg (f,U,y)&=0 \qq (i=1, U_1=\varnothing)
     \end{align*}
-    \item{iii)}
+    \item{(iii)}
     Sei $H(t,x):=(1-t)f(x)+tg(x)$ und sei $x\in \partial U$
     \begin{align*}
         \Ra \, |H(t,x)-y|&= |f(x)-y+t(g(x)-f(x))|\\
@@ -104,6 +119,7 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
         &\overset{(\textbf{D4})}{\Ra} \text{ Behauptung.}
     \end{align*}
     \end{description}
+    \[ \]
 \end{proof}
 
 \begin{theorem}\label{2.2}
@@ -123,18 +139,18 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
     Beachte: $D_y(\ol U, \R^n)$ ist offen in $C^0(\ol U, \R^n)$
     \begin{description}
     \item{i)}
-        $\|f-g\|_{C^0,\ol U} <\eps \, \Ra \, |f(x)-g(x)|<\eps \, \forall \, x,\partial U$ mit
+        $\|f-g\|_{C^0,\ol U} <\eps \, \Ra \, |f(x)-g(x)|<\eps \, \forall \, x\in\partial U$ mit
         \[
             \eps:= \dist(y,f(\partial U)) \, \Ra \, \deg (f,U,y)=\deg (g,U,y)
         \]
     \item{ii)}
-        Sei $y_0\nin f(\partial U)$ und $y\in B_{\dist(y_0,f(\partial U))}(y_0\subset \R^n\setminus
-                f(\partial U))$
-        \begin{eqnarray*}
+        Sei $y_0\nin f(\partial U)$ und $y\in B_{\dist(y_0,f(\partial U))}(y_0)\subset \R^n\setminus
+                f(\partial U)$
+        \begin{align*}
             \Ra \, \|(f-y)-f\|&<\dist(y_0,f(\partial U))\\
                 \overset{i)}{\Ra} \, \deg(f-y,U,y_0) &= \deg(f,U,y_0)\\
-            \overset{\textbf{D1}}{\Ra } \, \deg (f,U,y_0+y)&= \deg(f,U,y_0)
-        \end{eqnarray*}
+            \overset{\textbf{(D1)}}{\Ra } \, \deg (f,U,y_0+y)&= \deg(f,U,y_0)
+        \end{align*}
     \item{iii)}
         $H$ ist gleichmäßig stetig
         \[
@@ -146,14 +162,15 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
         \]
         weil $\deg(\cdot,U,y)$ konst. auf Zsh-Komponenten ist. Für $y=y(t):$
         \begin{align*}
-            \deg(H(0),U,y(0))&=\deg(H(0)-y(0),U,0)=\deg(H(t)-y(t), U, 0) \qq \forall t\\
-            &=
+            \deg(H(0),U,y(0))&=\deg(H(0)-y(0),U,0)=\deg(H(t)-y(t), U, 0) \qq \forall t\in [0,1]\\
+            &= \deg(H(1),U,y(1)).
         \end{align*}
     \end{description}
+    \[ \]
 \end{proof}
 
 \begin{lem}\label{1.3.5}
-    Zwei Matrizen $M_1,M_2\in \Gl(n)$ sind genau dann homotop in $\Gl(n)$, falls
+    Zwei nichtsinguläre Matrizen $M_1,M_2\in \Gl(n)$ sind genau dann homotop in $\Gl(n)$, falls
     \[
         \sign \det M_1 = \sign\det M_2
     \]
@@ -184,7 +201,7 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
 \end{proof}
 
 \begin{theorem}
-    Sei $f\in D_y^1(\ol U, \R^n)$, $y\nin CV(f)$ und $\deg$ eine Gradabbildung. Dann gilt
+    Sei $f\in D_y^1(\ol U, \R^n)$, $y\nin \CV(f)$ und $\deg$ eine Gradabbildung. Dann gilt
     \[
         \deg(f,U,y)=\sum_{x\in f^{-1}(y)} \sign J_f(x),
     \]
@@ -192,40 +209,39 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
 \end{theorem}
 
 \begin{proof}
-    O.B.d.A. $y_0$ (\textbf{D1}). Alle $x\in f^{-1} (0)$ sind isolierte Punkte in $U$ (Homöomorphiesatz).
+    O.B.d.A. $y=0$ (nach \textbf{D1}). Alle $x\in f^{-1} (0)$ sind isolierte Punkte in $U$
+    (Homöomorphiesatz).
     $f^{-1}(y)$ hat höchstens am Rand einen Häufungspunkt, aber $0\nin f(\partial U)$.
     \[
         \Ra \, f^{-1}(0)= \{ x^i \}_{i=1}^N
     \]
     Wähle $\delta >0$ so klein, dass $B_\delta(x^i)$ paarw. disjunkt.
     \[
-        \deg(f,U,0)=\sum_{i=1}^N \deg(f,B_\delta(x^i),0)
+        \Ra \, \deg(f,U,0)=\sum_{i=1}^N \deg(f,B_\delta(x^i),0)
     \]
     beachte $0\nin f(\ol U, \setminus \bigcup_{i=1}^N B_\delta(x^i))$.
     \begin{align*}
-        f(x)&= \partial f(x)(x-x') + |x-x^i| r(x-x') \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
-        \qq r(0)=0)\\
+        f(x)&= \d f(x)(x-x') + |x-x^i| r(x-x') \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
+        \qq r(0)=0\\
             &=
     \end{align*}
     Zeige $0\nin H(t,\partial B_\delta(x^i))$.
     \[
-        J_f(x^i)\neq 0 \, \Ra \, \exists\, \lambda >0:\, |\partial f(x^i)(x-x^i)|\geq \lambda|x-x^i|
+        J_f(x^i)\neq 0 \, \Ra \, \exists\, \lambda >0:\, |\d f(x^i)(x-x^i)|\geq \lambda|x-x^i|
     \]
     O.B.d.A. sei $\delta$ so klein, dass $|r(x-x^i)|<\lambda$ in $B_\delta (x^i)$.
-    \[
-        \Ra\, | H(t,x) |>|\partial f(x^i)(x-x^i)|-(1-t)(x-x^i)r(x-x^i)\geq \lambda \delta - \delta|r|>0
-        \qq \forall \, x\in \partial B_\delta (x^i)
-    \]
-    \[
-        \overset{(\textbf{D4})}{\Ra} \, \deg(f,U,0)=\sum_{i=1}^N\deg (\partial f (x^i)(\cdot-x^i),
-                B_\delta(x^i),0
-    \]
+    \begin{align*}
+        \Ra\, | H(t,x) |&>|\d f(x^i)(x-x^i)|-(1-t)(x-x^i)r(x-x^i)\geq \lambda \delta - \delta|r|>0
+        \qq \forall \, x\in \partial B_\delta (x^i)\\
+        \overset{(\textbf{D4})}{\Ra} \, \deg(f,U,0)&=\sum_{i=1}^N\deg (\partial f (x^i)(\cdot-x^i),
+                B_\delta(x^i),0)
+    \end{align*}
     Lemma \ref{1.3.5}
     \[
-        \Ra \, \deg(\partial f (x^i)(\cdot- x^i),B_\delta (x^i),0)= \deg(\diag(\sign J_f(x^i),1,…,1),
+        \Ra \, \deg(\d f (x^i)(\cdot- x^i),B_\delta (x^i),0)= \deg(\diag(\sign J_f(x^i),1,…,1),
             B_\delta(x^i),0)
     \]
-    Falls $J_f(x^i)>0\, \overset{\textbf{D2}}{\Ra}\,\deg(I(\cdot-x^i),B_\delta (x^i),0)=1$. Es genüngt
+    Falls $J_f(x^i)>0\, \overset{\textbf{(D2)}}{\Ra}\,\deg(I(\cdot-x^i),B_\delta (x^i),0)=1$. Es genüngt
     also, $\deg(M(\cdot-x^i),B_1(x^i),0)$. Zu berechnen, wobei $M=\diag(-1,1,…,1)$ ist.
     \begin{align*}
         U_1&:= B_1 (x^i) = \{ \max_{1\leq k\leq n} |x_k-x_k^i|<1 \}\\

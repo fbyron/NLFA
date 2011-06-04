@@ -146,7 +146,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
 \end{defi}
 
 \begin{prop}\label{3.9}
-    Die obige Definiton ist unabhängig von der Wahl von $F_1$ und $X_1$.
+    Die obige Definition ist unabhängig von der Wahl von $F_1$ und $X_1$.
 \end{prop}
 
 \begin{proof}
@@ -155,7 +155,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \[
         F_i\in \ms F_y(\ol\Omega_0,X_0) \qq i=1,2
     \]
-    und es folgt wegen der Reduktionseigenschaft des endlich dimenisionalen Abbildungsgrades, dass
+    und es folgt wegen der Reduktionseigenschaft des endlichdimensionalen Abbildungsgrades, dass
     \[
         \deg(\Id + F_i,\Omega_0,y)=\deg(\Id+F_i,\Omega_i,y)\qq i=1,2
     \]
@@ -167,7 +167,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \[
         \Ra \, \deg(\Id+F_1,\Omega_0,y)=\deg(\Id+F_2,\Omega_0,y)
     \]
-    Somit ergibt Definiton \ref{3.8} Sinn.
+    Somit ergibt Definition \ref{3.8} Sinn.
     \[ \]
 \end{proof}
 
@@ -197,13 +197,86 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \textit{i)-iii)} folgen sofort aus der Definition und den entsprechenden Eigenschaften des
     endlichdimensionalen Abbildungsgrades.
 
-    \noindent Zu \textit{iv)}: Mittels \textit{i)} betrachten wir $y(t)=0$ ($\tilde H(t)=H(t)-y(x)$).
-    Nachdem $H([0,1],\partial \Omega)$ abgeschlossen und kompakt ist, gilt
-    $\rho=\dist(y,H([0,1])\times\partial\Omega)>0$. Nach Satz \ref{3.6} existiert $H_1\in \ms F([0,1]
-    \times\ol\Omega, X)$, so dass $\|H(t)-H_1(t)\|<\rho$ $t\in [0,1]$. Damit folgt
+    \noindent\textit{iv)} Wir betrachten $H:[0,1]\times \ol \Omega\ra X$ stetig,
+    so dass $\forall t_0,\,\forall \eps>0$ $\exists \delta>0$ mit
     \[
-        \deg(\Id+H(t),\Omega,0)=\deg(\Id+H_1(t),\Omega,0) \qq \forall t\in [0,1].
+        \|H(t_0)-H(t)\|\leq \eps, \text{ falls } |t-t_0|<\delta,
     \]
-    Die Behauptung folgt nun wieder aus den Eigenschaften des endlichen Abbildungsgrades.
+    \[
+        y:[0,1]\ra X \text{ stetig},
+    \]
+    Es sei $H(t)\in \ms D_{y(t)}(\ol \Omega,X)$ $\forall t\in[1,0]$. Dann gilt
+    \[
+        \deg(\Id+H(0),\Omega,y(0))=\deg (\Id +H(1),\Omega,y(1))
+    \]
+    \begin{proof}
+        O.E. sei $y=(t)=0$ ($\tilde H(t)(x)=H(t)(x)-y(t)$).\\
+        \textbf{Behauptung:} $H\in \ms C([0,T]\times \ol\Omega,X)$
+        \begin{proof}
+            Sei $\eps >0,\, \forall t\in [0,1]$ sei $H_\eps^t$ eine endlichdimenisionale Approximation
+            von $H(t)$, so dass
+            \[
+                \|H_\eps^t-H(t)\|\leq\frac\eps4 \qq \forall t \qq \text{nach Satz \ref{3.6}}
+            \]
+            Nun sei $\{t_j\}_{j=1}^N$, so dass $\bigcup _{j=1}^N B_{j_j}(t_j)\supset [0,1]$ mit $\delta_j
+            $, so dass $\|H(t_j)-H(t)\|\leq \frac\eps4$ für $t\in B_{f_j}(t_j)$. Nun sei $F_\eps$ die
+            stückweise affine Interpolation von $H_\eps^{t_j}$. Damit ist $F_\eps$ endlichdimensional und
+            $\|F_\eps(t)-H(t)\|<\eps$. Somit ist nach Satz \ref{3.6} $H\in \ms C([0,1]\times 
+            \ol \Omega, X)$.
+            \[ \]
+        \end{proof}
+        Mit dem selben Argument, das in Satz \ref{3.7} benutzt wird gilt, dass
+        \[
+            A:=\bigcup_{t\in [0,1]} (\Id+H(t))(\partial \Omega)
+        \]
+        ist abgeschlossen als Bild einer abgeschlossenen Menge, somit gilt
+        \[
+            \dist(A,y)=\rho>0
+        \]
+        Jetzt benutzen wir einfach die bereit vorher konstruierte endlichdimensionale Approximation 
+        $F_{\frac\rho2}$ von $H$ und wenden die Homotopieinvarianz im endlichdimensioalen Fall an.
+        \[ \]
+    \end{proof}
     \[ \]
 \end{proof}
+
+Auch die anderen Aussagen über den endlichdimensionalen Abbildungsgrad übertragen sich.
+Die Beweise bleiben gleich.
+
+\begin{theorem}\label{3.11}
+    Seien $F,G\in \ms D_y(\ol\Omega,X)$. Es gilt
+    \begin{description}
+        \item{i)}
+        $\deg(\Id+F,\varnothing,y)=0$. Weiter gilt, falls $\Omega_i$, $1\leq i\leq N$ offen, disjunkt,
+        so dass
+        \[
+            y\in (\Id+F)(\ol\Omega\setminus\bigcup_{i=1}^N\Omega_i),
+        \]
+        folgt dass $\deg(\Id+F,\Omega,y)=\sum_{i=1}^N \deg(\Id+F,\Omega_i,y)$
+        \item{ii)}
+        Falls $y\nin (\Id+F)(\Omega)$, dann gilt
+        \[
+            \deg(\Id+F,\Omega,y)=0
+        \]
+        (die Umkehrung gilt nicht notwendigerweise!)
+
+        Äquivalent dazu gilt
+        \[
+            \deg(\Id+F,\Omega,y)\neq 0 \, \Ra \, y\in (\Id+F)(\Omega)
+        \]
+        \item{iii)}
+        Falls $\|F(x)-G(x)\|<\dist(y,(\Id+F)(\partial\Omega))$ $\forall x\in \partial \Omega$, so gilt
+        \[
+            \deg(\Id+F,\Omega,y)=\deg(\Id+G,\Omega,y).
+        \]
+        Insbesondere gilt das auch für den Fall, dass
+        \[
+            F=G,\qq \text{auf } \partial \Omega
+        \]
+        \item{iv)}
+        $\deg(\Id+\cdot,\Omega,y)$ ist konstant auf Zusammenhangskomponenten von $D_y(\ol\Omega,X)$.
+        \item{v)}
+        $\deg(\Id+F,\Omega,\cdot)$ ist konstant auf Zusammenhangskomponenten von $X\setminus 
+        (\Id+F)(\partial \Omega)$
+    \end{description}
+\end{theorem}
