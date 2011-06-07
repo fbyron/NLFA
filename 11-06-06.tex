@@ -1,0 +1,251 @@
+\subsection{Der Nemychii-Operator}
+
+\begin{defi}\label{4.8}
+    Sei $G\subset \R^n$, $f:G\times \R^n\ra \R^k$. Durch Anwendung auf $u:G\ra \R^n$ definieren
+    wir den Operator $F$ als
+    \begin{align}
+        (Fu)(x)=f(x,u(x)), \qq x\in G
+    \end{align}
+\end{defi}
+
+\begin{lem}\label{4.9}
+    Die Funktion $f$ erfülle
+    \begin{description}
+        \item{1. Carathéodey-Bedingung:}
+        \[
+            f(\cdot,\eta): x \ra f(x,\eta) \qq \text{messbar } \forall \eta\in \R^n
+        \]
+        \[
+            f(x,\cdot):\eta\ra f(x,\eta) \qq \text{stetig f.f.a. } x\in G
+        \]
+        \item{2.Wachstums-Bedingung:}
+        \[
+            |f^j(x,\eta)|\leq |a(x)|+ b \sum_{i=1}^n|\eta^i|^{\nicefrac{p_i}{q}}
+        \]
+        mit $b>0$, $a\in L^q(G)$ und $1\leq p_i$, $q<\infty$, $i=1,…,n$. 
+    \end{description}
+    Dann ist $F$ aus Definition \ref{4.8} ein Operator der Form
+    \[
+        F:\prod_{i=1}^n L^{p_i}(G) \ra (L^q(G))^k
+    \]
+    und $F$ ist stetig sowie beschränkt. Es gilt
+    \[
+        \|Fu\|_{L^q}\leq c\left( \|a\|_{L^q} + \sum_{i=1}^n \|u^i\|_{L^{p_i}}^{\nicefrac{p_i}{q}} \right)
+    \]
+    $F$ heiqt in diesem Fall \textit{Nemychii-Operator}.
+\end{lem}
+
+\begin{proof}
+    (nur für $n=1$, $k=1$, $p=p_1$, $u=u^1$)
+    \begin{description}
+    \item{1. Messbarkeit von $Fu$:}
+    Es sei $u\in L^p$, also messbar. Wir approximieren $u$ durch
+    $(u_j)_{j=1}^n$, so dass
+    \[
+        u_j\ra u \text{ für auf } G, \, u_j=\sum_{i=1}^{N_j} c_i^j \chi_{G_i^j}
+    \]
+    Es gilt
+    \[
+        (Fu)(x)= \lim_{j\ra \infty} f(x,u_j(x)) \text{für fast alle } x
+    \]
+    wegen Stetigkeit von in der 2. Variablen. Weiter gilt
+    \[
+        f(x,u_j(x))=\sum_{i=1}^{N_j} f(x,c_i^j) \chi_{G_i^j(x)}
+    \]
+    Damit ist $f(x,u_j(x))$ messbar für alle $j\in \N$ als Produkt von messbaren Funktionen.
+    Somit ist $f(x,u(x))$ auch messbar als punktweiser Limes von messbaren Funktionen.
+
+    \item{2. Beschränktheit von $F$:}
+    \begin{align*}
+        \|Fu\|_{L^q}^q &= \int_G|f(x,u(x))|^q= \int(|a(x)| + b |u(x)|^{\nicefrac pq})\\
+            &\leq C\left( \|a(x)\|_{L^q}^q+\|u\|_{L^p} \right) \qq \text{nach Young}.
+    \end{align*}
+    \item{3. Stetigkeit von $F$:}
+    \[u_j\ra u \qq \text{in } L^p\]
+    \[
+        \Ra \, \exists \text{ Teilfolge :} \, u_{j_k}\ra u \qq \text{f.ü.}
+    \]
+    \[
+        \Ra \, (Fu_{j_k})(x) \ra (Fu)(x) \qq \text{f.f.a. } x\in G \text{ (wegen Stetigkeit)}
+    \]
+    Aber es gilt zudem, dass
+    \[
+        \int_G|f(x,u_{j_k}(x)) - f(x,u(x))|^q \leq C \underbrace{(\|u\|^q_{L^q} + \|u_{j_k}\|_{L^p}^q+\|u\|_{L^p}^q+)}
+        _{\text{beschränkt.}}
+    \]
+    Mit dem Satz über domenierte Konvergenz folgt
+    \[
+        \|Fu_{j_k}-Fu\|_{L^p}\ra 0.
+    \]
+    \begin{align*}
+        |f(x,u_{j_k}(x)) - f(x,u(x))|^q &\leq C(|f(x,u_{j_k}(x))|+ |f(x,u(x))|^q)\\
+        &\leq C(|a(x)|^q + b^q|u_{j_k}|^q + |f(x,u(x))|^q) =: h_{j_k}(x)
+    \end{align*}
+    Es folgt
+    \[
+        \|Fu_{j_k}-Fu\|_{L^q}^q\leq \int_G h_{j_k}
+    \]
+    mit
+    \[
+        h_{j_k}\ra h \qq \text{in } G; \qq \int_{G}h_{j_k} \ra \int_G h,
+    \]
+    denn $\|u_{j_k}\|_{L^p}\ra \|u\|_{L^p}$. Jetzt folgt mit majorisierter Konvergenz, dass
+    \[
+        F(u_{j_k})(x)\ra (Fu)(x) \text{ in } L^p
+    \]
+    Die selbe Rechnung mit gleichem Limes folgt allerdings auch unter vorheriger
+    Auswahl einer Teilfolge von $u_j$, somit gilt auch für die gesamte Folge, dass
+    \[
+        \|Fu_j-Fu\|\ra 0 \qq (j\ra \infty)
+    \]
+    \end{description}\[ \]
+\end{proof}
+
+\subsubsection*{Anwendung: $p$-Laplace}
+
+Wir betrachten das Randwertproblem:
+\[
+    -\div\left( |\nabla u|^{p-2} \nabla u \right) + su =f \qq \text{auf } \Omega
+\]
+für $1<p<\infty$, $\Omega\subset\R^n$ offen, beschränkt, $s\geq 0$, $u=0$ auf $\partial\Omega$.
+
+\noindent Schwache Formulierung: Es sei $f\in L^p (\Omega)$
+
+Wir suchen $u\in X= W^{1,p}_0(\Omega)$, so dass
+\begin{align}\label{22}
+    \int_\Omega |\nabla u|^{p-2} \nabla u \nabla \vp + s\int_{\Omega}u\vp=\int f\vp \qq \forall \vp \in X
+\end{align}
+
+Wir definieren einen Operator $A$ durch
+\[
+    \lal Au,\vp\ral = (Au)(\vp) := \int_\Omega |\nabla u|^{p-2}\nabla u \nabla \vp +\int su\vp \qq 
+    \forall u,\vp \in X
+\]
+und ein Funktional $b$ durch
+\[
+\lal b,\vp \ral = \int_\Omega f\cdot \vp
+\]
+
+\begin{lem}\label{4.10}
+    Es sei $p\geq \frac{2n}{n-2}$ $f\in L^{p'}$, dann gilt
+    \[
+        A:X\ra X'
+    \]
+    beschränkt und $b\in X'$. Weiter gilt, dass (\ref{22}) äquivalent ist zu
+    \[
+        Au=b
+    \]
+\end{lem}
+
+\begin{proof}
+    Wir benutzen $\|u\|_X=\|\nabla u \|_{L^p}$ als äquivalente Norm auf $X$ mittels \textit{Poincaré}.
+    \begin{description}
+        \item{1)}
+        Es gilt
+        \begin{align*}
+            |\lal Au,\vp \ral| &\leq \int_\Omega |\nabla u |^{p-1}|\nabla \vp| + s\int_\Omega |u\vp|\\
+            &\overset{\text{Hölder}}{\leq} \left( \int_\Omega |\nabla u|_{(p-1)p'} \right)^{\nicefrac1{p'}}
+            \cdot \left( \int_\Omega |\nabla \vp|^p \right)^{\nicefrac 1p} + s \|u\|_{L^2}\|\vp\|_{L^2}\\
+            &\overset{p'=\frac{p}{p-1}}{=} \|\nabla u\|_{L^p}^{p-1} \|\nabla \vp\|_{L^p} +
+            s \|u\|_{L^2}\|\vp\|_{L^2}= ……
+        \end{align*}
+        Für $p\geq \frac{2n}{n-2}$ bettet $W^{1,p}$ genau stetig in $L^2$ ein. Es gilt somit, dass
+        \[
+            ……\leq C (\|\nabla u \|_{L^p}^{p-1}+s\|\nabla u\|_{L^p})\|\nabla\vp\|_{L^p}
+        \]
+        \[
+            \Ra \, Au\in X'
+        \]
+        und
+        \begin{align*}
+            \|Au\|_{X'}&\leq \sup_{\|\vp\|_X\leq1} |\lal Au,\vp \ral| \leq C \|\nabla u\|_{L^p}^{p-1}
+            =C\|\nabla u\|_X^{p-1}
+        \end{align*}
+        \item{2)}
+        Gleichermaßen gilt
+        \[
+            \|b\|_X' \leq C\|f\|_{L^{p'}}
+        \]
+        \item{3)}
+        Es folgt, dass
+        \[
+            (\ref{22}) \, \LRa \, \lal Au,\vp\ral= \lal b,\vp\ral \qq \vp \in X
+        \]
+        Das ist nichts anderes als
+        \[
+            Au=b
+        \]
+    \end{description}\[ \]
+\end{proof}
+
+\begin{lem}\label{4.11}
+    Es seien die Voraussetzungen von Lemma \ref{4.10} gegeben, $A$ definiert nach (\ref{22}). Dann sind
+    die Voraussetzungen von Theorem \ref{4.6} gegeben.
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{1. Monotonie:}
+    Es sei $g=(g^1,…,g^n):\R^n\ra \R^n$ und
+    \[
+        g:\xi \mapsto |\xi|^{p-2} \xi, \qq g(0)=0  
+    \]
+    Damit folgt, dass
+    \[
+        \frac{\partial g^i}{\partial \xi^j}(\xi)=|\xi|^{p-2} \delta_i^j + (p-2)|\xi|^{p-4}\xi_i\xi_j
+        \qq i,j=1,…,n \qq \xi\neq 0.
+    \]
+    Somit gilt aber, dass
+    \begin{align*}
+        \sum_{i,j=1}^n \frac{\partial q^i}{\partial \xi _j}(\xi) \eta^i\eta^j&= |\xi|^{p-2}
+        \left( |\eta|^2+ (p-2)\frac{(\xi \eta)^2}{|\xi|^2} \right)
+        \geq \min(1,p-1) |\xi|^{p-2} |\eta|^2
+    \end{align*}
+    Nun sei $u\neq v \in X.$ es folgt, dass
+    \begin{align*}
+        \lal Au-Av,u-v\ral &= \int_\Omega (g(\nabla u)- g(\nabla v))(\nabla u - \nabla v) + s \int_\Omega
+        |u-v|^2\\
+            &\geq \int_\Omega \underbrace{\int_0^1 \frac{\d}{\d \tau} g(\nabla v + \tau(\nabla u +
+                        \nabla v)) \d\tau\cdot(\nabla u-\nabla v)}_{:= I}  \d x\\
+    \end{align*}
+    Es gilt:
+    \begin{align*}
+        I&\geq \int_0^1 \sum_{i,j=1}^n\frac{\partial g^i}{\partial\xi_j}(\nabla v + \tau(\nabla u-\nabla v))
+        \cdot (\partial_ju-\partial_jv)(\partial_iu-\partial_iv)\d \tau\\
+        &\geq  c |\nabla u - \nabla v|^2\underbrace{\int_0^1 |\nabla v+\tau(\nabla u -\nabla v)|^{p-2}\d\tau}
+        _{<\infty \text{ für }p>1} >0,
+    \end{align*}
+    denn $|\nabla v + \tau (\nabla u - \nabla v)|^{p-2}>0$ außer für max. 1 Punkt $\tau_0(x)$. Somit gilt
+    aber
+    \[
+        \lal Au-Av, u-v \ral >0 \qq \Ra \, A \, \text{strikt monoton.}
+    \]
+    \item{2. Koerzitivität:}
+    Es sei $u\in X$. Es gilt
+    \[
+        \lal Av,u\ral= \int_\Omega |\nabla u|^p + s|u|^2\geq \int_\Omega |\nabla u|^p
+    \]
+    \[
+        \frac{\lal Au,u \ral}{\|u\|_X} \geq \|\nabla u\|^{p-1}_{L^p} \ra \infty \qq \text{für }\|u\|_X
+        \ra \infty \, \text{und } p>1.
+    \]
+    \item{3. Stetigkeit:}
+    Für die Funktion $g$ aus 1. gilt
+    \[
+        |g^i(\xi)|\leq c |\xi|^{p-1} = c |\xi|^{\nicefrac pq} \qq \text{für } q=\frac{p}{p-1}
+    \]
+    und $g$ ist stetig. Somit ist 
+    \[
+        f:(l^P)^n\ra (L^p)^n, \qq  F:\nabla u \mapsto g(\nabla u)
+    \]
+    ein $n$-dimenisonaler \textit{Nemychii-Operator}. Die Stetigkeit von $A$ ist gegeben durch
+    \[
+        \lal Au,\vp\ral=\int_\Omega \underbrace{F(\nabla u)}_{\in L^{p'}} \cdot \underbrace{\nabla \vp}
+        _{\in L^p} +\underbrace{s\int_\Omega u \vp}_{\text{beschränkt.}}
+    \]
+    folgt durch Normabschätzung. Damit ist $A$ stetig und somit hemistetig.
+    \item{4.}
+    $W_0^{1,p}$ ist seperabler Banachraum, somit sind alle Voraussetzungen von \ref{4.6} erfüllt
+    \end{description}
+    \[ \]
+\end{proof}

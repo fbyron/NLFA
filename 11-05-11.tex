@@ -1,7 +1,7 @@
 \subsection{Der Fixpunktsatz von Kakutani und eine Anwendung in der Spieltheorie}
 
 Im Folgenden beweisen wir die sogenannten \textit{Nash-Gleichgewichte} in n-Personen.
-Als Vorbereitung ist es notwendig, den \textit{Brouwer'schen Fixpunktsatz} auf mengenwertigen Funktionen
+Als Vorbereitung ist es notwendig, den \textit{Brouwer'schen Fixpunktsatz} auf mengenwertige Funktionen
 zu verallgemeinern.
 
 Für $K\subset \R^n$ konvex, kompakt, bezeichnen wir mit $\CS(K)$ die Menge der konvexen (Teil-)Mengen
@@ -65,8 +65,8 @@ von $K$.
     $f\left(x^0\right)$ ist konvex. 
 
     In $n$ Dimensionen nehmen wir zunächst an, dass $K$ ein Simplex (Konvexe Hülle von $n+1$
-    nichtgenerierten Vertizes) ist. Wir wenden wiederholt die Baryzentrische Unterteilung an,
-    die der Durchmesser der Simplizes schrumpft mit einem Faktor $\frac{n}{n+1}$.
+    nichtdegenerierten Vertizes) ist. Wir wenden wiederholt die Baryzentrische Unterteilung an,
+    der Durchmesser der Simplizes schrumpft mit einem Faktor $\frac{n}{n+1}$.
     Zur $k$-ten baryzentrischon Unterteilung mit Vertizes $\{v_j\}_{j=1}^{N_k}$. Wählen wir wieder
     $y_j\in f(v_j)$ mit $f^k(x)$ durch Interpolation mittels baryzentrischen Koordinaten in jdn.
     Unter-Simplex. Wir erhalten wieder Fixpunkte $x^k$, und eine Teilfolge von
@@ -81,14 +81,15 @@ von $K$.
 
 \subsubsection*{Spieltheorie:}
 
-Ein $n$-Personen Spiel besteht aus $n$ Spielern, wobei der $t$-te Spieler $m_i$ mögliche Aktionen
+Ein $n$-Personen Spiel besteht aus $n$ Spielern, wobei der $i$-te Spieler $m_i$ mögliche Aktionen
 ausführen kann. Die Menge der möglichen Aktionen des $i$-ten Spielers bezeichnen wir mit
 $\Phi_i=\{ 1,…,m_i \}$. Nachdem jeder Spieler eine Aktion ausgeführt hat, wird abgerechnet. Der $i$-te
 Spiele bekommt den Payoff
 \[
     R_i(\vp), \qq \vp=(\vp_1,…,\vp_n)\in \Phi=\prod_{j=1}^n \Phi_j
 \]
-Wir betrachten den Fall, dass das Spiel häufig ausgeführt wird, und jdn. Spieler seine Aktion nach einer Wahrscheinlichkeitsverteilung (einer Strategie) auf $\Phi_i $ wählt. Diese bezeichenen wir mit
+Wir betrachten den Fall, dass das Spiel häufig ausgeführt wird, und jeder Spieler seine Aktion nach
+einer Wahrscheinlichkeitsverteilung (einer Strategie) auf $\Phi_i $ wählt. Diese bezeichenen wir mit
 \[
     S_i=\{s_i^1,…,s_i^{m_i}\},\qq s_i^k\geq 0, \qq \sum_{k=1}^{m_i}s_i^k=1 \qq \forall i
 \]
@@ -96,10 +97,10 @@ Die Menge aller möglichen Strategien für den $i$-ten Spieler nennen wir $S_i$.
 Wahrscheinlichkeit, dass der $i$-te Spieler die Aktion $k$ wählt. Die Wahrscheinlichkeit, dass jeder
 Spieler eine bestimmte Aktion $s_i^k$ wählt ist
 \[
-    S(\vp)=\prod_{i=1}^n S_i(\vp), \qq S_i(\vp)=s_i^{k_i}
+    S(\vp)=\prod_{i=1}^n s_i(\vp), \qq s_i(\vp)=s_i^{k_i}
 \]
 mit $\vp=(k_1,…,k_n)\in \Phi$. Wir nehmen hier an, dass die Spieler ihre Aktionen unabhängig voneinander
-wählen. Der mittlere Payoff für Spieler $i$ ist dan der Erwartungswert für $R_i(\vp)$. Wir nennen diesen
+wählen. Der mittlere Payoff für Spieler $i$ ist dann der Erwartungswert für $R_i(\vp)$. Wir nennen diesen
 $R_i(s)$ und erhalten
 \[
     R_i(s)=\sum_{\vp\in\Phi}s(\vp) K_i(\vp)
@@ -109,21 +110,21 @@ Nach Konstruktion ist
     R_i(s)
 \]
 stetig in $s$. Was ist nun die optimale Strategie für Spiel $i$? Falls alle anderen Spiele nach einer
-bekannten  Strategie handeln, is es optimal $\ol{S}_i$ so zu wählen, dass
+bekannten  Strategie handeln, ist es optimal $\ol{s}_i$ so zu wählen, dass
 \begin{align}\label{8}
     R_i(s\setminus \ol{s_i})=\max_{\tilde s_i \in S_i} R_i(s\setminus \tilde s_i)
 \end{align}
 $s\setminus \tilde s_i$: Strategiekomination, die sich ergibt, wenn man $s_i$ durch  $\tilde s_i$
-ersetzt. Wir bezeichnen mit $B_i(s)$ die Menge aller Strategien $\ol s_i\in S_i$, die $\ref{8}$ erfüllen.
+ersetzt. Wir bezeichnen mit $B_i(s)$ die Menge aller Strategien $\ol s_i\in S_i$, die $(\ref{8})$ erfüllen.
 Insbesondere gilt $\ol s_i\in B_i(s)$ genau dann wenn $\ol s_i^k=0$ falls
 \[
     R_i(s\setminus (0,…,1,…)) < \max_{1<l<m_i}R_i(s\setminus(0,…,1,…)) \qq \text{mit der 1 als $l$-ter
     Eintrag}
 \]
 Insbesondere existiert immer eine reine (immer die selbe Aktion wird gewählt) optimale Strategie
-zu gegebenem $s$. Weiter sieht man, dass $B_i(s)$ konvex ist und nicht leer. Es seien nun $s,\ol s\in S$.
+zu gegebenem $S$. Weiter sieht man, dass $B_i(s)$ konvex ist und nicht leer. Es seien nun $s,\ol s\in S$.
 Wir nennen $\ol s$ die optimale Antwort gegen $s$, falls $\ol s_i\in B_1(s)$ $i=1,…,n$.
-Es sei $B(s)$ die Menge aller optimalen Antworten gegen $S$, wir haben
+Es sei $B(s)$ die Menge aller optimalen Antworten gegen $s$, wir haben
 \[
     B(s)=\prod_{i=1}^n B_i(s).
 \]
@@ -141,7 +142,7 @@ Es sei $B(s)$ die Menge aller optimalen Antworten gegen $S$, wir haben
 \subsubsection*{Beispiele:}
 
 %\begin{description}
-    \textbf{1. Das Gefangenendilemma:}
+    \textbf{Das Gefangenendilemma:}
     Zwei Gefangene können entweder schweigen, oder mit der Polizei kooperieren, das heißt den jeweils
     anderen belasten.
     \[
@@ -155,12 +156,12 @@ Es sei $B(s)$ die Menge aller optimalen Antworten gegen $S$, wir haben
 
 \begin{proof}
     Wir betrachten $s\mapsto B(s)$, $S$ ist kompakt, konvex, $B(s)\subset S$ ist nicht leer, konvex für
-    alle $s$.
+    alle $s$. Abgeschlossenheit des Graphen folgt mit Folgenkompaktheit.
     \[
         s^n\in S, \qq \ol s^m\in B(s^m), \qq s^m\ra s, \qq \ol s^k\ra \ol s
     \]
-    Wir haben $R_i(s^m\setminus \tilde s_i)\leq R_i(s^m\setminus \ol s_m)$ mit Stetigkeit von $R_i$ folgt
-    sofort
+    Wir haben $R_i(s^m\setminus \tilde s_i)\leq R_i(s^m\setminus \ol s_m)$ für alle $\tilde s_i \in S_i$
+    mit Stetigkeit von $R_i$ folgt sofort
     \[
         R_i(s\setminus \tilde s_i) \leq R_i(s\setminus \ol s) \qq \forall s_i\in S_i
     \]

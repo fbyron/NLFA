@@ -1,6 +1,7 @@
 \section{Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}
 
-Das Ziel ist es, den Fixpunktsatz von Brouwer auf $\infty$-dimensionale Räume ………
+Das Ziel ist es, den Fixpunktsatz von Brouwer auf $\infty$-dimensionale Räume zu verallgemeinern.
+So einfach ist das nicht.
 
 \begin{theorem}[Kakutani]\label{3.1}
     Sei $H$ ein $\infty$-dimensionaler separabler Hilbertraum. Dann existiert eine stetige Abbildung
@@ -50,21 +51,25 @@ Das Ziel ist es, den Fixpunktsatz von Brouwer auf $\infty$-dimensionale Räume �
 \begin{proof}
     Sei $\Psi$ ein zweiter Isomorphismus. Es gilt $A=\Psi\circ\Phi^{-1}\in \Gl(n)$. Wir schreiben
     \[
-        f^\star:=\Phi \circ \phi^{-1}, \qq y^\star\in \RV(\tilde f^\star)
+        f^\star:=\Phi \circ f \circ \Phi^{-1}, \qq y^\star\in \RV(\tilde f^\star)
     \]
-    und wählen wie üblich $\tilde f^\star\in C^1(\Phi(\ol\Omega),\R^n)$ aus derselben Komponente von
+    und wählen wie üblich $\tilde f^\star\in D^1(\Phi(\ol\Omega),\R^n)$ aus derselben Komponente von
     $D_y(\Phi(\ol \Omega),\R^n)$ wie $f^\star$, so dass $y^\star\in \RV(\tilde f^\star)$. Dann ist auch
     \[
-        A\circ \tilde f^\star \circ A^{-1}\in C^1(\Psi (\ol \Omega),\R^n)
+        A\circ \tilde f^\star \circ A^{-1}\in D^1(\Psi (\ol \Omega),\R^n)
     \]
     in derselben Komponente von $D_y(\Psi(\ol \Omega),\R^n)$ wie $A\circ f^\star\circ A^{-1}=\Psi\circ
     f\circ \Psi^{-1}$.
     Nach der Kettenregel gilt
     \begin{align*}
         J_{A\circ \tilde f^\star\circ A^{-1}}(Ay^\star)&= \det(A) J_{\tilde f^\star}(y^\star)
-        \det(A^{-1})=J_{\tilde f^\star} (y^\star) \deg(\Phi\circ f \Phi^{-1},\Phi(\Omega), \Phi (y)).
+        \det(A^{-1})=J_{\tilde f^\star} (y^\star).
     \end{align*}
-    \[ \]
+    Und es folgt
+    \[ 
+        \deg(\Psi\circ f \circ\Psi^{-1},\Psi(\Omega),\Psi(y))
+        = \deg(\Phi\circ f \circ\Phi^{-1},\Phi(\Omega),\Phi(y))
+    \]
 \end{proof}
 
 Die Eigenschaften des Abbildungsgrades im $\R^n$ übertragen sich mit Definition \ref{3.2} auf den
@@ -79,7 +84,8 @@ Es seien $X$ und $Y$ Banachräume, $\Omega\subset X$ (nicht unbedingt offen).
 \begin{defi}
     Ein stetiger Operator $F:\Omega\ra Y$ heißt
     \begin{description}
-        \item{•} \textit{endlichdimenisional}, falls $F$ ein endlichdimensionaler UVR $Y_1\subset Y$
+        \item{•} \textit{endlichdimenisional}, falls ein endlichdimensionaler Untervektorraum $Y_1\subset Y$
+        existiert, sodass $F(\Omega)\subset Y_1$.
         \item{•} \textit{kompakt}, falls $F$ beschränkte Teilmenge von $\Omega$ auf relativ kompakte
         Teilmengen von $Y$ abbildet.
     \end{description}
@@ -117,5 +123,3 @@ Es seien $X$ und $Y$ Banachräume, $\Omega\subset X$ (nicht unbedingt offen).
         \]
     \end{description}
 \end{remark}
-
-

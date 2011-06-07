@@ -24,7 +24,7 @@ wobei $f(z_n)=0$, $\alpha_k$ Vielfachheiten.
 
 \subsubsection{Notation}
 
-$U\subset\subset R^n$ offen,
+$U\Subset \R^n$ offen, $f\in C^1(U,\R^n)$
 \begin{align*}
     J_f(x)&:=\det \d f(x)\\
     \RV(f)&:=\{ y\in \R^n \,| \, \forall \, x\in f^{-1}(y), \, J_f(x)\neq 0 \}\\
@@ -32,7 +32,7 @@ $U\subset\subset R^n$ offen,
     D_y^r(\ol U, \R^n)&:=\{f\in C^k(\ol U, \R^n)\,|\,y\nin f(\partial U)\}\\
     D_y(\ol U, \R^n)&:=D_y^0(\ol U, \R^n)
 \end{align*}
-$\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
+$\tau(\R^n)$ bezeichne die Topologie auf $\R^n$.
 \begin{defi}
     Eine Abbildung
     \[
@@ -221,11 +221,11 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
     \]
     beachte $0\nin f(\ol U, \setminus \bigcup_{i=1}^N B_\delta(x^i))$.
     \begin{align*}
-        f(x)&= \d f(x)(x-x') + |x-x^i| r(x-x') \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
-        \qq r(0)=0\\
-            &=
+        f\in C^1 \, \Ra \, f(x)&= \d f(x)(x-x^i) + |x-x^i| r(x-x^i) \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
+        \qq r(0)=0.\\
+           H(t,x) &:= \d f (x^i) (x-x^i)+ (1-t) (x-x^i)+(x-x^i)
     \end{align*}
-    Zeige $0\nin H(t,\partial B_\delta(x^i))$.
+    Zeige $0\nin H(t,\partial B_\delta(x^i))$, für alle $t\in [0,1]$.
     \[
         J_f(x^i)\neq 0 \, \Ra \, \exists\, \lambda >0:\, |\d f(x^i)(x-x^i)|\geq \lambda|x-x^i|
     \]
@@ -254,7 +254,7 @@ $\tau(R^n)$ bezeichne die Topologie auf $\R^n$.
         \Ra \, \deg (f_1,U,0)&= \deg(f_1,U_1,0)+ \deg(f_2,U_2,0) \qq (\star)\\
         \Ra \, \deg(M,B_1(x^i),0)&=\deg(\partial f_1(y),B_1(x^i), 0)\\
         &=\deg(f_1, U_1,0) \overset{(\star)}{=} -\deg (f_1,U_2,0)\\
-        &= -\deg(\partial f_1(z),U_2,0)=\deg(\Id, U_2,0)=1
+        &= -\deg(\partial f_1(z),U_2,0)=\deg(\Id, U_2,0)=-1
     \end{align*}
     \[ \]
 \end{proof}

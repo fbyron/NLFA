@@ -32,7 +32,7 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
 \end{lem}
 
 \begin{proof}
-    Es sei $\{x_j\}_{j=1}^N\subset K$, so dass $\bigcap _{j=1}^NB_\eps(x_j)$ eine Überdeckung von $K$
+    Es sei $\{x_j\}_{j=1}^N\subset K$, so dass $\bigcup _{j=1}^NB_\eps(x_j)$ eine Überdeckung von $K$
     darstellt. Sei $\{\Phi_j\}_{j=1}^N$ eine Zerleung der Eins, welche $\{B_\eps(x_j)\}_{j=1}^N$
     untergeordnet ist. Wir definieren
     \[
@@ -43,6 +43,9 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
         \|P_\eps(x)-x\|=\left\|\sum_{j=1}^N\Phi_j(x)x_j-\sum_{j=1}^N \Phi_j(x)x\right\|
         \leq \sum_{j=1}^N \Phi_j(x)\|x-x_j\|\leq \eps
     \]
+    Es ist nämlich $\|x-x_j\|< \eps$ für alle $x\in B_\eps(x_j)$, aber für $\|x-x_j\|>\eps$ ist
+    $\Phi_j(x)=0$.
+    \[ \]
 \end{proof}
 
 \begin{theorem}\label{3.6}
@@ -56,7 +59,7 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
 
 \begin{proof}
     Es sei $(F_n)_{n\in \N}$ eine Folge in $\ms C(\Omega,Y)$, sodass  $F_n\ra F$. Wir nehmen an, dass
-    $F\nin \ms C(\Omega,Y)$. Dann existiert eine Folge $(x_n)_{n\in \N}$, so dass
+    $F\nin \ms C(\Omega,Y)$. Dann existiert eine (beschränkte) Folge $(x_n)_{n\in \N}$, so dass
     \[
         \|F(x_k)-F(x_l)\|\geq \rho>0 \qq\text{für}\qq k\neq l
     \]
@@ -70,7 +73,7 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
     \]
     Das ist ein Widerspruch zur Annahme, dass $F_n\in \ms C(\Omega,Y)$. Somit gilt auch
     \[
-        \ol{\ms F(\Omega,Y)}^{\ms C(\Omega,Y)}\subset \ms C(\Omega,Y)
+        \ol{\ms F(\Omega,Y)}^{C(\Omega,Y)}\subset \ms C(\Omega,Y)
     \]
     Sei andererseits $F\in \ms C(\Omega,Y)$,und sei $K=\ol{F(\Omega)}$ kompakt. sei $P_\eps$ gewählt wie
     in Lemma \ref{3.5}. Es gilt
@@ -84,8 +87,8 @@ kompakte Störungen der Identität (d.h. Operatoren der Form $\Id+F$, $F\in \ms 
 zunächst einige Interessante Eigenschaften von $\Id+F$.
 
 \begin{lem}\label{3.7}
-    Sei $X$ ein Banachraum und $\Omega\subset X$ beschränkt und abgeschlossen, $F\in \ms C(\Omega,Y)$.
-    Dann ist $\Id + F$ eine eigentliche Abbildung (d.h. $(\Id+F)^{-1}(K)$ ist kompakt für $K\in X$ 
+    Sei $X$ ein Banachraum und $\Omega\subset X$ beschränkt und abgeschlossen, $F\in \ms C(\Omega,X)$.
+    Dann ist $\Id + F$ eine eigentliche Abbildung (d.h. $(\Id+F)^{-1}(K)$ ist kompakt für $K\subset X$ 
     kompakt), die abgeschlossene Teilmengen von $\Omega$ auf abgeschlossene Teilmengen von $X$ abbildet.
 \end{lem}
 
@@ -98,16 +101,17 @@ zunächst einige Interessante Eigenschaften von $\Id+F$.
     \[
         y_n-x_n=F(x_n),
     \]
-    somit folgt $y_n-x_n\ra z$ in $X$, nach Extraktion einer Teilfolge. Es folgt $x_n\ra x \in A$, da
-    $A$ abgeschlossen und $y_n$ konvergent nach Annahme. Wir haben aber $x=y-z\in A$. Nachdem aber
-    $y=x+F(x)\in (Id+F)(A)$ folgt die Behauptung.
+    somit folgt $y_n-x_n\ra z$ in $X$, nach Extraktion einer Teilfolge (da $F$ kompakt, $(x_n)$
+    beschränkt in $\Omega$). Es folgt $x_n\ra x \in A$, da $A$ abgeschlossen und $y_n$ konvergent
+    nach Annahme. Wir haben aber $x=y-z\in A$. Nachdem aber $y=x+F(x)\in (\Id+F)(A)$ folgt die Behauptung
+    mit $F(x)=z$
 
     Sei nun $\Omega$ abgeschlossen und $K\subset X$ kompakt. Sei $(x_n)_{n\in \N}$ eine Folge in
     $(\Id+F)^{-1}(K)$. Wir können wieder eine Teilfolge
     \[
-        y_n=x_n+F(x_n)
+        K\ni y_n=x_n+F(x_n)
     \]
-    wählen, so dass $y_n\ra y$. Wie im vorhergehenden Teil folgt, folgt dass $x_n\ra x$, somit ist
+    wählen, so dass $y_n\ra y$. Wie im vorhergehenden Teil folgt, folgt dass $x_n\ra x\in K$, somit ist
     $(\Id+F)^{-1}(K)$ kompakt.
     \[ \]
 \end{proof}
@@ -159,7 +163,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \[
         \deg(\Id + F_i,\Omega_0,y)=\deg(\Id+F_i,\Omega_i,y)\qq i=1,2
     \]
-    Sei $H(t)=\Id + (1-t)F_1+F_2.$ Es folgt, dass
+    Sei $H(t)=\Id + (1-t)F_1+tF_2.$ Es folgt, dass
     \[
         H(t)\in D_y(\ol\Omega_0,X_0) \qq t\in [0,1],
     \]
@@ -167,8 +171,6 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \[
         \Ra \, \deg(\Id+F_1,\Omega_0,y)=\deg(\Id+F_2,\Omega_0,y)
     \]
-    Somit ergibt Definition \ref{3.8} Sinn.
-    \[ \]
 \end{proof}
 
 \begin{theorem}\label{3.10}
@@ -185,10 +187,14 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
             \deg(\Id+F,\Omega,y)=\deg(\Id+F,\Omega_1,y)+\deg(\Id+F,\Omega_2,y).
         \]
         \item{iv)}
-        Falls $H:[0,1]\times\ol\Omega\ra X$ und $y:[0,1]\ra X$ beide stetig, so dass $H(t)\in 
-        \ms D_{y(t)}(\ol\Omega,X) \qq \forall t\in [0,1]$. Dann gilt
+        Falls $H:[0,1]\times\ol\Omega\ra X$ stetig, so dass $\forall t_0$, $\forall\eps>0$ ein
+        $\delta>0$ gibt mit
         \[
-            \deg(\Id+H(0),\Omega,y(0))=\deg(\Id+H(1), \Omega,y(1))
+            \|H(t_0)-H(t)\|\leq \eps, \, \text{falls } |t-t_0|<\delta, \qq y[0,1]\ra X \text{ stetig,}
+        \]
+        und sei $H(t)\in \ms D _{y(t)}(\ol\Omega,X)$ $\forall t\in[0,1]$. Dann gilt
+        \[
+            \deg(\Id+H(0),\Omega,y(0))=\deg(\Id+H(1),\Omega,y(1))
         \]
     \end{description}
 \end{theorem}
@@ -197,23 +203,11 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     \textit{i)-iii)} folgen sofort aus der Definition und den entsprechenden Eigenschaften des
     endlichdimensionalen Abbildungsgrades.
 
-    \noindent\textit{iv)} Wir betrachten $H:[0,1]\times \ol \Omega\ra X$ stetig,
-    so dass $\forall t_0,\,\forall \eps>0$ $\exists \delta>0$ mit
-    \[
-        \|H(t_0)-H(t)\|\leq \eps, \text{ falls } |t-t_0|<\delta,
-    \]
-    \[
-        y:[0,1]\ra X \text{ stetig},
-    \]
-    Es sei $H(t)\in \ms D_{y(t)}(\ol \Omega,X)$ $\forall t\in[1,0]$. Dann gilt
-    \[
-        \deg(\Id+H(0),\Omega,y(0))=\deg (\Id +H(1),\Omega,y(1))
-    \]
-    \begin{proof}
-        O.E. sei $y=(t)=0$ ($\tilde H(t)(x)=H(t)(x)-y(t)$).\\
+    \noindent\textit{iv)} 
+        O.E. sei $y(t)=0$ ($\tilde H(t)(x)=H(t)(x)-y(t)$).\\
         \textbf{Behauptung:} $H\in \ms C([0,T]\times \ol\Omega,X)$
         \begin{proof}
-            Sei $\eps >0,\, \forall t\in [0,1]$ sei $H_\eps^t$ eine endlichdimenisionale Approximation
+            Sei $\eps >0,\, \forall t\in [0,1]$ sei $H_\eps^t$ eine endlichdimensionale Approximation
             von $H(t)$, so dass
             \[
                 \|H_\eps^t-H(t)\|\leq\frac\eps4 \qq \forall t \qq \text{nach Satz \ref{3.6}}
@@ -233,11 +227,9 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
         \[
             \dist(A,y)=\rho>0
         \]
-        Jetzt benutzen wir einfach die bereit vorher konstruierte endlichdimensionale Approximation 
-        $F_{\frac\rho2}$ von $H$ und wenden die Homotopieinvarianz im endlichdimensioalen Fall an.
+        Jetzt benutzen wir einfach die bereits vorher konstruierte endlichdimensionale Approximation 
+        $F_{\frac\rho2}$ von $H$ und wenden die Homotopieinvarianz im endlichdimensionalen Fall an.
         \[ \]
-    \end{proof}
-    \[ \]
 \end{proof}
 
 Auch die anderen Aussagen über den endlichdimensionalen Abbildungsgrad übertragen sich.
@@ -271,12 +263,12 @@ Die Beweise bleiben gleich.
         \]
         Insbesondere gilt das auch für den Fall, dass
         \[
-            F=G,\qq \text{auf } \partial \Omega
+            F=G\qq \text{auf } \partial \Omega
         \]
         \item{iv)}
         $\deg(\Id+\cdot,\Omega,y)$ ist konstant auf Zusammenhangskomponenten von $D_y(\ol\Omega,X)$.
         \item{v)}
         $\deg(\Id+F,\Omega,\cdot)$ ist konstant auf Zusammenhangskomponenten von $X\setminus 
-        (\Id+F)(\partial \Omega)$
+        (\Id+F)(\partial \Omega)$.
     \end{description}
 \end{theorem}

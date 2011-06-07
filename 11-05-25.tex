@@ -10,7 +10,8 @@ Es sei $\Omega\subset \R^3$ offen, zusammenkängend und beschränkt, und es sei 
    \]
    mit hinreichend glatten $v,\rho$.
 
-   Eine sehr schöne Herleitung der Gleichung findet man in einem Vortrag auf der Website des Clay Mathematics Institute $\ra $ Link sehe Vorlesungssite.
+   Eine sehr schöne Herleitung der Gleichung findet man in einem Vortrag auf der Website des Clay
+   Mathematics Institute $\ra $ Link sehe Vorlesungssite.
    \end{description}
 
    \subsubsection*{Einschub: Sobolev-Räume}
@@ -56,7 +57,7 @@ H_0^1(\Omega,\R)\hookrightarrow L^2(\Omega,\R)
     \begin{lem}[Ladyzhenshaya]
     Sei $\Omega\subset\R^3$. Für $u\in H_0^1(\Omega,\R)$ gilt
     \[
-    \|u\|_{L^4}\leq \sqrt[4]{8} \|u\|_{L^4}^{\nicefrac14}\|\nabla u \|_{L^2}^{\nicefrac34}
+    \|u\|_{L^4}\leq \sqrt[4]{8} \|u\|_{L^2}^{\nicefrac14}\|\nabla u \|_{L^2}^{\nicefrac34}
     \]    
     \end{lem}
 
@@ -72,32 +73,34 @@ H_0^1(\Omega,\R)\hookrightarrow L^2(\Omega,\R)
     \]
     Nun lassen wir $x_3$ fest und integrieren über $x_1$ und $x_2$:
     \begin{align*}
-    \iint u^4(x_1,x_2,x_3) &\leq \int \max_{x_1} u^2(x_1,x_2,x_3) \d x_2 = \int\max_{x_2}
+    \iint u^4(x_1,x_2,x_3) &\leq \int \max_{x_1} u^2(x_1,x_2,x_3) \d x_2 \cdot \int\max_{x_2}
     u^2(x_1,x_2,x_3)\d x_1\\
-        &\leq 4 \iint |u\partial_1 u|  \d x_1 \d x_2 \cdot \iint|u\partial u \partial _2 u| 
-        \d x_1 \d x_2 \qq \text{Cauchy-Scharz}\\
-            &\leq 4\left( \iint u^2 \d x_1 \d x_2\right)^{\nicefrac22}\cdot\left(\iint(\partial_1u)^2
-                    \d x_1\d x_2\right)^{\nicefrac 12}
-            \end{align*}
-            Jetzt integrieren wir über $x_3$ und bekommen
-            \begin{align*}
-\iint u^4\d x_1\d x_2 \d x_3 &\leq 4 \int \d x_3 \left(\iint u ^2 \d x_1 \d x_2\right) 
+        &\leq 4 \iint |u\partial_1 u|  \d x_1 \d x_2 \cdot \iint|u \partial _2 u| 
+        \d x_1 \d x_2\\
+        &\leq 4\left( \iint u^2 \d x_1 \d x_2\right)^{\nicefrac22}\cdot\left(\iint(\partial_1u)^2
+                \d x_1\d x_2\right)^{\nicefrac 12}\cdot\left( \iint(\partial_2 u)^2 \d x_1 \d x_2
+                \right)^{\nicefrac 12} \qq \text{(nach Cauchy-Schwarz)}
+    \end{align*}
+   Jetzt integrieren wir über $x_3$ und bekommen
+   \begin{align*}
+   \iiint u^4\d x_1\d x_2 \d x_3 &\leq 4 \int \d x_3 \left(\iint u ^2 \d x_1 \d x_2\right) 
     \left( \iint(\partial_1u)^2 + (\partial_2 u)^2 \d x_1 \d x_2 \right)\\
         &\leq 4\left( \iint\max_{x_3} u^2(x_1,x_2,x_3) \d x_1 \d x_2 \right)\left( \iiint 
-                (\partial_1 u )^2 + (\partial _2 u)^2 \d x_1 \d x_2 \d x_3\right)\\
-            &\leq 8 \iiint | u \partial_3 u | \d x_1 \d x_2 \d x_3 \cdot \iiint (\partial_1 u )^2 +
-            (\partial _2 u)^2 \d x_1 \d x_2 \d x_3\\
-                &\leq 8\left( u^2 \right)^{\nicefrac12}\cdot\left( \iiint(\partial_3u)^2 \right)^{\nicefrac12}
-\cdot \left(\iiint (\partial_1 u)^2 + (\partial)\right)
+        (\partial_1 u )^2 + (\partial _2 u)^2 \d x_1 \d x_2 \d x_3\right)\\
+        &\leq 8 \iiint | u \partial_3 u | \d x_1 \d x_2 \d x_3 \cdot\left(\iiint (\partial_1u)^2+
+        (\partial _2 u)^2 \d x_1 \d x_2 \d x_3\right)\\
+        & \leq 8\cdot \left( \iiint u^2 \right)^{\nicefrac 12}\cdot \left( \iiint (\partial_3u)^2
+        \right)^{\nicefrac12}\cdot \left( (\partial_1 u)^2 + (\partial_2u)^2 \right)^{\nicefrac 22}\\
+        &\leq 8 \|u\|_{L^2}\cdot\|\nabla u \|_{L^2}^3
     \end{align*}
     Sei nun  $u\in H_0^1(\Omega,\R)$. Wir wählen $(u_j)_{j=1}^\infty$ eine Folge in $C_0^1(\Omega,\R)$,
     so dass
     \[
     u_j\ra u \begin{cases} \text{ in } H_0^1\\ \text{ in } L^2  \end{cases}.
     \]
-    Dies ist wegen der Ladyzhenskaya-Ungleichung eine Cauchy-Folge in $L^4$ und konvergiert somit gegen
-    $x\in L^4$ und konvergiert somit gegen $v\in L^4$. Mit Hölder gilt $u=v$ und wir können den Limes
-    in der Ungleichung bilden.\[ \]
+    Dies ist wegen der Ladyzhenskaya-Ungleichung eine Cauchy-Folge in $L^4$ und konvergiert somit
+    gegen $v\in L^4$. Mit Hölder gilt $u=v$ und wir können den Limes in der Ungleichung bilden.
+    \[ \]
     \end{proof}
 
     Mit \textit{Poincaré-Friedrichs} und \textit{Ladyzhenshaya} folgt sofort, dass
@@ -118,7 +121,7 @@ H_0^1(\Omega,\R) \hookrightarrow L^4(\Omega,\R)
 
     Es sei 
     \[
-    X=\{v\in C^2(\ol\Omega,\R^3) \, | \, \div \, v=0, v_{|\partial\Omega}=0\}
+    X=\{v\in C^2(\ol\Omega,\R^3) \, | \, \div \, v=0, v\big|_{\partial\Omega}=0\}
     \]
     und es sei
     \[
@@ -133,8 +136,10 @@ Dieses ist mittels \textit{Poincaré} äquivalent zum üblichen Skalarprodukt au
 Wir multiplizieren nun die Navier-Stokes-Gleichung \ref{12} mit $w\in X$ und erhalten
 
 \begin{align*}
-    \int_\Omega (\eta\Delta v - v\nabla v + K)w &= \int_\Omega \nabla \vp \cdot \\
-    \LRa \, \int_\Omega (\eta \nabla v \cdot \nabla w - v\cdot v \cdot \nabla w- K\cdot w)=0 
+    \int_\Omega (\eta\Delta v - v\nabla v + K)w &= \int_\Omega \nabla \vp  \cdot w =0 \\
+    \LRa \, \int_\Omega (\eta \underbrace{\nabla v \cdot \nabla w}_{=\sum_{k,j=1}^3 
+    \partial_jv_k\partial_k w_j} -\underbrace{v\cdot v \cdot \nabla w}_{=\sum_{k,j=1}^3
+    v_kv_j(\partial_kw_j)}- K\cdot w)&=0 
 \end{align*}
 mit
 \[
@@ -145,19 +150,19 @@ folgt $u$ Lösung von Navier-Stokes
     \Ra \, \eta\cdot (v,w)_{\ms H} - a(v,v,w)- \int_\Omega Kw =0 \qq \forall x \in \ms H
 \end{align}
 
-Lösungen von \ref{13} heißen schwache Lösungen der Navier-Stokes-Gleichung.
+Lösungen von (\ref{13}) heißen schwache Lösungen der Navier-Stokes-Gleichung.
 
 \begin{remark}
     Es gilt
     \begin{align*}
-        a(v,v,v,)&=\int_\Omega v(v\cdot \nabla v)=\frac12 \int_\Omega\sum_{k,j} v_k\partial_k(v_j,v_j)
-        &=-\frac12 \int_\Omega\sum(v_j,v_j)\partial_kv_k=0 \qq \text{für } v\in \ms H 
+        a(v,v,v)&=\int_\Omega v(v\cdot \nabla v)=\frac12 \int_\Omega\sum_{k,j} v_k\partial_k(v_j,v_j)
+        =-\frac12 \int_\Omega\sum(v_j,v_j)\partial_kv_k=0 \qq \text{für } v\in \ms H 
     \end{align*}
 \end{remark}
 Für $K\in L^2 (\Omega,\R^3)$ ist $\int_\Omega K \cdot$ ein stetiges Funktional auf $\ms H$, somit
 existiert nach \textit{Riesz} ein $\tilde K \in \ms H$, so dass
 \[
-    \int K\cdot w= (\tilde K, w) 
+    \int K\cdot w= (\tilde K, w)  \qq \forall w\in \ms H
 \]
 Dies gilt auch für $a(u,v,\cdot)$ mit $u,v\in \ms H$, somit existiert $B(u,v) \in \ms H$ mit
 \[
@@ -165,14 +170,14 @@ Dies gilt auch für $a(u,v,\cdot)$ mit $u,v\in \ms H$, somit existiert $B(u,v) \
 \]
 Es folgt, dass
 \begin{align*}
-    \ref{13} \, &\LRa \, (\eta v - B(v,v)- \tilde K, w)_{\ms H}=0 \qq \forall w\in \ms H\\
+    (\ref{13}) \, &\LRa \, (\eta v - B(v,v)- \tilde K, w)_{\ms H}=0 \qq \forall w\in \ms H\\
         &\LRa \, \eta v - B(u,v)=\tilde K.
 \end{align*}
-Es sei nun $Y=L^4(\Omega,\R^3)$. Dank \textit{Ladyzhenshaya-Ungleichung} ist Einbettung
+Es sei nun $Y=L^4(\Omega,\R^3)$. Dank \textit{Ladyzhenshaya-Ungleichung} ist die Einbettung
 \[
     \ms H \hookrightarrow Y
 \]
-kompakt und es gilt mit zweimalger Anwendung der \textit{Cauchy-Schwarz - Ungleichung}:
+kompakt und es gilt mit zweimaliger Anwendung der \textit{Cauchy-Schwarz-Ungleichung}:
 \[
     |a(u,v,w)|\leq\|u\|_{L^4}\|v\|_{L^4}\|w\|_{H^1}
 \]
@@ -191,7 +196,7 @@ Es sei $a: \ms H^3 \ra \R$ eine Multilinearform, so dass
 und $a(v,v,v)=0$ für alle $v\in \ms H$. Es sei $\tilde K\in \ms H$, $\eta >0$. Dann existiert
 $v\in \ms H$ mit
 \[
-    \eta(v,w)- a(v,v,w)= (\tilde K, w)^{\ms H} \forall w \in \ms H
+    \eta(v,w)- a(v,v,w)= (\tilde K, w)_{\ms H} \forall w \in \ms H
 \]
 \end{theorem}
 
@@ -210,18 +215,18 @@ $v\in \ms H$ mit
     \begin{align*}
         \|F(u)-F(v)\|_{\ms H}\leq 2\alpha \rho\|u-v\|_Y
     \end{align*}
-    Damit ist $F\in ms C(\ms H,\ms H)$. 
+    Damit ist $F\in \ms C(\ms H,\ms H)$. 
 
     Nehmen wir nun an, dass $v$ eine Lösung ist von
     \[
         v=tF(v)-t\tilde K \qq \text{für } t\in [0,1]
     \]
-    Damit gilt $(v,v)_{\ms H}= ta()$
+    Damit gilt
+    \[
+        (v,v)_{\ms H} = t\underbrace{a(v,v,v)}_{=0} + t(\tilde K, v)_{\ms H} \, \Ra \,
+        \|v\|_{\ms H}\leq \|\tilde K\|_{\ms H}.
+    \]
 
     Die beiden Voraussetzungen des \textit{Leray-Schauder-Prinzips} sind damit erfüllt,
-    somit existiert ein Fixpunkt $v$ der
-    \[
-        v=F(v)-\tilde K
-    \]
-    erfüllt. \[ \]
+    somit existiert ein Fixpunkt $v$, der $ v=F(v)-\tilde K$ erfüllt. \[ \]
 \end{proof}
