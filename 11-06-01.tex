@@ -6,15 +6,15 @@
         X_n=\mr{span}(w_1,…,w_n)
     \]
     Betrachte
-    \begin{equation}\label{20}
+    \begin{align}\label{15}
         (Au^n-b,w_k)=0 \qq \forall k=1,…,n
-    \end{equation}
+    \end{align}
     Definiere
     \[
         g:\R^n\ra \R^n; \qq g_k(c^n):= (A(\sum_mc_m^nw_m)-b,w_k)
     \]
     \[
-        \ref{20} \, \Ra \, g(c^n)=0 \qq \text{für ein } c^n\in\R^n  
+        \ref{15} \, \Ra \, g(c^n)=0 \qq \text{für ein } c^n\in\R^n  
     \]
     O.B.d.A sei $|c^n|:= \|\sum_{k=1}^n c^n_kw_k\|_X$ als norm auf $\R^n$. Aus Lemma \ref{4.4} folgt,
     dass $A$ demistetig. 
@@ -35,7 +35,7 @@
     \[
         \exists u^n\in X_n: \, g(c^n)=0,
     \]
-    d.h. \ref{20} gilt für $u^n$.
+    d.h. \ref{15} gilt für $u^n$.
     \[
         \Ra \, \|u^n\|\geq R_0
     \]
@@ -46,16 +46,16 @@
     \]
     und
     \[
-        (Au^n-A^v,u^n-v)\geq 0 \qq \forall v\in X
+        \lal Au^n-A^v,u^n-v\ral\geq 0 \qq \forall v\in X
     \]
-    Wegen $u^n\in X_n$ und \ref{20} gilt
+    Wegen $u^n\in X_n$ und \ref{15} gilt
     \[
-        (Au^n,u^n)=(b,u^n)\, \Ra \, |(Au^n,u^n)|=\|b\|R_0
+        \lal Au^n,u^n\ral=\lal b,u^n\ral\, \Ra \, |\lal Au^n,u^n\ral|=\|b\|R_0
     \]
     \begin{align*}
-        \|Au^n\|&= \sup_{v\in X, \, \|v\|=r} \frac1r(Au^n,v) \overset{\text{Monotonie}}{\leq} 
-        \sup_{v\in X, \|v\|=5} \frac1r ((Av,v)+(Au^n,u^n)-(Av,u^n)) \leq \frac1r (\delta r+ \|b\|R_0
-                +\delta R_0)
+        \|Au^n\|&= \sup_{v\in X, \, \|v\|=r} \frac1r\lal Au^n,v\ral \overset{\text{Monotonie}}{\leq} 
+        \sup_{v\in X, \|v\|=5} \frac1r (\lal Av,v\ral+\lal Au^n,u^n\ral-\lal Av,u^n\ral)
+        \leq \frac1r (\delta r+ \|b\|R_0 +\delta R_0)
     \end{align*}
     $\Ra $ $(Au^n)_{n\in \N}$ ist beschränkt.
     \item{(iii)}
@@ -68,23 +68,21 @@
         w\in \bigcup_{m=1}^\infty X_m \, \Ra \, \exists n_0\in\N: \, w\in X_n\qq n\geq n_0
     \]
     \begin{align*}
-        \Ra \, \forall n\geq n_0: \, (Au^n,w)&=(b,w)\\
-        \Ra \, \lim_{n\ra \infty} (Au^n,w)=(b,w) \qq w\in \bigcup_{m=1}^\infty X_m
+        \Ra \, \forall n\geq n_0: \, \lal Au^n,w\ral&=(b,w)\\
+        \Ra \, \lim_{n\ra \infty} \lal Au^n,w\ral=\lal b,w\ral \qq w\in \bigcup_{m=1}^\infty X_m
     \end{align*}
     $X^\star$ reflexiv und $(Au^n)$ beschränkt
     \begin{align*}
-        \exists Au^{n_m}\rightharpoonup c \in X^\star\\
-        \Ra \, \forall w\in X: \, (Au^{n_k},w)\ra (c,w)\\
-        \Ra \, b=c, \qq \text{weil } \ol{\bigcup_{m=1}^\infty X_m}=X \qq (X \text{ separabel})\\
-        \Ra Au^{n_m} \rightharpoonup b
+        \exists Au^{n_m}&\rightharpoonup c \in X^\star\\
+        \Ra \, \forall w\in X: \, \lal Au^{n_k},w\ral&\ra (c,w)\\
+        \Ra \, b=c, \qq \text{weil } \ol{\bigcup_{m=1}^\infty X_m}&=X \qq (X \text{ separabel})\\
+        \Ra Au^{n_m} &\rightharpoonup b
     \end{align*}
     Wiederhole dieses Argument für jede Teilfolge von $Au^n$.
-    \[
-        \Ra \, Au^n\rightharpoonup b
-    \]
     \begin{align*}
-        \Ra \, (Au^n,u^n)&=(b,u^n)\ra (b,u)\\
-        \lim_{n\ra \infty} (Au^n,u^n)&= (b,u)
+        \Ra \, Au^n&\rightharpoonup b\\
+        \Ra \, \lal Au^n,u^n\ral&=\lal b,u^n\ral\ra \lal b,u\ral\\
+        \lim_{n\ra \infty} \lal Au^n,u^n\ral&= \lal b,u\ral
     \end{align*}
     Mit Lemma \ref{4.5} (ii) erhalten wir
     \[ 
@@ -95,18 +93,18 @@
     \begin{description}
     \item{(a) Beschränktheit:}
     \[
-        \exists \, R_0>0 \, \forall \|V\|\geq R_0>0: \, (Au,u)\geq (1+\|b\|)\|u\|
+        \exists \, R_0>0 \, \forall \|V\|\geq R_0>0: \, \lal Au,u\ral\geq (1+\|b\|)\|u\|
     \]
     Sei $u$ eine Lösung mit $\|u\|\geq R$
     \begin{align*}
-        \Ra \, 0&=(Au,u) -(b,u)\geq \|u\|>0 \, \lightning\\
-        \Ra \, S\subset B_{R_0}(0)
+        \Ra \, 0&=\lal Au,u\ral -\lal b,u\ral\geq \|u\|>0 \, \lightning\\
+        \Ra \, S&\subset B_{R_0}(0)
     \end{align*}
     \item{(b) Konvexität:}
     Seien $u_1,u_2\in S$, $w=tu_1+(1-t)u_2$, $v\in X$.
     \begin{align*}
-        (b-Av,w-v)&=(b-Av,t(u_1-v))+(b-Av,(1-t)(u_2-v))\\
-                 &= t(Au_1-Av,u_1-v)+(1-t)(Au_2-Av,u_2-v)\\
+        \lal b-Av,w-v\ral &=\lal b-Av,t(u_1-v)\ral+\lal b-Av,(1-t)(u_2-v)\ral\\
+                 &= t\lal Au_1-Av,u_1-v\ral+(1-t)\lal Au_2-Av,u_2-v\ral\\
                  &\geq 0 \qq \forall v\in X\\
         \overset{\text{Lem. \ref{4.5}}}\Ra \, b&=Aw \, \Ra \, w\in S 
     \end{align*}
@@ -129,5 +127,5 @@
 \end{cor}
 
 \begin{proof}
-    Übung. \[ \]
+    Übungsaufgabe. \[ \]
 \end{proof}

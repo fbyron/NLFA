@@ -30,7 +30,7 @@ Es sei $\Omega\subset \R^3$ offen, zusammenkängend und beschränkt, und es sei 
    \begin{theorem}[Rellich]\label{001}
    Die Einbettung
     \[
-H_0^1(\Omega,\R)\hookrightarrow L^2(\Omega,\R)
+        H_0^1(\Omega,\R)\hookrightarrow L^2(\Omega,\R)
     \]
     ist kompakt.
     \end{theorem}
@@ -112,7 +112,7 @@ H_0^1(\Omega,\R)\hookrightarrow L^2(\Omega,\R)
     \begin{cor}\label{004}
     Die Einbettung
     \[
-H_0^1(\Omega,\R) \hookrightarrow L^4(\Omega,\R)
+        H_0^1(\Omega,\R) \hookrightarrow L^4(\Omega,\R)
     \]
     ist kompakt.
     \end{cor}
@@ -121,16 +121,16 @@ H_0^1(\Omega,\R) \hookrightarrow L^4(\Omega,\R)
 
     Es sei 
     \[
-    X=\{v\in C^2(\ol\Omega,\R^3) \, | \, \div \, v=0, v\big|_{\partial\Omega}=0\}
+        X=\{v\in C^2(\ol\Omega,\R^3) \, | \, \div \, v=0, v\big|_{\partial\Omega}=0\}
     \]
     und es sei
     \[
-    \ms H:=\ol{X}^H_1 = \{v\in H_0^1(\Omega,\R^3) \, | \, \div \, v =0\}
+        \ms H:=\ol{X}^H_1 = \{v\in H_0^1(\Omega,\R^3) \, | \, \div \, v =0\}
     \]
     Wir betrachten $\ms H$ als Hilbertraum mit dem Skalarprodukt
     \[
-    (u,v)_{\ms H}= \int_\Omega\nabla u \cdot \nabla v \d x
-\]
+        (u,v)_{\ms H}= \int_\Omega\nabla u \cdot \nabla v \d x
+    \]
 Dieses ist mittels \textit{Poincaré} äquivalent zum üblichen Skalarprodukt auf $H^1$:
 
 Wir multiplizieren nun die Navier-Stokes-Gleichung \ref{12} mit $w\in X$ und erhalten
@@ -190,9 +190,9 @@ kompakt. Insbesondere sei
     \|u\|_Y\leq \beta \|u\|_{\ms H} \qq \forall u \in \ms H
 \]
 Es sei $a: \ms H^3 \ra \R$ eine Multilinearform, so dass
-\begin{align*}\label{14}
+\begin{align}\label{14}
     |a(u,v,w)|\leq \|u\|_Y\|v\|_Y\|w\|_{\ms H}
-\end{align*}
+\end{align}
 und $a(v,v,v)=0$ für alle $v\in \ms H$. Es sei $\tilde K\in \ms H$, $\eta >0$. Dann existiert
 $v\in \ms H$ mit
 \[

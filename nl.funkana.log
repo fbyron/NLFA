@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  7 JUN 2011 03:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  7 JUN 2011 16:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1242,6 +1242,9 @@ LaTeX Warning: Unused global option(s):
 
 LaTeX Warning: Label `2.16' multiply defined.
 
+
+LaTeX Warning: Label `15' multiply defined.
+
 )
 \openout1 = `nl.funkana.aux'.
 
@@ -1589,43 +1592,46 @@ LaTeX Warning: Reference `12' on page 37 undefined on input line 136.
 
 [37]) (./11-05-30.tex [38] [39] [40]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 237.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 247.
 
-) (./11-06-01.tex
+[41]) (./11-06-01.tex
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 6.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 10.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 11.
 
-[41] [42]) (./11-06-06.tex [43]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 11.
+
+[42]) (./11-06-06.tex [43]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 25.
 
 [44] [45]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 151.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 151.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 151.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 151.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 154.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 154.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 189.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 190.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 196.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 197.
 
 [46])
 \tf@thm=\write7
@@ -1640,10 +1646,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18834 strings out of 493848
- 282161 string characters out of 1152822
- 378443 words of memory out of 3000000
- 21332 multiletter control sequences out of 15000+50000
+ 18836 strings out of 493848
+ 282151 string characters out of 1152822
+ 378490 words of memory out of 3000000
+ 21331 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,17n,49p,340b,645s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1666,9 +1672,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (50 pages, 436816 bytes).
+Output written on nl.funkana.pdf (50 pages, 437760 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
- 246 named destinations out of 1000 (max. 500000)
+ 737 PDF objects out of 1000 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
  170 words of extra memory for PDF output out of 10000 (max. 10000000)
 
