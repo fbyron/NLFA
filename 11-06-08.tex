@@ -1,0 +1,263 @@
+Wir haben gezeigt, dass $A$ alle Voraussetzung von Satz \ref{4.6} erfüllet, somit folgt sofort:
+
+\begin{theorem}\label{4.12}
+    Sei $\Omega\subset\R^n$ offen, beschränkt, $s\geq 0$. Es sei $p\geq  \frac{2n}{n+2}$, $p>1$. Dann
+    existiert zu jedem $f\in L^{p'}$ genau eine schwache Lösung des $p$-Laplace-Randwertproblems
+    (\ref{23}).
+\end{theorem}
+
+\begin{proof}
+    Lemma \ref{4.10}, \ref{4.11}, Satz \ref{4.6}.
+    \[ \]
+\end{proof}
+
+\begin{remark}
+    \begin{description}
+        \item{1)}
+        Der Satz \ref{4.12} gilt auch für Gleichungen der Form
+        \begin{align*}
+            -\div(A,(x,\nabla u))&=f \qq \text{in } \Omega\\
+                        u&=0 \qq \text{auf }\partial\Omega
+        \end{align*}
+        falls $A$ die folgenden Bedingungen erfüllt
+        \begin{itemize}
+            \item \textit{Crathéodory} (Stetigkeit im 2. Argument, messbar im 1. Argument)
+            \item  $|A(x,\eta)|\leq C\cdot (g(x)+ |\eta|^{p-1})$ $y\in L^{p'}(\Omega)$
+                (Wachstumsbedingung)
+            \item $(A(x,\eta)- A(x,\xi))\cdot (\eta-\xi)>0$ f.f.a. $x$, $\eta\neq \xi$
+            \item $A(x,\eta)\cdot\eta\geq c|\eta|^p-h(x)$ $h\in L^1(\Omega)$ (Koerzitivität)
+        \end{itemize}
+        \item{2)}
+        Man kann $f$ auch beliebig aus $(W_0^{1,p}(\Omega))'$ wählen. Das ist eine etwas größere Menge
+        als $L^{p'}$.
+        \item{3)} Aber was ist mit $s<0$?
+    \end{description}
+\end{remark}
+
+\subsection{Pseudomonotone Operatoren}
+
+In diesem Abschnitt wird die Theorie monotoner Operatoren und die Theorie kompakter Operatoren vereint.
+Ein typischer pseudomonotoner Operator ist von der Form
+\[
+    A=A_1+A_2,
+\] 
+\[
+    A_1: X\ra X' \qq \text{monoton, hemistetig.}
+\]
+\[
+    A_2:X\ra X' \qq \text{strak stetig (d.h. kompakt in separablen, reflexiven Räumen $X$).}
+\]
+
+\subsubsection*{Beispiel}
+\[
+    \lal A_1u,\vp\ral = \int_\Omega |\nabla u|^{p-2} \nabla u \cdot \nabla \vp\qq
+    \text{monoton, hemistetig.}
+\]
+\[
+    \lal A_2u , \vp \ral =\int_\Omega su\cdot \vp\qq
+    \text{kompakt als Abbildung von $X=W_0^{1,p}$ nach $X'$ für vernünftige $p$, auch für $s<0$.}
+\]
+
+\begin{defi} \label{4.13}
+Wir sagen $A$ genüge Bedingung (M), falls gilt
+\begin{align}\label{24}
+    Au=b \, \La \, \begin{cases}u_n\rightharpoonup u & \text{in } X\\
+    Au_n\rightharpoonup b & \text{in }X'\\ \limsup_{n\ra \infty} \lal Au_n,u_n\ral \leq \lal b,u\ral & 
+    \end{cases}
+\end{align}
+\end{defi}
+
+\begin{lem}\label{4.14}
+    Es sei $X$ ein reflexiver, reeller Banachraum,
+    \[
+        A:X\ra X', \qq B: X\ra X'
+    \]
+    seien Operatoren.
+    Es gilt
+    \begin{description}
+        \item{1)}
+        $A$ monoton, hemistetig $\Ra$ $A$ genügt (M) (\ref{24})
+        \item{2)}
+        $A$ genügt (M) \ref{24}, $B$ stark stetig $\Ra$ $A+B$ genügt (M) (\ref{24}).
+    \end{description}
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+        \item{1) (siehe \textit{Minty-Lemma} \ref{4.5})} Es  gilt $\forall v \in X$, dass
+        \begin{align*}
+            0&\leq \lal Au_n-Av, u_n-v \ral = \underbrace{\lal Au_n,u_n\ral}_{\leq \lal b,u\ral-
+            \lal Au_n-Av,v\ral} - \lal Av,u_n\ral\\
+            \Ra \, 0&\leq \lal b,u\ral- \lal Av,u\ral - \lal b-Av,v\ral= \lal b-Av,u-v\ral
+        \end{align*}
+        Sei $w \in X$, $v=u-tw$.
+        \begin{align*}
+            \Ra \, 0\leq \lal b-Av,u-v\ral &= \lal b-A(u-tw),tw\ral \qq t\ra 0 \qq
+            \text{(Hemistetigkeit)}\\
+            \Ra \, \lal b-Av, w \ral &\geq 0 \qq \forall w\\
+            \lal b-Av, w \ral &\leq 0 \qq \text{(durch Einsetzen von $w$, $tw-w$ oben)}\\
+            \Ra \, Av&= b .
+        \end{align*}
+        \item{2)}
+        Es gelte $u_n \rightharpoonup u $ in $X$.
+        \[
+            Au_n+Bu_n \rightharpoonup b \qq \text{in }X'
+        \]
+        \[
+            \limsup_{n\ra \infty} \lal Au_n+ Bu_n,u \ral\leq \lal b,u\ral
+        \]
+        Es gilt wegen starker Stetigkeit von $B$ , dass
+        \[
+            Bu_n\ra Bu \qq \text{in }X'
+        \]
+        somit folgt dass
+        \begin{align*}
+            \limsup _{n\ra \infty} \lal Au_n,u_n\ral & \leq \lal b-Bu,u\ral\\
+            \Ra \, Au&= b - Bu\\
+            \Ra \, Au + Bu &= b.
+        \end{align*}
+        $A$ erfüllt (M) \ref{24}.
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{defi}[Pseudomonotonie] \label{4.15}
+    Es sei $X$ ein reflexiver, reeller Banachraum
+    \[
+        A: X\ra X' \qq \text{ein Operator}
+    \]
+    $A$ heißt \textit{pseudomonoton}, falls gilt
+    \begin{align*}
+        \left.
+        \begin{array}{ll}
+            u_n \rightharpoonup u \qq \text{in } X\\ \limsup\lal Au_n,u_n-u\ral \leq 0
+        \end{array}
+        \right\}
+        \, \Ra \lal Au, u-w\ral \leq \liminf \lal Au_n, u_n - w \ral \qq w\in X
+    \end{align*}
+\end{defi}
+
+\begin{lem}\label{4.16}
+    Sei $X$ ein reflexiver, reeller Banachraum, $A,B: X\ra X'$ zwei Operatoren
+    \begin{description}
+        \item{(i)}
+        $A$ monoton, hemistetig $\Ra$ $A$ pseudomonoton.
+        \item{(ii)}
+        $A$ stark stetig $\Ra$ $A+ B$ pseudomonoton.
+        \item{(iii)}
+        $A, B$ beide pseudomonoton $\Ra$ $A+ B$ pseudomonoton.
+        \item{(iv)}
+        $A$ pseudomonoton $\Ra$ $A$ erfüllt (M) (\ref{24})
+        \item{(v)}
+        $A$ pseudomonoton, lokal beschränkt $\Ra$ $A$ demistetig.
+    \end{description}
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+        \item{1)}
+        Sei
+        \[
+            u_n\rightharpoonup u \qq\text{in } X
+        \]
+        \[
+            \limsup \lal Au_n , u_n - u \leq 0.
+        \]
+        $A$ monoton
+        \begin{align*}
+            \lal Au_n- Au, u_n -u \ral & \geq 0 \\
+            \Ra \, \liminf\lal Au_n , u_n - u \ral &\geq \liminf \lal Au, u_n - u \ral = 0,
+        \end{align*}
+        wegen schwacher Konvergenz von $u_n$.
+        \[
+            \lim \lal Au_n , u_n - u\ral =0
+        \]
+        Es sei $w\in X$, $z=u+t(w-u)$, $t>0$.
+        \begin{align*}
+            \Ra \, \lal Au_n - Az, u_n - z \ral &= \lal Au_n - Az , u_n -(u+t(w-u)) \ral \geq 0\\
+            \Ra \, t\lal Au_n , u-w \ral &\geq \underbrace{-\lal Au_n , u_n - u\ral + \lal Az, u_n - u
+                \ral}_{\ra 0} + t\lal Az, u-w\ral\\
+            \Ra \, \liminf \lal Au_n , u_n - w \ral &\geq \liminf \lal Au_n, u-w \ral \geq \lal Au, v-w
+            \ral
+        \end{align*}
+        und die Behauptung folgt.
+        \item{2)}
+        \begin{align*}
+            u_n&\rightharpoonup u \qq \text{in } X\\
+            \Ra \, Au_n&\ra Au \qq \text{$A$ stark stetig}\\
+            \Ra \, \lal Au,u-w\ral &= \lim \lal Au_n ,u_n - w \ral,
+        \end{align*}
+        womit die Behauptung folgt.
+        \item{3)}
+        Es sei $u_n \rightharpoonup u$ Folge in $X$ mit
+        \[
+            \limsup \lal Au_n + Bu_n, u_n -u\ral \leq 0
+        \]
+        Wir zeigen, dass dann gilt
+        \[
+            \limsup\lal Au_n , u_n -u\ral \leq 0
+        \]
+        und
+        \[
+            \lal Bu_n, u_n - u \ral \leq 0
+        \]
+        Daraus folgt die Behauptung durch Addition der beiden Ungleichungen der Pseudomonotonität für
+        $A$ und $B$ separat.
+        
+        \noindent Angenommen (zum Widerspruchsbeweis), dass
+        \begin{align*}
+            \limsup \lal Au_n , u_n - u \ral &> 0\\
+            \Ra \, \text{Teilfolge} \, u_{n_k}:\, \lim \lal Au_{n_k}, u_{n_k}-u\ral &=a\\
+            \Ra \, \limsup \lal Bu_{n_k},u_{n_k-u}&= \limsup \lal (B+A)u_{n_k} - A u_{n_k}, u_{n_k}-u\ral
+            \\
+            &\leq \underbrace{\limsup \lal (B+A) u_{n_k}, u_{n_k}-u\ral}_{\leq 0} +\underbrace{
+            \lim \lal -Au_{n_k}, u_{n_k} - u\ral}_{=-a} \leq -a\\
+            \Ra \, 0= \lal Bu,u-u\ral &\leq \liminf \lal Bu_{n_k} , u_{n_k}-u\ral\\
+            &\leq \limsup \lal Bu_{n_k}, u_{n_k}-u\ral \leq -a <0 \qq \lightning,
+        \end{align*}
+        womit die Behauptung folgt.
+        \item{4)}
+        Es sei $u_n\rightharpoonup u$ Folge in $X$, so dass
+        \[
+            Au_n \rightharpoonup b
+        \]
+        und
+        \begin{align*}
+            \limsup \lal Au_n,u_n\ral &\leq \lal b,u\ral\\
+            \Ra \,  \limsup \lal Au_n, u_n - u\ral &\leq \limsup \lal Au_n, u_n\ral - \underbrace{
+            \lim\lal Au_n, u\ral }_{=\lal b,u\ral }\\
+            & \leq \lal b,u\ral - \lal b,u\ral = 0.
+        \end{align*}
+        Damit gilt wegen der Pseudomonotonietät für alle $w\in X$:
+        \begin{align*}
+            \lal Au, u-w\ral &\leq \liminf \lal Au_n, u_n - w\ral \leq \lal b,u \ral - \lal b,w\ral
+            = \lal b, u-w\ral
+        \end{align*}
+        mit $w'=2u-w$ folgt die umgekehrte Ungleichung, somit gilt
+        \[
+            \lal Au, u-w \ral = \lal b , u-w \ral \qq w\in X \, \Ra \, Au=b 
+        \]
+        und damit die Behauptung.
+        \item{5)}
+        Es gelte $u_n \ra u$ in $X$.
+        \[
+            \Ra \, (Au_n)_{n\in \N} \text{ beschränkt in $X'$, da $A$ lokal bechränkt.}
+        \]
+        \[
+            \Ra \, \exists \text{ Teilfolge:} \, Au_{n_k}\rightharpoonup b
+        \]
+        \[
+            \Ra \, \lim \lal Au_{n_k},u_{n_k}-u\ral =0
+        \]
+        Aus der Pseudomonotonität folgt
+        \begin{align*}
+            \lal Au, u-w \ral &\leq \liminf \lal Au_{n_k} , u_{n_k} - w\ral \qq \forall w \in X\\
+            &= \lal b ,  u-w \ral \qq \text{$u_n$ stark-schwach konvergent.}\\
+            \overset{\text{wie in 4)}}{\Ra}  Au&= b.\\
+            \Ra \, Au_{n_k}&\rightharpoonup Au.
+        \end{align*}
+        Dieses Argument gilt auch bei vorheriger Auswahl einer weiteren Teilfolge, somit folgt die
+        Behauptung, da $A$ demistetig.
+    \end{description}
+    \[ \]
+\end{proof}

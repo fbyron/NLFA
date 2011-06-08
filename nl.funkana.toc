@@ -18,4 +18,5 @@
 \contentsline {subsection}{\numberline {3.4}Das Leray-Schauder-Prinzip und der Schaude'sche Fixpunktsatz}{33}{subsection.3.4}
 \contentsline {section}{\numberline {4}Monotone Operatoren}{38}{section.4}
 \contentsline {subsection}{\numberline {4.1}Der Nemychii-Operator}{44}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Pseudomonotone Operatoren}{48}{subsection.4.2}
 \contentsfinish 

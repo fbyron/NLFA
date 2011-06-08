@@ -104,9 +104,12 @@
 \subsubsection*{Anwendung: $p$-Laplace}
 
 Wir betrachten das Randwertproblem:
-\[
-    -\div\left( |\nabla u|^{p-2} \nabla u \right) + su =f \qq \text{auf } \Omega
-\]
+\begin{align}\label{23}
+    \begin{split}
+    -\div\left( |\nabla u|^{p-2} \nabla u \right) + su &=f \qq \text{auf } \Omega\\
+    u&=0\qq \text{auf } \partial \Omega
+    \end{split}
+\end{align}
 für $1<p<\infty$, $\Omega\subset\R^n$ offen, beschränkt, $s\geq 0$, $u=0$ auf $\partial\Omega$.
 
 \noindent Schwache Formulierung: Es sei $f\in L^p (\Omega)$
