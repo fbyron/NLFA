@@ -57,7 +57,7 @@ $\tau(\R^n)$ bezeichne die Topologie auf $\R^n$.
         \item[(D3)]
         Additivität: Seien $U_1,U_2\subset U$ offen und disjunkt, sodass
         \[
-            y\nin f(\ol U\,|\,(U_1\cup U_2)),
+            y\nin f(\ol U\setminus(U_1\cup U_2)),
         \]
         dann gelte
         \[
@@ -158,9 +158,9 @@ $\tau(\R^n)$ bezeichne die Topologie auf $\R^n$.
         \]
         ist auch stetig. $H$ ist ein stetiger Weg in $D_y(\ol U,\R^n)$. Sei $y$ fest
         \[
-            \Ra \, \deg(H(t,U,y))=\Const
+            \Ra \, \deg(H(t,\cdot),U,y)=\Const,
         \]
-        weil $\deg(\cdot,U,y)$ konst. auf Zsh-Komponenten ist. Für $y=y(t):$
+        weil $\deg(\cdot,U,y)$ konst. auf Zusammenhangskomponenten ist. Für $y=y(t):$
         \begin{align*}
             \deg(H(0),U,y(0))&=\deg(H(0)-y(0),U,0)=\deg(H(t)-y(t), U, 0) \qq \forall t\in [0,1]\\
             &= \deg(H(1),U,y(1)).

@@ -1,6 +1,6 @@
 \subsection{Verallgemeinerung der Determinantenformel}
 
-Wir haben einen Kandidaten für $\deg$ identifiziert; für $f\in D'_Y(\ol\Omega,\R^n)$, $y\in \R^n\cap
+Wir haben einen Kandidaten für $\deg$ identifiziert; für $f\in D^1_y(\ol\Omega,\R^n)$, $y\in \R^n\cap
 \RV(f)$ gilt
 \[
     \deg(f,\Omega, g)=\sum_{x_j\in f^{-1}(y)} \sign J_f(x_j).
@@ -23,7 +23,7 @@ Wie aus den Beispielen ersichtlich ist, haben wir noch (kleine) Schwierigkeiten,
 an kritischen Werten von $f$ zu definieren. Stetige Fortsetzungen liegt aber nahe. Das funktioniert
 aber nur falls es von diesen nicht „zu viele“ gibt.
 
-\subsubsection*{Schritt 1:} Kritische Werte von $f$:
+\subsubsection*{Schritt 1: Kritische Werte von $f$}
 
 \begin{lem}[Sard]\label{2.5}
 
@@ -39,7 +39,7 @@ $\CV(f)$ eine Lebesgue-Nullmenge.
     Sei $\{ Q_j \}_{j\in \N}$ eine abzählbare, offene Überdeckung von $\Omega$ bestehend aus Würfeln,
     so dass
     \[
-        \ol \Omega_i\subset \Omega, \, i\in \N.
+        \ol Q_i\subset \Omega, \, i\in \N.
     \]
     Es gilt 
     \[
@@ -98,7 +98,7 @@ definieren zu können. (denn $\deg$ soll konstant sein auf Zusammenhangskomponen
 von krit. Werten.)
 
 \textbf{Idee:} Umschreiben der Determinantenformel als \textit{Integral}.
-Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d. h.
+Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier, d. h.
 \[
     \eta_\eps \in C^\infty_c(B_\eps(0)\subset \R^n), \qq \int_{\R^n} \eta_\eps=1,\qq \eta_\eps\geq 0
 \]
@@ -125,7 +125,7 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier (Standard-Dirarcfolge), d.
             f^{-1}(B_{\eps_0}(y)) = \bigcup_{i=1}^N U(x_i)=:\bigcup_{i=1}^N U_i
         \]
         mit $U_i\cap U_j=\varnothing$ für $i\neq j$.
-        Aus dem \textit{Satz über die imliziete Funktion} (war ja klar, dass wir den mal brauchen)
+        Aus dem \textit{Satz über die implizite Funktion} (war ja klar, dass wir den mal brauchen)
         folgt für evtl. noch kleiners $\eps_0$, dass
         \[
             f\big|_{U_i} \qq \text{bijektiv,} \qq J_f(x)\neq 0 \qq \forall x \in U_i.

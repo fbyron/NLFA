@@ -22,18 +22,24 @@ Dann
     ein Operator. A heißt
     \begin{description}
         \item{(i)}
-        monoton $\Ra$ $\forall u,v\in X:$ $\lal Au-Av,u-v\ral\geq 0$
-        \item{(ii)}
-        strikt monoton $\Ra$ $\forall u\neq v\in X:$ $\lal Au-Av,u-v\ral>0$
-        \item{(iii)}
-        stark monoton
+        monoton, falls für alle $u,v\in X$ gilt
         \[
-            \Ra \exists c>0 \, \forall u,v\in X:\, \lal Au-Av,u-v\ral\geq c\|u-v\|^2
+            \lal Au-Av,u-v\ral\geq 0
+        \]
+        \item{(ii)}
+        strikt monoton, falls für alle $ u, v\in X$ $u\neq v$ gilt
+        \[
+            \lal Au-Av,u-v\ral>0
+        \]
+        \item{(iii)}
+        stark monoton, falls es ein $c >0$ gibt, sodass für alle $u,v\in X$ gilt
+        \[
+            \lal Au-Av,u-v\ral\geq c\|u-v\|^2
         \]
         \item{(iv)}
-        koerziv
+        koerziv, falls
         \[
-            \Ra \, \lim_{\|u\|\ra \infty}\frac{ \lal Au,u\ral }{\|u\|}=\infty
+            \lim_{\|u\|\ra \infty}\frac{ \lal Au,u\ral }{\|u\|}=\infty
         \]
     \end{description}
 \end{defi}
