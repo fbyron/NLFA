@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  12 JUN 2011 00:07
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  14 JUN 2011 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1407,7 +1407,7 @@ LaTeX Font Info:    Try loading font information for OT1+txtt on input line 138
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
 )
-<license.pdf, id=86, 96.36pt x 33.726pt>
+<license.pdf, id=82, 96.36pt x 33.726pt>
 File: license.pdf Graphic file (type pdf)
  <use license.pdf> [1
 
@@ -1590,9 +1590,13 @@ Overfull \hbox (23.4312pt too wide) in paragraph at lines 83--83
 
 LaTeX Warning: Reference `12' on page 37 undefined on input line 136.
 
-[37]) (./11-05-30.tex [38] [39] [40]
+[37]) (./11-05-30.tex [38]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 253.
+LaTeX Warning: Reference `4.2' on page 39 undefined on input line 90.
+
+[39] [40]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 256.
 
 [41]) (./11-06-01.tex
 
@@ -1608,7 +1612,20 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 11.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 25.
 
-[44] [45]
+[44]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
+
+[45]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
 
@@ -1616,24 +1633,12 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 190.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 155.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 197.
 
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 158.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 158.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 193.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 200.
-
-[46]) (./11-06-08.tex [47] [48] [49] [50])
+[46]) [47] (./11-06-08.tex [48] [49] [50])
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
@@ -1647,12 +1652,12 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  18895 strings out of 493848
- 282820 string characters out of 1152822
- 378974 words of memory out of 3000000
+ 282794 string characters out of 1152822
+ 378979 words of memory out of 3000000
  21370 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 47i,17n,49p,340b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,19n,49p,340b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/share/
 texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-texlive/
 fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-texlive/fonts/enc/dvip
@@ -1672,9 +1677,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (54 pages, 454969 bytes).
+Output written on nl.funkana.pdf (54 pages, 454332 bytes).
 PDF statistics:
- 787 PDF objects out of 1000 (max. 8388607)
+ 786 PDF objects out of 1000 (max. 8388607)
  266 named destinations out of 1000 (max. 500000)
- 178 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

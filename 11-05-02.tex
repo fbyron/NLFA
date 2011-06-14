@@ -10,7 +10,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         \item{b)}
         Sei $\vp \in C^1(\R^n)$, und sei $z\in \R^n$. Dann gilt
         \[
-            \vp (x+z)-\vp(x)=\div \left( z\cdot \int_0^1 \vp (z+tz) \d t\right)
+            \vp (x+z)-\vp(x)=\div \left( z\cdot \int_0^1 \vp (x+tz) \d t\right)
         \]
         \item{c)}
         Seien $u$, $K$, $\vp$ wie in $a)$, $\Omega \subset \R^n$ offen, beschränkt.
@@ -59,18 +59,18 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
     \begin{align*}
         \div u(x)&=\sum_{k,j}\partial _k u_j(f(x))\cdot \left( \sum_{i=1}^n \d_{ij}(x) \partial f_k(x) 
                 \right) +\sum_{i=1}^nu_j(f(x)) \left( \sum \partial _i \d_{ij}(x) \right)\\
-        =&\sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
+        &=\sum_{k,j}\partial _k u_j(f(x))\delta _{jk} J_f(x)=\vp(f(x))J_f(x)
     \end{align*}
     Behauptungen: Siehe Übungsblatt 2.
     Wir wollen nun zeigen, dass der über die Determinantenformel definierte Abbildungsgrad konstant
     ist auf Zusammenhangskomponente. Zu zeigen: $\deg(f,\Omega,y_1)=\deg(f,\Omega,y_2)$.
 
     \begin{lem}\label{2.8}
-        Sei $f\in C^2(\ol \Omega,\R^n),$ $ y_0\nin f(\partial \Omega) $,
+        Sei 
         \[
-            \rho:=\dist(y_0,f(\partial \Omega))
+            f\in C^2(\ol\Omega,\R^n),\qq y_0\nin f(\partial\Omega),\qq\rho:=\dist(y_0,f(\partial \Omega))
         \]
-        Dann ist $\deg(f,\Omega,\cdot)$ (Definiert durch die Determinantenformel) konstant auf
+        Dann ist $\deg(f,\Omega,\cdot)$ (definiert durch die Determinantenformel) konstant auf
         \[
             B_\delta (y_0)\cap \RV(f)
         \]
@@ -80,9 +80,10 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         Sei $y^j\in B_\delta (y_0)\cap \RV(f),$ $j=1,2$, sei $\delta := \rho-\max_{j=1,2}\|y^j-y_0\|$.
         Sei $\eps>0$, so dass
         \[
-            \deg(f,\Omega,y^j)=\int \eta_\eps(f(x)-y^j)J_f(x) \d x \qq \text{(nach Lemma $\ref{2.6}$)}
+            \deg(f,\Omega,y^j)=\int_{\R^n} \eta_\eps(f(x)-y^j)J_f(x) \d x \qq 
+            \text{(nach Lemma $\ref{2.6}$)}
         \]
-        mit Proposition $\ref{2.7}$ b) gilt
+        mit Proposition \ref{2.7} b) gilt
         \begin{align*}
             \eta_\eps(x-y^2)-\eta_\eps(x-y^1)&= \eta_\eps (x-y^1+(y^1-y^2))-\eta_\eps(x-y^1)\\
             &= \div w(x) \qq\text{mit}\\
@@ -96,7 +97,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
                 \eps + \rho-\delta&<\rho
         \end{align*}
         Damit gilt aber, dass $f(\partial \Omega)\cap \supp w=\varnothing$. Mit Proposition 
-        $\ref{2.7}$ e) existiert
+        \ref{2.7} c) existiert
         \[
             v\in C^1(\Omega),\, \supp v \subset \Omega.
         \]
@@ -104,9 +105,9 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
         \[
             \left( \eta_\eps(f(x)-y^2)-\eta_\eps (f(x)-y^1) \right)J_f(x)=\div v(x)
         \]
-        Mit der Proposition $\ref{2.7}$ a) folgt die Behauptung. \[  \]
+        Mit der Proposition \ref{2.7} a) folgt die Behauptung. \[  \]
     \end{proof}
-
+    \[  \]
     \end{proof}
     \end{description}
 \end{proof}
@@ -123,6 +124,7 @@ Dieses Problem können wir beseitigen, wenn wir $f\in C^2$ fördern. Wir brauche
 \end{defi}
 
 \noindent\textit{Behauptung:} $\deg$ ist somit nach dem vorherstehenden Überlegungen wohldefiniert.
+
 \subsubsection*{2. Schritt: Nur stetige Funktionen $f$}
 
 Auch hier die Idee: Sei $f\in D_y(\ol \Omega, \R^n)$. Wir suchen $\tilde f \in C^2 (\ol \Omega, \R^n)$
@@ -140,7 +142,7 @@ definierte Funktion stetig ist.
 \begin{proof}
     \begin{description}
         \item{1)}
-        $f(y)=\varnothing \, \Ra \, (f+tg)^{-1}(y)=\varnothing$ falls
+        $f^{-1}(y)=\varnothing \, \Ra \, (f+tg)^{-1}(y)=\varnothing$ falls
         \[
             |t| < \frac{\dist(y,f(\ol \Omega))}{\|g\|_\infty}
         \]
@@ -150,7 +152,7 @@ definierte Funktion stetig ist.
             \[
                 U(x^i)=:U^i
             \]
-            disjunkte Umegbungen, so dass eindeutige Lösungen $x^i(t)\in U^i$ existieren von
+            disjunkte Umgebungen, so dass eindeutige Lösungen $x^i(t)\in U^i$ existieren von
             \[
                 (f+tg)(x)=y \qq \forall |t|<\eps
             \]

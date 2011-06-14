@@ -87,7 +87,7 @@ Dann
     \end{proof}
 \end{description}
 
-\begin{defi}
+\begin{defi}\ref{4.2}
     Sei $X$ reflexiver Banachraum und $A:X\ra X^\star$ ein Operator. $A$ heißt
     \begin{description}
     \item{(i)}
@@ -108,13 +108,13 @@ Dann
 \begin{proof}
     Zu $(\star)$. Seien $u,v,w\in X$, $t\ra t_0$ 
     \[
-        \Ra\, u+tv \ra u+tv
+        \Ra\, u+tv \ra u+t_0v
     \]
     \[
         \overset{\text{demistetig}}{\Ra} \, A(u+tv) \rightharpoonup A(u+t_0v)
     \]
     \[
-        \Ra \lal A(u+tv),w\ral\ra \lal A(u+t_0v),w\ral
+        \LRa \lal A(u+tv),w\ral\ra \lal A(u+t_0v),w\ral
     \]
 \end{proof}
 
@@ -154,12 +154,12 @@ Dann
     \begin{align*}
         \Ra \, 0&\leq \lal Au_n-Av,u_n-v\ral= \lal Au_n-Av,(u_n-u)+(u-v)\ral\\
         \Ra\, a_n\lal Au_n,v-u\ral &\leq a_n(\lal Au_n,u_n-v\ral-\lal Av,u_n-v\ral)\\
-        &\leq 1+ c\lal u,v\ral \qq \forall v\in X
+        &\leq 1+ c( u,v) \qq \forall v\in X
     \end{align*}
     Einsetze $v\leadsto 2u-v$
     \begin{align*}
-        -a_n \lal Au_n,v-u\ral&\leq 1+\tilde c\lal u,v\ral \qq \forall v \in X\\
-        \Ra \, |\lal a_n A u_n,v-u\ral|&\leq 1+c\lal u,v\ral
+        -a_n \lal Au_n,v-u\ral&\leq 1+\tilde c( u,v) \qq \forall v \in X\\
+        \Ra \, |\lal a_n A u_n,v-u\ral|&\leq 1+c( u,v)
     \end{align*}
     $\Ra \, (a_nAu_n)_{n\in \N}$ ist punktweise beschränkt. Mit \textit{Banach-Steinhaus}
     \[
@@ -198,9 +198,12 @@ Dann
         \item{(ii)}
         $A$ genügt der Bedingung (M), d.h.
         \begin{align}\label{15}
-            Av=b \La \begin{cases} v_n \rightharpoonup v \\ Av_n\rightharpoonup b \\ \lal Av_n,v_n\ral
-            \ra (b,v)
-        \end{cases}
+            \left.\begin{array}{lr}
+            v_n \rightharpoonup v& \\
+            Av_n\rightharpoonup b& \\
+            \lal Av_n,v_n\ral \ra \lal b,v\ral&
+            \end{array}\right\}
+            \,\Ra \, Av=b            
         \end{align}
         \item{(iii)}
         \[

@@ -98,13 +98,13 @@ definieren zu können. (denn $\deg$ soll konstant sein auf Zusammenhangskomponen
 von krit. Werten.)
 
 \textbf{Idee:} Umschreiben der Determinantenformel als \textit{Integral}.
-Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier, d. h.
+Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier, \text{d. h.}
 \[
     \eta_\eps \in C^\infty_c(B_\eps(0)\subset \R^n), \qq \int_{\R^n} \eta_\eps=1,\qq \eta_\eps\geq 0
 \]
 
 \begin{lem}\label{2.6}
-    Sei $f\in D^1_y(\ol \Omega, \R^n)$, $y\nin \CV(F)$. Dann gilt
+    Sei $f\in D^1_y(\ol \Omega, \R^n)$, $y\nin \CV(f)$. Dann gilt
     \begin{align}\label{5}
         \deg(f,\Omega,y)=\sum_{x_j\in f^{-1}(y)}\sign J_f(x_j)=\int_\Omega \eta_\eps (f(x)-y) J_f(x)\d x
     \end{align}
@@ -130,21 +130,21 @@ Es sei im Weiteren $\eta_\eps$ ein Standard-Mollifier, d. h.
         \[
             f\big|_{U_i} \qq \text{bijektiv,} \qq J_f(x)\neq 0 \qq \forall x \in U_i.
         \]
-        Wieder gilt $\eta _{\eps}(f(x)-y)=0$ für
+        Wieder gilt
         \[
-            x\in \ol \Omega \setminus \bigcup _{i=1}^N U_i
+            \eta _{\eps}(f(x)-y)=0 \qq \forall x\in \ol \Omega \setminus \bigcup _{i=1}^N U_i
         \]
         Damit gilt
         \begin{align*}
             \int_\Omega \eta_\eps(f(x)-y) J_f(x) \d x&= \sum_{i=1}^N \sign J_f(x^i)\cdot
-            \int_{B_{\eps_0(x)}}\eta_\eps (\tilde x ) \d \tilde x\\
+            \int_{B_{\eps_0}(x)}\eta_\eps (\tilde x ) \d \tilde x\\
             &=\sum_{x^i\in f^{-1(y)}} \sign  J_f(x^i)
         \end{align*}
-        mit $f(x)=\tilde x$.
+        mit $\tilde x=f(x)-y$.
     \end{description}
     \[ \]
 \end{proof}
 Die Integraldarstellung ergibt auch für kritische Punkte Sinn. Aber:
 Wegen der Abhängigkeit von $\eps_0$ von $f$ und $y$ ist auch der Wert des Integrals nicht
-\textit{a priori} stetig in $f,y$, denn $\eps_0$ hängt ab von $f$ und $y$.
+\textit{a priori} stetig in $f,y$.
 

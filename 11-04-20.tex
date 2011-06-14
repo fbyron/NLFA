@@ -211,15 +211,15 @@ $\tau(\R^n)$ bezeichne die Topologie auf $\R^n$.
 \begin{proof}
     O.B.d.A. $y=0$ (nach \textbf{D1}). Alle $x\in f^{-1} (0)$ sind isolierte Punkte in $U$
     (Homöomorphiesatz).
-    $f^{-1}(y)$ hat höchstens am Rand einen Häufungspunkt, aber $0\nin f(\partial U)$.
+    $f^{-1}(0)$ hat höchstens am Rand einen Häufungspunkt, aber $0\nin f(\partial U)$.
     \[
         \Ra \, f^{-1}(0)= \{ x^i \}_{i=1}^N
     \]
     Wähle $\delta >0$ so klein, dass $B_\delta(x^i)$ paarw. disjunkt.
     \[
-        \Ra \, \deg(f,U,0)=\sum_{i=1}^N \deg(f,B_\delta(x^i),0)
+        \overset{\text{\ref{2.1} i)}}{\Ra} \, \deg(f,U,0)=\sum_{i=1}^N \deg(f,B_\delta(x^i),0).
     \]
-    beachte $0\nin f(\ol U, \setminus \bigcup_{i=1}^N B_\delta(x^i))$.
+    Beachte $0\nin f(\ol U \setminus \bigcup_{i=1}^N B_\delta(x^i))$.
     \begin{align*}
         f\in C^1 \, \Ra \, f(x)&= \d f(x)(x-x^i) + |x-x^i| r(x-x^i) \qq \text{mit} \qq r\in C^0(B_\delta(x^i),\R^n), 
         \qq r(0)=0.\\
@@ -233,7 +233,7 @@ $\tau(\R^n)$ bezeichne die Topologie auf $\R^n$.
     \begin{align*}
         \Ra\, | H(t,x) |&>|\d f(x^i)(x-x^i)|-(1-t)(x-x^i)r(x-x^i)\geq \lambda \delta - \delta|r|>0
         \qq \forall \, x\in \partial B_\delta (x^i)\\
-        \overset{(\textbf{D4})}{\Ra} \, \deg(f,U,0)&=\sum_{i=1}^N\deg (\partial f (x^i)(\cdot-x^i),
+        \overset{(\textbf{D4})}{\Ra} \, \deg(f,U,0)&=\sum_{i=1}^N\deg (\d f (x^i)(\cdot-x^i),
                 B_\delta(x^i),0)
     \end{align*}
     Lemma \ref{1.3.5}

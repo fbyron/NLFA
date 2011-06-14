@@ -8,7 +8,6 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Notation}{9}{subsubsection.2.1.1}
 \contentsline {subsection}{\numberline {2.2}Verallgemeinerung der Determinantenformel}{13}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Der Brouwer'sche Fixpunktsatz}{19}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Einschub:}{20}{subsubsection.2.3.1}
 \contentsline {subsection}{\numberline {2.4}Weitere Eigenschaften des Abbildungsgrades}{23}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Der Fixpunktsatz von Kakutani und eine Anwendung in der Spieltheorie}{25}{subsection.2.5}
 \contentsline {section}{\numberline {3}Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}{27}{section.3}

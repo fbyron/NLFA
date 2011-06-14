@@ -32,7 +32,7 @@
     \[
         \|Fu\|_{L^q}\leq c\left( \|a\|_{L^q} + \sum_{i=1}^n \|u^i\|_{L^{p_i}}^{\nicefrac{p_i}{q}} \right)
     \]
-    $F$ heiqt in diesem Fall \textit{Nemychii-Operator}.
+    $F$ heißt in diesem Fall \textit{Nemychii-Operator}.
 \end{lem}
 
 \begin{proof}
@@ -42,7 +42,7 @@
     Es sei $u\in L^p$, also messbar. Wir approximieren $u$ durch
     $(u_j)_{j=1}^n$, so dass
     \[
-        u_j\ra u \text{ für auf } G, \, u_j=\sum_{i=1}^{N_j} c_i^j \chi_{G_i^j}
+        u_j\ra u \text{ auf } G, \, u_j=\sum_{i=1}^{N_j} c_i^j \chi_{G_i^j}
     \]
     Es gilt
     \[
@@ -70,13 +70,10 @@
     \]
     Aber es gilt zudem, dass
     \[
-        \int_G|f(x,u_{j_k}(x)) - f(x,u(x))|^q \leq C \underbrace{(\|u\|^q_{L^q} + \|u_{j_k}\|_{L^p}^q+\|u\|_{L^p}^q+)}
-        _{\text{beschränkt.}}
+        \int_G|f(x,u_{j_k}(x)) - f(x,u(x))|^q 
+        \leq C \underbrace{(\|u\|^q_{L^q} + \|u_{j_k}\|_{L^p}^q+\|u\|_{L^p}^q)}_{\text{beschränkt.}}
     \]
-    Mit dem Satz über domenierte Konvergenz folgt
-    \[
-        \|Fu_{j_k}-Fu\|_{L^p}\ra 0.
-    \]
+    Es gilt
     \begin{align*}
         |f(x,u_{j_k}(x)) - f(x,u(x))|^q &\leq C(|f(x,u_{j_k}(x))|+ |f(x,u(x))|^q)\\
         &\leq C(|a(x)|^q + b^q|u_{j_k}|^q + |f(x,u(x))|^q) =: h_{j_k}(x)
