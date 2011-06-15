@@ -1,0 +1,202 @@
+\begin{theorem}[Brezis]\label{4.16}
+    Es sei $A:X\ra X'$ ein pseudomonotoner, beschränkter koerzitiver Operator,
+    $X$ ein separapbler, reflexiver reeller Banachraum. Dann existiert für alle $b\in X'$
+    eine Lösung $u\in X$ von
+    \[
+        Au=b
+    \]
+\end{theorem}
+
+\begin{proof}
+    Nach Lemma \ref{4.16} ist $A$ demistetig und genüge Bedingung (M). Es sei $(w_i)_{i\in \N}$
+    eine abzählbare Teilmenge von $X$, so dass $\mr{span}\{w_i\}_{i\in \N}$ dicht liegt in $X$ und
+    $w_n$ linear unabhängig von $\{w_j\}_{j=1}^{n-1}$ für alle $n\in\N$ ist.
+
+    Wie im Beweis von \textit{Browder-Minty} suchen wir approximative Lösungen $u^n\in \mr{span}\{w_j\}
+    _{j=1}^n=:X^n$
+    \[
+        u_n=\sum_{j=1}^n c_j^nw_j
+    \]
+    das „Galerkin-Systems“
+    \begin{align}\label{25}
+        g_k(c^n)=g_k(u_n):=\lal Au_n - b, w_k\ral =0\qq \forall k=1,…,n.
+    \end{align}
+    Auf $\R^n$ betrachten wir die Norm $\|c^n\|_X=\|u_n\|_X$ mit
+    \[
+        u_n=\sum_{j=1}^nc_j^nw_j
+    \]
+    Es gilt
+    \begin{description}
+    \item{-} $g_k$ ($k=1,…,n$) stetig in $\R^n$, da $A$ demistetig
+    \[
+        \Ra \, \lal Au^j-b,w_n\ral\ra \lal Au -b,w_k\ral
+    \]
+    \item{-} $\exists R_0>0:$ $\sum_{k=1}^n g_k(\tilde c^n)\cdot \tilde c_k^n>0$,
+    falls $\|\tilde u_n\|=R_0$ mit $\tilde u_n=\sum_{j=1}^n\tilde c_j^nw_j$. (Koerzitivität von $A$) 
+    \end{description}
+    Aus den Eigenschaften des \textit{Brouwer'schen Abbildungsgrades} folgt die Existenz einer Lösung
+    $u_n\in X_n$ von \ref{25} für alle $n\in \N$ mit $\|u_n\|_X\leq R_0$.
+    (Das war Theorem \ref{2.10}: Ein stetiges Vektorfeld, das auf einer Kugeloberfläche in jdm. Punkt
+     nach außen zeigt muss an einem Punkt im Innern verschwinden.)
+    Wegen der Beschränktheit von $(u_n)_{n\in\N}$ Lösungen von (\ref{25}) existiert eine (schwach)
+    konvergente Teilfolge $u_{n_j}\rightharpoonup u$ in $X$. Wir zeigen, dass $u$ die gesuchte Lösung
+    ist. Wegen Beschränktheit von $A$ und der schwachen Konvergenz von $u_{n_j}$ existiert eine weitere
+    Teilfolge (wieder mit $n_j$ indiziert), so dass
+    \[
+        Au_{n_j}\rightharpoonup c \qq \text{in }X
+    \]
+    Weiter gilt aber
+    \[
+        \lal Au_{n+k}, w \ral = \lal b,w \ral \qq \forall w\in \bigcup_{j=1}^n X_j \qq k\geq 0.
+    \]
+    \begin{align*}
+        \Ra \, \lim_{n\ra \infty} \lal Au_n, w\ral = \lal b,w\ral \qq \forall w\in \bigcup_{j=1}^\infty
+        X_j
+    \end{align*}
+    Es folgt wie in \textit{Browder-Minty}, dass $c=b$, denn für alle $w\in \bigcup_{j=1}^\infty X_j$
+    gilt
+    \[
+        \lal c-b , w\ral =0
+    \]
+    und $\bigcup_{j=1}^\infty X_j$ liegt dicht in $X$.
+
+    \noindent Somit folgt aber, dass
+    \[
+        \lal Au_{n_j}, u_{n_j} \ral = \lal b,u_{n_j}\ral \ra \lal b,u\ral
+    \]
+    Von oben wissen wir noch dass $u_n\rightharpoonup u$ und $Au_{n_j}\rightharpoonup b$. Aufgrund von
+    (M) folgt sofort, dass
+    \[
+        Au=b
+    \]
+\end{proof}
+
+\subsubsection*{Anwendung: $p$-Laplace (Redux)}
+
+Wir suchen $u:\Omega\ra \R$, so dass
+\begin{align*}
+    -\div (|\nabla u |^{p-2}\nabla u) + g(u)&= f \qq \text{in }\Omega,\\
+     u&=0 \qq\text{auf }\partial \Omega,
+\end{align*}
+wobei $\Omega\subset\R^n$ offen, beschränkt, $p>1$. Wir betrachten wieder $x=W^{1,p}_0(\Omega)$ und die
+Operatoren $A_1$, $A_2$ definiert durch
+\begin{align*}
+    \lal A_1u,\vp\ral &:= \int_{\Omega} |\nabla u |^{p-2} \nabla u \cdot \nabla\vp\\
+    \lal A_2u,\vp\ral &:= \int_\Omega g(u)\cdot \vp
+\end{align*}
+und
+\[
+    \lal b,\vp \ral := \int_\Omega f\vp.
+\]
+Der Operator $A_1$ und das Funktional $b$ wurden bereits in $p$-Laplace Teil 1 behandelt. Zu $A_2$:
+
+\begin{lem}\label{4.17}
+    Es sei $\Omega\subset \R^n$ beschränkt, offen, $g:\R\ra \R$ stetig, so dass
+    \[
+        |g(y)|\leq c \cdot(1+|y|^{r-1})
+    \]
+    für  $1<r<\infty$.
+    Falls $1\leq p < n$ und $r\leq \frac{np}{n-p}$, dann ist $A_2:X\ra X'$ beschränkt. Für
+    $r<\frac{np}{n-p}$ ist $A_2$ stark stetig. Falls $p\geq n$, so gilt das für alle $r\in (1,\infty)$.
+\end{lem}
+
+\begin{proof}
+    siehe Übungsblatt, folgt aus Sobolev-Einbettung.\[ \]
+\end{proof}
+
+\noindent Koezitivität: Achtung, beispielsweise für $g(y)=-sy$, $s$ hinreichend groß ist $A=A_1+A_2$
+unter Umständen nicht koerzitiv. Es existiert dann auch nicht immer eine Lösung.
+
+\begin{beispiel}
+\[
+    \Delta u - \lambda u=0
+\]
+besitzt nichttriviale Lösungen $u$ für $\lambda$ Eigenwert von $\Delta$.
+$\mapsto$ Fredholm-Alternative: Nichtexistenz von Lösungen von $\Delta u - \lambda u = \alpha u$
+$\alpha>0$.
+
+Wir rechnen
+\begin{align*}
+    \frac{\lal A_1u+A_2u,u\ral}{\|u\|_X} &= \frac{\|\nabla u\|_{L^p}^p+\int g(u)u}{\|\nabla u\|_{L^p}}\\
+    &\geq \|\nabla u\|_{L^p}^p - {\|A_2u\|_{X'}}\\
+    \text{mit} \qq \|A_2u\|_{X'} &= \sup_{\vp \in X} \lal A_2u, \vp \ral \geq \frac{\lal A_2 u , u\ral}
+    {\|\nabla u\|_{L^p}}
+\end{align*}
+\end{beispiel}
+
+\begin{beispiel}
+\[
+    g(u)=-su, \qq s>0
+\]
+Es gilt $\|u\|_{L^2}\leq C\| \nabla u\|_{L^p}$ mit $C$ der Sobolev-Konstante.
+\[
+    \Ra \, \frac{-\int su^2}{\|\nabla u\|_{L^p}} \geq -s C^2 \cdot\|\nabla u\|_{L^p}
+\]
+und es folgt die Koerzitivität von $A=A_2+A_1$ für $p>2$ und jedes $s>0$, (dann gewinnt $\|\nabla u \|
+_{L^p}^{p-1}$ immer) oder in der linearen Gleichung ($p=2$) für $s\cdot C^2<1$.
+\end{beispiel}
+
+\begin{beispiel}
+Falls
+\begin{align}\label{26}
+    \inf_{y\in \R} g(y) y> -\infty,
+\end{align}
+dann ist $A=A_1+A_2$ immer koerzitiv, falls $p>1$.
+\end{beispiel}
+
+\begin{theorem}\label{4.18}
+    Sei $\Omega \subset\R^n$ offen, beschränkt, $p>1$. Die Funktion $g$ erfülle die Voraussetzungen von
+    Lemma \ref{4.17}. Weiter sei der Operator $A=A_1+A_2$ koerzitiv, also sei z.B. (\ref{26}) erfüllt.
+    Dann existiert für alle $f\in L^{p'}(\Omega)$ ein $u\in W_0^{1,p}(\Omega)$, so dass gilt
+    \[
+        (A_1+A_2)u=b
+    \]
+    ($u$ ist schwache Lösung von 
+     \[
+        \div(|\nabla u|^{p-2}\nabla u)+ g(u)=f
+     \]
+     mit Nullrandbedingung.)
+\end{theorem}
+
+\begin{proof}
+    Folgt aus dem \textit{Satz von Brezis} \ref{4.16}. \[ \]
+\end{proof}
+
+\subsection{Evolutionsprobleme}
+
+Es wird notwendig sein, Funktionen der Art
+\[
+    f:S\ra X
+\]
+mit $S\subset \R$ und $X$ ein reflexiver reeller Banachraum und insbesondere deren Integrale zu
+betrachten. Deshalb ein 
+
+\subsubsection*{Einschub: Das Bochner-Integral}
+
+\begin{defi}[Treppenfunktion]\label{4.19}
+    Eine Funktion $f:S\ra X$ heißt \textit{Treppenfunktion}, falls gilt
+    \[
+        f(s)=\sum_{j=1}^n \chi_{B_j} (s) x_j
+    \]
+    mit $x_j\in X$, $j=1,…,n$; $B_j\subset S \subset \R$ Lebesgue-messbare Mengen mit
+    $|B_i|\leq \infty$ und $B_i\cap B_j=\varnothing$ für $i\neq j$ Maß von $B_i$. $\chi_{B_i}$ ist
+    die charakteristische Funktion von $B_i$.    
+\end{defi}
+
+\begin{defi}[Bochner-Integral]\label{4.20}
+    Für eine Treppenfunktion $f$ definieren wir das \textit{Bochner-Integral}
+    \[
+        \int_S f(s)\d s:= \sum_{j=1}^n|B_j|\cdot x_j
+    \]
+\end{defi}
+
+\begin{remark}
+    Es gilt natürlich
+    \[
+        \int_S f(s)\d s \in X
+    \]
+\end{remark}
+\begin{remark}
+    Verallgemeinerung auf andere Maßräume (z.B. Teilmengen des $\R^n$) ebenfalls möglich.
+\end{remark}
+

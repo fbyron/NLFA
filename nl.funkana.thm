@@ -55,6 +55,7 @@
 \contentsline {proof}{{Beweis:}{22}{}}{18}{proof.22}
 \contentsline {theorem}{{Theorem}{2.{13}}{}}{19}{theorem.2.13}
 \contentsline {proof}{{Beweis:}{23}{}}{19}{proof.23}
+\contentsline {theorem}{{Theorem}{2.{14}}{}}{20}{theorem.2.14}
 \contentsline {idea}{{Beweisidee:}{1}{}}{20}{idea.1}
 \contentsline {theorem}{{Theorem}{2.{15}}{Fortsetzung stetiger Funktionen}}{20}{theorem.2.15}
 \contentsline {proof}{{Beweis:}{24}{}}{20}{proof.24}
@@ -147,3 +148,16 @@
 \contentsline {defi}{{Definition}{4.{14}}{Pseudomonotonie}}{49}{theorem.4.14}
 \contentsline {lem}{{Lemma}{4.{15}}{}}{49}{theorem.4.15}
 \contentsline {proof}{{Beweis:}{60}{}}{50}{proof.60}
+\contentsline {theorem}{{Theorem}{4.{16}}{Brezis}}{51}{theorem.4.16}
+\contentsline {proof}{{Beweis:}{61}{}}{51}{proof.61}
+\contentsline {lem}{{Lemma}{4.{17}}{}}{53}{theorem.4.17}
+\contentsline {proof}{{Beweis:}{62}{}}{53}{proof.62}
+\contentsline {beispiel}{{Beispiel:}{1}{}}{53}{beispiel.1}
+\contentsline {beispiel}{{Beispiel:}{2}{}}{53}{beispiel.2}
+\contentsline {beispiel}{{Beispiel:}{3}{}}{53}{beispiel.3}
+\contentsline {theorem}{{Theorem}{4.{18}}{}}{53}{theorem.4.18}
+\contentsline {proof}{{Beweis:}{63}{}}{53}{proof.63}
+\contentsline {defi}{{Definition}{4.{19}}{Treppenfunktion}}{54}{theorem.4.19}
+\contentsline {defi}{{Definition}{4.{20}}{Bochner-Integral}}{54}{theorem.4.20}
+\contentsline {remark}{{Bemerkung:}{15}{}}{54}{remark.15}
+\contentsline {remark}{{Bemerkung:}{16}{}}{54}{remark.16}
