@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  15 JUN 2011 11:55
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  20 JUN 2011 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1257,6 +1257,9 @@ LaTeX Warning: Label `15' multiply defined.
 
 LaTeX Warning: Label `4.16' multiply defined.
 
+
+LaTeX Warning: Label `26' multiply defined.
+
 )
 \openout1 = `nl.funkana.aux'.
 
@@ -1667,11 +1670,15 @@ ut line 111.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 181.
 
-)
+) (./11-06-20.tex [54] [55]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 172.
+
+[56])
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
- [54] (./nl.funkana.aux)
+ [57] (./nl.funkana.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1680,10 +1687,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18979 strings out of 493848
- 283883 string characters out of 1152822
- 379684 words of memory out of 3000000
- 21430 multiletter control sequences out of 15000+50000
+ 19031 strings out of 493848
+ 284511 string characters out of 1152822
+ 380011 words of memory out of 3000000
+ 21465 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,19n,49p,340b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1706,9 +1713,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (57 pages, 470377 bytes).
+Output written on nl.funkana.pdf (60 pages, 485135 bytes).
 PDF statistics:
- 832 PDF objects out of 1000 (max. 8388607)
- 287 named destinations out of 1000 (max. 500000)
+ 864 PDF objects out of 1000 (max. 8388607)
+ 301 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
