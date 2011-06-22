@@ -11,7 +11,7 @@
 \begin{lem}\label{4.9}
     Die Funktion $f$ erfülle
     \begin{description}
-        \item{1. Carathéodey-Bedingung:}
+        \item{1. Carathéodory-Bedingung:}
         \[
             f(\cdot,\eta): x \ra f(x,\eta) \qq \text{messbar } \forall \eta\in \R^n
         \]
@@ -32,7 +32,7 @@
     \[
         \|Fu\|_{L^q}\leq c\left( \|a\|_{L^q} + \sum_{i=1}^n \|u^i\|_{L^{p_i}}^{\nicefrac{p_i}{q}} \right)
     \]
-    $F$ heißt in diesem Fall \textit{Nemychii-Operator}.
+    $F$ heißt in diesem Fall \textit{Nemyckii-Operator}.
 \end{lem}
 
 \begin{proof}
@@ -127,7 +127,7 @@ und ein Funktional $b$ durch
 \]
 
 \begin{lem}\label{4.10}
-    Es sei $p\geq \frac{2n}{n-2}$ $f\in L^{p'}$, dann gilt
+    Es sei $p\geq \frac{2n}{n+2}$ $f\in L^{p'}$, dann gilt
     \[
         A:X\ra X'
     \]
@@ -150,7 +150,7 @@ und ein Funktional $b$ durch
             &\overset{p'=\frac{p}{p-1}}{=} \|\nabla u\|_{L^p}^{p-1} \|\nabla \vp\|_{L^p} +
             s \|u\|_{L^2}\|\vp\|_{L^2}= ……
         \end{align*}
-        Für $p\geq \frac{2n}{n-2}$ bettet $W^{1,p}$ genau stetig in $L^2$ ein. Es gilt somit, dass
+        Für $p\geq \frac{2n}{n+2}$ bettet $W^{1,p}$ genau stetig in $L^2$ ein. Es gilt somit, dass
         \[
             ……\leq C (\|\nabla u \|_{L^p}^{p-1}+s\|\nabla u\|_{L^p})\|\nabla\vp\|_{L^p}
         \]
@@ -165,7 +165,7 @@ und ein Funktional $b$ durch
         \item{2)}
         Gleichermaßen gilt
         \[
-            \|b\|_X' \leq C\|f\|_{L^{p'}}
+            \|b\|_{X'} \leq C\|f\|_{L^{p'}}
         \]
         \item{3)}
         Es folgt, dass
@@ -206,7 +206,7 @@ und ein Funktional $b$ durch
     \begin{align*}
         \lal Au-Av,u-v\ral &= \int_\Omega (g(\nabla u)- g(\nabla v))(\nabla u - \nabla v) + s \int_\Omega
         |u-v|^2\\
-            &\geq \int_\Omega \underbrace{\int_0^1 \frac{\d}{\d \tau} g(\nabla v + \tau(\nabla u +
+            &\geq \int_\Omega \underbrace{\int_0^1 \frac{\d}{\d \tau} g(\nabla v + \tau(\nabla u -
                         \nabla v)) \d\tau\cdot(\nabla u-\nabla v)}_{:= I}  \d x\\
     \end{align*}
     Es gilt:
@@ -237,7 +237,7 @@ und ein Funktional $b$ durch
     \]
     und $g$ ist stetig. Somit ist 
     \[
-        f:(l^P)^n\ra (L^p)^n, \qq  F:\nabla u \mapsto g(\nabla u)
+        F:(L^p)^n\ra (L^{p'})^n, \qq  F:\nabla u \mapsto g(\nabla u)
     \]
     ein $n$-dimenisonaler \textit{Nemychii-Operator}. Die Stetigkeit von $A$ ist gegeben durch
     \[
@@ -246,7 +246,7 @@ und ein Funktional $b$ durch
     \]
     folgt durch Normabschätzung. Damit ist $A$ stetig und somit hemistetig.
     \item{4.}
-    $W_0^{1,p}$ ist seperabler Banachraum, somit sind alle Voraussetzungen von \ref{4.6} erfüllt
+    $W_0^{1,p}$ ist separabler Banachraum, somit sind alle Voraussetzungen von \ref{4.6} erfüllt
     \end{description}
     \[ \]
 \end{proof}

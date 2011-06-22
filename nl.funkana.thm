@@ -161,7 +161,7 @@
 \contentsline {defi}{{Definition}{4.{20}}{Bochner-Integral}}{54}{theorem.4.20}
 \contentsline {remark}{{Bemerkung:}{15}{}}{54}{remark.15}
 \contentsline {remark}{{Bemerkung:}{16}{}}{54}{remark.16}
-\contentsline {defi}{{Definition}{4.{21}}{}}{54}{theorem.4.21}
+\contentsline {defi}{{Definition}{4.{21}}{Bochner-messbar, Bochner-integrierbar}}{54}{theorem.4.21}
 \contentsline {prop}{{Proposition}{4.{22}}{}}{54}{theorem.4.22}
 \contentsline {proof}{{Beweis:}{64}{}}{54}{proof.64}
 \contentsline {theorem}{{Theorem}{4.{23}}{Pettis}}{55}{theorem.4.23}
@@ -171,3 +171,17 @@
 \contentsline {proof}{{Beweis:}{66}{}}{56}{proof.66}
 \contentsline {cor}{{Corollar}{4.{25}}{}}{57}{theorem.4.25}
 \contentsline {proof}{{Beweis:}{67}{}}{57}{proof.67}
+\contentsline {theorem}{{Theorem}{4.{26}}{}}{57}{theorem.4.26}
+\contentsline {proof}{{Beweis:}{68}{}}{57}{proof.68}
+\contentsline {cor}{{Corollar}{4.{27}}{}}{58}{theorem.4.27}
+\contentsline {proof}{{Beweis:}{69}{}}{58}{proof.69}
+\contentsline {remark}{{Bemerkung:}{18}{}}{58}{remark.18}
+\contentsline {defi}{{Definition}{4.{28}}{}}{58}{theorem.4.28}
+\contentsline {theorem}{{Theorem}{4.{29}}{}}{58}{theorem.4.29}
+\contentsline {proof}{{Beweis:}{70}{}}{58}{proof.70}
+\contentsline {lem}{{Lemma}{4.{30}}{}}{59}{theorem.4.30}
+\contentsline {proof}{{Beweis:}{71}{}}{59}{proof.71}
+\contentsline {theorem}{{Theorem}{4.{31}}{Hölder-Ungleichung}}{59}{theorem.4.31}
+\contentsline {proof}{{Beweis:}{72}{}}{59}{proof.72}
+\contentsline {theorem}{{Theorem}{4.{32}}{Darstellungssatz}}{59}{theorem.4.32}
+\contentsline {proof}{{Beweis:}{73}{}}{59}{proof.73}

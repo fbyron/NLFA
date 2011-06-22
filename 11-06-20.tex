@@ -1,5 +1,5 @@
-\begin{defi}\label{4.22}
-    Eine Funktion $f:S\ra X$ heißt \textit{Bochner-Messbar}, falls eine Folge $(f_n)_{n\in\N}$
+\begin{defi}[Bochner-messbar, Bochner-integrierbar]\label{4.22}
+    Eine Funktion $f:S\ra X$ heißt \textit{Bochner-messbar}, falls eine Folge $(f_n)_{n\in\N}$
     von Treppenfunktionen $f_n:S\ra X$ existiert, so dass für fast alle $s\in S$ gilt
     \[
         \lim_{n\ra \infty} \|f_n(s)-f(s)\| _X=0.
@@ -8,7 +8,7 @@
     \[
         \lim_{n\ra \infty} \int_S\|f_n(s)-f(s)\|_X \d s =0,
     \]
-    so heißt $f$ \textit{Bochner-Integrierbar} und schreiben
+    so heißt $f$ \textit{Bochner-integrierbar} und schreiben
     \begin{align}\label{26}
         \int_S f(s)\d s=\lim_{n\ra\infty} \int_S f_n(s)\d s
     \end{align}
@@ -21,7 +21,7 @@
     \item{2)}
     Der Grenzwert in (\ref{26}) existiert für Bochner-integrable Funktionen $f$.
     \item{3)}
-    Der Grenzwert in (\ref{26}) ist unabhängig von der Wahl der Folge $(f_n)_{n_\in\N}$. 
+    Der Grenzwert in (\ref{26}) ist unabhängig von der Wahl der Folge $(f_n)_{n\in\N}$. 
     \end{description}
 \end{prop}
 
@@ -29,14 +29,14 @@
     \begin{description}
         \item{1)}
         Es sei $f$ Bochner-messbar, $(f_n)_{n\in \N}$ eine Folge von Treppenfunktionen, so dass
-        $\lim_{n\ra \infty}\|f_n(s)-f(s)\|_X=0$ ffa $s\in S$. Dann ist $\|f_n(\cdot)\|:S\ra \R$ eine
+        $\lim_{n\ra \infty}\|f_n(s)-f(s)\|_X=0$ f.f.a. $s\in S$. Dann ist $\|f_n(\cdot)\|:S\ra \R$ eine
         (reelle) Treppenfunktion. Es gilt
         \[
             \lim_{n\ra\infty} \|f_n(s)\| =\|f(s)\| \qq \text{ffa } s\in S 
         \]
         Damit folgt, dass $\|f(\cdot)\|$ Lebesgue-messbar ist als punktweiser Limes messbarer Funktionen.
         \item{2)}
-        Es gilt für $n,k\in\N$ gilt dass
+        Es gilt für $n,k\in\N$, dass
         \begin{align*}
             \left\|\int_Sf_n\d s - \int_Sf_k(s)\d s\right\|_X &=\left\| \int_S f_n(s)-f_k(s)\d s
                 \right\| _X\leq \int_S\|f_n (s)- f_k(s)\|_X\d s\\ 
@@ -53,8 +53,8 @@
             \hat f_n= \begin{cases} \tilde f_{\nicefrac n2} & \text{$n$ gerade.}\\
                       f_{\nicefrac{(n+1)}{2}} & \text{$n$ ungerade.} \end{cases}
         \]
-        Es gilt $\lim_{n\ra \infty}\int_S \hat f_n(s)$ existiert wegen 2) somit auch für TF. Somit ist
-        gezeigt dass das Bochner-Integral für Bochner-integrierbare Funktionen definiert ist.
+        Es gilt $\lim_{n\ra \infty}\int_S \hat f_n(s)$ existiert wegen 2) somit auch für Teilfolgen.
+        Somit ist gezeigt dass das Bochner-Integral für Bochner-integrierbare Funktionen definiert ist.
 
     \end{description}
     \[ \]
@@ -71,7 +71,7 @@
 
 \begin{proof}
     \begin{description}
-        \item{1)}
+        \item{a)}
         Sei $f$ Bochner-messbar, $(f_n)_{n\in\N}$ die entsprechende Folge von Treppenfunktionen, sei
         $\vp \in X'$. Es folgt f.f.a. $s\in S$, dass
         \[
@@ -79,7 +79,7 @@
         \]
         Somit ist $\lal \vp, f(\cdot)\ral$ als punktweiser Limes von reellwertiger Treppenfunktionen 
         Lebesgue-messbar.
-        \item{2)}
+        \\[.5cm]
         Wir zeigen zunächst dass $\|f(\cdot)\|_X: S\ra \R$ Lebesgue-messbar ist.
 
         \begin{lem}\label{27}

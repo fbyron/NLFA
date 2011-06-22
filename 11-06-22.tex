@@ -1,0 +1,237 @@
+\begin{theorem}\label{4.26}
+    Eine Bochner-messbare Funktion $f:\ra X$ ist genau dann Bochner-integrierbar, wenn die Funktion
+    \[
+        \|f(\cdot)\|_X :S \ra \R
+    \]
+    Lebesgue-integrierbar ist.
+\end{theorem}
+
+\begin{proof}
+    \begin{description}
+    \item{1)}
+    Sei $f:S\ra X$ Bochner-integrierbar, $(f_n)_{n\in \N}$ ein Folge von Treppenfunktionen, so dass
+    f.f.a. $s\in S$ gilt $f_n(s)\ra f(s)$ in $X$. Es folgt sofort, dass $\|f(\cdot)\|$ Lebegue-messbar
+     ist. Punktweise gilt
+     \[
+        \|f(s)\|\leq \|f_n(s)\|+ \|f(s)-f_n(s)\|
+     \]
+     und somit
+     \[
+        \int_S\|f(s)\|\d s\leq \underbrace{\int_S\|f_n(s)\|}_{\text{Treppenfunktion}}
+            + \underbrace{\int_S\|f(s)-f_n(s)\|<\infty}_{\text{Grenzwert existiert}}
+     \]
+    $\Ra$ $\|f(\cdot)\|$ Lebesgue-integrierbar.
+    \item{2)}
+    Sei $f$ Bochner-messbar und sei $\|f(\cdot)\|:S \ra \R$ Lebesgue-integrierbar. Es existiert eine
+    Folge von Treppenfunktionen, so dass
+    \[
+        f_n(s) \ra f(s) \qq \text{f.f.a. } s\in S .
+    \]
+    Es sei
+    \[
+        g_n(s):= \begin{cases} f_n(s)& \text{falls } \|f_n(s)\|\leq \nicefrac32 \|f(s)\| \\
+                 0&\text{falls } \|f_n(s)\|>\nicefrac32 \|f(s)\|\end{cases}
+    \]
+    Es gilt immer noch: $g_n$ Treppenfunktion und
+    \[
+        g_n(s)\ra f(s) \qq \text{f.f.a. } s\in S
+    \]
+    Gleichzeitig gilt aber, dass
+    \[
+        \|g_n(s)-f(s)\|\leq \|g_n(s)\|+\|f(s)\| \leq \frac52\|f(s)\|
+    \]
+    Mit dem \textit{Lebesgue'schen Konvergenzsatz} folgt, dass
+    \[
+        \lim_{n\ra\infty} \int_S \|g_n(s)-f(s)\|=0,
+    \]
+    womit $f$ Bochner-integrierbar ist. 
+    \end{description}    
+    \[ \]
+\end{proof}
+
+\begin{cor}\label{4.27}
+    Es sei $f:S\ra X$ Bochner-integrierbar. Dann gilt
+    \[
+        \left\| \int_S f(s)\d s \right\|_X\leq\int_S\|f(s)\|_X \d s \qq  \text{und } \forall \vp \in X'
+    \]
+    gilt
+    \[
+        \lal \vp, \int f(s)\d s \ral _X = \int_S \lal \vp, f(s)\ral_X \d s
+    \]
+\end{cor}
+
+\begin{proof}
+    \begin{description}
+    \item{1)}
+    $(f_n)_{n\in \N}$ Folge von Treppenfunktionen, die $f$ punktweise f.ü. in $S$ approximieren.
+    Es folgt, dass
+    \begin{align*}
+        \left\| \int_Sf(s)\d s\right\| &=\lim_{n\ra\infty} \left\| \int_Sf_n(s) \d s\right\|
+        \leq \lim_{n\ra \infty} \int_S\|f_n(s)\| \d s\\
+        &\leq \lim_{n\ra \infty} \int_S \|f_n(s)-f(s)\| +\|f(s)\|\d s = \int_S \|f(s)\| \d s.
+    \end{align*}
+    \item{2)}
+    Wir können wie im Beweis von Theorem \ref{4.26} annehmen, dass
+    \[
+        \|f_n(s)\|_X \leq \frac32 \|f(s)\|.
+    \]
+    Damit gilt für $\vp \in X'$, dass
+    \[
+        \lal \vp, \int_S f(s)\d s\ral = \lim_{n\ra \infty} \lal \vp , \int_S f_n(s)\d s\ral 
+        \underset{\text{endl. Summe}}{=} \lim_{n\ra \infty} \int_S \lal \vp, f_n(s)\ral \d s
+        \underset{\text{Lebesgue}}{=} \int_S \lal \vp, f(s)\ral \d s
+    \]
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{remark}
+    Es sei $I$ ein beschränktes Intervall, $f\in C(\ol I, X)$. Man kann in diesem Fall zeigen, dass
+    Bochner- und Riemann-Integral von $f$ über $I$ übereinstimmen.
+\end{remark}
+
+\subsubsection*{$L^p$-Räume mit Werten in Banachräumen}
+
+Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
+
+\begin{defi}\label{4.28}
+    Wir bezeichnen mit $L^p(S;X)$ $1\leq p<\infty$ die Menge aller Bochner-messbaren Funktionen
+    $f:S\ra X$, für die gilt
+    \[
+        \int_S \|f(s)\|^p \d s < \infty
+    \]
+    Die Menge aller Bochner-messbaren Funktionen, für die ein $M>0$ existiert mit $\|f(s)\|_X\leq M$ 
+    f.f.a. $s\in S$ bezeichnen wir mit $L^\infty(S;X)$.
+\end{defi}
+
+\begin{theorem}\label{4.29}
+    Die Menge $L^p(S;X)$ $1\leq p \leq \infty$ bildet einen Banachraum bzgl. der Norm
+    \[
+        \|f\|_{L^p(S;X)} = \left( \int_S \|f(s)\|_X^p\d s \right)^{\nicefrac1p} \qq \text{für } 1\leq p 
+        <\infty
+    \]
+    bzw. 
+    \[
+        \|f\|_{L^\infty(S;X)}=\esssup_{s\in S} \|f(s)\|_X
+    \]
+\end{theorem}
+
+\begin{proof}
+    Die Eigenschaften der Norm sind evident.
+    \begin{description}
+    \item{Vollständigkeit:} Sei $(f_n)_{n\in\N}$ eine Cauchy-Folge in $L^p(S;X)$, also
+    \[
+        \|f_n(s)-f_k(s)\|_{L^p(S;X)} = \left( \int_S \|f_k(s)-f_n(s)\|_X^p\right)^{\nicefrac1p} \ra 0
+        \qq (n,k\ra \infty)
+    \]
+    Mit der Dreiecksungleichung in $X$ und dem Satz von Bochner folgt, dass $\|f_n(\cdot)\|_X$ eine
+    Cauchy-Folge in $L^p(S;\R)$ ist, der Rest des Beweises folgt dann von reellen $L^p$-Räumen.
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{lem}\label{4.30}
+    Die Menge der Treppenfunktionen ist dicht in $L^p(S;X)$ $1\leq p <\infty$.
+\end{lem}
+
+\begin{proof}
+    $p=1$: Siehe Beweis des Satzes von Bochner.\\
+    $p>1$: Analog zu reellwertigen $L^p$. \[ \]
+\end{proof}
+
+\begin{theorem}[Hölder-Ungleichung]\label{4.31}
+    Sei $f\in L^p(S;X)$, $g\in L^{p'}(S;X')$ ($X'$ Dualraum von $X$, $\nicefrac1p+\nicefrac1{p'}=1$, 
+    $1\leq p \leq \infty$). Dann ist
+    \[
+        \lal g(\cdot), f(\cdot)\ral _X\in L^1(S;\R)
+    \]
+    und es gilt
+    \[
+        \left| \int_S\lal g(s),f(s)\ral_X\d s \right| \leq \|g\|_{L^{p'}(S;X')}\|f\|_{L^p(S;X)}
+    \]
+\end{theorem}
+
+\begin{proof}
+    Übungsaufgabe. \[ \]
+\end{proof}
+
+\begin{theorem}[Darstellungssatz]\label{4.32}
+    Es sei $X$ ein separabler, reflexiver Banachraum, $1<p<\infty$. Dann besitzt jedes Funktional
+    \[
+        \vp \in \left( L^p(S;X)\right)'
+    \]
+    eine eindeutige Darstellung der Form:
+    \[
+        \vp (u) = \int_S\lal v(s),u(s)\ral_X \d s \qq \forall u\in L^p(S;X)
+    \]
+    mit $v\in L^{p'}(S;X')$ ($\nicefrac1p+\nicefrac1{p'}=1$).
+\end{theorem}
+
+\begin{proof}
+    \textit{4 Schritte:}
+    \begin{enumerate}
+        \item % 1)
+        Sei $t_0\in S$. Für $t\in S$, $x\in X$ setzen wir
+        \begin{align*}
+            u_{t,x}(s) &:= \begin{cases} x & \text{falls $t_0\leq t$ und $t_0\leq s \leq t$}\\
+                        -x & \text{falls $t_0>t$ und $t\leq s \leq t_0$} \\
+                        0 & \text{sonst}.\end{cases}\\
+            \Ra \, u_{t,x} \in L^p (S;X)
+        \end{align*}
+        Es sei $\vp\in (L^p(S;X))'$. Damit ist $\vp(u_{t,x})$ linear in $X$ und es gilt
+        \[
+            |\vp(u_{t,x})|\leq \|\vp\|_{(L^p(S;X))'} \cdot\|u_{t,x}\|_{L^p(S;X)} \leq \|\vp\|
+            _{(L^p(S;X))'} \cdot \|x\|\cdot (t-t_0)^{\nicefrac1p}.
+        \]
+        $\vp(u_{t,x})$ ist also ein stetiges lineares Funktional auf $X$. Somit existiert für jedes
+        $t\in S$ eine Darstellung
+        \[
+            \vp(u_{t,x})= \lal g(t),x\ral _X \qq \text{mit } g(t)\in X'
+        \]
+        Es gilt $g(t_0)=0$.
+        \item % 2)
+        Es seien $\{S_1,…,S_m\}$ nichtleere, disjunkte Teilintervalle der Form $S_L=[t_i,t_i+h_i]\subset
+        S$ $i=1,…,m$. Für $x\in X$ gilt dann
+        \begin{align*}
+            \left|\sum_{i=1}^n\lal g(t_i+h_i),x\ral-\lal g(t_i),x\ral\right|&= \left| \vp
+            \left( \sum_{i=1}^n (u_{t_i+h_i,x}-u_{t_i,x}) \right) \right|\\
+                &\leq \|\vp\|_{L^{p'}(S;X')}\cdot\|x\|\cdot\left(\sum_{i=1}^m h_i\right)^{\nicefrac1p}.
+        \end{align*}
+        Wir setzen $z_i:= \frac{1}{n_i}(g(t_i+h_i)-g(t_i))$. Es existieren (wegen der Reflexivität von
+        $X$), $y_i\in X$ mit $\|y_i\|_X=1$, $\lal z_i,y_i\ral = \|z_i\|_{X'}$. Wir wählen
+        $x_i=\|z_i\|^{p'-1} y_i$ und es folgt
+        \[
+            \lal z_i,x_i \ral = \|z_i\|^{p'}_{X'}
+        \]
+        Nun sei
+        \[
+            u(t):= \begin{cases} x_i & \text{für $t\in S_i$, $i=1,…,m$} \\
+                   0 & \text{für } t\in S\setminus\bigcup_{i=1}^m S_i\end{cases}
+        \]
+        Dann gilt
+        \[
+            u= \sum_{i=1}\left( u_{t_i+h_i,x_i}-u_{t_i,x_i} \right)
+        \]
+        Es folgt, dass
+        \[
+            \|u\|^p_{L^p(S;X)} = \sum_{n=1}^m \|x_i\|^p_X h_i = \sum_{i=1}^m \|z_i\|_{X'}^{p'} h _i
+            \qq (p(p'-1)=p')
+        \]
+        Somit folgt
+        \begin{align*}
+            \|\vp\|_{(L^p(S;X))'} \cdot \|u\|_{L^p(S;X)} &\geq \vp (u) 
+                = \sum_{i=1}^m \lal g(t_i+h_i)- g(t_i), x_i\ral = \sum_{i=1}^m \lal z_i,x_i\ral h_i
+                \geq \sum_{i=1}^m \|z_i\|_{X'}^{p'} \cdot h_i
+        \end{align*}
+        Also gilt
+        \[
+            \|\vp\|_{(L^p(S;X))'} \geq \left( \sum_{i=1}^m \|z_i\|_{X'}^{p'} h_i \right)^{\nicefrac1{p'}}
+        \]
+        und es folgt, dass
+        \begin{align}\label{28}
+            \|\vp\|_{(L^p(S;X))'} &\geq \sup_{\text{Intervallteilung}} \left( \sum_{i=1}^m
+            \underbrace{\left\|\frac1{n_i}(g(t_i+h_i)-g(t_i))\right\|_X^{p'}}_{z_i}\cdot h_i\right)
+            ^{\nicefrac1{p'}}
+        \end{align}
+    \end{enumerate}
+\end{proof}
