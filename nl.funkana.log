@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  22 JUN 2011 11:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  27 JUN 2011 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1672,20 +1672,35 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 172.
 
 [56]) (./11-06-22.tex [57] [58]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 193.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 190.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 194.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 191.
 
 [59]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 208.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 205.
 
-)
+) (./11-06-27.tex
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 9.
+
+[60]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 33.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 65.
+
+[61]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 124.
+
+[62])
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
- [60] (./nl.funkana.aux)
+ [63] (./nl.funkana.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1694,10 +1709,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19098 strings out of 493848
- 285340 string characters out of 1152822
- 380649 words of memory out of 3000000
- 21508 multiletter control sequences out of 15000+50000
+ 19144 strings out of 493848
+ 285965 string characters out of 1152822
+ 380795 words of memory out of 3000000
+ 21539 multiletter control sequences out of 15000+50000
  59245 words of font info for 155 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,19n,49p,340b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1720,9 +1735,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (63 pages, 500773 bytes).
+Output written on nl.funkana.pdf (66 pages, 516079 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 322 named destinations out of 1000 (max. 500000)
+ 929 PDF objects out of 1000 (max. 8388607)
+ 334 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

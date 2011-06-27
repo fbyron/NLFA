@@ -1,5 +1,5 @@
 \begin{theorem}\label{4.26}
-    Eine Bochner-messbare Funktion $f:\ra X$ ist genau dann Bochner-integrierbar, wenn die Funktion
+    Eine Bochner-messbare Funktion $f: S\ra X$ ist genau dann Bochner-integrierbar, wenn die Funktion
     \[
         \|f(\cdot)\|_X :S \ra \R
     \]
@@ -53,10 +53,7 @@
     Es sei $f:S\ra X$ Bochner-integrierbar. Dann gilt
     \[
         \left\| \int_S f(s)\d s \right\|_X\leq\int_S\|f(s)\|_X \d s \qq  \text{und } \forall \vp \in X'
-    \]
-    gilt
-    \[
-        \lal \vp, \int f(s)\d s \ral _X = \int_S \lal \vp, f(s)\ral_X \d s
+        \text{ gilt} \qq\lal \vp, \int f(s)\d s \ral _X = \int_S \lal \vp, f(s)\ral_X \d s
     \]
 \end{cor}
 
@@ -176,7 +173,7 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
             u_{t,x}(s) &:= \begin{cases} x & \text{falls $t_0\leq t$ und $t_0\leq s \leq t$}\\
                         -x & \text{falls $t_0>t$ und $t\leq s \leq t_0$} \\
                         0 & \text{sonst}.\end{cases}\\
-            \Ra \, u_{t,x} \in L^p (S;X)
+            \Ra \, u_{t,x} &\in L^p (S;X)
         \end{align*}
         Es sei $\vp\in (L^p(S;X))'$. Damit ist $\vp(u_{t,x})$ linear in $X$ und es gilt
         \[
@@ -233,5 +230,3 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
             \underbrace{\left\|\frac1{n_i}(g(t_i+h_i)-g(t_i))\right\|_X^{p'}}_{z_i}\cdot h_i\right)
             ^{\nicefrac1{p'}}
         \end{align}
-    \end{enumerate}
-\end{proof}
