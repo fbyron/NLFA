@@ -1,0 +1,181 @@
+\begin{remark}
+    $C_c^\infty((0,T);X)$ liegen dicht in $L^p((0,T); X)$ für $1\leq p < \infty$. Siehe Übungsaufgabe.
+\end{remark}
+
+\subsubsection*{Geltaud-Tripel}
+Wir betrachten als Beispiel zunächst die Wäremleitungsgleichung auf $I\times \Omega$, $I=(0,T)$,
+$\Omega\subset \R^n$ offen, beschränkt. Sei $u$ also ein eglatte Lösung von
+\begin{align*}
+    \partial_t u - \Delta u &= f\qq \text{in } I\times \Omega\\
+    u&= 0 \qq \text{auf } I\times \partial \Omega\\
+    u(0)&=u_0 \qq \text{in } \Omega
+\end{align*}
+Die Funktion $u$ erfüllt dann auch die schwache Formulierung, d.h. für alle $\vp \in L^2(F; W_0^{1,2}
+(\Omega))$ gilt:
+\begin{align}\label{31}
+    \iint_{I,\Omega} \partial_t u \vp + \iint_{I,\Omega} \nabla u \cdot \nabla \vp = \iint_{I,\Omega}
+    f\cdot \vp
+\end{align}
+Mit der Wahl $\vp=u$ erhalten wir
+\begin{align*}
+    \iint_{I,\Omega} \frac{\partial}{\partial t}\frac{u^2}2 + \underbrace{\|u\|
+    _{L^2(I;W_0^{1,2}(\Omega))}^2}_{=\iint_{I\Omega |\nabla u |^2}} &\leq \|f\|_{L^2(I;L^2(\Omega))}
+    \cdot \|u\|_{L^2(I;L^2(\Omega))}\\
+    &\leq \frac 12 \|f\|^2_{L^2(I;L^2(\Omega))} + \frac12 \|u\|^2_{L^2(I;L^2(\Omega))}\\
+    \Ra \, \int_I\frac{\d}{\d t} \frac{\|u\|_{L^2}^2} + \|U\|^2_{L^2(I,W_0^{1,2}(\Omega))}
+    &\leq \frac 12 \left( \|f\|^2_{L^2(I;L^2(\Omega))} + \|u\|^2_{L^2(I,L^2(\Omega))}\right)
+\end{align*}
+\begin{align}\label{32}
+    \Ra \, \|u\|^2_{L^\infty(I,L^2(\Omega))}+\|u\|_{L^2(I;W_0^{1,2}(\Omega))} &\leq \left( \|f\|^2
+    _{L^2(I;L^2(\Omega))} + \|u_0\|^2_{L^2(I;L^2(\Omega))} \right)
+\end{align}
+
+Mit (\ref{31}) folgt aber auch, dass
+\[
+    \iint_{I,\Omega} u_t\cdot \vp = \int_I -(u,\vp)_{W_0^{1,2}} + \int_I(\vp,\vp)_{L^2} 
+\]
+Das heißt, dass $u_t$ kanonisch mit einem Element von $(W_0^{1,2}(\Omega))'$ identifiziert werden kann.
+Die Abschätzung ergibt mit Hilfe von (\ref{32}), dass
+\[
+    \|u_t\|_{L^2(I;W_0^{1,2}(\Omega)')} \leq \tilde c (\|f\|^2_{L^2(I;L^2(\Omega))} + \|u_0\|^2
+    _{L^2(I;L^2(\Omega))}   )  
+\]
+Wir schreiben damit dass $u_t=\Delta u + f \in (W^{1,2}_0(\Omega))'=:W^{-1,2}_0(\Omega)$
+(punktweise f.ü.). Aber: $u_t$ ist als Funktion \textit{nicht} durch Anfangswert und $f$ in
+$W_0^{1,2}(\Omega)$ beschränkt.
+Es ist in diesem Fall günstig, die sog. \textit{Gelfand-Tripel} einzuführen.
+
+Es sei $V$ ein reflexiver, separabler Banachraum, dicht und stetig eingebettet in einen Hilbertraum $H$.
+Damit ist durch jedes stetige Funktional $f\in H'$ ein stetiges Funktional auf $V$ definiert:
+\[
+    \lal f,v \ral _V := (f,v)_H
+\]
+Damit gilt $H'\hookrightarrow V'$ stetig. Mittels dem \textit{Riesz'schen Darstellungssatz} identifizieren wir nun
+$H'$ mit $H$ und erhalten
+\[
+    V \hookrightarrow H \hookrightarrow V'
+\]
+stetig.
+
+\noindent$\leadsto$ Definiert einen Operator $T:H'\ra V'$, einfach als Einschränkung der Funktionale aus
+$H'$. Es gilt:
+\begin{description}
+    \item{i)} $\|T\vp\|_{V'}\leq C\|\vp\|_{H'}$
+    \item{ii)} $T$ ist injektiv.
+    \item{iii)} $T(H)$ liegt dicht in $V'$, da $V$ reflexiv ist.
+\end{description}
+Die Skalarprodukte $\lal \cdot,\cdot \ral_V$ und $(\cdot,\cdot)_H$ sitmmen überein, falls beide Sinn
+ergeben, d.h.
+\[
+    \lal f,v\ral_V=(f,v)_H \qq \forall f\in H, \forall v\in V,
+\]
+wobei wir von nun an $Tf$ mit $f$ identifizieren. Falls nun $V$ ebenfalls ein Hilbertraum ist, ergibt es
+keinen Sinn, $V$ mit $V'$ zu identifizieren. Dazu ein einfaches
+
+\begin{beispiel}
+    Es sei
+    \[
+        H=l^2= \left\{ u=(u_n)_{n\in\N} : \, \sum_{i=1}^\infty a_i<\infty\right\}
+    \]
+    mit Skalarprodukt
+    \[
+        (u,v)_H=\sum_{n=1}^\infty u_nv_n \qq \forall u,v\in\mc l^2
+    \]
+    und sei
+    \[
+        V:=\left\{u=(u_n)_{n\in\N}:\, \sum_{n=1}^\infty n^2u_n^2<\infty\right\}
+    \]
+    mit Skalarprodukt
+    \[
+        ((u,v))_V:= \sum_{n=1}^\infty n^2u_nv_n.
+    \]
+    Es gilt $V\hookrightarrow H$ stetig, dicht. Wir identifizieren, $H$ und $H'$, und identifizieren
+    damit aber $V'$ mit dem Raum 
+    \[
+        V'=\left\{ f=(f_n)_{n\in\N}: \, \sum_{n=1}^\infty \frac1{n^2} f_n^2 <\infty\right\}
+    \]
+    Das Dualitätsprodukt $\lal\cdot,\cdot\ral_V$ ist damit gegeben durch
+    \[
+        \lal f,v\ral_V=\sum_{n=1}^\infty f_nv_n.
+    \]
+    Der Isomorphismus $T:V\ra V'$ ist damit gegeben durch die Abbildung
+    \[
+        u=(u_n)_{n\in\N}\mapsto Tu=(n^2u_n)_{n\in\N}
+    \]
+\end{beispiel}
+
+\subsubsection*{Die verallgemeinerte Zeitableitung und ihre Eigenschaften}
+($\ra$ Zeidler, Nonlinear Funktional Analysis and its Applications II A)\\[.5cm]
+\noindent Wir erinnern uns: $C^1(I;X)$, $I=[0,T]$ ist der Raum der stetigen Fréchet-differenzierbaren
+Abbildungen $u:I\ra X$, $X$ ein Banachraum. Die Ableitung $u': I\ra \ms L(\R,X)$ identifizieren wir für
+jedes $t\in I$ mit einem Element in $X$.
+
+
+\begin{defi}[Verallgemeinerte Zeitableitung]\label{4.34}
+    Es sei $u\in L^p(I,V)$, $1<p<\infty$ und $(V,H,V')$ ein Gelfand-Triplet. Eine Funktion
+    \[
+        \frac{\d u}{\d t} \in L^{p'} (I;V')
+    \]
+    heißt \textit{verallgemeinerte Zeitableitung} von $u$, falls gilt
+    \[
+        \int_0^T\lal \frac{\d u}{\d t} (t), v\ral _V \vp (t)\d t = -\int_0^T(u(t),v)_H \vp'(t)\d t
+        \qq \forall v\in V,\, \forall \vp \in C_c^\infty (I,\R).
+    \]
+\end{defi}
+
+\begin{remark}
+    Im Allgemeinen ist die verallgemeinerte Zeitableitung nicht mit der schwachen Zeitableitung einer
+    Funktion $u:I\times \Omega\ra \R$ überein. Identität gilt jedoch durchaus, falls 
+    $C^\infty_c(\Omega,\R)$ dicht in $V$ liegt.
+\end{remark}
+
+\begin{remark}
+    Für $u\in C^1([0,T], X)$ stimmen starke und verallgemeinerte Zeitableitung überein. 
+\end{remark}
+
+\noindent \textbf{Notation:} Im Folgenden bezeichnen wir mit $W$ den Raum:
+\[
+    W:=\left\{u\in L^p(I,V): \, \frac{\d u}{\d t}\in L^{p'}(I; V')\right\}
+\]
+mit
+\[
+    \|u\|_W:= \|u\|_{L^p(I;V)} + \left\|\frac{\d u}{\d t}\right\|_{L^{p'}(I;V)}
+\]
+
+\begin{prop}\label{4.34}
+    $W$ ist ein Banachraum.
+\end{prop}
+
+\begin{proof}
+    Alle Eigenschaften außer der Vollständigkeit sind klar. Diese folgt mit:
+
+    \begin{prop}\label{4.35}
+        Es sei $(V,H,V')$ ein Gelfand-Tripel und
+        \[
+            \frac{\d}{\d t} u_k = v_k \qq \forall k\in \N
+        \]
+        mit
+        \begin{align*}
+            u_k&\rightharpoonup u \qq L^p(I;V) \qq (k\ra \infty)\\
+            v_k&\rightharpoonup v \qq L^{p'}(I;V') \qq (k\ra \infty)
+        \end{align*}
+        Dann gilt
+        \[
+            \frac{\d }{\d t} u =v,
+        \]
+        wobei $\frac{\d}{\d t} u$ die verallgemeinerte Zeitableitung bezeichne.
+    \end{prop}
+    \begin{proof}
+        Falls $A$, $B$ Banachräume, $A\hookrightarrow B$ stetig, so gilt 
+        \[
+            a_k\rightharpoonup a \text{ in }  A \qq \Ra \qq a_k\rightharpoonup a \text{ in } B.
+        \]
+        Es folgt in unserem Fall, dass
+        \[
+            u_k\rightharpoonup u, \qq v_k\rightharpoonup v \qq \text{in }L^1(I;V').
+        \]
+        Offensichtlich ist aber $\vp \cdot v$, $\vp \in C_c^\infty (I;\R)$ $v\in V$ eine geeignete
+        Testfunktion in $L^1(I,V')$. Im Limes folgt die Behauptung.\[ \]
+    \end{proof}
+    \[ \]
+\end{proof}
