@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  29 JUN 2011 15:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.11.23)  4 JUL 2011 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1416,11 +1416,11 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 133.
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 139
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 161
 .
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
@@ -1430,7 +1430,7 @@ File: license.pdf Graphic file (type pdf)
  <use license.pdf> [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./license.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+txr on input line 154.
+LaTeX Font Info:    Try loading font information for TS1+txr on input line 178.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ts1txr.fd
@@ -1701,11 +1701,27 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 124.
 
 [62]) (./11-06-29.tex [63]
 Missing character: There is no l in font MnSymbolS10!
- [64] [65])
+ [64] [65]) (./11-07-04.tex [66] [67]
+Overfull \hbox (12.47165pt too wide) in paragraph at lines 171--173
+[]\OT1/txr/m/n/10 Dieser Be-weis verl[]auft []ahnlich dem Exis-tenz-be-weis f[]
+ur schwa-che L[]osungen der W[]armeleitungsgleichung.
+ []
+
+[68]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 187.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 211.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 211.
+
+)
 \tf@thm=\write7
 \openout7 = `nl.funkana.thm'.
 
- [66] (./nl.funkana.aux)
+ [69] (./nl.funkana.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1714,11 +1730,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19190 strings out of 493848
- 286511 string characters out of 1152822
- 381069 words of memory out of 3000000
- 21566 multiletter control sequences out of 15000+50000
- 59245 words of font info for 155 fonts, out of 3000000 for 9000
+ 19188 strings out of 493848
+ 286378 string characters out of 1152822
+ 381539 words of memory out of 3000000
+ 21559 multiletter control sequences out of 15000+50000
+ 49019 words of font info for 116 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  47i,19n,49p,340b,651s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/share/
@@ -1740,9 +1756,9 @@ live/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texmf-texlive/fonts/type1
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/te
 xmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/urw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (69 pages, 531360 bytes).
+Output written on nl.funkana.pdf (72 pages, 546662 bytes).
 PDF statistics:
- 960 PDF objects out of 1000 (max. 8388607)
- 350 named destinations out of 1000 (max. 500000)
+ 993 PDF objects out of 1000 (max. 8388607)
+ 366 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

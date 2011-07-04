@@ -1,0 +1,213 @@
+\begin{prop}\label{4.36}
+    Der Raum $C^1(\ol I; V)$ liegt dicht in $W$.
+\end{prop}
+
+\begin{proof}
+    Folgt wie globale Approximation von Sobolev-Funktionen. Es sei 
+    \[
+        \tilde u(t)=\begin{cases} u(t) & t\in I \\ u(-t) & t\in(-\tau,0) \\ u(T-t) & t\in (T,T+\tau) \\
+        0 & \text{sonst} \end{cases}
+    \]
+    und es sei $\eta_n(t)$ eine Standard-Diracfolge. Wir betrachten
+    \[
+        u_n(t)=\int_\R \eta_n(t-s) \tilde u(s) \d s.
+    \]
+    Es gilt $u_n(t)\in C^1(\ol I;V)$ und es gilt
+    \[
+        \frac{\d}{\d t} \tilde u_n = \int_\R \eta'_n(t-s) \tilde u(s) \d s
+        =\int_\R \eta_n(t-s) \frac{\d}{\d t} u(s) \d s \qq \forall t\in I
+    \]
+    Die Konvergenz von $u_n\ra u$ in $L^p(I;V)$ und von $\frac{\d}{\d t}u_n:=v_n\ra v$ in $L^{p'}(I;V')$
+    folgt wie im skalarwertigen Fall. Mit Benutzung von Proposition \ref{4.35} folgt $v=\frac{\d}{\d t}u$
+    und somit die Behauptung. \[ \]
+\end{proof}
+
+\begin{prop}\label{4.37}
+    Es gilt
+    \[
+        W\hookrightarrow C(\ol I;V') 
+    \]
+    stetig.
+\end{prop}
+
+\begin{proof}
+    Es sei $u\in W$. Damit ist $\frac{\d}{\d t}u \in L^{p'}(I;V')$ eine lokal integrierbare Funktion.
+    Wir definieren
+    \[
+        v(t)=\int_0^t\frac{\d}{\d t} u(\tau)\d \tau,
+    \]
+    mit $\|v(t)-v(s)\|_{V'}\leq \int_0^t \|\frac{\d}{\d t} u(\tau)\|_{V'}$.
+    Somit ist $v(t)\in C(\ol I; V')$. Wie im skalaren Fall folgt, dass
+    \[
+        v(t)=u(t)+c \qq \text{mit} \, c\in V' \, \text{f.f.a.} \, t\in I.
+    \]
+    Damit ist auch $u$ stetig. Mit Hölder folgt
+    \begin{align*}
+        \|v(t)\|&\leq T^{\nicefrac1p}\left\|\frac{\d}{\d t}u\right\|_{L^{p'}(I;V')} \\
+        \|c\|_{V'}&\leq T^{-\nicefrac{1}{p}}\|u-v\|_{L^p(I;V)}
+    \end{align*}
+    Damit gilt aber
+    \[
+        \max \|u(t)\|_{V'}\leq C\cdot \left( \|u'\|_{L^{p'}(I;V)} + \|u-v\|_{L^{p'}(I;V)}\right)
+        \leq \tilde C \|u\|_W
+    \]
+\end{proof}
+
+Es folgt das wichtige Einbettungslemma
+
+\begin{lem}\label{4.38}
+    Es sei $(V,H,V')$ ein Gelfand-Tripel, $W$ der Funktionenraum wie oben. Dann gilt
+    \[
+        W\hookrightarrow C(\ol C; H)
+    \]
+    und für alle $u,v\in W$, $s.t \in \ol I$ gilt
+    \begin{align}\label{33}
+        \int_s^t \lal  \frac{\d u}{\d t}(\tau), v(t)\ral_V+ \lal \frac{\d v}{\d t} (\tau) , u(\tau)\ral_V
+        \d\tau =(u(t),v(t))_H - (u(s),v(s))_H
+    \end{align}
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+    \item{1)}
+    Es seies zunächst $u,v \in C(\ol I; V)$. Es gilt
+    \begin{align*}
+        (u(t),v(t))_H'&=(u'(t),v(t))_H + (u(t),v'(t))_H\\
+        \Ra \, (u(t),v(t))_H-(u(s),v(s))_H &= \int_s^t (u',v)_H + (u,v')_H \overset{\text{Gelfand-Tri.}}
+        {=} \int_s^t\lal \frac{\d}{\d t} u, v\ral_V+\lal u,\frac{\d}{\d t} v \ral _V
+    \end{align*}
+    \item{2)}
+    Es sei nun $\vp\in C^1(\ol I, \R)$, mit $\vp(a)=0$, $\vp(b)=1$ mit $0<a<b<T$ und $u\in
+    C^1(\ol I;V)$. Wir setzen $v=\vp u$, $w=u-\vp u$. Es gilt
+    \begin{align*}
+        v'&= \vp'u + \vp u' \\
+        w'&=u'-\vp'u-\vp u'
+    \end{align*}
+    Nachdem \ref{33} bereits für $u,v,w\in C^1(\ol I; V)$ gilt, (Schritt 1) folgt
+    \begin{align*}
+        (v(t),u(t))_H&= \int_a^t\left\{ \vp'(s)(u(s), u(s))_H+ 2\vp\lal u'(s),u(s)\ral_V\right\} \d s\\
+        (-w(t),u(t))_H &= \int_t^b\{ -\vp (s)(u(s),u(s))_H + 2 (1-\vp(s))\lal u'(s),u(s)\ral\} \d s
+    \end{align*}
+    Durch Subtraktion der beiden Gleichungen erhalten wir
+    \[
+        \|u(t)\|_H^2=\int_a^b \{\vp'(s)(u(s),u(s))+ 2 \vp(s)\lal u'(s),u(s)\ral_V\}\d s
+        =2\int_a^b\lal u'(s),u(s)\ral _V\d s.
+    \]
+    Somit folgt
+    \[
+        \|u(t)\|_H^2\leq K\left( \|u\|_{C(\ol I; V)} \cdot \|u\|_{L^p(I;V)} + \left\| \frac{\d}{\d t}
+        u\right\|_{L^{p'}(I;V')}\cdot\|u\|_{L^p(I;V)}\right)  \leq K\|u\|^2_W,
+    \]
+    wegen stetiger Einbettung von $W$ in $C(\ol I;V')$.
+    \item{3)}
+    Nun sei $u_n$ eine Cauchy-Folge in $C(I,V)$, diegegen $u\in W$ konvergiert. Es gilt
+    \[
+        \|u_n-u_k\|_{C(\ol I;H)} \leq K\|u_n-u_k\|_W \qq \text{(Schritt 2)}
+    \]
+    Damit konvergiert die Folge auch in $C(\ol I; H)$ gegen $u$. Die Normabschätzung bleibt im Limes
+    erhalten, ebenso die Formel für die prtielle Integration \ref{33}.
+    \end{description}
+    \[ \]
+\end{proof}
+
+\begin{remark}
+    \begin{description}
+    \item{i)}
+    \ref{33} ist analog zur reellwertigen partiellen Integrartion, $u,v:I\ra \R$,
+    \[
+        \int_s^tu'(\tau)v(\tau) + u(\tau)v'(\tau) \d \tau = u(t)v(t)-u(s)v(s)
+    \]
+    \item{ii)}
+    Für $u=v\in W$ folgt
+    \[
+        \int_s^t \lal \frac{\d u}{\d t}(\tau), u(\tau)\ral_V \d\tau= \frac12 \|u(t)\|_H^2-\frac12\|u(s)\|
+        _H^2
+    \]
+    \end{description}
+\end{remark}
+
+\subsubsection*{Das Anfangswertproblem, Existenz}
+
+Wir betrachten das Problem
+\begin{align*}
+    \frac{\d u}{\d t} + Au &= b\\
+    u(0)&= u_0
+\end{align*}
+und wollen eine Variante des \textit{Satzes von Brézis} beweisen.
+
+\noindent Es sei also $A:V\ra V'$ ein Operator auf einen separablen, reflexiven Banachraum $V$. Es sei
+$u\in L^p(I;V)$, $1<p<\infty$, $I=(0,T)$, $T<\infty$. Wir betrachten den induzierten Operator
+\[
+    (\tilde Au)(t) := A(u(t)), \qq t\in I.
+\]
+Unter bestimmeten Voraussetzungen gilt für den induzierten Operator, dass
+\[
+    \tilde A: L^p(I;V) \ra L^{p'}(I;V') = \left(L^p(I;V))\right)'    
+\]
+ist. In diesem Fall identifizieren wir $A$ mit $\tilde A$. Im Folgenden sei nun $X:= L^p(I;V)$,
+$I=(0,T)$, $T<\infty$, $1<p<\infty$, $W'=L^{p'}(I;V)=(L^p(I;V))'$, $(V,H,V')$ sei ein Gelfand-Tripel.
+
+\begin{theorem}\label{4.39} [Existenz von Lösungen für das Cauchy-Problem]
+    Es sei $A:V\ra V'$ ein Operator, so dass der induzierte Operator $A:X\ra X'$ pseudomonoton und
+    beschränkt ist, sowie der Koerzitivitätsbedingung
+    \[
+        \lal Au,u\ral _X\geq C_0\cdot \|u\|_x^p
+    \]
+    genügt. Dann existiert für alle $u_0\in H$, $b\in X'$ eine Lösung $u\in W$ von
+    \[
+        \frac{\d u}{\d t}+ Au=b
+    \]
+\end{theorem}
+
+\begin{remark}
+    Die Anfangswertbedingug ergibt wegen der Einbettung
+    \[
+        W\hookrightarrow C(\ol I;H)
+    \]
+    Sinn.
+\end{remark}
+
+\begin{proof}
+    Dieser Beweis verläuft ähnlich dem Existenzbeweis für schwache Lösungen der Wärmeleitungsgleichung.
+    Siehe z.B. \textit{Evans: Partial Differential Equations, Chapter 7}.
+
+    \noindent Wir benutzen wieder das Galerkin-Verfahren. Es sei also $\{x_i\}_{i\in \N}\subset V$, so
+    dass $\{w_i\}_{i=1}^n$ linear unabhängig sind und $\mr{span}\{w_i\}_{i\in\N}$ dicht liegt in $V$. Wir
+    setzen $V_n=\mr{span}\{w_i\}_{i=1}^n$ und suchen eine Lösung $u_n$ der Form
+    \[
+        u_n(t)=\sum_{k=1}^n C^n_k(t) w_k,
+    \]
+    die für alle $t\in [0,T]$ das Galerkin-System.
+    \begin{align}\label{34}
+        \begin{split}
+        \lal \frac{\d u_n}{\d t}(t), w_j\ral _V + \lal Au_n(t),w_j\ral _V &= \lal b_n(t), w_j\ral\\
+        u_n(0)&= u_0^n
+        \end{split}
+    \end{align}
+    für alle $j=1,…,n$ löst. Hier ist
+    \[
+        \begin{cases} b_n&\in C(\ol I; V') \\ b_n\ra b \qq \text{in} \, X'\end{cases}
+    \]
+    Eine solche Folge exisiert wegen Dichtheit von $C_c^\infty(\ol I;V')$ und
+    \[
+        u_0^n=\sum_{k=1}^n C_{0k}^nw_i \in V_n, 
+    \]
+    so dass $u_0^n\ra u_0$ in $H$.
+    \begin{description}
+    \item{1)}
+        Lösbarkeit des Galerkin-Systems. Aufgrund der linearen Unabhängigkeit der $\{ w_i \}_{i=1}^n$ ist
+        die Matrix $D=(d_{ij})_{i,j=1}^n=((w_i,w_j)_H)_{i,j=1}^n$ invertierbar. Somit können wir \ref{34}
+        schreiben als System gewöhnlicher Differentialgleichungen für die Funktion
+        \begin{align*}
+            t\mapsto C^n(t)&=\begin{pmatrix} C_1^n(t) & \cdots & C_n^n(t)\end{pmatrix}\\
+            \frac{\d C^n(t)}{\d t} &= f^n(t,C^n(t))\\
+            C^n(0)&= C_0^n
+        \end{align*}
+        Wobei
+        \[
+            f_j^n(t,C)=\sum_{k=1}^n d_{jk}^{-1} (\lal b_n(t), w_k\ral_V-\lal A(\sum_{l=1}^nC_l^nw_l), w_k
+            \ral_V)
+        \]
+        für $j=1,…,n$ und $C_0^n=(C_{01}^n, … , C_{0n}^n)$
+    \end{description}\[ \]
+\end{proof}
