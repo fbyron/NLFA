@@ -1,4 +1,4 @@
-\begin{theorem}\label{4.26}
+\begin{theorem}\label{4.26}[Satz von Bochner]
     Eine Bochner-messbare Funktion $f: S\ra X$ ist genau dann Bochner-integrierbar, wenn die Funktion
     \[
         \|f(\cdot)\|_X :S \ra \R
@@ -18,7 +18,7 @@
      und somit
      \[
         \int_S\|f(s)\|\d s\leq \underbrace{\int_S\|f_n(s)\|}_{\text{Treppenfunktion}}
-            + \underbrace{\int_S\|f(s)-f_n(s)\|<\infty}_{\text{Grenzwert existiert}}
+            + \underbrace{\int_S\|f(s)-f_n(s)\|}_{\text{Grenzwert existiert}}<\infty
      \]
     $\Ra$ $\|f(\cdot)\|$ Lebesgue-integrierbar.
     \item{2)}
@@ -53,7 +53,7 @@
     Es sei $f:S\ra X$ Bochner-integrierbar. Dann gilt
     \[
         \left\| \int_S f(s)\d s \right\|_X\leq\int_S\|f(s)\|_X \d s \qq  \text{und } \forall \vp \in X'
-        \text{ gilt} \qq\lal \vp, \int f(s)\d s \ral _X = \int_S \lal \vp, f(s)\ral_X \d s
+        \text{ gilt} \qq\Lal \vp, \int f(s)\d s \Ral _X = \int_S \Lal \vp, f(s)\Ral_X \d s
     \]
 \end{cor}
 
@@ -74,9 +74,9 @@
     \]
     Damit gilt für $\vp \in X'$, dass
     \[
-        \lal \vp, \int_S f(s)\d s\ral = \lim_{n\ra \infty} \lal \vp , \int_S f_n(s)\d s\ral 
-        \underset{\text{endl. Summe}}{=} \lim_{n\ra \infty} \int_S \lal \vp, f_n(s)\ral \d s
-        \underset{\text{Lebesgue}}{=} \int_S \lal \vp, f(s)\ral \d s
+        \Lal \vp, \int_S f(s)\d s\Ral = \lim_{n\ra \infty} \Lal \vp , \int_S f_n(s)\d s\Ral 
+        \underset{\text{endl. Summe}}{=} \lim_{n\ra \infty} \int_S \Lal \vp, f_n(s)\Ral \d s
+        \underset{\text{Lebesgue}}{=} \int_S \Lal \vp, f(s)\Ral \d s
     \]
     \end{description}
     \[ \]
@@ -140,11 +140,11 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
     Sei $f\in L^p(S;X)$, $g\in L^{p'}(S;X')$ ($X'$ Dualraum von $X$, $\nicefrac1p+\nicefrac1{p'}=1$, 
     $1\leq p \leq \infty$). Dann ist
     \[
-        \lal g(\cdot), f(\cdot)\ral _X\in L^1(S;\R)
+        \Lal g(\cdot), f(\cdot)\Ral _X\in L^1(S;\R)
     \]
     und es gilt
     \[
-        \left| \int_S\lal g(s),f(s)\ral_X\d s \right| \leq \|g\|_{L^{p'}(S;X')}\|f\|_{L^p(S;X)}
+        \left| \int_S\Lal g(s),f(s)\Ral_X\d s \right| \leq \|g\|_{L^{p'}(S;X')}\|f\|_{L^p(S;X)}
     \]
 \end{theorem}
 
@@ -159,7 +159,7 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
     \]
     eine eindeutige Darstellung der Form:
     \[
-        \vp (u) = \int_S\lal v(s),u(s)\ral_X \d s \qq \forall u\in L^p(S;X)
+        \vp (u) = \int_S\Lal v(s),u(s)\Ral_X \d s \qq \forall u\in L^p(S;X)
     \]
     mit $v\in L^{p'}(S;X')$ ($\nicefrac1p+\nicefrac1{p'}=1$).
 \end{theorem}
@@ -183,22 +183,22 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
         $\vp(u_{t,x})$ ist also ein stetiges lineares Funktional auf $X$. Somit existiert für jedes
         $t\in S$ eine Darstellung
         \[
-            \vp(u_{t,x})= \lal g(t),x\ral _X \qq \text{mit } g(t)\in X'
+            \vp(u_{t,x})= \Lal g(t),x\Ral _X \qq \text{mit } g(t)\in X'
         \]
         Es gilt $g(t_0)=0$.
         \item % 2)
         Es seien $\{S_1,…,S_m\}$ nichtleere, disjunkte Teilintervalle der Form $S_L=[t_i,t_i+h_i]\subset
         S$ $i=1,…,m$. Für $x\in X$ gilt dann
         \begin{align*}
-            \left|\sum_{i=1}^n\lal g(t_i+h_i),x\ral-\lal g(t_i),x\ral\right|&= \left| \vp
+            \left|\sum_{i=1}^n\Lal g(t_i+h_i),x\Ral-\Lal g(t_i),x\Ral\right|&= \left| \vp
             \left( \sum_{i=1}^n (u_{t_i+h_i,x}-u_{t_i,x}) \right) \right|\\
                 &\leq \|\vp\|_{L^{p'}(S;X')}\cdot\|x\|\cdot\left(\sum_{i=1}^m h_i\right)^{\nicefrac1p}.
         \end{align*}
         Wir setzen $z_i:= \frac{1}{n_i}(g(t_i+h_i)-g(t_i))$. Es existieren (wegen der Reflexivität von
-        $X$), $y_i\in X$ mit $\|y_i\|_X=1$, $\lal z_i,y_i\ral = \|z_i\|_{X'}$. Wir wählen
+        $X$), $y_i\in X$ mit $\|y_i\|_X=1$, $\Lal z_i,y_i\Ral = \|z_i\|_{X'}$. Wir wählen
         $x_i=\|z_i\|^{p'-1} y_i$ und es folgt
         \[
-            \lal z_i,x_i \ral = \|z_i\|^{p'}_{X'}
+            \Lal z_i,x_i \Ral = \|z_i\|^{p'}_{X'}
         \]
         Nun sei
         \[
@@ -217,7 +217,7 @@ Es ist weiterhin $X$ ein separabler Banachraum, $S\subset \R$ offen.
         Somit folgt
         \begin{align*}
             \|\vp\|_{(L^p(S;X))'} \cdot \|u\|_{L^p(S;X)} &\geq \vp (u) 
-                = \sum_{i=1}^m \lal g(t_i+h_i)- g(t_i), x_i\ral = \sum_{i=1}^m \lal z_i,x_i\ral h_i
+                = \sum_{i=1}^m \Lal g(t_i+h_i)- g(t_i), x_i\Ral = \sum_{i=1}^m \Lal z_i,x_i\Ral h_i
                 \geq \sum_{i=1}^m \|z_i\|_{X'}^{p'} \cdot h_i
         \end{align*}
         Also gilt

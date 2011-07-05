@@ -4,7 +4,7 @@
 
 \subsubsection*{Gelfand-Tripel}
 Wir betrachten als Beispiel zunächst die Wäremleitungsgleichung auf $I\times \Omega$, $I=(0,T)$,
-$\Omega\subset \R^n$ offen, beschränkt. Sei $u$ also ein eglatte Lösung von
+$\Omega\subset \R^n$ offen, beschränkt. Sei $u$ also eine glatte Lösung von
 \begin{align*}
     \partial_t u - \Delta u &= f\qq \text{in } I\times \Omega\\
     u&= 0 \qq \text{auf } I\times \partial \Omega\\
@@ -19,20 +19,20 @@ Die Funktion $u$ erfüllt dann auch die schwache Formulierung, d.h. für alle $\
 Mit der Wahl $\vp=u$ erhalten wir
 \begin{align*}
     \iint_{I,\Omega} \frac{\partial}{\partial t}\frac{u^2}2 + \underbrace{\|u\|
-    _{L^2(I;W_0^{1,2}(\Omega))}^2}_{=\iint_{I\Omega |\nabla u |^2}} &\leq \|f\|_{L^2(I;L^2(\Omega))}
+    _{L^2(I;W_0^{1,2}(\Omega))}^2}_{=\iint_{I,\Omega} |\nabla u |^2} &\leq \|f\|_{L^2(I;L^2(\Omega))}
     \cdot \|u\|_{L^2(I;L^2(\Omega))}\\
     &\leq \frac 12 \|f\|^2_{L^2(I;L^2(\Omega))} + \frac12 \|u\|^2_{L^2(I;L^2(\Omega))}\\
-    \Ra \, \int_I\frac{\d}{\d t} \frac{\|u\|_{L^2}^2} + \|U\|^2_{L^2(I,W_0^{1,2}(\Omega))}
+    \Ra \, \int_I\frac{\d}{\d t} \frac{\|u\|_{L^2}^2}{2} + \|u\|^2_{L^2(I,W_0^{1,2}(\Omega))}
     &\leq \frac 12 \left( \|f\|^2_{L^2(I;L^2(\Omega))} + \|u\|^2_{L^2(I,L^2(\Omega))}\right)
 \end{align*}
 \begin{align}\label{32}
-    \Ra \, \|u\|^2_{L^\infty(I,L^2(\Omega))}+\|u\|_{L^2(I;W_0^{1,2}(\Omega))} &\leq \left( \|f\|^2
+    \Ra \, \|u\|^2_{L^\infty(I,L^2(\Omega))}+2\|u\|_{L^2(I;W_0^{1,2}(\Omega))} &\leq \left( \|f\|^2
     _{L^2(I;L^2(\Omega))} + \|u_0\|^2_{L^2(I;L^2(\Omega))} \right)
 \end{align}
 
 Mit (\ref{31}) folgt aber auch, dass
 \[
-    \iint_{I,\Omega} u_t\cdot \vp = \int_I -(u,\vp)_{W_0^{1,2}} + \int_I(\vp,\vp)_{L^2} 
+    \iint_{I,\Omega} u_t\cdot \vp = \int_I -(u,\vp)_{W_0^{1,2}} + \int_I(f,\vp)_{L^2} 
 \]
 Das heißt, dass $u_t$ kanonisch mit einem Element von $(W_0^{1,2}(\Omega))'$ identifiziert werden kann.
 Die Abschätzung ergibt mit Hilfe von (\ref{32}), dass
@@ -48,7 +48,7 @@ Es ist in diesem Fall günstig, die sog. \textit{Gelfand-Tripel} einzuführen.
 Es sei $V$ ein reflexiver, separabler Banachraum, dicht und stetig eingebettet in einen Hilbertraum $H$.
 Damit ist durch jedes stetige Funktional $f\in H'$ ein stetiges Funktional auf $V$ definiert:
 \[
-    \lal f,v \ral _V := (f,v)_H
+    \Lal f,v \Ral _V := (f,v)_H
 \]
 Damit gilt $H'\hookrightarrow V'$ stetig. Mittels dem \textit{Riesz'schen Darstellungssatz} identifizieren wir nun
 $H'$ mit $H$ und erhalten
@@ -64,10 +64,10 @@ $H'$. Es gilt:
     \item{ii)} $T$ ist injektiv.
     \item{iii)} $T(H)$ liegt dicht in $V'$, da $V$ reflexiv ist.
 \end{description}
-Die Skalarprodukte $\lal \cdot,\cdot \ral_V$ und $(\cdot,\cdot)_H$ sitmmen überein, falls beide Sinn
+Die Skalarprodukte $\Lal \cdot,\cdot \Ral_V$ und $(\cdot,\cdot)_H$ sitmmen überein, falls beide Sinn
 ergeben, d.h.
 \[
-    \lal f,v\ral_V=(f,v)_H \qq \forall f\in H, \forall v\in V,
+    \Lal f,v\Ral_V=(f,v)_H \qq \forall f\in H, \forall v\in V,
 \]
 wobei wir von nun an $Tf$ mit $f$ identifizieren. Falls nun $V$ ebenfalls ein Hilbertraum ist, ergibt es
 keinen Sinn, $V$ mit $V'$ zu identifizieren. Dazu ein einfaches
@@ -79,7 +79,7 @@ keinen Sinn, $V$ mit $V'$ zu identifizieren. Dazu ein einfaches
     \]
     mit Skalarprodukt
     \[
-        (u,v)_H=\sum_{n=1}^\infty u_nv_n \qq \forall u,v\in\mc l^2
+        (u,v)_H=\sum_{n=1}^\infty u_nv_n \qq \forall u,v\in l^2
     \]
     und sei
     \[
@@ -94,9 +94,9 @@ keinen Sinn, $V$ mit $V'$ zu identifizieren. Dazu ein einfaches
     \[
         V'=\left\{ f=(f_n)_{n\in\N}: \, \sum_{n=1}^\infty \frac1{n^2} f_n^2 <\infty\right\}
     \]
-    Das Dualitätsprodukt $\lal\cdot,\cdot\ral_V$ ist damit gegeben durch
+    Das Dualitätsprodukt $\Lal\cdot,\cdot\Ral_V$ ist damit gegeben durch
     \[
-        \lal f,v\ral_V=\sum_{n=1}^\infty f_nv_n.
+        \Lal f,v\Ral_V=\sum_{n=1}^\infty f_nv_n.
     \]
     Der Isomorphismus $T:V\ra V'$ ist damit gegeben durch die Abbildung
     \[
@@ -105,7 +105,7 @@ keinen Sinn, $V$ mit $V'$ zu identifizieren. Dazu ein einfaches
 \end{beispiel}
 
 \subsubsection*{Die verallgemeinerte Zeitableitung und ihre Eigenschaften}
-($\ra$ Zeidler, Nonlinear Funktional Analysis and its Applications II A)\\[.5cm]
+(siehe \textit{Zeidler, Nonlinear Funktional Analysis and its Applications II A})\\[.5cm]
 \noindent Wir erinnern uns: $C^1(I;X)$, $I=[0,T]$ ist der Raum der stetigen Fréchet-differenzierbaren
 Abbildungen $u:I\ra X$, $X$ ein Banachraum. Die Ableitung $u': I\ra \ms L(\R,X)$ identifizieren wir für
 jedes $t\in I$ mit einem Element in $X$.
@@ -118,7 +118,7 @@ jedes $t\in I$ mit einem Element in $X$.
     \]
     heißt \textit{verallgemeinerte Zeitableitung} von $u$, falls gilt
     \[
-        \int_0^T\lal \frac{\d u}{\d t} (t), v\ral _V \vp (t)\d t = -\int_0^T(u(t),v)_H \vp'(t)\d t
+        \int_0^T\Lal \frac{\d u}{\d t} (t), v\Ral _V \vp (t)\d t = -\int_0^T(u(t),v)_H \vp'(t)\d t
         \qq \forall v\in V,\, \forall \vp \in C_c^\infty (I,\R).
     \]
 \end{defi}

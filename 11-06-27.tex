@@ -43,14 +43,14 @@ Nachdem $S_{r,K}$ in $r$ wächst folgt
 \end{align*}
 Nun sei $\{z_j\}_{j\in\N}$ dicht in $X$ und wir definieren
 \[
-    a_j(t)=\lal g(t), z_j\ral \qq t\in S
+    a_j(t)=\Lal g(t), z_j\Ral \qq t\in S
 \]
 \[
-    b_{j,u}(t) =\lal u_n(t), z_j \ral \qq t\in S 
+    b_{j,u}(t) =\Lal u_n(t), z_j \Ral \qq t\in S 
 \]
 Es gilt $b_{j,n}\in L^{p'}(S;\R)$ mit gleichmäßiger beschränkter Norm.
 \[
-    \|b_j^n\|_{L^{p'}(S;\R)}^{p'}=\int_S|\lal u_n(\tau), z_j\ral|^{p'}\leq \int_S \|u_n\|_X^{p'} \cdot
+    \|b_j^n\|_{L^{p'}(S;\R)}^{p'}=\int_S|\Lal u_n(\tau), z_j\Ral|^{p'}\leq \int_S \|u_n\|_X^{p'} \cdot
     \|z_j\|_X^{p'} \leq \|z_j\|_X^{p'} \|u_n\|_{L^{p'}(S;X')}
 \]
 Wir können somit sukzessive eine Teilfolge auswählen, so dass für alle $j\in \N$ gilt
@@ -67,10 +67,10 @@ Wir können somit sukzessive eine Teilfolge auswählen, so dass für alle $j\in 
     _{n\in \N}$ dicht in $S$. Nun sei $\tilde t\in S_n$, damit gilt $\tilde t\in S_m$ $\forall m\geq n.$
     Es gilt für $m\geq n$
     \begin{align*}
-        \int_{t_0}^{\tilde t} b_{m,j}(\tau) \d \tau &= \int_{t_0}^{\tilde t} \lal u_m,z_j\ral 
-        = \sum_{i=1}^{2^m\frac{\tilde t}T} \frac1{2^{-m}T}\lal g_{m,i+1} - g_{m,i}, z_j\ral \cdot 2^{-m}T
+        \int_{t_0}^{\tilde t} b_{m,j}(\tau) \d \tau &= \int_{t_0}^{\tilde t} \Lal u_m,z_j\Ral 
+        = \sum_{i=1}^{2^m\frac{\tilde t}T} \frac1{2^{-m}T}\Lal g_{m,i+1} - g_{m,i}, z_j\Ral \cdot 2^{-m}T
         \\
-        &= \lal g_{m, 2^m\frac{\tilde t}T}, z_j\ral = \lal g(t_0+ \tilde t), z_j \ral = a_j (\tilde t)
+        &= \Lal g_{m, 2^m\frac{\tilde t}T}, z_j\Ral = \Lal g(t_0+ \tilde t), z_j \Ral = a_j (\tilde t)
     \end{align*}
     Aber wegen $b_n^j\rightharpoonup b_j$ weil $\chi_{(0,\tilde t)}$ eine Testfunktion in $L^p(S;\R)$
     ist, gilt
@@ -91,8 +91,8 @@ $t\in S$, und $b_j\in L^1([t_0,t_1);\R)$) dass $a_j$ fast überall differenzierb
 Nun sei $t\in S\setminus \bigcup_{j=0}^\infty N_j$ und $i_n\in \N$ sei für $n\in \N$ so gewählt,
 dass gilt $2^{-n}Ti_n\leq t-t_0<2^{-n}T(i_n+1)$. Dann folgt:
 \[
-    \lim_{n\ra \infty} b_{j,n}= \lim_{n\ra \infty} \lal u_n(t),z_j\ral = \lim_{n\ra \infty}
-    \lal \frac1{2^{-m}T} (g_{n,i_n+1}-g_{n,i_n}), z_j \ral = a'_j(t).
+    \lim_{n\ra \infty} b_{j,n}= \lim_{n\ra \infty} \Lal u_n(t),z_j\Ral = \lim_{n\ra \infty}
+    \Lal \frac1{2^{-m}T} (g_{n,i_n+1}-g_{n,i_n}), z_j \Ral = a'_j(t).
 \]
 Damit folgt aber, dass $\forall t\in S\setminus \bigcup_{j=0}^\infty N_j$ gilt
 \[
@@ -110,9 +110,9 @@ Daraus und aus (\ref{29}) folgt mit Fatou, dass
 \end{align}
 Also ist $u\in L^{p'}(S;X')$. Wegen Behauptung 1 gilt für alle $j\in \N$, dass
 \[
-    \lal g(t),z_j\ral = a_j(t) = \int_{t_0}^t a_j'(\tau)\d\tau=\int_{t_0}^{t} \lim_{n\ra \infty}
-    \lal u_n(\tau) , z_j \ral \d\tau= \int_{t_0}^t \lal u(\tau), z_j\ral \d\tau
-    = \lal \int_{t_0}^t u_(\tau) \d\tau, z_j\ral.
+    \Lal g(t),z_j\Ral = a_j(t) = \int_{t_0}^t a_j'(\tau)\d\tau=\int_{t_0}^{t} \lim_{n\ra \infty}
+    \Lal u_n(\tau) , z_j \Ral \d\tau= \int_{t_0}^t \Lal u(\tau), z_j\Ral \d\tau
+    = \Lal \int_{t_0}^t u_(\tau) \d\tau, z_j\Ral.
 \]
 Also ist
 \[
@@ -127,18 +127,18 @@ Es sei nun $u$ eine Treppenfunktion aus $L^p(S;X)$ auf einer endlichen Menge von
 Damit folgt sofort
 \begin{align*}
     \vp(u)&=\vp\left(\sum_{i=1}^m (u_{t_i,x_i}- u_{s_i,x_i} )\right)
-    = \sum_{i=1}^m \lal g(t_i)-g(s_i),x_i\ral\\
-    &= \sum_{i=1}^m \lal \int_{s_i}^{t_i} u(t)\d t, x_i\ral = \sum_{i=1}^m \int_{s_i}^{t_i}
-    \lal v(t) , u(t)
+    = \sum_{i=1}^m \Lal g(t_i)-g(s_i),x_i\Ral\\
+    &= \sum_{i=1}^m \Lal \int_{s_i}^{t_i} u(t)\d t, x_i\Ral = \sum_{i=1}^m \int_{s_i}^{t_i}
+    \Lal v(t) , u(t)\Ral
 \end{align*}
 Nachdem diese Treppenfunktionen dicht liegen in $L^p(S;X)$ und dank \textit{Hölder'scher Ungleichung}
 die Abbildung
 \[
-    u\mapsto \int_S\lal v(t),u(t)\ral \d t
+    u\mapsto \int_S\Lal v(t),u(t)\Ral \d t
 \]
 stetig ist bzgl. $u\in L^p(S;X)$ gilt
 \[
-    \vp (u)=\int_S \lal v(t),u(t)\ral \d t \qq \forall u\in L^p(S;X)
+    \vp (u)=\int_S \Lal v(t),u(t)\Ral \d t \qq \forall u\in L^p(S;X)
 \]
 Wegen \textit{Hölder} gilt ebenfalls, dass
 \[
