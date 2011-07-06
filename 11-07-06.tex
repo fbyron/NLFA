@@ -1,0 +1,159 @@
+Nun ist $A$ demistetig (als Operator $A:V\ra V$), da $A$ pseudomonoton und beschränkt (Lemma \ref{4.16}),
+$b\in C(\ol I;V')$. Damit ist $f^n:\ol I\times \R^n \ra \R^n$ eine stetige Abbildung. Nun die Lösbarkeit
+von (\ref{34})  auf $[0,T]$ zu zeigen, benötigen wir noch eine \textit{a priori} Abschätzung:
+
+\noindent \textbf{Behauptung:}
+
+\begin{align}\label{35}
+\left.\begin{array}{lrl}
+i)  & \,\|u_n\|^2_{C(\ol I;H)} + \|u_n\|_X^p &\leq c (b,u_0) \\
+ii) & \|Au_n\|_{X'}&\leq c (b,u_0)
+\end{array}\right\}
+\end{align}
+unabhängig von $n$.
+
+\begin{proof}
+    Sei also $u_n\in C^1(\ol I;V_n)$ eine Lösung von \ref{34}. Wir multiplizieren die $j$-te Gleichung in
+    (\ref{34}) mit $C^n_j(t)$, summieren über $j$, und integriere von $0$ bis $t\leq T$. Mit (\ref{33})
+    folgt
+    \begin{align*}
+        \frac12 \|u_n(t)\|_H^2-\cancel{\frac12\|u_0^n\|^2_H}+ c_0\int_0^t\|u_n(s)\|_V^p\d s&\leq
+        \int_b^t\|b_n(s)\|_{V'} \|u_n(s)\|_V\d s + \frac12\|u_0\|_H^2\\
+        &\overset{\text{Young}}{\leq} \frac12\|u_0^n\|_H^2+c(u_0,p) \int_0^T \|b_n\|_{V'}^p\d s +
+        \frac{c_0}2 \int_0^t \|u_n(s)\|_V^p\d s
+    \end{align*}
+    Es gilt aber $u_0^n\ra u_0$ in $H$, $b_n\ra b_0$ in $X'$, somit folgt (\ref{35} i). Wegen der
+    Beschränktheit. Wegen der Beschränktheit von $A$ folgt auch (\ref{35} ii). Damit ist die Behauptung
+    bewiesen.\[ \]
+\end{proof}
+Aus (\ref{35} i) folgt, dass für alle $n\in\N$ eine Konstante $c_1(b,u_0,u)$ existiert mit
+\[
+    |c^n(t)|\leq c_1 \qq \forall t\in \ol I
+\]
+Wir setzen
+\[
+    K:= \sup_{\ol I \times \ol{B_{2c_1}(0)}} |f^n|
+\]
+und erhalten mit Hilfe des \textit{Satzes von Peano} die Lösbarkeit des Galerkin-Systems auf dem
+Intervall $[0,\min(T,\frac{2c_1}K)]$. Diese Lösung lässt sich auf ganz $I$ fortsetzen, da das
+Existenzintervall nur von $n$, $b$,$u_0$ abhängt. Damit ist das Galerkin-System für alle $n$ auf ganz
+$I$ (modulo „Klebepunkte“ der lokalen Lösung) lösbar, und $u_n$ erfüllt die \textit{a priori}
+Abschätzung (\ref{35} i).
+\item{2)}
+Konvergenz des Galerkin-Verfahrens: Aus (\ref{35} i) folgt für Teilfolgen von $u_n$, dass
+\begin{align*}
+    u_n\rightharpoonup u &\qq \text{in }X\\
+    Au_n\rightharpoonup \xi &\qq \text{in }X'\\
+    u_n(T) \rightharpoonup u^* &\qq \text{in }H
+\end{align*}
+Es sei nun $w\in \bigcup_{k=1}^\infty V_k$, somit $w\in V_{k_0}$. Aus der Galerkin-Gleichung erhalten wir
+für alle $n\geq n_0$
+\[
+    \Lal \frac{d-u_n(t)}{\d t}, w\Ral_V+\Lal Au_n(t),w\Ral = \Lal b_n(t),w\Ral_V
+\]
+Wir multiplizieren mit $\vp\in C^1(\ol I, \R)$ und integrieren in der Zeit. Es folgt mit (\ref{34}), dass
+\[
+    -\int_0^T (u_n(t),w)_H\vp'(t)\d t + \int_0^T \lal Au_n,w\ral_V \vp(t)\d t = \int_0^T\lal b_n(t),w
+    \ral_V\vp (t)\d t - (u_n(T),w)_H\vp(T) + (u_0^n,w)_H\vp(0).
+\]
+Wegen schwacher Konvergenz von $u_n$, $Au_n$, $u_n(T)$ und starker Konvergenz von $u_0^n$, $b_n$ folgt
+\begin{align}\label{37}
+    -\int_0^T (u(t),w)_H \vp'(t)\d t + \int_0^T \lal \xi, w\ral _V \vp (t)\d t = 
+    \int_0^T\lal b(t), w \ral _V \vp (t)\d t - (u^*,w)_H \vp (T) + (u_0, w )_H \vp (0).
+\end{align}
+Wegen Dichtheit von $\bigcup_{k=1}^\infty V_k$ in $V$ gilt (\ref{37}) auch für \textit{alle} $w\in V$ 
+und für alle $\vp\in C^1(\ol I. \R)$, also insbesondere auch für $\vp \in C_c^\infty (I,\R)$. Nach der
+Definintion der verallgemeinerten Zeitableitung gilt damit
+\begin{align}\label{38}
+    \frac{\d u}{\d t} = b-\xi \in X'
+\end{align}
+und somit $u\in W$. Aus (\ref{33}) und (\ref{38}) folgt mit $v(t)=\vp (t) w$, dass
+\[
+    \int_0^T (u(t),w)_H \vp ' + \lal b-\xi, w\ral_V \vp (t) \d t = (u(T),w)_H\vp(T)-(u(0),w)_H\vp(0)
+\]
+Wir ziehen diese Gleichung von (\ref{37}) ab und erhalten
+\[
+    (u(T),w)_H\vp(T)-(u(0),w)_H\vp(0) = (u^*,w)_H\vp(T)-(u_0,w)_H\vp(0),
+\]
+also folgt $u(T)=u^*$, $u(0)=u_0$. Es bleibt noch zu zeigen, dass $Au=\xi$. Wir multiplizieren nun die
+$j$-te Gleichung im Galerkin-System mit $C_j^m$ und summieren. Dann integrieren wir die Gleichung über
+$I$. Mit (\ref{33}) folgt
+\[
+    \int_0^T \lal Au_n,u_n\ral \d t = \int_0^T \lal b_n,u_n \ral \d t - \frac 12 \|u_n (T) \|_H^2
+\]
+Es gilt $b_n \ra b$ in $X'$, $u_n(T)\rightharpoonup u(T)$ und $u_n(0)\rightharpoonup u_0$. Mit der
+schwachen Unterhalbstetigkeit von Normen folgt, dass
+\[
+    \limsup_{n\ra \infty} \int_0^T \lal Au_n,u_n\ral \d t \leq \int_0^T \lal b,u\ral \d t -
+    \frac12 \|u(T)\|_H^2 + \frac12 \|u(0)\|_H^2
+\]
+Ebenfalls gilt, dass
+\[
+    -\frac12 \|u(T)\|_H^2 + \frac12 \|u(0)\|_H^2 \overset{(\ref{33})}{=} 
+    -\int_0^T \Lal \frac{\d u}{\d t}, u \Ral \d t \overset{(\ref{38})}{=} \int_0^T \lal \xi- b , u\ral
+    \d t.
+\]
+Somit folgt, dass 
+\[
+    \limsup_{n\ra \infty} \int_0^T \lal Au_n,u_n \ral \d t \leq \int_0^T \lal \xi, u\ral \d t.
+\]
+Nachdem $A$ pseudomonoton ist und somit der Bedingung (M) genügt, folgt
+\[
+    Au=\xi.
+\]
+Damit ist $u$ eine Lösung der Evolutionsgleichung.
+\end{description}
+\[ \]
+\end{proof}
+
+\begin{lem}\label{4.40}
+    Es sei $V$ ein separabler Banachraum $A:V\ra V'$ ein demistetiger Operator, welcher der
+    Wachstumsbedingung $\|Au\|_{V'}\leq c\|u\|_V^{p-1}$ für $p>1$ genügt. Der induzierte Operator
+    $\tilde A$, definiert durch
+    \[
+        (\tilde Au)(t)=A(u(t))
+    \]
+    bildet dann den Raum $L^p(I;V)$ in den Dualraum  $L^{p'}(I;V')$ ab und ist beschränkt und demistetig.
+\end{lem}
+
+\begin{proof}
+    \begin{description}
+        \item{1)}
+        Messbarkeit von $\tilde Au$. Wir approximieren $u$ durch  f.ü. stark konvergente
+        Treppenfunktionen $(u_n)_{n\in\N}$. Damit konvergiert $\tilde Au_n$ wegen Demistetigkeit von
+        $A$ schwach gegen $\tilde A u$ f.f.a. $t\in I$. Bochner-Messbarkeit von $\tilde Au$ folgt mit
+        Korollar \ref{4.25} (zum \textit{Satz von Pettis}).
+        \item{2)}
+        $\tilde A: L^p(I;V)\ra L^{p'}(I; V')$ ist beschränkt. Sei $u\in L^p(I;V)$. Die Funktion
+        \[
+            t\mapsto \|(\tilde A u )(t)\|_{V'}
+        \]
+        ist Lebesgue-messbar und es gilt wegen der Wachstumsbedingung $\|(\tilde Au)(t)\|_{V'}^{p'}
+        \leq c \|u(t)\|_V^p$. Es folgt, dass $\|\tilde A u\|_{L^{p'}(I;V)}\leq c\|u\|^{p-1}_{L^p(I;V)}$.
+        \item{3)}
+        Die Demistetigkeit: Es sei $(u_n)_{n\in\N}$ eine Folge in $L^p(I;V)$, die stark konvergiert,
+        so dass
+        \[
+            \int_I\|u_n - u\|_V^p \d t \ra 0 \qq (n\ra \infty)
+        \]
+        Damit existiert eine f.ü. konvergente Teilfolge (wieder mit $n$ indiziert). Für fast alle
+        $t\in I$ gilt somit $\tilde Au_n(t)\rightharpoonup \tilde Au(t)$. Sei dann $\vp L^p(I;V)
+        =(L^{p'}(I;V'))'$, dann gilt f.f.a. $t\in I$
+        \[
+            \lal \tilde A u_n (t),\vp (t)\ral_V \ra \lal \tilde Au(t), \vp (t)\ral _V
+        \]
+        Mit der Wachstumsbedingung und der \textit{Young'schen Ungleichung} folgt, dass
+        \[
+            |\lal \tilde A u_n  (t), \vp (t)\ral _V|\leq c \left( \|u_n(t)\| + \|\vp(t)\|_V^p\right)
+        \]
+        wobei die rechte Seite punktweise f.ü. konvergiert und in $L^1(I)$ gegen 
+        $c(\|u\|_V^p+\|\vp\|_V^p)$. Mit majorisierter Konvergenz folgt
+        \[
+            \int_I\lal \tilde Au_k(t),\vp(t)\ral \d t \ra \int_I \lal \tilde A u (t), \vp (t)\ral _V \d t
+            \qq \forall \vp \in L^p(I;V)
+        \]
+        Damit konvergiert $\tilde Au_n$ schwach gegen $\tilde Au$, zunächst nun für eine Teilfolge.
+        Die Konvergenz für die Originalfolge folgt mit dem üblichen Teilfolgen von Teilfolgen Argument.
+    \end{description}
+    \[ \]
+\end{proof}

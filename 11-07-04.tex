@@ -179,14 +179,12 @@ $I=(0,T)$, $T<\infty$, $1<p<\infty$, $W'=L^{p'}(I;V)=(L^p(I;V))'$, $(V,H,V')$ se
     \]
     die für alle $t\in [0,T]$ das Galerkin-System.
     \begin{align}\label{34}
-        \begin{split}
-        \lal \frac{\d u_n}{\d t}(t), w_j\ral _V + \lal Au_n(t),w_j\ral _V &= \lal b_n(t), w_j\ral\\
-        u_n(0)&= u_0^n
-        \end{split}
+        \left.\begin{array}{rl} \Lal \frac{\d u_n}{\d t}(t), w_j\Ral _V + \lal Au_n(t),w_j\ral _V &= \lal b_n(t), w_j\ral\\
+        u_n(0)&= u_0^n \end{array} \right\}
     \end{align}
     für alle $j=1,…,n$ löst. Hier ist
     \[
-        \begin{cases} b_n&\in C(\ol I; V') \\ b_n\ra b \qq \text{in} \, X'\end{cases}
+        \begin{cases} b_n&\in C(\ol I; V') \\ b_n\ra b \qq &\text{in} \, X'\end{cases}
     \]
     Eine solche Folge exisiert wegen Dichtheit von $C_c^\infty(\ol I;V')$ und
     \[
@@ -209,5 +207,3 @@ $I=(0,T)$, $T<\infty$, $1<p<\infty$, $W'=L^{p'}(I;V)=(L^p(I;V))'$, $(V,H,V')$ se
             \ral_V)
         \]
         für $j=1,…,n$ und $C_0^n=(C_{01}^n, … , C_{0n}^n)$
-    \end{description}\[ \]
-\end{proof}
