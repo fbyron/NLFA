@@ -1,0 +1,153 @@
+\begin{beispiel} Quasilineare parabolische Gleichung, die $p$-Laplace Evolutionsgleichung.
+\end{beispiel}
+Wir betrachten die
+\begin{align*}
+    \partial_tu-\div\left( |\nabla u|^{p-2}\nabla u\right) + su &= f \qq \text{in } I\times\Omega\\
+    u&=0 \qq I\times \partial \Omega\\
+    u(0)&= u_0\qq \Omega
+\end{align*}
+$1<p<\infty$, $\Omega \subset\R^n$ offen, beschränkt, $I=(0,T)$ endliche Zeitintervall, $s\geq 0$. Wir
+setzen $V:= W_0^{1,p}(\Omega)$ mit $\|u\|_V=\int_\Omega |\nabla u|^p$, $H=L^2(\Omega)$. Damit ist
+$(V,H,V')$ ein Gelfand-Tripel für $p\geq \frac{2n}{n+2}$. Wir betrachten den Operator
+\begin{align}\label{39}
+    \Lal Au,u\Ral _V= \int\Omega |\nabla u|^{p-2}\nabla u \cdot \nabla v + su v \d x
+\end{align}
+Dieser Operator ist für $p\geq \frac{2n}{n+2}$ beschränkt, koerziv, stetig und strikt monoton.
+\begin{lem}\label{4.41}
+Dies gilt auch für den induzierten Operator $\tilde Au(t):=A(u(t))$.
+\end{lem}
+
+\begin{proof}
+Übungsaufgabe.\[ \]
+\end{proof}
+
+\begin{theorem}\label{4.42}
+    Es sei $\Omega \Subset \R^n$ offen, $I=(0,T)$ ein endliches Zeitintervall. Es sei
+    $p\geq \frac{2n}{n+2}$, $s\geq 0$, und $V=W_0^{1,p}(\Omega)$, $H=L^2(\Omega)$, $X=L^p(I;V)$.
+    Dann existiert für alle $u_0\in H$ und für alle $f\in L^{p'}(I;L^{p'}(\Omega;\R))$ eine Lösung
+    $u\in W$ der Operatorgleichung
+    \begin{align*}
+        \left.\begin{array}{rcl} \frac{\d}{\d t} u -Au & = & f\\u(0)&=&u_0 \end{array}\right\} \, 
+        \text{in} X'
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+Übungsaufgabe.\[ \]
+\end{proof}
+
+\begin{remark}
+    \begin{description}
+    \item{1)}
+    Wie zu Anfang des Beweises von Satz \ref{4.39} bereits angemerkt, sind dies auch die
+    Standardmethoden, um Existenz linearer Evolutionsgleichungen zu zeigen ($\leadsto$ \textit{Evans,
+    Partial Differential Equations, Chapter 7})
+    \item{2)}
+    Wir haben bei der Behandlung des $p$-Laplace Evolutionsproblems nicht das ganze Potential von Satz
+    \ref{4.39} ausgenutzt, den $A:X\ra X'$ ist in diesem Fall sogar strikt monoton. (Es folgt damit sogar
+    Eindeutigkeit der Lösung wie bei \textit{Brouder-Minty}). Aber Vorsicht! Eine Verallgemeinerung durch
+    Addition von
+    \[
+        \lal A_2u,v\ral_X = \iint_{I,\Omega} g(u)v\d x \d t
+    \]
+    ist möglich, aber sehr technisch, denn die einfache Einbettung
+    \[
+        L^p(I;W_0^{1,p}(\Omega))\hookrightarrow L^{p'}(I;L^4(\Omega))
+    \]
+    ist auch für $q<\frac{np}{n-p}$ \textit{nicht} kompakt (für $p>2$ ist sie nicht notwendigerweise
+    stetig.) Es gilt jedoch für 
+    \[
+        W_0:= \left\{ u\in L^{p_0}(I;B_0):\, \frac{\d}{\d t} u \in L^{p_1}(I; B_1)\right\}, \qq
+        1<p_0,p_1<\infty
+    \]
+    mit Norm
+    \[
+        \|u\|_{W_0}:= \|u\|_{L^{p_0}(I;B_0)} + \left\|\frac{\d}{\d t} u \right\|_{L^{p_1}(I;B_1)}
+    \]
+    und $B_0\overset{\text{kompakt}}{\hookrightarrow} B\hookrightarrow B_1$.
+    \end{description}
+\end{remark}
+
+\begin{lem}[Aubin-Lions]\label{4.43}
+    Die Einbettung $W_0\hookrightarrow L^{p_0}(I;B)$ ist kompakt.
+\end{lem}
+
+Zum Beweis siehe \textit{Růžička} oder \textit{Zeidler}. Damit lässt sich auch Existenz von Lösungen des
+Problems
+\[
+    u_t-\Delta_pu+g(u)=f
+\]
+für geeignete Funktionen $g$ zeigen.
+
+\begin{remark}
+    Sehr wichtig in der Anwendug ist die Theorie der maximal monotoer Operatoren. Diese sind definiert
+    durch
+    \begin{defi}\label{4.44}
+    Es sei $V$ ein reflexiver, reeller Banachraum, $M\subset X$, $A:M\ra 2^{X'}$ heißt
+    \begin{description}
+        \item{i)}
+        \textit{monoton}, falls $\forall (u,u'),(v,v')\in G(A):= \{(x,y): \,y\in A(x) \}$ gilt
+        \[
+            \lal u'-v',u-v \ral_X \geq 0
+        \]
+        \item{ii)}
+        \textit{maximal monoton}, falls $A$ monoton ist und aus
+        \[
+            (u,u')\in M\times X' \qq \text{sowie} \qq
+            \lal u'-v',u-v\ral_X\geq 0 \qq \forall (v,v')\in G(A) 
+        \]
+        folgt, dass $u,u'\in G(A)$.
+    \end{description}
+    \end{defi}
+\end{remark}
+
+Existenz von Lösungen $x\in M$ von $y\in A(x)$ $\forall y\in X'$ ist gerantiert für maximal monotone
+Operatoren (unter Koerzitivitäts-Annahmen). Beweise ähnlich derer für pseudomonotoner Operatoren.
+Wichtig sind die maximal monotonen Operatoren beispielsweise für Variationsungleichungen, i.e.
+\[
+    \lal b-Au,u-v\ral \geq 0 \qq C\subset X, \, A:C\ra X',\, \forall v\in C.
+\]
+
+\section{Variationsrechnung}
+
+Wir schreiben eine partielle Differentialgleichung in einem Banachraum $X$, z.B.
+\[
+    \Delta u = f \qq \text{in }W_0^{1,2}(\Omega)
+\]
+abstrakt als $Au=0$. Falls der Operator $A$ die Fréchet-Abbleitung eines Funktionals $I:X\ra\R$ ist,
+d.h. $A=I'$, reduzierte sich das Problem darauf, kritische Punkte, (insbesondere als z.B. Minima) von
+$I$ zu finden. Dies ist häufig deutlich einfacher als die direkte Lösung von $Au=0$.\\
+\noindent In diesem Kapitel betrachten wir konkret $\Omega \Subset \R^n$ offen,
+\[
+    L:\R^{n\times m} \times \R^m \times \ol \Omega \ra \R
+\]
+glatt, $L$ heißt \textit{Lagrangian} und wir schreiben $L= L(p,z,x)$mit den entsprechenden partiellen
+Ableitungen $\partial_p L$, $\partial_zL$, $\partial_x L$. Das Funktional $I$ hat die Form
+\[
+    I(u)=\int_\Omega L(\nabla u , u , x) \d x
+\]
+für $u:\Omega\ra \R^n$ mit Randwert $u=g$ auf $\partial \Omega$.
+
+\begin{theorem}\label{5.1}
+    Die Funktion $L$ erfülle die Wachstumsbedingung
+    \begin{description}
+    \item{i)}
+    \[|L(p,z,x)|\leq C\cdot(|p|^q+|z|^q+1) \]
+    \item{ii)}
+    \[
+        \left\{ \begin{array}{lcr} |\partial_pL(p,z,x)|&\leq& C\cdot (|p|^{q-1}+|z|^{q-1}+1)\\
+                |\partial _z L(p,z,x)|&\leq& C\cdot(|p|^{q-1}+ |z|^{q-1} + 1) \end{array}\right.
+    \]
+    und $u \in W_0^{1,q}(\Omega;R^m)$ erfülle $I(u)=\min_{w\in W_0^{1,q}(\Omega)}I(w)$
+    \end{description}
+    Dann erfüllt $u$ die schwache Form der Euler-Lagrange-Gleichung, d.h.
+    \[
+        \int_\Omega \sum_{i=1}^n\sum_{k=1}^m L_{p_{i_k}} (\nabla u , u , x) \cdot v_{x_i}^k
+        +\sum_{k=1}^m L_{z_k}(\nabla u, u ,x) \cdot v^k =0 \qq \forall v\in W_0^{1,4}(\Omega;\R^m)
+    \]
+\end{theorem}
+
+
+\begin{proof}
+    (für m=1…)…… \[ \]
+\end{proof}

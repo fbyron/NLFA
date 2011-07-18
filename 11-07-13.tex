@@ -1,0 +1,197 @@
+\subsection*{Konvexe Funktionale}
+
+\begin{theorem}[Unterhalbstetigkeit konvexer Funktionale]\label{5.2}
+    Es sei $L:\R^n\times \R\times \ol\Omega\ra \R$ eine glatte, von unten beschränkte Funktion. Weiter
+    sei die Abbidung
+    \[
+        p\mapsto L(p,z,x)
+    \]
+    konvex $\forall z \in \R$, $x\in \Omega$. Dann ist
+    \[
+        I(u)=\int_\Omega L(\nabla u, u, x ) \d x
+    \]
+    im $W^{1,q}(\Omega)$ schwach folgenunterhalbstetig für $1<q<\infty$, d.h.
+    \[
+        (u_j\rightharpoonup u \qq \text{in $W^{1,p}$}) \, \Ra \, \liminf I(u_j)\geq I(u)
+    \]
+\end{theorem}
+
+\begin{proof}
+(Skizze, siehe auch lineare Funktionalanalysis) Wir nehmen an, dass $L\geq 0$. Wir setzen
+\[
+    l:= \liminf I(u_j)=\lim I(u_{j_k}) \qq\text{nach übergang zu einer Teilfolge}
+\]
+Es bleibt zu zeigen, dass $I(u)\leq l$. Dazu wählen wir $u_j\ra u$ in $L^1$ (kompakte Einbettung),
+$u_j\ra u$ fast überall. Mit Egoroff existiert für alle $\eps>0$ ein $F_\eps\subset \Omega$, 
+$|\Omega\setminus F_\eps|\leq \eps$. Wähle
+\[
+    G_\eps := \{x\in\Omega:\, |u|+|\nabla u|<\frac1\eps\}
+\]
+und $E_\eps=G_\eps\cap F_\eps$, es gilt, dass $|\Omega\subset F_\eps|\ra 0$ für
+$\eps \ra 0$. Auf der Menge $E_\eps$ können wir in der Variablen $L$ zum Limes übergehen
+\[
+    \lim_{i\ra \infty} \int_{G_\eps} L(\nabla u, u_h,x) \d x = \int_{G_\eps} L(\nabla u, u ,x)
+    \ra 0 \qq (\text{schawache Konvergenz})
+\]
+und wegen Konvexität gilt
+\[
+    I(u_n)\geq \int_{G_\eps} L(\nabla u_h,u_h,x)\geq (*)
+\]
+Mit monotoner Konvergenz und $\eps \ra 0$ folgt die Behauptung.\[ \]
+\end{proof}
+
+\begin{remark}
+\begin{description}
+    \item{(1)} Den ausfühlichen Beweis findet man im Skript zur linearen Funktionalanalysis.
+    \item{(2)} Für $L=f(\nabla u) + g(u,x)$ folgt der Beweis einfach durch schwache Unterhalbstetigkeit
+    von $\int f$ und starker Unterhalbstetigkeit von $\int g$.
+\end{description}
+\end{remark}
+\begin{theorem}[Existenz von Minimierern] \label{5.3}
+Es sei $L$ wie im Satz \ref{5.2} und zusätzlich gelte
+\[
+    L(p,z,x) \ra |p|^q-\beta
+\]
+für ein $q>1$, $\beta\in \R$ und für alle $x\in \Omega.$
+Dann existiert ein Minimierer $u$ von $L$ in $W_0^{1,q}(\Omega)$
+
+\end{theorem}
+
+\begin{proof}
+    Es sei $u_j$ eine Folge, so dass 
+    \[
+        I(u_j)\ra \inf_{v\in W_0^{1,q}(\Omega)} I(v) \qq (\text{Minimalfolge})
+    \]
+    Wegen der Koerzitivität von $I$ gilt 
+    \[
+        \|u_j\|_{W^{1,q}(\Omega)}\overset{\text{\textit{Poincaré}}}{\leq} \int_\Omega |\nabla u|^q
+        \overset{\text{koerziv}}{\leq} C
+    \]
+    Somit existiert eine Teilfolge mit $u_j\rightharpoonup u$ in $W^{1,q}(\Omega)$ und mit Satz
+    \ref{5.2} folgt die Behauptung. \[ \]
+\end{proof}
+
+\begin{theorem}[Eindeutigkeit von Minimierern]\label{5.4}
+    Es gelte
+    \begin{description}
+    \item{i)}
+    $L=L(p,x)$ ist unabhängig von $z$.
+    \item{ii)}
+    $\exists \Theta > 0$, so dass
+    \[
+        \sum_{i,j=1}^n\partial_{p_j}\partial_{p_i} L(p,x) \cdot \xi_i\xi_j\geq \Theta |\xi|^2
+        \qq \forall p,\, \xi \in \R^n, \,\forall x\in \Omega.
+    \]
+    (oder eine äquivalente Tensorformulierung im Fall von vektorwertigen $u$.)
+    Dann ist der Minimierer $u\in W_0^{1,q}(\Omega)$ eindeutig.
+    \end{description}
+\end{theorem}
+
+\begin{proof}
+    Angenommen $u,\tilde u \in W_0^{1,q}(\Omega)$ minimieren beide das Funktional $I$, dann ist
+    \[
+        v:=\frac{u+\tilde u}2 \in W_0^{1,q}(\Omega)
+    \]
+    \textbf{Behauptung:} $I(v)\in \frac{I(u)+ I(\tilde u)}{2}$, mit strikter Ungleichung, falls nicht gilt,
+    dass $u=\tilde u$ f.ü. in $\Omega$.
+    \begin{proof}
+    Es gilt wegen der gleichmäßigen Konvexität von $L$, dass
+    \[
+        L(p,x)\geq L(q,x) + \partial _p L(q,x)|p-q|+ \frac\Theta2 |p-q|^2.
+    \]
+    Wir setzen $q=\frac{\nabla u + \nabla \tilde u}2$, $p=\nabla u$. Es folgt, dass
+    \[
+        I(v) + \int_\Omega \partial _pL\left(\frac{\nabla u + \nabla \tilde u}2, x\right)\cdot \left( 
+        \frac{\nabla u-\nabla \tilde u}2\right) \d x + \frac\Theta8 \int_\Omega |\nabla u - \nabla \tilde u|^2
+        \d x\leq I(u).
+    \]
+    Ähnlich folgt aber, dass
+    \[
+        I(v)+\int_\Omega \partial _p L\left( \frac{\nabla u + \nabla \tilde u}2, x \right) \left( \frac{\nabla \tilde u
+        -\nabla u}2\right) \d x +\frac\Theta8\int_\Omega|\nabla u - \nabla \tilde u|^2 \d x \leq I(u).
+    \]
+    Somit gilt, dass
+    \begin{align*}
+        I(v)&\leq \frac{I(u)+I(\tilde u)}2 -\frac\Theta8 \int_\Omega |\nabla u-\nabla \tilde u|^2 \d x\\
+        \Ra \, \nabla u - \nabla \tilde u &= 0 \qq \text{f.ü. auf }\Omega\\
+        \Ra \, u&=\tilde u \qq \text{f.ü. auf $\Omega$, da $u,\tilde u\in W_0^{1,q}(\Omega)$}.
+    \end{align*}
+    Und die Behauptung folgt. \[ \]
+    \end{proof}
+    \[ \]
+\end{proof}
+Wir können für $\Omega$ mit hinreichend glatten Rand Minimierer auch in der Klasse der Funktionen
+\[
+    \ms A:= \{u\in W^{1,q}:\, u=g \, \text{auf } \partial \Omega\}
+\]
+suchen, wobei die Randwerte im Spursinne gegeben sind
+
+\noindent $\ra$ siehe \textit{Evans, Partial Differential Equations, Chapter 5}
+
+\noindent Alternativ sei $g\in C^1(\ol \Omega)$, dann können wir statt $L$ den Lagrangen
+$\tilde L:= L(\nabla u-\nabla g,u-g,x)$
+……
+Die Konvexitäts- und Koerzitivitätseigenschaften übertragen sich von $L$ auf $\tilde L$, Sätze \ref{5.1}
+bis \ref{5.4} sind aber auch auf $\tilde L$ anwendbar.
+Die Klasse von Randwerten, die sich so behandeln lassen sind aber \textit{kleiner} als die der Randwerte
+im Spursinne.
+
+\begin{beispiel}
+    \[
+        L(p,z,x)= \frac{|p|^q}{q} + \frac{sz^2}2 -f(x) z
+    \]
+    Die schwache Euler-Lagrange-Gleichung zu $L$ lautet:
+    \[
+        -\int_\Omega |\nabla u|^{q-2} \nabla u \cdot \nabla v + suv\d x = \int_\Omega fv\d x \qq \forall
+        v\in W_0^{1,q}(\Omega)
+    \]
+    $\leadsto$ $q$-Laplace.
+\end{beispiel}
+
+\begin{remark}
+    Es sei $V$ ein Banachraum, $I:V\ra \R$ ein (strikt-) konvexes Funktional, das $\forall u\in V$
+    Fréchet-differenzierbar ist. Es gilt
+    \begin{align*}
+        I':V\ra \ms L(V,\R)= V'
+    \end{align*}
+    und $A:= I'$ ist (strikt-) monoton.
+\end{remark}
+
+\begin{proof}
+    Sei $u,v\in V$, es gilt
+    \begin{align*}
+        I(tu+(1-t)v) &\leq tI(u) + (1-t)I(v)\\
+        \Ra \, I(v)&\geq \underbrace{\Lal Au,v-u \Ral}_{=I'} + I(u)\\
+        I(u)&\geq \Lal Av, u-v\Ral + I(v)\\
+        \Ra \, 0&\leq \Lal Au-Av,u-v \Ral \, \Ra \, A \, \text{monoton},
+    \end{align*}
+    strikte Monotonität ebenso. \[ \]
+\end{proof}
+
+Für allgemeine (unterhalbstetige) Funktionale $I:V\ra\R$ existiert das sogennante Subdifferential
+$\partial I$, definiert als
+\[
+    \left\{A\in V':\, I(v)\leq \Lal A,v-u\Ral + I(u)\, \forall u\in V\right\}
+\]
+und das Subdifferential ist ein maximal monotoner Operator. (\textit{Satz von Rockefellar})
+
+\subsection*{Nichtkonvexe Funktionale, ein Beispiel aus der nichtlinearen Elastizitätstheorie}
+
+\subsubsection*{Motivation eines nichtkonvexen Funktionals}
+
+Wir betrachten einen Festkörper in einem Gebiet $\Omega\subset\R^3.$ Dieser besteht aus Atomen mit
+Gittervektoren $e_1$, $e_2$, $e_3$.\\
+\noindent Energiefunktion(Lagrangian):
+\[
+    L=L(e_1,e_2,e_3).
+\]
+\textbf{Annahme (Cauchy-Born-Hypothese)} Affine Randbedingung für Atome $\Ra$ Im Inneren affine
+Anordnung. Verformung des Körpers durch eine glatte Funktion
+\[
+    y:\Omega\ra \R^3
+\]
+gegeben ist. Aus \textit{Cauchy-Born-Hypothese} folgt, dass
+\[
+    (e_1,e_2,e_3)= (\nabla y)(\ol e_1, \ol e_2, \ol e_3) \qq(\text{undeformiert})
+\]
+$\leadsto$ $L=L(\nabla y)$

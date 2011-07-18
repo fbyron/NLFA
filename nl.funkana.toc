@@ -19,4 +19,5 @@
 \contentsline {subsection}{\numberline {4.1}Der Nemyckii-Operator}{44}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Pseudomonotone Operatoren}{48}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Evolutionsprobleme}{54}{subsection.4.3}
+\contentsline {section}{\numberline {5}Variationsrechnung}{73}{section.5}
 \contentsfinish 
