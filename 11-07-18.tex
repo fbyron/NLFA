@@ -1,0 +1,204 @@
+\begin{beispiel}[Nichtlineare Elastizitätstheorie]
+    \[
+        F:=\nabla y \in\mathbb M^{3\times 3} \qq \text{Deformationsgradient}
+    \]
+    Annahme: Lagrangian hängt ab von $F$ (evtl. auch auf $x$, $y$)
+    \[
+        I(y)=\int_\Omega L(\nabla y(x), y(x), x) \d x
+    \]
+\end{beispiel}
+\subsubsection*{Rahmeninvarianz}
+
+Starkörperbewegung sollten Energieänderung bewirken
+\[
+    \tilde y(x)= a+Qy(x), \qq a\in\R^3
+\]
+Wir haben
+\begin{align*}
+    \nabla \tilde y &= Q\nabla y.\\
+    \Ra \, L(QF,\cdot, \cdot) &= L(F,\cdot, \cdot) \qq \forall Q\in \mr{SO}(3), \, F\in 
+    \mathbb{M}^{3\times 3}
+\end{align*}
+Diese Invarianz kollidiert aber leider mit der Konvexitätsannahme. Normieren:
+\begin{align*}
+    L(\Id) &= 0 \qq\min(L)\\
+    L(Q)&= 0, \qq\text{(Rahmeninvarianz)}
+\end{align*}
+    \[
+        \Ra \, L\begin{pmatrix} 1&&\\&1&\\&&1\end{pmatrix}
+        = L\begin{pmatrix} -1&&\\&-1&\\&&1\end{pmatrix}
+        =L\begin{pmatrix} -1&&\\&1&\\&&-1\end{pmatrix}
+        = L\begin{pmatrix}1&&\\&-1&\\&&-1\end{pmatrix}=0
+    \]
+Aus der Konvexität von $L$ würde nun folgen, dass
+\[
+    L\left(\frac14 \left[ \begin{pmatrix} 1&&\\&1&\\&&1\end{pmatrix} 
+    + \begin{pmatrix} -1&&\\&-1&\\&&1\end{pmatrix}+
+        \begin{pmatrix} -1&&\\&1&\\&&-1\end{pmatrix} +
+        \begin{pmatrix} 1&&\\&-1&\\&&-1\end{pmatrix}\right]\right) 
+    = L\left(\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\end{pmatrix}\right)=0
+\]
+Das ist aber die Deformation, die den Körper auf einen Punkt schrumpfen lässt diese sollte hohe Energie
+besitzen. Konvexitätsannahme und Rahmeninvarianz ergben physökalisch unsinnige Energien. Viel besser wäre
+eine Energie der Form
+\begin{align}\label{40}
+\left.\begin{array}{rlcl}
+    L(P,r,z,x)&=L(F,\det F, z ,x)&&\text{$\det F$ Volumenänderung der Deformation.}\\
+    (P,r)&\mapsto L(P,r,z,x) &&\text{konvex für alle $z$, $x$.}
+\end{array}
+\right\}
+\end{align}
+\[
+    \leadsto \, y:\Omega\subset\R^3\ra \R^3 ; \qq I(y)=\int\Omega L(\nabla y(x),\det \nabla y(x),y(x),x)
+    \d x.
+\]
+\begin{remark}
+    \[
+        \det QF = \det F, \qq Q\in \mr{SO}(3)
+    \]
+    Eine Energie der Form (\ref{40}), beispielsweise
+    \[
+        L(F,\det F, z ,x) = \tilde L(F) + (\det F -1)^2
+    \]
+    mit $\tilde L(F)=\tilde L(QF)$ konvex.
+    Existieren Minimierer von Funktionalen der Form (\ref{40})? Unsere „üblichen“ Sätze sind nicht
+    anwendbar.
+\end{remark}
+
+Funktionale der Form (\ref{40}) nennt man polykonvexe Funktionale. Wir zeigen im Folgenden die Existenz
+von Minimierern polykonvexer (und koerziver) Funktionale. Dazu betrachten wir zunächst bestimmte
+Lagrangians, deren Euler-Lagrange-Gleichungen von \textit{jeder} glatten Funktion erfüllt wird.
+
+\begin{defi}[Null-Lagrangefunktion]\label{5.5}
+    Eine Funktion $L:\R^{n\times m} \times \R^m\times \ol \Omega$ heißt \textit{Null-Lagrangefunktion},
+    falls das System der (starken) Euler-Lagrange-Gleichungen
+    \[
+        -\sum_{i=1}^n \partial_{x_i} (L_{p_{ki}}(\nabla u , u , x) + L_{z_i}(\nabla u , u, x) ) = 0 
+        \qq (k=1,…,n)
+    \]
+    \textit{automatisch} von jeder glatten Funktion $u:\Omega\ra \R^m$ erfüllt wird.
+\end{defi}
+
+\begin{remark}
+    Für $m=1$ sind die Null-Lagrangians langweilig, sie sind nur für die Funktionen, die affin in
+    der Ableitung von $u$ sind (i.e. $L_p(u')=\mr{const}$ $\Ra$ $\partial_xL_p(u')=0$)
+\end{remark}
+
+\begin{theorem}[Null-Lagrangian und Randwerte]\label{5.6}
+    Es sei $L$ ein Null-Lagrangian, und es seien $u,\tilde u\in C^2(\ol \Omega,\R^m)$ mit $u=\tilde u$
+    auf $\partial \Omega$. Dann gilt $I(u)=I(\tilde u)$
+    \[
+        I(v)=\int_\Omega L(\nabla v(x),v(x), x )\d x.
+    \]
+\end{theorem}
+
+\begin{proof}
+    Wir definieren $i(\tau):= I(\tau u+(1-\tau)\tilde u)$ und leiten ab:
+    \begin{align*}
+        i'(\tau) &= \int_\Omega \left[\sum_{i=1}^n\sum_{k=1}^m L_{p_{k_i}}(\tau\nabla u + 
+        (1-\tau)\nabla\tilde u,\tau u + (1-\tau)\tilde u, x)\cdot(\partial_{x_i} u_k - 
+        \partial_{x_i}\tilde u_k) + \sum_{k=1} L^{z_k}(-"-,-"-,-"-)\cdot (u_k-\tilde u_k)\right] \d x \\
+        &\overset{\text{part. int}}{=} \sum_{k=1}^m \int_\Omega\left[ - \sum_{i=1} \partial_{x_i}
+        L_{p_{k_i}}(-"-,-"-,-"-)+ L_{z_k}(-"-,-"-,-"-) \right] (u_k-\tilde u_k) \d x =0, 
+    \end{align*}
+    da $\tau u + (1-\tau)\tilde u \in L^2(\ol\Omega)$ die Euler-Lagrange-Gl. erfüllt. Die Randterme
+    fallen weg, da $u_k=\tilde u_k$ auf $\partial \Omega$. Die Behauptung folgt. \[ \]
+\end{proof}
+
+\noindent \textbf{Notation:} Es sei $A$ eine $n\times n$-Matrix. Mit $\mr{cof}\,A$ bezeichnen wir die 
+Kofaktor-Matrix von $A$, d.h.
+\[
+    (\mr{cof}\, A)_{ki}= (-1)^{i+k} d(A)_{ki}
+\]
+mit $d(A)_{ki}=$ Determinante der $(n-1)\times(n-1)$-Matrix, die aus $A$ durch Löschen der $k$-ten
+Reihe und der $i$-ten Spalte entsteht.
+\begin{lem}[Divergenzfreiheit der Reihen der Kofaktormatrix]\label{5.7}
+    Es sei $u:\R^n\ra \R^n$ glatt. Dann gilt
+    \[
+        \sum_{i=1}^n \partial_{x_i} (\mr{cof}\, \nabla u (x))_{ki}=0
+    \]
+\end{lem}
+
+\begin{proof}
+    Das war Übungsaufgabe 8. Im Wesentlichen:
+    \[
+        (\det P)\cdot \Id = P^T(\mr{cof} \, P)
+    \]
+    Das leiten wir ab. \[ \]
+\end{proof}
+
+\begin{theorem}[Determinanten sind Null-Lagrange-Funktionen]\label{5.8}
+    Die Determinantenfunktion
+    \[
+        L(P)=\det \, P
+    \]
+    ist ein Null-Lagrangian.
+\end{theorem}
+
+\begin{proof}
+    Es sei zu zeigen, dass für jede Funktion $u:\Omega\ra \R^n$ gilt
+    \[
+        \sum_{i=1}^n\partial _{x_i} (L_{p_{k_i}}(\nabla u (x)))=0
+    \]
+    Es gilt $L^{p_{ki}}=(\mr{cof}\, P)_{ki}$, $i,k=1,…,n$, also nach Lemma \ref{5.7}:
+    \[
+        \sum_{i=1}^n\partial _{x_i}(L_{p_{ki}}(\nabla u(x)))=\sum_{i=1}^n\partial_{x_i}(\mr{cof}\, \nabla
+         u)_{ki} =0
+    \]
+\end{proof}
+
+\begin{remark}
+    Eine Anwendung des Satzes \ref{5.8} ist ein einfacher Beweis des \textit{Brouwer'schen Fixpunktsatzes
+    }, siehe \textit{Evans: PDE, THEOREM 8.3}
+\end{remark}
+
+\begin{theorem}[Determinanten sind schwach stetige Funktionen]\label{5.9}
+    Es sei $n<q<\infty$ und  $u_k\rightharpoonup u$ in $W^{1,q}(\Omega;\R^n)$, $\Omega\Subset \R^n$
+    offen. Dann gilt
+    \[
+        \det \, \nabla u_k \rightharpoonup \det\, \nabla u \qq \text{schwach in }L^{\nicefrac q1}(\Omega)
+    \]
+\end{theorem}
+
+\begin{proof}
+    \begin{description}
+        \item{1)}
+        Wieder benutzen wir die Matirx-Identität
+        \[
+            (\det\, P)\Id = P(\mr{cof} \, P)^T
+        \]
+        bzw. Laplace'scher Entwicklungssatz!
+        \[
+            \Ra \, \det \, P=\sum_{k=1}^nP_{kj}(\mr{cof}\, P)_{kj}
+        \]
+        Sei nun $w\in C^\infty (\Omega;\R^n)$. Dann gilt
+        \begin{align*}
+            \det\, \nabla w &= \sum_{k=1}^n(\partial_{x_k w_j})(\mr{cof}\,\nabla u)_{kj} \qq (j=1,…,n)\\
+                &=\underbrace{\sum_{k=1}^n -w_j\cdot (\partial_{x_k}(\mr{cof}\, \nabla w)_{kj})}_{=0, 
+                \text{ wegen Lemma \ref{5.7}}} + 
+                \sum_{k=1}^n\partial_{x_k}(w_j\cdot(\mr{cof}\, \nabla w)_{kj})
+        \end{align*}
+        Somit ist die Determinante der Jakobimatrix eine Divergenz.
+        (Das haben wir bereits einmal gesehen, siehe Proposition \ref{2.8}) Es sei nun $v\in C_c^\infty
+        (\Omega)$, damit folgt
+        \[
+            \int_\Omega v \det \, \nabla w = -\sum_{k=1}^n\int_{\Omega} (\partial_{x_n}v)\cdot
+            w_j(\mr{cof}\, \nabla w)_{ik}
+        \]
+        Mittels einer Standardapproximation folgt auch
+        \[
+            \int_\Omega v \det\, \nabla u_l = - \sum_{k=1}^n \int_\Omega(\partial_{x_k}v)(u_l)_j
+            (\mr{cof}\, \nabla u_l)_{jk}
+        \]
+        Für $n<q<\infty$ und $u_k\rightharpoonup u$ in $W^{1,q(\Omega; \R^n)}$ folgt mit dem
+        \textit{Morrey'schen Einbettungssatz} (und \textit{Arzelá-Ascoli}), dass $u_k\ra u$ gleichmäßig
+        in $\Omega$.\\
+        \noindent \textbf{Behauptung:} Es gilt
+        \[
+            \lim_{l\ra \infty}\int_\Omega \vp (\mr{cof}\, \nabla u_l)_{jk} = \int_\Omega \vp(\mr{cof}\,
+            \nabla u)_jk\qq \forall \vp \in C_c^\infty, \, (j,k=1,…,n)
+        \]
+
+
+    \end{description}
+\end{proof}
