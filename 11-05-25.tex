@@ -1,20 +1,20 @@
 \item[2. Existenz von Lösungen der stationären Navier-Stokes-Gleichung]
-Es sei $\Omega\subset \R^3$ offen, zusammenkängend und beschränkt, und es sei $K:\Omega\ra
+Es sei $\Omega\subset \R^3$ offen, zusammenhängend und beschränkt, und es sei $K:\Omega\ra
 \R^3$ eine gegeben Funktion. Wir suchen eine Lösung $v:\Omega\ra\R^3$ zum Problem
-\[
-\begin{cases}
-0= \eta \Delta v - v\cdot \nabla v - \nabla \rho + K & \text{ in } \Omega\\
-   0= \div v & \text{ in } \Omega\\
-   0= v & \text{ auf } \partial \Omega
-   \end{cases}
-   \]
+\begin{align}\label{xyz}
+\begin{array}{rcll}
+\eta \Delta v - v\cdot \nabla v - \nabla \rho + K&=&0 & \text{ in } \Omega\\
+   \div v&=&0 & \text{ in } \Omega\\
+    v &=0& \text{ auf } \partial \Omega
+   \end{array}
+\end{align}
    mit hinreichend glatten $v,\rho$.
 
    Eine sehr schöne Herleitung der Gleichung findet man in einem Vortrag auf der Website des Clay
    Mathematics Institute $\ra $ Link sehe Vorlesungssite.
    \end{description}
 
-   \subsubsection*{Einschub: Sobolev-Räume}
+   \subsection*{Einschub: Sobolev-Räume}
 
    Wir betrachten die Menge $C^1(\Omega, \R)$ und das darauf definierte Skalarprodukt
    \[
@@ -117,29 +117,29 @@ Es sei $\Omega\subset \R^3$ offen, zusammenkängend und beschränkt, und es sei 
     ist kompakt.
     \end{cor}
 
-    Zurück zu Navier-Stokes:
+    \noindent Zurück zu Navier-Stokes: Es sei
 
-    Es sei 
     \[
         X=\{v\in C^2(\ol\Omega,\R^3) \, | \, \div \, v=0, v\big|_{\partial\Omega}=0\}
     \]
     und es sei
     \[
-        \ms H:=\ol{X}^H_1 = \{v\in H_0^1(\Omega,\R^3) \, | \, \div \, v =0\}
+        \ms H:=\ol{X}^{H^1(\Omega)} = \{v\in H_0^1(\Omega,\R^3) \, | \, \div \, v =0\}
     \]
     Wir betrachten $\ms H$ als Hilbertraum mit dem Skalarprodukt
     \[
         (u,v)_{\ms H}= \int_\Omega\nabla u \cdot \nabla v \d x
+        =\int_\Omega\sum_{k,j=1}^3\partial_ju_k\partial_kv_j
     \]
 Dieses ist mittels \textit{Poincaré} äquivalent zum üblichen Skalarprodukt auf $H^1$:
 
-Wir multiplizieren nun die Navier-Stokes-Gleichung \ref{12} mit $w\in X$ und erhalten
+Wir multiplizieren nun die Navier-Stokes-Gleichung (\ref{xyz}) mit $w\in X$ und erhalten
 
 \begin{align*}
-    \int_\Omega (\eta\Delta v - v\nabla v + K)w &= \int_\Omega \nabla \vp  \cdot w =0 \\
-    \LRa \, \int_\Omega (\eta \underbrace{\nabla v \cdot \nabla w}_{=\sum_{k,j=1}^3 
+    0&=\int_\Omega (\eta\Delta v - v\nabla v + K)w = \int_\Omega \nabla \rho  \cdot w  \\
+    \LRa \, 0&=\int_\Omega (\eta \underbrace{\nabla v \cdot \nabla w}_{=\sum_{k,j=1}^3 
     \partial_jv_k\partial_k w_j} -\underbrace{v\cdot v \cdot \nabla w}_{=\sum_{k,j=1}^3
-    v_kv_j(\partial_kw_j)}- K\cdot w)&=0 
+    v_kv_j(\partial_kw_j)}- K\cdot w)
 \end{align*}
 mit
 \[
@@ -207,8 +207,8 @@ $v\in \ms H$ mit
     \end{align*}
     Es sei $F(v)=B(v,v)$. $F$ ist lokal Lipschitz, denn für $\|u\|_Y< \rho,$ $\|v\|_Y<\rho$ gilt
     \begin{align*}
-        \|F(u)-F(v)\|_{\ms H} &= \|B(u-v,u)-B(v,u-v)\|_{\ms H}\leq 2\alpha \rho \|u-v\|_Y\\
-            &\leq 2\alpha\beta^2 \rho \|u-v\|_{\ms H}.
+        \|F(u)-F(v)\|_{\ms H} &= \|B(u-v,u)-B(v,u-v)\|_{\ms H}\leq 2\alpha \rho^2 \|u-v\|_Y\\
+            &\leq 2\alpha\beta \rho^2 \|u-v\|_{\ms H}.
     \end{align*}
     Sei $(v_n)_{n\in \N}$ beschränkt in $\ms H$. Nach Wahl einer Teilfolge ist $v_n$ eine Cauchyfolge
     in $Y$. $\Ra$ $F(v_n)$ ist eine Cauchyfolge in $\ms H$, da gilt

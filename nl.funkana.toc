@@ -1,23 +1,22 @@
 \select@language {ngerman}
-\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Thema der Vorlesung}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Vorarbeiten}{3}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Ableitung in Banachr\IeC {\"a}ume und implizite Funktionen}{3}{subsubsection.1.2.1}
-\contentsline {section}{\numberline {2}Der Brouwer'sche Abbildungsgrad}{9}{section.2}
-\contentsline {subsection}{\numberline {2.1}Die Determinantenformel}{9}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Notation}{9}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Verallgemeinerung der Determinantenformel}{13}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Der Brouwer'sche Fixpunktsatz}{19}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Weitere Eigenschaften des Abbildungsgrades}{23}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Der Fixpunktsatz von Kakutani und eine Anwendung in der Spieltheorie}{25}{subsection.2.5}
-\contentsline {section}{\numberline {3}Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}{27}{section.3}
-\contentsline {subsection}{\numberline {3.1}Der Abbildungsgrad auf endlichen Banachr\IeC {\"a}umen}{28}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Kompakte Operatoren}{29}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Der Leray-Schauder Grad}{31}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Das Leray-Schauder-Prinzip und der Schauder'sche Fixpunktsatz}{33}{subsection.3.4}
-\contentsline {section}{\numberline {4}Monotone Operatoren}{38}{section.4}
-\contentsline {subsection}{\numberline {4.1}Der Nemyckii-Operator}{44}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Pseudomonotone Operatoren}{48}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Evolutionsprobleme}{54}{subsection.4.3}
-\contentsline {section}{\numberline {5}Variationsrechnung}{73}{section.5}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Thema der Vorlesung}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Vorarbeiten}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Ableitung in Banachr\IeC {\"a}ume und implizite Funktionen}{3}{subsection.1.2.1}
+\contentsline {chapter}{\numberline {2}Der Brouwer'sche Abbildungsgrad}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Die Determinantenformel}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Verallgemeinerung der Determinantenformel}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Der Brouwer'sche Fixpunktsatz}{21}{section.2.3}
+\contentsline {section}{\numberline {2.4}Weitere Eigenschaften des Abbildungsgrades}{25}{section.2.4}
+\contentsline {section}{\numberline {2.5}Der Fixpunktsatz von Kakutani und eine Anwendung in der Spieltheorie}{27}{section.2.5}
+\contentsline {chapter}{\numberline {3}Der Leray-Schauder Grad und der Schauder'sche Fixpunktsatz}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Der Abbildungsgrad auf endlichen Banachr\IeC {\"a}umen}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Kompakte Operatoren}{32}{section.3.2}
+\contentsline {section}{\numberline {3.3}Der Leray-Schauder Grad}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}Das Leray-Schauder-Prinzip und der Schauder'sche Fixpunktsatz}{36}{section.3.4}
+\contentsline {chapter}{\numberline {4}Monotone Operatoren}{43}{chapter.4}
+\contentsline {section}{\numberline {4.1}Der Nemyckii-Operator}{49}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pseudomonotone Operatoren}{53}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Evolutionsprobleme}{59}{subsection.4.2.1}
+\contentsline {chapter}{\numberline {5}Variationsrechnung}{79}{chapter.5}
 \contentsfinish 

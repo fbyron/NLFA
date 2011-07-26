@@ -1,4 +1,4 @@
-\documentclass[14pt]{article} 
+\documentclass[14pt]{book} 
 \usepackage[utf8]{inputenc}
 \usepackage{epsfig}
 \usepackage[ngerman]{babel}
@@ -12,15 +12,54 @@
 \usepackage{MnSymbol}
 \usepackage{mathrsfs}
 \usepackage{parallel}
-\usepackage{tikz}
+\usepackage{tikz}     % Tikz ist kein Zeichenprogramm
 \usepackage{geometry}
+\usepackage{fancyhdr} % Kopf- und Fußzeilen
 \usepackage{titletoc}
 \usepackage{url}
+\usepackage{shadethm}
 \usepackage{nicefrac}
 \usepackage{cancel}
+\usepackage{sidecap}
 \usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,colorlinks=true,
 		filecolor=black,linkcolor=blue,urlcolor=blue,plainpages=false,pdfpagelabels,
 		citecolor=black,setpagesize=false]{hyperref}
+
+%\newcounter{iop@c}
+%\newcommand*{\iop@id}{iop@\number\value{iop@c}}
+%\newcommand*{\ifoddpage}
+%{
+%    \stepcounter{iop@c}
+%    \expandafter\label\expandafter{\iop@id}
+%    \ifthenelse
+%    {
+%        \isodd{\iop@getpagenumber{\iop@id}}
+%    }
+%}
+%
+%\newcommand*{\iop@getpagenumber}[1]
+%{
+%    \expndafter\iop@@getpagenumber\csname r@#1\endcsname{#1}
+%}
+%\newcommand*{\iop@@getpagenumber}[2]
+%{
+%    \ifx#1\relax
+%        \protect\G@refundefinedtrue % LaTeX-Warnung
+%        0%
+%    \else\expandafter\@secondoftwo#1\@nil
+%    \fi
+%}
+
+\pagestyle{fancy}
+\setlength{\parindent}{0pt}
+\setlength{\shadedtextwidth}{\textwidth}
+
+\lhead{\thepage}
+\rhead{\rightmark}
+\chead{}
+\cfoot{}
+%\addtolength{\headheight}{50pt}
+%\addtolength{\headwidth}{1.4cm}
 
 
 \makeatletter
@@ -41,7 +80,7 @@
 \theoremheaderfont{\bfseries}
 
 \theorembodyfont{\it}
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{lem}[theorem]{Lemma}
 \newtheorem{cor}[theorem]{Corollar}
 \newtheorem{prop}[theorem]{Proposition}
@@ -115,7 +154,7 @@
 \newcommand{\Lb}{\left(}
 \newcommand{\Rb}{\right)}
 \newcommand{\esssup}{\mr{ess\, sup}}
-\geometry{hmargin=3cm,top=2cm,bottom=4cm}
+\geometry{hmargin=3.5cm,top=3cm,bottom=3cm}
 
 \newcommand{\makelicense}{Dieser Mitschrieb steht unter der freien \texttt{CC-BY-SA-DE 3.0} 
 Lizenz.
@@ -123,6 +162,10 @@ Lizenz.
 Für weitere Informationen besuchen Sie
 \begin{center}\url{http://creativecommons.org/licenses/by-sa/3.0/deed.de}\end{center}}
 
+
+\makeindex
+\numberwithin{equation}{section}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 
 \input xy
 \xyoption{all}
@@ -162,8 +205,8 @@ Universität Heidelberg
 
 \end{titlepage}
 
+\newpage \[ \]
 \newpage
-
 \pagenumbering{roman}
 
 \section*{Organisatorisches}
@@ -191,7 +234,7 @@ Universität Heidelberg
 
 \tableofcontents
 
-\newpage
+\newpage\[ \]\newpage \[ \]\newpage
 
 \pagenumbering{arabic}
 
@@ -225,4 +268,5 @@ Universität Heidelberg
 \input{11-07-11}   % 
 \input{11-07-13}   %
 \input{11-07-18}   %
+
 \end{document}

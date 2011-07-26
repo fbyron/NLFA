@@ -1,4 +1,4 @@
-\subsubsection*{Korrekturen}
+\subsection*{Korrekturen}
 
 Bei Satz \ref{2.15}. Vorsicht vor der unbeschränkten Komponente $K_\infty$ von $\R^n\setminus f(\partial
 \Omega)$! Diese taucht jedoch in der Produktformel ausschließend nicht auf, denn
@@ -116,7 +116,7 @@ zunächst einige Interessante Eigenschaften von $\Id+F$.
     \[ \]
 \end{proof}
 
-\subsection{Der Leray-Schauder Grad}
+\section{Der Leray-Schauder Grad}
 
 Sei $\Omega\subset X$, $X$ ein Banachraum. Wir setzten
 \[
@@ -129,7 +129,7 @@ und
 Es gilt für $F\in \ms D_y(\ol \Omega,X)$, dass $\dist(y,(\Id+F)(\partial\Omega))>0$, da $\Id+F$
 abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
 
-\begin{defi}\label{3.8}
+\begin{defi}[Der Leray-Schauder Grad]\label{3.8}
     Sei $\Omega\subset X$ offen, beschränkt, $y\in X$, $F\in \ms D_y(\ol \Omega,X)$. Sei $\rho:=
     \dist(y,(\Id+F)(\partial \Omega))$ und sei
     \[
@@ -154,8 +154,8 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
 \end{prop}
 
 \begin{proof}
-    Sei $F_2\in \ms F (\ol \Omega,X)$, $\|F_2-F\|<S$, $X_2$ entsprechend endlichdim UVR von $X$. Es sei
-    $X_0=X_1+X_2$, $\Omega_0=\Omega\cap X_0$. Dann gilt
+    Sei $F_2\in \ms F (\ol \Omega,X)$, $\|F_2-F\|<\rho$, $X_2$ entsprechend endlichdim UVR von $X$. Es 
+    sei $X_0=X_1+X_2$, $\Omega_0=\Omega\cap X_0$. Dann gilt
     \[
         F_i\in \ms F_y(\ol\Omega_0,X_0) \qq i=1,2
     \]
