@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.23)  25 JUL 2011 22:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.23)  27 JUL 2011 10:41
 entering extended mode
  %&-line parsing enabled.
 **nl.funkana.tex
@@ -1303,52 +1303,52 @@ LaTeX Warning: Label `4.34' multiply defined.
 )
 \openout1 = `nl.funkana.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 173.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 173
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 148.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 148
 .
  (/usr/share/texmf-texlive/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 173.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 173
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 148.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 148
 .
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 173.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 173
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 148.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 148
 .
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 173.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 173.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 148.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 148.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 173.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 173.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 148.
 
 
 (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 173.
-LaTeX Font Info:    ... okay on input line 173.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 173.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 148.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txr.fd
@@ -1430,7 +1430,7 @@ LaTeX Info: Redefining \selectfont on input line 125.
 \RaggedRightParindent=\skip83
 \JustifyingParindent=\skip84
 )
-Package hyperref Info: Link coloring ON on input line 173.
+Package hyperref Info: Link coloring ON on input line 148.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -1440,38 +1440,38 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 \c@section@level=\count188
 )
-LaTeX Info: Redefining \ref on input line 173.
-LaTeX Info: Redefining \pageref on input line 173.
+LaTeX Info: Redefining \ref on input line 148.
+LaTeX Info: Redefining \pageref on input line 148.
  (./nl.funkana.out)
 (./nl.funkana.out)
 \@outlinefile=\write6
 \openout6 = `nl.funkana.out'.
 
 \AtBeginShipoutBox=\box48
-LaTeX Font Info:    Try loading font information for U+txsya on input line 177.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 152.
 
  (/usr/share/texmf-texlive/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 177.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 152.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 177.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 152.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 177.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 152.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 177.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 152.
 
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1479,13 +1479,13 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Try loading font information for TS1+txr on input line 216.
+LaTeX Font Info:    Try loading font information for TS1+txr on input line 191.
 
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+txtt on input line 219
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 194
 .
 
 (/usr/share/texmf-texlive/tex/latex/txfonts/ot1txtt.fd
@@ -1566,34 +1566,34 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 185.
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 194.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 242.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 243.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 246.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 247.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 259.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 260.
 
 [14]) (./11-04-27.tex [15] [16]) (./11-05-02.tex [17]
 
@@ -1628,7 +1628,7 @@ Overfull \hbox (5.17426pt too wide) in paragraph at lines 198--199
 
 ) (./11-05-04.tex [20]
 Overfull \hbox (10.48683pt too wide) in paragraph at lines 70--73
-\OT1/txr/m/n/10 sagt, dass ste-ti-ge Abb-li-dun-gen, die kom-pak-te, kon-ve-xe 
+\OT1/txr/m/n/10 sagt, dass ste-ti-ge Ab-bil-dun-gen, die kom-pak-te, kon-ve-xe 
 Men-gen im $\U/txsyb/m/n/10 R[]$ \OT1/txr/m/n/10 (oder Men-gen, die da-zu hom[]
 oomorph
  []
@@ -1699,13 +1699,13 @@ Overfull \hbox (31.50041pt too wide) in paragraph at lines 2--4
 
 [38]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 45.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 45.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 46.
 
 
-Overfull \hbox (51.88396pt too wide) in paragraph at lines 83--83
+Overfull \hbox (51.88396pt too wide) in paragraph at lines 84--84
 [] 
  []
 
@@ -1756,7 +1756,7 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 190.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 197.
 
-[51]) [52] (./11-06-08.tex [53] [54] [55]) (./11-06-15.tex
+[51]) (./11-06-08.tex [52] [53] [54] [55]) (./11-06-15.tex
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 23.
 
@@ -1932,7 +1932,7 @@ ic/txfonts/txtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (92 pages, 620748 bytes).
+Output written on nl.funkana.pdf (92 pages, 621145 bytes).
 PDF statistics:
  1181 PDF objects out of 1200 (max. 8388607)
  434 named destinations out of 1000 (max. 500000)

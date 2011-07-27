@@ -100,10 +100,11 @@ Fixpunktsätze in schneller Folge!
     \item[1. nichtlineares 2-Punkt Randwertsproblem:]
     Wir betrachten auf $[0,T]$ das Randwertsproblem
     \begin{align}\label{11}
-        \begin{split}
-        u''(t)&=g(t,u(t),u'(t))\qq 0\leq t \leq T \\
-        u(0)&=u(1)=0
-        \end{split}
+        \left.
+        \begin{array}{rcll}
+        g(t,u(t),u'(t))&=&u''(t)& 0\leq t \leq T \\
+        u(0)=u(1)&=&0&
+        \end{array}\right\}
     \end{align}
     Es sei $C_0^2=\{u\in C^2\, | \, u(0)=u(T)=0\}$
 

@@ -25,39 +25,15 @@
 		filecolor=black,linkcolor=blue,urlcolor=blue,plainpages=false,pdfpagelabels,
 		citecolor=black,setpagesize=false]{hyperref}
 
-%\newcounter{iop@c}
-%\newcommand*{\iop@id}{iop@\number\value{iop@c}}
-%\newcommand*{\ifoddpage}
-%{
-%    \stepcounter{iop@c}
-%    \expandafter\label\expandafter{\iop@id}
-%    \ifthenelse
-%    {
-%        \isodd{\iop@getpagenumber{\iop@id}}
-%    }
-%}
-%
-%\newcommand*{\iop@getpagenumber}[1]
-%{
-%    \expndafter\iop@@getpagenumber\csname r@#1\endcsname{#1}
-%}
-%\newcommand*{\iop@@getpagenumber}[2]
-%{
-%    \ifx#1\relax
-%        \protect\G@refundefinedtrue % LaTeX-Warnung
-%        0%
-%    \else\expandafter\@secondoftwo#1\@nil
-%    \fi
-%}
 
 \pagestyle{fancy}
 \setlength{\parindent}{0pt}
 \setlength{\shadedtextwidth}{\textwidth}
 
-\lhead{\thepage}
-\rhead{\rightmark}
-\chead{}
-\cfoot{}
+\lhead[\rightmark]{\thepage}
+\rhead[\thepage]{\leftmark}
+\chead[]{}
+\cfoot[]{}
 %\addtolength{\headheight}{50pt}
 %\addtolength{\headwidth}{1.4cm}
 
@@ -146,7 +122,6 @@
 \newcommand{\diam}{\mr{diam}}
 \newcommand{\CS}{\mr{CS}}
 \newcommand{\Bild}{\mr{Bild}}
-%\renewcommand{\span}{\mr{span}}
 \newcommand{\lal}{\langle}
 \newcommand{\ral}{\rangle}
 \newcommand{\Lal}{\left\langle}
@@ -256,7 +231,6 @@ Universität Heidelberg
 \input{11-05-30}   % 4 Monotone Operatoren
 \input{11-06-01}   % 
 \input{11-06-06}   % 4.1 Der Nemyckii-Operator
-\newpage
 \input{11-06-08}   % 4.2 Psoudomonotone Operatoren
 \input{11-06-15}   % 4.3 Evolutionsprobleme \\ Einschub: Das Bochner-Integral
 \input{11-06-20}   %
