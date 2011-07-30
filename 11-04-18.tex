@@ -1,5 +1,5 @@
 \begin{theorem}[Satz über implizite Funktion]\label{1.12}
-    Seien $X$, $Y$, $Z$ Banachräume, $U\subset X$ Umgebung von $x_0\in X$, $V\in Y$ Umgebung von 
+    Seien $X$, $Y$, $Z$ Banachräume, $U\subset X$ Umgebung von $x_0\in X$, $V\subset Y$ Umgebung von 
     $y_0 \in Y$. Sei weiter
     \[F:U\times V\ra Z\]
     stetig und stetig differenzierbar nach der zweiten Variablen. $F_Y(x_0,y_0)$ sei eine Bijektion
@@ -74,7 +74,7 @@
     differenzierbar und $F'(x_0)$ sei eine lineare Bijektion von $X$ nach $Y$.
     Dann existiert eine Umgebung $U_0\subset U$ von $x_0$, so dass
     \[
-        F|_{U_0}: U_0\ra F(U_0)\ni y_0 -F(x_0)
+        F|_{U_0}: U_0\ra F(U_0)\ni y_0 =F(x_0)
     \]
     ein Homöomorphismus (bistetige Abbildung) ist.
 \end{theorem}
@@ -142,7 +142,7 @@
     Dann gilt
     \[
         \sup_{x\in \Omega}\|F'(x)\|\leq M
-    \]
+    \]  
     \end{description}
 \end{theorem}
 
@@ -165,15 +165,16 @@
     \begin{align*}
         \phi(t_0+\eps)&=\|f(t_0+\eps)-f(t_0)+f(t_0)-f(0)\|-(\tilde M + \delta)t\\
         &\leq \|f(t_0+\eps)-f(t_0)\|-(\tilde M +\delta) -\phi(t_0)\\
-        &\leq \|f'(t_0)\eps+ \mc o (1)\|-(\tilde M +\delta)\eps\\
-        &\leq (-\delta + \mc o (1))\eps 
+        &\leq \|f'(t_0)\eps+  o (0)\|-(\tilde M +\delta)\eps\\
+        &\leq (\tilde M+  o(1) -\tilde M -\delta)\eps\\
+        &=(-\delta+  o (1))\eps <0 \qq \text{für $\eps$ hinreichend klein.}
     \end{align*}
     \item{ii)}
     Angenommen, es existiert $x_0$ mit $\|F'(x_0)\|\geq M+2\delta$, $\delta>0$. Dann existiert
     $e\in X$, $\|e\|=1$, $\| F'(x_0)e \|\geq M+\delta$. Somit gilt
     \begin{align*}
-        M\eps&\geq \|F(x_0+\eps e) - F(x_0)\|= \|F'(x_0)(\eps e)+\mc o (\eps)\|\\
-         &\geq (M+\delta)\eps- \mc o(\eps) > M\eps
+        M\eps&\geq \|F(x_0+\eps, e) - F(x_0)\|= \|F'(x_0)(\eps e)+ o (\eps)\|\\
+         &\geq (M+\delta)\eps-  o(\eps) > M\eps
     \end{align*}
     Das ist ein Widerspruch.
     \end{description}

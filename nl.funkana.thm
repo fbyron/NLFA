@@ -72,7 +72,7 @@
 \contentsline {theorem}{{Theorem}{2.{20}}{Kakutani}}{27}{theorem.2.20}
 \contentsline {proof}{{Beweis:}{29}{}}{27}{proof.29}
 \contentsline {defi}{{Definition}{2.{21}}{Nash-Gleichgewicht}}{29}{theorem.2.21}
-\contentsline {theorem}{{Theorem}{2.{22}}{}}{29}{theorem.2.22}
+\contentsline {theorem}{{Theorem}{2.{22}}{}}{30}{theorem.2.22}
 \contentsline {proof}{{Beweis:}{30}{}}{30}{proof.30}
 \contentsline {theorem}{{Theorem}{3.{1}}{Kakutani}}{31}{theorem.3.1}
 \contentsline {proof}{{Beweis:}{31}{}}{31}{proof.31}
@@ -85,24 +85,24 @@
 \contentsline {proof}{{Beweis:}{33}{}}{33}{proof.33}
 \contentsline {theorem}{{Theorem}{3.{6}}{}}{33}{theorem.3.6}
 \contentsline {proof}{{Beweis:}{34}{}}{33}{proof.34}
-\contentsline {lem}{{Lemma}{3.{7}}{}}{34}{theorem.3.7}
+\contentsline {lem}{{Lemma}{3.{7}}{}}{33}{theorem.3.7}
 \contentsline {proof}{{Beweis:}{35}{}}{34}{proof.35}
 \contentsline {defi}{{Definition}{3.{8}}{Der Leray-Schauder Grad}}{34}{theorem.3.8}
-\contentsline {prop}{{Proposition}{3.{9}}{}}{35}{theorem.3.9}
-\contentsline {proof}{{Beweis:}{36}{}}{35}{proof.36}
+\contentsline {prop}{{Proposition}{3.{9}}{}}{34}{theorem.3.9}
+\contentsline {proof}{{Beweis:}{36}{}}{34}{proof.36}
 \contentsline {theorem}{{Theorem}{3.{10}}{}}{35}{theorem.3.10}
 \contentsline {proof}{{Beweis:}{37}{}}{35}{proof.37}
 \contentsline {proof}{{Beweis:}{38}{}}{35}{proof.38}
 \contentsline {theorem}{{Theorem}{3.{11}}{}}{36}{theorem.3.11}
 \contentsline {theorem}{{Theorem}{3.{12}}{Leray-Schauder-Prinzip}}{36}{theorem.3.12}
-\contentsline {proof}{{Beweis:}{39}{}}{37}{proof.39}
+\contentsline {proof}{{Beweis:}{39}{}}{36}{proof.39}
 \contentsline {theorem}{{Theorem}{3.{13}}{Schauder'sche Fixpunktsatz}}{37}{theorem.3.13}
 \contentsline {proof}{{Beweis:}{40}{}}{37}{proof.40}
 \contentsline {remark}{{Bemerkung:}{9}{}}{37}{remark.9}
 \contentsline {theorem}{{Theorem}{3.{14}}{}}{37}{theorem.3.14}
 \contentsline {proof}{{Beweis:}{41}{}}{37}{proof.41}
 \contentsline {cor}{{Corollar}{3.{15}}{}}{37}{theorem.3.15}
-\contentsline {proof}{{Beweis:}{42}{}}{38}{proof.42}
+\contentsline {proof}{{Beweis:}{42}{}}{37}{proof.42}
 \contentsline {proof}{{Beweis:}{43}{}}{38}{proof.43}
 \contentsline {theorem}{{Theorem}{3.{16}}{}}{38}{theorem.3.16}
 \contentsline {proof}{{Beweis:}{44}{}}{38}{proof.44}
@@ -112,7 +112,7 @@
 \contentsline {lem}{{Lemma}{3.{19}}{Ladyzhenshaya}}{39}{theorem.3.19}
 \contentsline {proof}{{Beweis:}{46}{}}{39}{proof.46}
 \contentsline {cor}{{Corollar}{3.{20}}{}}{40}{theorem.3.20}
-\contentsline {remark}{{Bemerkung:}{10}{}}{41}{remark.10}
+\contentsline {remark}{{Bemerkung:}{10}{}}{40}{remark.10}
 \contentsline {theorem}{{Theorem}{3.{21}}{Existenz schwacher Lösungen}}{41}{theorem.3.21}
 \contentsline {proof}{{Beweis:}{47}{}}{41}{proof.47}
 \contentsline {defi}{{Definition}{4.{1}}{}}{43}{theorem.4.1}

@@ -1,24 +1,3 @@
-\subsection*{Korrekturen}
-
-Bei Satz \ref{2.15}. Vorsicht vor der unbeschränkten Komponente $K_\infty$ von $\R^n\setminus f(\partial
-\Omega)$! Diese taucht jedoch in der Produktformel ausschließend nicht auf, denn
-\[
-    f(\ol \Omega)\subset B_r(0), \, \text{mit}\, f(\ol \Omega) \text{ kompakt}
-\]
-\[
-    \Ra \, \deg(f,\Omega,K_\infty\cap B_{2r}(0))=0 \qq \text{und} \qq f(\ol \Omega) \cap (\R^n\setminus
-    B_{2r}(0))=\varnothing
-\]
-somit können wir vereinfacht schreiben
-\[
-    \deg(f,\Omega,K_\infty)=0
-\]
-Der in der Produktformel auftauchende Term
-\[
-    \deg(f,\Omega,K_\infty)\cdot \deg(g,K_\infty,y)
-\]
-ist also unproblematisch, da er verschwindet.\\[0.5cm]
-
 \begin{lem}\label{3.5}
     Sei $K\subset X$ kompakt, $\eps>0$. Dann existiert ein endlichdimensionaler Untervektorraum $X_\eps
     \subset X$ und eine stetige Abbildung
@@ -33,7 +12,7 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
 
 \begin{proof}
     Es sei $\{x_j\}_{j=1}^N\subset K$, so dass $\bigcup _{j=1}^NB_\eps(x_j)$ eine Überdeckung von $K$
-    darstellt. Sei $\{\Phi_j\}_{j=1}^N$ eine Zerleung der Eins, welche $\{B_\eps(x_j)\}_{j=1}^N$
+    darstellt. Sei $\{\Phi_j\}_{j=1}^N$ eine Zerlegung der Eins, welche $\{B_\eps(x_j)\}_{j=1}^N$
     untergeordnet ist. Wir definieren
     \[
         P_\eps(x):= \sum_{j=1}^N \Phi_j(x)x_j
@@ -75,10 +54,10 @@ ist also unproblematisch, da er verschwindet.\\[0.5cm]
     \[
         \ol{\ms F(\Omega,Y)}^{C(\Omega,Y)}\subset \ms C(\Omega,Y)
     \]
-    Sei andererseits $F\in \ms C(\Omega,Y)$,und sei $K=\ol{F(\Omega)}$ kompakt. sei $P_\eps$ gewählt wie
+    Sei andererseits $F\in \ms C(\Omega,Y)$,und sei $K=\ol{F(\Omega)}$ kompakt. Sei $P_\eps$ gewählt wie
     in Lemma \ref{3.5}. Es gilt
     \[
-        F_\eps=P_\eps\circ F\in \ms F(\Omega,Y) \qq \text{und}\qq F_\eps\ra F
+        F_\eps=P_\eps\circ F\in \ms F(\Omega,Y) \qq \text{und}\qq F_\eps\ra F \qq (\eps \ra 0)
     \]
 \end{proof}
 
@@ -157,7 +136,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
     Sei $F_2\in \ms F (\ol \Omega,X)$, $\|F_2-F\|<\rho$, $X_2$ entsprechend endlichdim UVR von $X$. Es 
     sei $X_0=X_1+X_2$, $\Omega_0=\Omega\cap X_0$. Dann gilt
     \[
-        F_i\in \ms F_y(\ol\Omega_0,X_0) \qq i=1,2
+        F_i\in \ms G_y(\ol\Omega_0,X_0) \qq i=1,2
     \]
     und es folgt wegen der Reduktionseigenschaft des endlichdimensionalen Abbildungsgrades, dass
     \[
@@ -223,7 +202,7 @@ abgeschlossene Mengen auf abgeschlossene Mengen abbildet.
         \[
             A:=\bigcup_{t\in [0,1]} (\Id+H(t))(\partial \Omega)
         \]
-        ist abgeschlossen als Bild einer abgeschlossenen Menge, somit gilt
+        abgeschlossen ist als Bild einer abgeschlossenen Menge, somit gilt
         \[
             \dist(A,y)=\rho>0
         \]

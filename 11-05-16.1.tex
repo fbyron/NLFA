@@ -22,7 +22,7 @@ gilt, dass $\deg(f,\Omega,\cdot)$ konstant ist auf Zusammenhangskomponenten von 
     G_j \}_{j=1}^N$ um $g^{-1}(y)\cap B_r(0)$ zu überdecken.
     \begin{description}
     \item{1)}
-    Wir nehmen an, dass $f\circ g\in C^1(\ol \Omega)$, $y\in \RV(g\circ f)$. Es gilt nach der
+    Wir nehmen an, dass $g\circ f\in C^1(\ol \Omega)$, $y\in \RV(g\circ f)$. Es gilt nach der
     Kettenregel, dass
     \[
         (g\circ f)'(x)=g'(f(x))\circ f'(x)
@@ -46,7 +46,7 @@ gilt, dass $\deg(f,\Omega,\cdot)$ konstant ist auf Zusammenhangskomponenten von 
 
     Es sei
     \[
-        L_l=\{z\in \R^n\setminus(\partial \Omega)\, | \, \deg(f,\Omega,z)=l\}
+        L_l=\{z\in \R^n\setminus f(\partial \Omega)\, | \, \deg(f,\Omega,z)=l\}
     \]
     Für $l\neq 0$ gilt, dass $L_l$ aus einer Vereinigung von Mengen $G_j$ bestehen muss. Sei nun
     $\tilde f\in C^1 (\ol \Omega)$, so dass $|f(x)-\tilde f(x)|< \frac 12 \dist(g^{-1}(y),
@@ -59,13 +59,30 @@ gilt, dass $\deg(f,\Omega,\cdot)$ konstant ist auf Zusammenhangskomponenten von 
     nach Satz \ref{2.1} (iii). ($\|f(x)-\tilde f(x)\|<\dist(y,f(\partial \Omega)\qq \forall
     x\in \partial \Omega)\qq \Ra \qq \deg(f,\Omega,y)=\deg(\tilde f,\Omega,y)$.) Es gilt somit
     \begin{align*}
-        \deg(g\circ f, \Omega, y)&=\deg(g\circ\tilde f,\Omega,y)\\
-        &=\sum_{j}\deg(f,\Omega,\tilde G_j)\cdot \deg(g,\tilde G_j,y)=\sum_{l\neq0} l\cdot\deg( g,\tilde
-        L_l,y)=\sum_{l\neq 0} l\cdot \deg(g,L_l,y)\\
-        &=\sum_j \deg(f,\Omega,G_j)\cdot \deg(g,G_j,y)
+        \deg(g\circ f, \Omega, y)&=\deg(g\circ\tilde f,\Omega,y)
+            =\sum_{j}\deg(f,\Omega,\tilde G_j)\cdot \deg(g,\tilde G_j,y)\\
+        &=\sum_{l\neq0} l\cdot\deg( g,\tilde L_l,y)=\sum_{l\neq 0} l\cdot \deg(g,L_l,y)
+        =\sum_j \deg(f,\Omega,G_j)\cdot \deg(g,G_j,y)
     \end{align*}
     \end{description}
-    \[ \]
+    Vorsicht vor der unbeschränkten Komponente $K_\infty$ von $\R^n\setminus f(\partial
+    \Omega)$! Diese taucht jedoch in der Produktformel ausschließend nicht auf, denn
+    \[
+        f(\ol \Omega)\subset B_r(0), \, \text{mit}\, f(\ol \Omega) \text{ kompakt}
+    \]
+    \[
+        \Ra \, \deg(f,\Omega,K_\infty\cap B_{2r}(0))=0 \qq \text{und} \qq f(\ol \Omega)
+        \cap (\R^n\setminus B_{2r}(0))=\varnothing
+    \]
+    somit können wir vereinfacht schreiben
+    \[
+        \deg(f,\Omega,K_\infty)=0
+    \]
+    Der in der Produktformel auftauchende Term
+    \[
+        \deg(f,\Omega,K_\infty)\cdot \deg(g,K_\infty,y)
+    \]
+    ist also unproblematisch, da er verschwindet.\[ \]
 \end{proof}
 
 Eine wichtige Anwendung der Produktformel ist das folgende

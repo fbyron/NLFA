@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.23)  27 JUL 2011 10:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.7.23)  30 JUL 2011 10:45
 entering extended mode
  %&-line parsing enabled.
 **nl.funkana.tex
@@ -1499,23 +1499,18 @@ File: ot1txtt.fd 2000/12/15 v3.1
 
  [3] [4] [5] (./11-04-11.tex
 Kapitel 1.
-
-Overfull \hbox (34.89728pt too wide) in paragraph at lines 52--52
-[] 
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 \end{align}
+l.63 \end{align}
                  [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 \end{itemize}
+l.125 \end{itemize}
                     [2]) (./11-04-13.tex
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
 ine 7.
@@ -1536,23 +1531,15 @@ $, falls $[] \U/MnSymbolD/m/n/10 ` \OT1/txr/m/n/10
 $ ma-xi-mal, zu-sam-menh[]angend. 
  []
 
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
 [7]
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
-Missing character: There is no o in font MnSymbolS10!
 Package hyperref Info: bookmark level for unknown cor defaults to 0 on input li
-ne 183.
+ne 184.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 191.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 192.
 
 Package hyperref Info: bookmark level for unknown lem defaults to 0 on input li
-ne 200.
+ne 201.
 [8]) (./11-04-20.tex [9] [10
 
 ]
@@ -1653,10 +1640,10 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 86.
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 89.
 
+[28]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 94.
 
-[28]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 102.
 
@@ -1685,12 +1672,8 @@ ML/txmi/m/it/10 S$ \OT1/txr/m/n/10 hei^^Yt Nash-Gleichgewicht, falls
 Kapitel 3.
 [31
 
-]) (./11-05-18.tex [32]
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
-
- []
-
-[33] [34] [35]) (./11-05-23.tex [36] [37]) (./11-05-25.tex
+]) (./11-05-18.tex [32] [33] [34] [35]) (./11-05-23.tex [36] [37])
+(./11-05-25.tex
 Overfull \hbox (31.50041pt too wide) in paragraph at lines 2--4
 []\OT1/txr/m/n/10 Es sei $
  \U/MnSymbolD/m/n/10 ` \U/txsyb/m/n/10 R[]$ \OT1/txr/m/n/10 of-fen, zu-sam-menh
@@ -1709,11 +1692,11 @@ Overfull \hbox (51.88396pt too wide) in paragraph at lines 84--84
 [] 
  []
 
-[39] [40] [41]) (./11-05-30.tex [42]
-Kapitel 4.
-[43
+[39] [40]) (./11-05-30.tex [41] [42
 
-] [44] [45]
+]
+Kapitel 4.
+[43] [44] [45]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 258.
 
@@ -1905,9 +1888,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19822 strings out of 493848
- 294699 string characters out of 1152823
- 394451 words of memory out of 3000000
+ 19821 strings out of 493848
+ 294696 string characters out of 1152823
+ 394475 words of memory out of 3000000
  22064 multiletter control sequences out of 15000+50000
  67455 words of font info for 171 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
@@ -1932,9 +1915,9 @@ ic/txfonts/txtt.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-t
 exlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on nl.funkana.pdf (92 pages, 621145 bytes).
+Output written on nl.funkana.pdf (92 pages, 620071 bytes).
 PDF statistics:
- 1181 PDF objects out of 1200 (max. 8388607)
- 434 named destinations out of 1000 (max. 500000)
+ 1179 PDF objects out of 1200 (max. 8388607)
+ 433 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
